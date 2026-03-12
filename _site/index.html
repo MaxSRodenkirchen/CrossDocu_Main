@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+  <div id="content" style="display:none">
+    <!-- dein Inhalt -->
+    
+
+Homepage / Index
+
+    <p>This is the "paged.njk" Layout.</p>
+    
+    <ul><li><a href="/">Index</a></li>
+<li><a href="/How to use/">How to use</a></li>
+<li><a href="/geschichte/">Geschichte</a></li></ul>
+
+  </div>
+
+  <div id="preview"></div>
+
+  <script type="module">
+    import { Previewer } from '/js/paged.esm.js';
+
+    let content = document.querySelector("#content");
+    let preview = document.querySelector("#preview");
+    let paged = new Previewer();
+    paged.preview(content.innerHTML, ["/style.css"], preview)
+      .then((flow) => {
+        console.log("Rendered", flow.total, "pages.");
+      });
+
+  </script>
+
+</body>
+
+</html>
