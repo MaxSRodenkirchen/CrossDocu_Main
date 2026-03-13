@@ -1,5 +1,5 @@
 ---
-layout: paged.njk
+layout: paged.html
 title: Geschichte
 
 eleventyNavigation:

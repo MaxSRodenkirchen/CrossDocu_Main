@@ -4,22 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage</title>
+    <title>{{ title }}</title>
 </head>
 
 <body>
 
     <h3>base.html</h3>
 
-    
-<article>
-    <h3>home.html</h3>
-    <h1>Homepage</h1>
-    <p>Homepage / Index</p>
-
-    <p>something here</p>
-</article>
-
+    {% block content %}
+    <p>
+        Here is some placeholder content that will render if a template doesn’t define a
+        block.
+    </p>
+    {% endblock %}
 </body>
 
 </html>

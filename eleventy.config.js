@@ -24,3 +24,8 @@ export default function (eleventyConfig) {
     // Input Directory
     eleventyConfig.setInputDirectory("content");
 };
+
+export const config = {
+    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
+};

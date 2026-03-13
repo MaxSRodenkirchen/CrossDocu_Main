@@ -11,11 +11,12 @@
     <!-- dein Inhalt -->
     {{ content | safe }}
     <p>This is the "paged.njk" Layout.</p>
-    
-    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+
 
   </div>
-
+  <div class=nav>
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+  </div>
   <div id="preview"></div>
 
   <script type="module">

@@ -1,5 +1,5 @@
 ---
-layout: paged.njk
+layout: home.html
 title: Homepage
 
 eleventyNavigation:
