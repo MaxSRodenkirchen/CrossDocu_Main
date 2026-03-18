@@ -1,31 +1,46 @@
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 
-export default function (eleventyConfig) {
-    // Global Data
-    // eleventyConfig.addGlobalData("metadata", {
-    //     title: "CrossDocu",
-    //     language: "en",
-    //     description: "Project and process documentation simplified."
-    // });
 
-    // Shortcodes
-    // eleventyConfig.addShortcode("currentBuildDate", () => {
-    //     return (new Date()).toISOString();
-    // });
+export default function (eleventyConfig) {
+
 
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
     // Paged.js und CSS in den Output kopieren
     eleventyConfig.addPassthroughCopy({
         "node_modules/pagedjs/dist/paged.esm.js": "js/paged.esm.js",
-        "content/_includes/style.css": "style.css"
+        "js": "js"
     });
 
+    eleventyConfig.addPassthroughCopy('content/images');
+    eleventyConfig.addPassthroughCopy('styles');
+
     // Input Directory
-    eleventyConfig.setInputDirectory("content");
+    // eleventyConfig.setInputDirectory(content);
 };
 
 export const config = {
-    markdownTemplateEngine: 'njk',
-    htmlTemplateEngine: 'njk',
+    // Control which files Eleventy will process
+    // e.g.: *.md, *.njk, *.html, *.liquid
+    templateFormats: [
+        "md",
+        "njk",
+        "html",
+        "liquid",
+        "11ty.js",
+    ],
+
+    // Pre-process *.md files with: (default: `liquid`)
+    markdownTemplateEngine: "njk",
+
+    // Pre-process *.html files with: (default: `liquid`)
+    htmlTemplateEngine: "njk",
+
+    // These are all optional:
+    dir: {
+        input: "content",          // default: "."
+        includes: "../_includes",  // default: "_includes" (`input` relative)
+        data: "../_data",          // default: "_data" (`input` relative)
+        output: "_site"
+    },
 };

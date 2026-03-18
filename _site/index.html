@@ -1,24 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/navbar.css" data-pagedjs-ignore>
+  <link rel="stylesheet" href="styles/preview.css">
 </head>
 
 <body>
+  <div id="mainContainer">
+    <div id="sidebar">
+      <nav id=navbar>
+        <ul><li><a href="/">Index</a></li></ul>
+      </nav>
+    </div>
+    <div id="preview"></div>
 
-    <h3>base.html</h3>
+  </div>
 
-    
-<article>
-    <h3>home.html</h3>
-    <h1>Homepage</h1>
-    <p>Homepage / Index</p>
 
-    <p>something here</p>
-</article>
+
+
+  <template id="content">
+    <p>This is just the landing page for The CrossDocu Project. Which content will be shown here in future?</p>
+<p>Haaaaaalo</p>
+<p><a href="https://actuallysomecat.github.io/blog/2025-05-29%20-%20wikilinks%20+%20image%20embeds%20in%2011ty/">Link zu einem GitHub Repo was ich doch nicht brauche</a></p>
+<p><img src="images/CrossDocu_Grafik.png" alt="Das ist der Alt-Text"></p>
+
+    <p>This is the "paged.njk" Layout.</p>
+  </template>
+
+  <script type="module" src="/js/preview.js"></script>
+
+  <!-- 
+  <script type="module">
+    import { Previewer } from '/js/paged.esm.js';
+
+    let content = document.querySelector("#content");
+    let preview = document.querySelector("#preview");
+    let paged = new Previewer();
+    paged.preview(content.innerHTML, ["/base.css"], preview)
+      .then((flow) => {
+        console.log("Rendered", flow.total, "pages.");
+      });
+
+  </script> -->
 
 </body>
 

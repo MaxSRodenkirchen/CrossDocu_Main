@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+
+    <title>{{ title }}</title>
+</head>
+
+<body>
+
+    <div id="mainContainer">
+        <div id="sidebar"></div>
+    </div>
+
+    {% include "partials/header.html" %}
+    {% include "partials/navbar.html" %}
+
+    <!-- {% block content %}
+    <p>
+        Here is some placeholder content that will render if a template doesn’t define a
+        block.
+    </p>
+    {% endblock %} -->
+
+    {{ content | safe }}
+
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/navbar.css" data-pagedjs-ignore>
+  <link rel="stylesheet" href="styles/preview.css">
+</head>
+
+<body>
+  <div id="mainContainer">
+    <div id="sidebar">
+      <nav id=navbar>
+        {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+      </nav>
+    </div>
+    <div id="preview"></div>
+
+  </div>
+
+
+
+
+  <template id="content">
+    {{ content | safe }}
+    <p>This is the "paged.njk" Layout.</p>
+  </template>
+
+  <script type="module" src="/js/preview.js"></script>
+
+  <!-- 
+  <script type="module">
+    import { Previewer } from '/js/paged.esm.js';
+
+    let content = document.querySelector("#content");
+    let preview = document.querySelector("#preview");
+    let paged = new Previewer();
+    paged.preview(content.innerHTML, ["/base.css"], preview)
+      .then((flow) => {
+        console.log("Rendered", flow.total, "pages.");
+      });
+
+  </script> -->
+
+</body>
+
+</html>

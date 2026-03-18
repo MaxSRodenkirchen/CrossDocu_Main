@@ -1,0 +1,15 @@
+@media print {
+  @page {
+    size: A5;
+    bleed: 6mm;
+    marks: crop;
+
+    @bottom-center {
+      content: counter(page);
+    }
+  }
+
+  img {
+    width: 200px;
+  }
+}

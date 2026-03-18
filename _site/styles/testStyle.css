@@ -1,0 +1,13 @@
+img {
+    width: 200px;
+}
+
+header,
+nav {
+    background: lightgrey;
+    padding: 20px
+}
+
+nav {
+    background: rgb(220, 220, 220);
+}
