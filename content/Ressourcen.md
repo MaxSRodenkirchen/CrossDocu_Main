@@ -1,5 +1,5 @@
 ---
-layout: paged.html
+layout: "layouts/paged.html"
 title: Ressourcen
 
 eleventyNavigation:

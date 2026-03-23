@@ -1,33 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/testStyle.css">
+  <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
+  <link rel="stylesheet" href="/styles/navbar.css" data-pagedjs-ignore>
+  <link rel="stylesheet" href="/styles/preview.css">
 
-    <title>To Do&#39;s</title>
+  <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
 </head>
 
 <body>
-
+  <div id="mainContainer">
     <header>
-    <h1>Das CrossDocu Projekt</h1>
-</header>
-    <nav>
-    <h3>Navbar</h3>
-    <ul><li><a href="/">Index</a></li>
+      <h1>Header</h1>
+    </header>
+
+    <aside id="sidebar">
+      <nav id=navbar>
+        <ul><li><a href="/">Index</a></li>
+<li><a href="/How to use/">How to use</a></li>
+<li><a href="/geschichte/">Geschichte</a></li>
+<li><a href="/Ressourcen/">Ressourcen</a></li>
 <li><a href="/ToDos/">To Do's</a></li></ul>
-</nav>
+      </nav>
+    </aside>
 
-    <h3>base.html</h3>
+    <article id="preview"></article>
 
-    
-    <p>
-        Here is some placeholder content that will render if a template doesn’t define a
-        block.
-    </p>
-    
+    <aside id="config">
+      <h3>Config</h3>
+    </aside>
+
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </div>
+
+
+
+
+  <template id="content">
+    <ul>
+<li>
+<p>Barrierearme Gestaltung / Programmierung</p>
+<ul>
+<li>https://www.w3.org/WAI/ARIA/apg/</li>
+</ul>
+</li>
+<li>
+<p>Make it Accessible</p>
+<ul>
+<li>Learning Experiences für die verschiedenen Tools (Obsidian, Paged.js,...)</li>
+<li>Ansprechende, spaßige Gestaltung (Bsp. Coding Train)</li>
+<li>Idee: Upload your MD File to the CrossDocu Webpage for testing the functionalities</li>
+</ul>
+</li>
+</ul>
+
+    <p>This is the "paged.njk" Layout.</p>
+  </template>
+
+  <script type="module" src="/js/preview.js"></script>
+
+  <!-- 
+  <script type="module">
+    import { Previewer } from '/js/paged.esm.js';
+
+    let content = document.querySelector("#content");
+    let preview = document.querySelector("#preview");
+    let paged = new Previewer();
+    paged.preview(content.innerHTML, ["/base.css"], preview)
+      .then((flow) => {
+        console.log("Rendered", flow.total, "pages.");
+      });
+
+  </script> -->
+
 </body>
 
 </html>

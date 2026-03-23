@@ -5,12 +5,14 @@ body {
     padding: 0;
 }
 
-body * {}
+* {
+    box-sizing: border-box;
+}
 
 #mainContainer {
     display: grid;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     height: 100vh;
     grid-template-columns: 250px auto 50px;
     grid-template-rows: 50px auto 50px;
@@ -25,6 +27,7 @@ footer,
 article {
     /* border: 1px solid red; */
     overflow: hidden;
+    border-radius: 1rem;
 }
 
 header {

@@ -2,14 +2,44 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="styles/testStyle.css">
+  <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
+  <link rel="stylesheet" href="/styles/navbar.css" data-pagedjs-ignore>
+  <link rel="stylesheet" href="/styles/preview.css">
 
+  <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
 </head>
 
 <body>
+  <div id="mainContainer">
+    <header>
+      <h1>Header</h1>
+    </header>
 
-  <div id="content" style="display:none">
-    <!-- dein Inhalt -->
+    <aside id="sidebar">
+      <nav id=navbar>
+        <ul><li><a href="/">Index</a></li>
+<li><a href="/How to use/">How to use</a></li>
+<li><a href="/geschichte/">Geschichte</a></li>
+<li><a href="/Ressourcen/">Ressourcen</a></li>
+<li><a href="/ToDos/">To Do's</a></li></ul>
+      </nav>
+    </aside>
+
+    <article id="preview"></article>
+
+    <aside id="config">
+      <h3>Config</h3>
+    </aside>
+
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </div>
+
+
+
+
+  <template id="content">
     <p><strong>Ziel von CrossDocu ist es, Projekt- und Prozessdokumentationen zu vereinfachen, indem Inhalte automatisch in verschiedene Formate konvertiert werden.</strong></p>
 <p>Das Sammeln von Inhalten und das Gestalten von Layouts nimmt in Projekten kostbare Zeit in Anspruch. Oft werden verschiedene Formate zum Präsentieren und zur Kollaboration benötigt, weshalb Texte, Bilder und andere Medien hin und her kopiert werden müssen.</p>
 <p>In CrossDocu werden Fortschritte nur noch an einer Stelle als Text, Bilder und Hyperlinks in Markdown-Dateien erfasst. Auf einer Webseite werden diese Inhalte dann in Form eines digitalen Gartens öffentlich zugänglich gemacht. Von dort aus können weitere paginierte Formate für Print und Digital erstellt werden. So können beispielsweise wöchentliche Journale als Keynotes aufbereitet oder komplette Projektdokumentationen für den Broschürendruck exportiert werden.</p>
@@ -17,30 +47,23 @@
 [[README]]</p>
 
     <p>This is the "paged.njk" Layout.</p>
+  </template>
 
+  <script type="module" src="/js/preview.js"></script>
 
-  </div>
-  <div class=nav>
-    <ul><li><a href="/">Index</a></li>
-<li><a href="/How to use/">How to use</a></li>
-<li><a href="/geschichte/">Geschichte</a></li>
-<li><a href="/Ressourcen/">Ressourcen</a></li>
-<li><a href="/ToDos/">To Do's</a></li></ul>
-  </div>
-  <div id="preview"></div>
-
+  <!-- 
   <script type="module">
     import { Previewer } from '/js/paged.esm.js';
 
     let content = document.querySelector("#content");
     let preview = document.querySelector("#preview");
     let paged = new Previewer();
-    paged.preview(content.innerHTML, ["/style.css"], preview)
+    paged.preview(content.innerHTML, ["/base.css"], preview)
       .then((flow) => {
         console.log("Rendered", flow.total, "pages.");
       });
 
-  </script>
+  </script> -->
 
 </body>
 

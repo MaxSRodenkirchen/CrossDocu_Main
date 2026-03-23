@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.html
+layout: "layouts/paged.html"
 title: To Do's
 
 eleventyNavigation:
