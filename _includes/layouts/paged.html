@@ -2,20 +2,34 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/base.css" data-pagedjs-ignore>
   <link rel="stylesheet" href="styles/navbar.css" data-pagedjs-ignore>
   <link rel="stylesheet" href="styles/preview.css">
+
+  <link rel="stylesheet" href="styles/print.css" data-pagedjs-ignore>
 </head>
 
 <body>
   <div id="mainContainer">
-    <div id="sidebar">
+    <header>
+      <h1>Header</h1>
+    </header>
+
+    <aside id="sidebar">
       <nav id=navbar>
         {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
       </nav>
-    </div>
-    <div id="preview"></div>
+    </aside>
 
+    <article id="preview"></article>
+
+    <aside id="config">
+      <h3>Config</h3>
+    </aside>
+
+    <footer>
+      <p>Footer</p>
+    </footer>
   </div>
 
 

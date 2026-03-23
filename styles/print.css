@@ -1,0 +1,27 @@
+@media print {
+
+  header,
+  aside,
+  footer {
+    display: none !important;
+  }
+
+  /* Brich das CSS-Grid auf, damit das Fenster nach unten wachsen kann. 
+     Sonst druckt der Browser nur die erste sichtbare Seite (100vh) und schneidet den Rest ab! */
+  #mainContainer {
+    display: block !important;
+    height: auto !important;
+    background: none !important;
+  }
+
+  /* Entferne das Scrollen, damit das PDF vollständig alle Seiten lesen kann */
+  #preview {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  body {
+    background: none !important;
+  }
+}
