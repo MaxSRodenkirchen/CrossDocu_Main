@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/variables.css">
+
+    <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
+    <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
+
+    {% block head %}{% endblock %}
+
+    <title>{{ title }}</title>
+</head>
+
+<body>
+
+    <div id="mainContainer">
+
+        {% include "partials/header.njk" %}
+
+        <aside id="sidebar">
+            {% include "partials/navbar.njk" %}
+        </aside>
+
+        {% block content %}
+        <article id="normalContent">{{ content | safe }}</article>
+        {% endblock %}
+
+
+        <aside id="config">
+            <h3>Config</h3>
+        </aside>
+
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

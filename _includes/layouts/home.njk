@@ -1,0 +1,11 @@
+{% block head %}
+<link rel="stylesheet" href="/styles/preview.css">
+{% endblock %}
+
+{% extends "layouts/base.njk" %}
+{% block content %}
+<article>
+	{{ content | safe }}
+</article>
+
+{% endblock %}

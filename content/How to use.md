@@ -1,5 +1,5 @@
 ---
-layout: "layouts/paged.html"
+layout: "layouts/paged.njk"
 title: How to use
 
 eleventyNavigation:

@@ -1,5 +1,5 @@
 ---
-layout: "layouts/paged.html"
+layout: "layouts/paged.njk"
 title: My Rad Markdown Blog Post
 ---
 **Ziel von CrossDocu ist es, Projekt- und Prozessdokumentationen zu vereinfachen, indem Inhalte automatisch in verschiedene Formate konvertiert werden.**

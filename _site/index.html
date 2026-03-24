@@ -1,47 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
-  <link rel="stylesheet" href="/styles/navbar.css" data-pagedjs-ignore>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/variables.css">
+
+    <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
+    <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
+
+    
   <link rel="stylesheet" href="/styles/preview.css">
 
-  <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
+
+    <title>Homepage / Index</title>
 </head>
 
 <body>
-  <div id="mainContainer">
-    <header>
-      <h1>Header</h1>
-    </header>
 
-    <aside id="sidebar">
-      <nav id=navbar>
-        <ul><li><a href="/">Index</a></li>
+    <div id="mainContainer">
+
+        <header>
+    <h1>Header</h1>
+</header>
+
+        <aside id="sidebar">
+            <nav id=navbar>
+    <ul><li><a href="/">Index</a></li>
 <li><a href="/How to use/">How to use</a></li>
 <li><a href="/geschichte/">Geschichte</a></li>
 <li><a href="/Ressourcen/">Ressourcen</a></li>
 <li><a href="/ToDos/">To Do's</a></li></ul>
-      </nav>
-    </aside>
+</nav>
+        </aside>
 
-    <article id="preview"></article>
-
-    <aside id="config">
-      <h3>Config</h3>
-    </aside>
-
-    <footer>
-      <p>Footer</p>
-    </footer>
-  </div>
-
-
-
-
+        
   <template id="content">
     <p>This is just the landing page for The CrossDocu Project. Which content will be shown here in future?</p>
-<p>Haaaaaalo</p>
+<p>Haaaaaallo</p>
 <p><a href="https://actuallysomecat.github.io/blog/2025-05-29%20-%20wikilinks%20+%20image%20embeds%20in%2011ty/">Link zu einem GitHub Repo was ich doch nicht brauche</a></p>
 <p><img src="images/CrossDocu_Grafik.png" alt="Das ist der Alt-Text"></p>
 <p><strong>🌟 <em>Die geheimnisvolle Reise des fliegenden Gurkens</em> 🌟</strong></p>
@@ -64,21 +60,25 @@
     <p>This is the "paged.njk" Layout.</p>
   </template>
 
+  <article id="preview"></article>
+
   <script type="module" src="/js/preview.js"></script>
 
-  <!-- 
-  <script type="module">
-    import { Previewer } from '/js/paged.esm.js';
 
-    let content = document.querySelector("#content");
-    let preview = document.querySelector("#preview");
-    let paged = new Previewer();
-    paged.preview(content.innerHTML, ["/base.css"], preview)
-      .then((flow) => {
-        console.log("Rendered", flow.total, "pages.");
-      });
 
-  </script> -->
+        <aside id="config">
+            <h3>Config</h3>
+        </aside>
+
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
+
+
+
+
+
 
 </body>
 
