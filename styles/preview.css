@@ -1,6 +1,6 @@
 @media print {
   @page {
-    size: A5;
+    size: A4;
     bleed: 6mm;
     marks: crop;
 
