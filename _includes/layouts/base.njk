@@ -4,8 +4,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/variables.css">
 
+    <script>
+
+        function switchView(mode = 'default') {
+
+            const url = new URL(window.location.href);
+
+            if (mode === 'print') {
+                url.searchParams.set('view', 'print');
+            } else {
+                url.searchParams.delete('view');
+            }
+
+            window.location.href = url.toString();
+        }
+
+    </script>
+
+    <link rel="stylesheet" href="/styles/variables.css">
     <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
     <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
 
@@ -24,13 +41,20 @@
             {% include "partials/navbar.njk" %}
         </aside>
 
-        {% block content %}
+        {# {% block content %}
         <article id="normalContent">{{ content | safe }}</article>
-        {% endblock %}
+        {% endblock %} #}
+        <template id="templateContent">
+            {{ content | safe }}
+        </template>
 
+        <article id="content">
+        </article>
 
         <aside id="config">
             <h3>Config</h3>
+            {% include "partials/config.njk" %}
+
         </aside>
 
         <footer>
@@ -39,8 +63,35 @@
     </div>
 
 
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+        const viewMode = params.get('view');
 
 
+        if (viewMode === 'print') {
+
+            import("/js/paged.esm.js").then((module) => {
+                const Previewer = module.Previewer;
+                const previewer = new Previewer();
+                previewer
+                    .preview(
+                        document.querySelector("#templateContent").content,
+                        ["/styles/preview.css"],
+                        document.querySelector("#content")
+                    )
+                    .then(flow => {
+                        console.log("preview rendered, total pages", flow.total, { flow });
+                    });
+            });
+
+        } else {
+            const templateContent = document.querySelector('#templateContent').innerHTML;
+            const content = document.querySelector('#content');
+            content.innerHTML = templateContent;
+        }
+
+    </script>
 
 
 </body>

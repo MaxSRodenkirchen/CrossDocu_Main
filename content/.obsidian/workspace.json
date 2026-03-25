@@ -185,7 +185,20 @@
   },
   "active": "cec200b4d69f974d",
   "lastOpenFiles": [
+    "content.json",
+    "content.11tydata.js",
+    "content.11ty.js",
+    "content.js",
+    "layout.js",
     "README.md",
+    "_site/_includes/images/CrossDocu_Grafik.png",
+    "_site/ToDos/index.html",
+    "_site/_includes/images",
+    "_site/styles/variables.css",
+    "_site/styles/testStyle.css",
+    "_site/styles/style.css",
+    "_site/styles/print.css",
+    "_site/images/CrossDocu_Grafik.png",
     "index.md",
     "Unbenannt.md",
     "trash/ToDos.md",
@@ -194,7 +207,6 @@
     "trash/How to use.md",
     "trash/geschichte.md",
     "trash/CrossDocu.md",
-    "trash",
     "images/CrossDocu_Grafik.png"
   ]
 }

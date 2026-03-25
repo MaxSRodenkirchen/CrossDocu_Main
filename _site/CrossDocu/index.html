@@ -4,8 +4,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/variables.css">
 
+    <script>
+
+        function switchView(mode = 'default') {
+
+            const url = new URL(window.location.href);
+
+            if (mode === 'print') {
+                url.searchParams.set('view', 'print');
+            } else {
+                url.searchParams.delete('view');
+            }
+
+            window.location.href = url.toString();
+        }
+
+    </script>
+
+    <link rel="stylesheet" href="/styles/variables.css">
     <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
     <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
 
@@ -35,24 +52,24 @@
         </aside>
 
         
-  <template id="content">
-    <p><strong>Ziel von CrossDocu ist es, Projekt- und Prozessdokumentationen zu vereinfachen, indem Inhalte automatisch in verschiedene Formate konvertiert werden.</strong></p>
+        <template id="templateContent">
+            <p><strong>Ziel von CrossDocu ist es, Projekt- und Prozessdokumentationen zu vereinfachen, indem Inhalte automatisch in verschiedene Formate konvertiert werden.</strong></p>
 <p>Das Sammeln von Inhalten und das Gestalten von Layouts nimmt in Projekten kostbare Zeit in Anspruch. Oft werden verschiedene Formate zum Präsentieren und zur Kollaboration benötigt, weshalb Texte, Bilder und andere Medien hin und her kopiert werden müssen.</p>
 <p>In CrossDocu werden Fortschritte nur noch an einer Stelle als Text, Bilder und Hyperlinks in Markdown-Dateien erfasst. Auf einer Webseite werden diese Inhalte dann in Form eines digitalen Gartens öffentlich zugänglich gemacht. Von dort aus können weitere paginierte Formate für Print und Digital erstellt werden. So können beispielsweise wöchentliche Journale als Keynotes aufbereitet oder komplette Projektdokumentationen für den Broschürendruck exportiert werden.</p>
 <p>dasdas
 [[README]]</p>
 
-    <p>This is the "paged.njk" Layout.</p>
-  </template>
+        </template>
 
-  <article id="preview"></article>
-
-  <script type="module" src="/js/preview.js"></script>
-
-
+        <article id="content">
+        </article>
 
         <aside id="config">
             <h3>Config</h3>
+            <button onclick="switchView('web')">🌐 Webansicht</button>
+<button onclick="switchView('print')">🌐 Printansicht</button>
+<button onclick="switchView()">Default </button>
+
         </aside>
 
         <footer>
@@ -61,8 +78,35 @@
     </div>
 
 
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+        const viewMode = params.get('view');
 
 
+        if (viewMode === 'print') {
+
+            import("/js/paged.esm.js").then((module) => {
+                const Previewer = module.Previewer;
+                const previewer = new Previewer();
+                previewer
+                    .preview(
+                        document.querySelector("#templateContent").content,
+                        ["/styles/preview.css"],
+                        document.querySelector("#content")
+                    )
+                    .then(flow => {
+                        console.log("preview rendered, total pages", flow.total, { flow });
+                    });
+            });
+
+        } else {
+            const templateContent = document.querySelector('#templateContent').innerHTML;
+            const content = document.querySelector('#content');
+            content.innerHTML = templateContent;
+        }
+
+    </script>
 
 
 </body>
