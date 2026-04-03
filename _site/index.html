@@ -1,53 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="module">
+import "/js/hooktest.js"
+import { Previewer } from "/js/paged.esm.js"
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script>
+window.switchView = switchView;
 
-        function switchView(mode = 'default') {
+function switchView(mode = 'default') {
 
-            const url = new URL(window.location.href);
+    const url = new URL(window.location.href);
 
-            if (mode === 'print') {
-                url.searchParams.set('view', 'print');
-            } else {
-                url.searchParams.delete('view');
-            }
+    if (mode === 'print') {
+        url.searchParams.set('view', 'print');
+    } else {
+        url.searchParams.delete('view');
+    }
 
-            window.location.href = url.toString();
-        }
+    history.pushState({}, "", url)
 
-    </script>
+    window.location.href = url.toString();
 
-    <link rel="stylesheet" href="/styles/variables.css">
-    <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
-    <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
+    set();
+}
 
-    
+function set() {
 
-    <title>Homepage / Index</title>
-</head>
+    const params = new URLSearchParams(window.location.search);
+    const viewMode = params.get('view');
 
-<body>
+    document.querySelector("#content").innerHTML = ""
 
-    <div id="mainContainer">
+    if (viewMode === 'print') {
+        const previewer = new Previewer();
+        previewer
+            .preview(
+                document.querySelector("#templateContent").content,
+                ["/styles/preview.css"],
+                document.querySelector("#content")
+            )
+            .then(flow => {
+                console.log("preview rendered, total pages", flow.total, { flow });
+            });
 
-        <header>
+    } else {
+        const templateContent = document.querySelector('#templatesource').innerHTML;
+        const content = document.querySelector('#content');
+        content.innerHTML = templateContent;
+    }
+
+
+};
+
+
+        </script>
+        <link rel="stylesheet" href="/styles/variables.css">
+        <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
+        <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
+        
+        <title>Homepage / Index</title>
+    </head>
+    <body>
+        <div id="mainContainer">
+            <header>
     <h1>Header</h1>
 </header>
-
-        <aside id="sidebar">
-            <nav id=navbar>
+            <aside id="sidebar">
+                <nav id=navbar>
     <ul><li><a href="/">Index</a></li></ul>
 </nav>
-        </aside>
-
-        
-        <template id="templateContent">
-            <p>Ich schreibe hier
+            </aside>
+            
+            <template id="templatesource"><p>Ich schreibe hier
+dsabh</p>
+<p>asdasd
+bsdfazzigfuak
+[[README]]</p>
+<hr>
+<p>This is just the landing page for The CrossDocu Project. Which content will be shown here in future?</p>
+<p>Wir sind hier. Hallo</p>
+<p><a href="https://actuallysomecat.github.io/blog/2025-05-29%20-%20wikilinks%20+%20image%20embeds%20in%2011ty/">Link zu einem GitHub Repo was ich doch nicht brauche</a></p>
+<p><img src="images/CrossDocu_Grafik.png" alt="Das ist der Alt-Text"></p>
+<p><strong>🌟 <em>Die geheimnisvolle Reise des fliegenden Gurkens</em> 🌟</strong></p>
+<p>Es war ein <strong>dunstiger Dienstagmorgen</strong>, als die <strong>Gurke <em>Karl-Heinz</em></strong> plötzlich realisierte: <em>„Ich will FLIEGEN!“</em> – nicht etwa, weil sie Flügel hatte (die hatte sie nicht), sondern weil sie im Kühlschrank einen <strong>verstaubten Prospekt</strong> für <em>„Luftakrobatik für Gemüse“</em> gefunden hatte.</p>
+<blockquote>
+<p><em>„Wer braucht schon Physik, wenn man <em>Chuzpe</em> hat?“</em> – Karl-Heinz’ Lebensmotto</p>
+</blockquote>
+<p>Mit einem <strong>selbstgebastelten Katapult</strong> aus Joghurtbechern und Klebeband (das sie <em>„Gurken-Gleiter 3000“</em> nannte) stürzte sie sich vom Küchenfenster – und landete <strong>direkt im Blumentopf der Nachbarin</strong>. <em>„Das zählt als sanfte Landung!“</em> rief sie triumphierend, während die Nachbarin verwirrt ihre <strong>Kaktus-Sammlung</strong> umarmte.</p>
+<p>Doch das Abenteuer war noch nicht vorbei! Plötzlich tauchte <strong>Herr Schnuffel</strong>, der sprechende Staubsauger, auf und flüsterte: <em>„Psst… die <em>Welt der vergessenen Socken</em> braucht dich!“</em> Karl-Heinz zögerte – aber nur, weil sie gerade <strong>ihren imaginären Helm</strong> richten musste.</p>
+<hr>
+<p><strong>📜 <em>Moral der Geschichte</em> 📜</strong></p>
+<ul>
+<li><strong>Gurken können alles</strong> (außer vielleicht <em>nicht</em> fliegen).</li>
+<li><strong>Staubsauger haben Geheimnisse</strong> (und manchmal reden sie).</li>
+<li><strong>Klebeband löst alle Probleme</strong> (bis es klebt).</li>
+</ul>
+<hr>
+<p><em>„Und wenn du das liest: Karl-Heinz fliegt jetzt mit einem Drachen aus Alufolie. Sie grüßt dich.“</em> 🥒✨</p>
+</template>
+            <template id="templateContent">
+                <p>Ich schreibe hier
 dsabh</p>
 <p>asdasd
 bsdfazzigfuak
@@ -74,35 +129,30 @@ bsdfazzigfuak
 <hr>
 <p><em>„Und wenn du das liest: Karl-Heinz fliegt jetzt mit einem Drachen aus Alufolie. Sie grüßt dich.“</em> 🥒✨</p>
 
-        </template>
-
-        <article id="content">
-        </article>
-
-        <aside id="config">
-            <h3>Config</h3>
-            <button onclick="switchView('web')">🌐 Webansicht</button>
+            </template>
+            <article id="content" contenteditable></article>
+            <aside id="config">
+                <h3>Config</h3>
+                <button onclick="switchView('web')">🌐 Webansicht</button>
 <button onclick="switchView('print')">🌐 Printansicht</button>
 <button onclick="switchView()">Default </button>
+            </aside>
+            <footer>
+                <p>Footer</p>
+            </footer>
+        </div>
+        <script type="module">
+        import "/js/hooktest.js"
+        import { Previewer } from "/js/paged.esm.js"
 
-        </aside>
-
-        <footer>
-            <p>Footer</p>
-        </footer>
-    </div>
-
-
-    <script>
+// 
 
         const params = new URLSearchParams(window.location.search);
         const viewMode = params.get('view');
 
+                        document.querySelector("#content").innerHTML = ""
 
         if (viewMode === 'print') {
-
-            import("/js/paged.esm.js").then((module) => {
-                const Previewer = module.Previewer;
                 const previewer = new Previewer();
                 previewer
                     .preview(
@@ -113,17 +163,18 @@ bsdfazzigfuak
                     .then(flow => {
                         console.log("preview rendered, total pages", flow.total, { flow });
                     });
-            });
 
         } else {
-            const templateContent = document.querySelector('#templateContent').innerHTML;
+            const templateContent = document.querySelector('#templatesource').innerHTML;
+
             const content = document.querySelector('#content');
             content.innerHTML = templateContent;
         }
 
-    </script>
 
 
-</body>
 
+
+        </script>
+    </body>
 </html>

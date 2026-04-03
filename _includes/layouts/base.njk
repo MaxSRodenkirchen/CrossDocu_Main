@@ -1,78 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="module">
+import "/js/hooktest.js"
+import { Previewer } from "/js/paged.esm.js"
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script>
+window.switchView = switchView;
 
-        function switchView(mode = 'default') {
+function switchView(mode = 'default') {
 
-            const url = new URL(window.location.href);
+    const url = new URL(window.location.href);
 
-            if (mode === 'print') {
-                url.searchParams.set('view', 'print');
-            } else {
-                url.searchParams.delete('view');
-            }
+    if (mode === 'print') {
+        url.searchParams.set('view', 'print');
+    } else {
+        url.searchParams.delete('view');
+    }
 
-            window.location.href = url.toString();
-        }
+    history.pushState({}, "", url)
 
-    </script>
+    window.location.href = url.toString();
 
-    <link rel="stylesheet" href="/styles/variables.css">
-    <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
-    <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
+    set();
+}
 
-    {% block head %}{% endblock %}
+function set() {
 
-    <title>{{ title }}</title>
-</head>
+    const params = new URLSearchParams(window.location.search);
+    const viewMode = params.get('view');
 
-<body>
+    document.querySelector("#content").innerHTML = ""
 
-    <div id="mainContainer">
+    if (viewMode === 'print') {
+        const previewer = new Previewer();
+        previewer
+            .preview(
+                document.querySelector("#templateContent").content,
+                ["/styles/preview.css"],
+                document.querySelector("#content")
+            )
+            .then(flow => {
+                console.log("preview rendered, total pages", flow.total, { flow });
+            });
 
-        {% include "partials/header.njk" %}
+    } else {
+        const templateContent = document.querySelector('#templatesource').innerHTML;
+        const content = document.querySelector('#content');
+        content.innerHTML = templateContent;
+    }
 
-        <aside id="sidebar">
-            {% include "partials/navbar.njk" %}
-        </aside>
 
-        {# {% block content %}
+};
+
+
+        </script>
+        <link rel="stylesheet" href="/styles/variables.css">
+        <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
+        <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
+        {% block head %}{% endblock %}
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <div id="mainContainer">
+            {% include "partials/header.njk" %}
+            <aside id="sidebar">
+                {% include "partials/navbar.njk" %}
+            </aside>
+            {# {% block content %}
         <article id="normalContent">{{ content | safe }}</article>
         {% endblock %} #}
-        <template id="templateContent">
-            {{ content | safe }}
-        </template>
+            <template id="templatesource">{{ content|safe }}</template>
+            <template id="templateContent">
+                {{ content | safe }}
+            </template>
+            <article id="content" contenteditable></article>
+            <aside id="config">
+                <h3>Config</h3>
+                {% include "partials/config.njk" %}
+            </aside>
+            <footer>
+                <p>Footer</p>
+            </footer>
+        </div>
+        <script type="module">
+        import "/js/hooktest.js"
+        import { Previewer } from "/js/paged.esm.js"
 
-        <article id="content">
-        </article>
-
-        <aside id="config">
-            <h3>Config</h3>
-            {% include "partials/config.njk" %}
-
-        </aside>
-
-        <footer>
-            <p>Footer</p>
-        </footer>
-    </div>
-
-
-    <script>
+// 
 
         const params = new URLSearchParams(window.location.search);
         const viewMode = params.get('view');
 
+                        document.querySelector("#content").innerHTML = ""
 
         if (viewMode === 'print') {
-
-            import("/js/paged.esm.js").then((module) => {
-                const Previewer = module.Previewer;
                 const previewer = new Previewer();
                 previewer
                     .preview(
@@ -83,17 +107,18 @@
                     .then(flow => {
                         console.log("preview rendered, total pages", flow.total, { flow });
                     });
-            });
 
         } else {
-            const templateContent = document.querySelector('#templateContent').innerHTML;
+            const templateContent = document.querySelector('#templatesource').innerHTML;
+
             const content = document.querySelector('#content');
             content.innerHTML = templateContent;
         }
 
-    </script>
 
 
-</body>
 
+
+        </script>
+    </body>
 </html>
