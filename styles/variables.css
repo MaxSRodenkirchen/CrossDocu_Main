@@ -1,3 +1,9 @@
 :root {
-    --color-main: lightgrey;
+
+    --color-1: #ffe74cff;
+    --color-2: #ff5964ff;
+    --color-3: #6bf178ff;
+    --color-4: #35a7ffff;
+    --color-5: #ffffffff;
+    --color-6: #000000;
 }

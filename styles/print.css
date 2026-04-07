@@ -1,5 +1,21 @@
 @media print {
 
+  body,
+  #content {
+    margin: 0;
+    padding: 0;
+  }
+
+  #mainContainer {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  #content {
+    overflow-y: unset;
+  }
+
   header,
   aside,
   footer {
@@ -24,4 +40,10 @@
   body {
     background: none !important;
   }
+
+
+  img {
+    width: 200px;
+  }
+
 }

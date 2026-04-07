@@ -1,70 +1,128 @@
-body {
-    font-family: sans-serif;
-    background: darkgrey;
-    margin: 0;
-    padding: 0;
-}
+@media screen {
 
-* {
-    box-sizing: border-box;
-}
 
-#mainContainer {
-    display: grid;
-    margin: 0;
-    padding: 20px;
-    height: 100vh;
-    grid-template-columns: 250px auto 250px;
-    grid-template-rows: 50px auto 50px;
-    gap: 0rem;
+    body {
+        font-family: sans-serif;
+        background: var(--color-5);
+        margin: 0;
+        padding: 0;
+        color: var(--color-6);
+    }
 
-    background: darkgrey;
-}
+    * {
+        box-sizing: border-box;
+        /* border: 1px solid red; */
+    }
 
-#mainContainer>aside,
-header,
-footer,
-article {
-    /* border: 1px solid red; */
-    overflow: hidden;
-    border-radius: 1rem;
-}
+    #mainContainer {
+        display: grid;
+        margin: 0;
+        padding: 1rem;
+        height: 100vh;
+        grid-template-columns: 200px auto 120px;
+        grid-template-rows: 50px auto 20px;
+        gap: 0rem;
 
-header {
-    grid-column: 1/4;
-    grid-row: 1;
-    background: var(--color-main);
-}
+        background: var(--color-1);
+    }
 
-#sidebar {
-    grid-column: 1;
-    grid-row: 2;
-    background: grey;
-}
+    #mainContainer>aside,
+    header,
+    footer,
+    article {
+        /* border: 1px solid red; */
+        overflow: hidden;
+        /* border-radius: 1rem; */
+    }
 
-#content {
-    grid-column: 2;
-    grid-row: 2;
-    overflow-y: scroll;
-}
+    header {
+        margin: 0;
+        padding: 0;
+        grid-column: 1/4;
+        grid-row: 1;
+    }
 
-#config {
-    grid-column: 3;
-    grid-row: 2;
-    width: 100%;
-    background: grey;
-}
+    #sidebar {
+        display: flex;
+        flex-direction: column;
+        grid-column: 1;
+        grid-row: 2;
+        padding-top: 1rem;
 
-footer {
-    grid-column: 1 / 4;
-    grid-row: 3;
-    background: lightgrey;
-}
+    }
 
-/* Print-Regeln wurden ins HTML verschoben, damit Paged.js sie nicht kaputt macht! */
+    #content {
+        /* background: var(--color-5); */
 
-.pagedjs_page {
-    background: rgb(255, 255, 255);
-    box-shadow: 10px 12px 30px 0 rgba(0, 0, 0, 0.1);
-    margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: .1rem;
+
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-top: 1rem;
+
+
+        grid-column: 2;
+        grid-row: 2;
+        overflow-y: scroll;
+        /* border-color: var(--color-4);
+        border-style: solid;
+        border-width: 4px; */
+        /* box-shadow: .5rem .5rem .8rem .01rem var(--color-6); */
+    }
+
+    #content img {
+        margin: 2rem 0rem 2rem 0rem;
+        max-width: 100%;
+
+        max-height: 400px;
+        aspect-ratio: 1/1;
+    }
+
+    #config {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        gap: .3rem;
+        grid-column: 3;
+        grid-row: 2;
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; */
+        align-items: center;
+        padding: 0;
+        gap: 0;
+        grid-column: 1 / 4;
+        grid-row: 3;
+    }
+
+    #sidebar,
+    #config,
+    #content {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Print-Regeln wurden ins HTML verschoben, damit Paged.js sie nicht kaputt macht! */
+
+    .pagedjs_page {
+        background: rgb(255, 255, 255);
+        box-shadow: 10px 12px 30px 0 rgba(0, 0, 0, 0.1);
+        margin: 1rem;
+    }
+
+    h3,
+    p,
+    h2,
+    h1,
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
 }
