@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=web" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=web" />
     <link rel="stylesheet" href="/styles/variables.css">
     <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
     <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
@@ -20,28 +21,31 @@
     <div id="mainContainer">
 
         <header>
-    <h1>Das CrossDocu Projekt</h1>
+    <h1>Doku: Der Baum hat Zeit</h1>
 </header>
 
         <aside id="sidebar">
+
             <nav id=navbar>
     <ul><li><a href="/">Index</a></li>
+<li><a href="/Ressourcen/">Ressourcen</a></li>
+<li><a href="/ToDos/">To Do's</a></li>
 <li><a href="/How to use/">How to use</a></li>
-<li><a href="/geschichte/">Geschichte</a></li></ul>
+<li><a href="/geschichte/">Geschichte</a></li>
+<li><a href="/Kurzvorstellung/">Kurzvorstellung</a></li></ul>
 </nav>
         </aside>
 
         <template id="templateSource">
-            <p>Ich schreibe hier
-dsabh</p>
-<p>asdasd
-bsdfazzigfuak
-[[README]]</p>
+
+            <h2>Das ist der Titel</h2>
+<hr>
+<p>[[README]]</p>
 <hr>
 <p>This is just the landing page for The CrossDocu Project. Which content will be shown here in future?</p>
 <p>Wir sind hier. Hallo</p>
 <p><a href="https://actuallysomecat.github.io/blog/2025-05-29%20-%20wikilinks%20+%20image%20embeds%20in%2011ty/">Link zu einem GitHub Repo was ich doch nicht brauche</a></p>
-<p><img src="images/CrossDocu_Grafik.png" alt="Das ist der Alt-Text"></p>
+<p><img src="/images/CrossDocu_Grafik.png" alt="Das ist der Alt-Text"></p>
 <p><strong>🌟 <em>Die geheimnisvolle Reise des fliegenden Gurkens</em> 🌟</strong></p>
 <p>Es war ein <strong>dunstiger Dienstagmorgen</strong>, als die <strong>Gurke <em>Karl-Heinz</em></strong> plötzlich realisierte: <em>„Ich will FLIEGEN!“</em> – nicht etwa, weil sie Flügel hatte (die hatte sie nicht), sondern weil sie im Kühlschrank einen <strong>verstaubten Prospekt</strong> für <em>„Luftakrobatik für Gemüse“</em> gefunden hatte.</p>
 <blockquote>
@@ -62,16 +66,14 @@ bsdfazzigfuak
         </template>
 
         <template id="templateContent">
-            <p>Ich schreibe hier
-dsabh</p>
-<p>asdasd
-bsdfazzigfuak
-[[README]]</p>
+            <h2>Das ist der Titel</h2>
+<hr>
+<p>[[README]]</p>
 <hr>
 <p>This is just the landing page for The CrossDocu Project. Which content will be shown here in future?</p>
 <p>Wir sind hier. Hallo</p>
 <p><a href="https://actuallysomecat.github.io/blog/2025-05-29%20-%20wikilinks%20+%20image%20embeds%20in%2011ty/">Link zu einem GitHub Repo was ich doch nicht brauche</a></p>
-<p><img src="images/CrossDocu_Grafik.png" alt="Das ist der Alt-Text"></p>
+<p><img src="/images/CrossDocu_Grafik.png" alt="Das ist der Alt-Text"></p>
 <p><strong>🌟 <em>Die geheimnisvolle Reise des fliegenden Gurkens</em> 🌟</strong></p>
 <p>Es war ein <strong>dunstiger Dienstagmorgen</strong>, als die <strong>Gurke <em>Karl-Heinz</em></strong> plötzlich realisierte: <em>„Ich will FLIEGEN!“</em> – nicht etwa, weil sie Flügel hatte (die hatte sie nicht), sondern weil sie im Kühlschrank einen <strong>verstaubten Prospekt</strong> für <em>„Luftakrobatik für Gemüse“</em> gefunden hatte.</p>
 <blockquote>
@@ -96,13 +98,13 @@ bsdfazzigfuak
 
         <aside id="config">
             <h3>Config</h3>
-            <button onclick="switchView('web')"><span class="material-symbols-outlined">web</span> Webansicht</button>
+            <button onclick="switchView('web')">Webansicht </button>
 <button onclick="switchView('print')">Printansicht</button>
-<button onclick="switchView()">Default </button>
+<button onclick="switchView('slide')">Präsentation</button>
         </aside>
 
         <footer>
-            <p>Hier könnte Ihre Werbung stehen!</p>
+            <p>Max S. Rodenkirchen - CrossDocu v.1</p>
         </footer>
     </div>
 

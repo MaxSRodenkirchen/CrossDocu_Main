@@ -5,23 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script>
-
-        function switchView(mode = 'default') {
-
-            const url = new URL(window.location.href);
-
-            if (mode === 'print') {
-                url.searchParams.set('view', 'print');
-            } else {
-                url.searchParams.delete('view');
-            }
-
-            window.location.href = url.toString();
-        }
-
-    </script>
-
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=web" />
     <link rel="stylesheet" href="/styles/variables.css">
     <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
     <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
@@ -38,20 +23,29 @@
     <div id="mainContainer">
 
         <header>
-    <h1>Header</h1>
+    <h1>Doku: Der Baum hat Zeit</h1>
 </header>
 
         <aside id="sidebar">
+
             <nav id=navbar>
     <ul><li><a href="/">Index</a></li>
+<li><a href="/Ressourcen/">Ressourcen</a></li>
+<li><a href="/ToDos/">To Do's</a></li>
 <li><a href="/How to use/">How to use</a></li>
 <li><a href="/geschichte/">Geschichte</a></li>
-<li><a href="/Ressourcen/">Ressourcen</a></li>
-<li><a href="/ToDos/">To Do's</a></li></ul>
+<li><a href="/Kurzvorstellung/">Kurzvorstellung</a></li></ul>
 </nav>
         </aside>
 
-        
+        <template id="templateSource">
+
+            <ul>
+<li>https://learneleventy.dev/</li>
+</ul>
+
+        </template>
+
         <template id="templateContent">
             <ul>
 <li>https://learneleventy.dev/</li>
@@ -64,46 +58,20 @@
 
         <aside id="config">
             <h3>Config</h3>
-            <button onclick="switchView('web')">🌐 Webansicht</button>
-<button onclick="switchView('print')">🌐 Printansicht</button>
-<button onclick="switchView()">Default </button>
-
+            <button onclick="switchView('web')">Webansicht </button>
+<button onclick="switchView('print')">Printansicht</button>
+<button onclick="switchView('slide')">Präsentation</button>
         </aside>
 
         <footer>
-            <p>Footer</p>
+            <p>Max S. Rodenkirchen - CrossDocu v.1</p>
         </footer>
     </div>
 
 
-    <script>
-
-        const params = new URLSearchParams(window.location.search);
-        const viewMode = params.get('view');
-
-
-        if (viewMode === 'print') {
-
-            import("/js/paged.esm.js").then((module) => {
-                const Previewer = module.Previewer;
-                const previewer = new Previewer();
-                previewer
-                    .preview(
-                        document.querySelector("#templateContent").content,
-                        ["/styles/preview.css"],
-                        document.querySelector("#content")
-                    )
-                    .then(flow => {
-                        console.log("preview rendered, total pages", flow.total, { flow });
-                    });
-            });
-
-        } else {
-            const templateContent = document.querySelector('#templateContent').innerHTML;
-            const content = document.querySelector('#content');
-            content.innerHTML = templateContent;
-        }
-
+    <script type="module">
+        import { setView } from "/js/switchView.js";
+        setView();
     </script>
 
 

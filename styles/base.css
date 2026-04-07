@@ -1,12 +1,24 @@
 @media screen {
 
+    @font-face {
+        font-family: Medium;
+        src: url(/fonts/Favorit-Regular.otf);
+    }
+
+    @font-face {
+        font-family: Bold;
+        src: url(/fonts/Graebenbach-Bold.ttf);
+    }
 
     body {
         font-family: sans-serif;
-        background: var(--color-5);
+        font-style: bold;
+
+        background: var(--color-1);
         margin: 0;
         padding: 0;
         color: var(--color-6);
+
     }
 
     * {
@@ -40,6 +52,8 @@
         padding: 0;
         grid-column: 1/4;
         grid-row: 1;
+        font-family: sans-serif;
+        font-weight: 900;
     }
 
     #sidebar {
@@ -73,11 +87,10 @@
     }
 
     #content img {
-        margin: 2rem 0rem 2rem 0rem;
+        margin: 1rem 0rem 1rem 0rem;
         max-width: 100%;
-
-        max-height: 400px;
-        aspect-ratio: 1/1;
+        max-height: 60vh;
+        object-fit: contain;
     }
 
     #config {
@@ -99,6 +112,14 @@
         gap: 0;
         grid-column: 1 / 4;
         grid-row: 3;
+
+        font-size: .6rem;
+        /* z-index: -1000; */
+
+    }
+
+    footer>p {
+        margin: 0;
     }
 
     #sidebar,
@@ -122,6 +143,7 @@
     h1,
     ul {
         margin: 0;
+        margin-bottom: 1rem;
         padding: 0;
     }
 

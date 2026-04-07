@@ -13,6 +13,8 @@ export default function (eleventyConfig) {
     });
 
     eleventyConfig.addPassthroughCopy('content/images');
+    eleventyConfig.addPassthroughCopy('fonts');
+
     eleventyConfig.addPassthroughCopy('styles');
 
     // Input Directory

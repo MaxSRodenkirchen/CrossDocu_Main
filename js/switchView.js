@@ -6,6 +6,10 @@ export function switchView(mode = 'default') {
 
     if (mode === 'print') {
         url.searchParams.set('view', 'print');
+    } else if (mode === 'slide') {
+        url.searchParams.set('view', 'slide');
+
+
     } else {
         url.searchParams.delete('view');
     }
@@ -30,7 +34,19 @@ export function setView() {
         previewer
             .preview(
                 document.querySelector("#templateContent").content,
-                ["/styles/preview.css"],
+                ["/styles/printPreview.css"],
+                document.querySelector("#content")
+            )
+            .then(flow => {
+                console.log("preview rendered, total pages", flow.total, { flow });
+            });
+
+    } else if (viewMode === 'slide') {
+        const previewer = new Previewer();
+        previewer
+            .preview(
+                document.querySelector("#templateContent").content,
+                ["/styles/slidePreview.css"],
                 document.querySelector("#content")
             )
             .then(flow => {
