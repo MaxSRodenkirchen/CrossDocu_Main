@@ -9,17 +9,25 @@ eleventyNavigation:
 # Kurzvorstellung 
 *08. April*
 <br><br><br><br>
--  **Digitalen Lehranwendungen** 
--  **Creative Coding / Computing / Interaktive Medien** 
--  **Wissenschaftskommunikation** 
+
+Hallo ich bin Max :)
+
+<br><br>
+
+
+
+- **Creative Coding / Computing / Interaktive Medien** 
+- **Prozessgestaltung**
+-  **Digitale Lehr- & Lernanwendungen** 
+- **Wissenschaftskommunikation** 
+- 
 <br><br>
 - **Brett- und Computerspiele**
 - **Ultimate Frisbee**
+- **Bouldern / Klettern**
 
 
-Ich bin aktuell in der zweiten Halbzeit meines Masters und suche noch nach der richtigen Masterthesis. Vermutlich wird es sich aber in den oben genannten Interessensfeldern bewegen. Mein berufliches Ziel ist es, an Projekten zu arbeiten die eine Relevanz und Sinnhaftigkeit haben. Außerdem finde ich Spaß und Freude beim Arbeiten und Studieren sehr wichtig. :D 
-
-<br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 ### Laufendes Projekt:
 
@@ -27,7 +35,9 @@ Ich bin aktuell in der zweiten Halbzeit meines Masters und suche noch nach der r
 
 <br><br><br><br>
 
-### Bachelorarbeit:
+### Bachelorarbeit: 
+#### Echoes of the Depth
+Interaktiver VR-Kurzfilm zur Lärmverschmutzung durch Tiefseebergbau
 
 ![Echoes of the Depth](/images/EOTD.jpg)
 ![Echoes of the Depth](/images/EOTD_Person.jpg)
@@ -50,7 +60,7 @@ Ich bin aktuell in der zweiten Halbzeit meines Masters und suche noch nach der r
 
 ### Dieses Semester:
 
-**Was möchte ich gerne mehr machen** 
+**Was möchte ich gerne mehr ** 
 
 - Tiefergehende Recherche und Auseinandersetzung 
 - Mitgestalten von Designwissen (Reflektierende Arbeit)
