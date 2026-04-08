@@ -60,7 +60,7 @@ Interaktiver VR-Kurzfilm zur Lärmverschmutzung durch Tiefseebergbau
 
 ### Dieses Semester:
 
-**Was möchte ich gerne mehr ** 
+**Davon mehr** 
 
 - Tiefergehende Recherche und Auseinandersetzung 
 - Mitgestalten von Designwissen (Reflektierende Arbeit)
@@ -69,5 +69,18 @@ Interaktiver VR-Kurzfilm zur Lärmverschmutzung durch Tiefseebergbau
 - Explorative Kollaborationen
 - Kleiner gefasste Projekte 
 
+<br><br>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+**Ideen**
+
+- "IVCO - Modulares Patternsystem" neu- bzw. weiterdenken
+- Analoges ins Digitale bringen
+- Gemeinschaftliches / Interdisziplinäres Lernen 
+- Talent-Trees 
+- Simulationen
+- Modulare Systeme / Synthesizer
+
+Spaß ! 
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>

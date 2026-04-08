@@ -4,7 +4,7 @@ title: Homepage / Index
 id: 31241234
 
 eleventyNavigation:
-  key: Index
+  key: Testtext
 ---
 
 ## Das ist der Titel
