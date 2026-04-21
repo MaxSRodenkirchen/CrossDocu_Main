@@ -168,4 +168,10 @@
         padding: 0;
     }
 
+    hr {
+        border: none;
+        border-top: 2px solid var(--color-6);
+        margin: 2rem 0;
+    }
+
 }

@@ -1,10 +1,25 @@
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import wikilinksPlus from "markdown-it-wikilinks-plus";
 
 
 export default function (eleventyConfig) {
 
 
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+    // Wikilinks Plugin aktivieren ([[seite]] und ![[bild.png]])
+    eleventyConfig.amendLibrary("md", (mdLib) => {
+        mdLib.use(wikilinksPlus, {
+            pageLink: {
+                relativeBaseURL: './',
+            },
+            imageEmbed: {
+                defaultAltText: true,
+                absoluteBaseURL: '/images/',
+                forceAllImageUrlsAbsolute: true
+            },
+        });
+    });
 
     // Paged.js und CSS in den Output kopieren
     eleventyConfig.addPassthroughCopy({
