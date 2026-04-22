@@ -22,6 +22,8 @@ eleventyNavigation:
 
 This is just the landing page for The CrossDocu Project. Which content will be shown here in future? 
 
+<iframe src="https://editor.p5js.org/MaxRodenkirchen/full/kB4i3pS0X" width="100%" height="500" style="border: none;"></iframe>
+
 Wir sind hier. Halloa
 
 [Link zu einem GitHub Repo was ich doch nicht brauche](https://actuallysomecat.github.io/blog/2025-05-29%20-%20wikilinks%20+%20image%20embeds%20in%2011ty/)
