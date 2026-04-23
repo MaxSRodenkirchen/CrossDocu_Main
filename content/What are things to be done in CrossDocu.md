@@ -1,7 +1,11 @@
 ---
-layout: "layouts/paged.njk"
-title: To Do's
-
+tags:
+  - untagged
+state:
+type:
+  - Process
+publish:
+  - public
 eleventyNavigation:
   key: To Do's
 ---

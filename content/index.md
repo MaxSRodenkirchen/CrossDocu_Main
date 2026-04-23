@@ -1,4 +1,12 @@
 ---
+tags:
+  - CrossDocu
+state:
+  - "4"
+type:
+  - Synthese
+publish:
+  - public
 eleventyNavigation:
   key: index
 ---

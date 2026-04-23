@@ -1,7 +1,12 @@
 ---
-title: Markdown Showcase
-eleventyNavigation:
-  key: Markdown Showcase
+tags:
+  - Markdown
+state:
+  - "10"
+type:
+  - Tutorial
+publish:
+  - public
 ---
 
 # Markdown Showcase & Tutorial (AI generiert)

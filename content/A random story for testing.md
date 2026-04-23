@@ -1,6 +1,11 @@
 ---
-title: A random story for testing
-
+tags:
+  - CrossDocu
+state:
+  - "10"
+type:
+publish:
+  - public
 eleventyNavigation:
   key: A random story for testing
 ---

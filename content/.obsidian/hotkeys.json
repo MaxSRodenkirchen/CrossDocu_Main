@@ -1,0 +1,11 @@
+{
+  "templater-obsidian:create-Frontmatter Template.md": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "E"
+    }
+  ]
+}

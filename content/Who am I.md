@@ -1,6 +1,12 @@
 ---
-layout: "layouts/web.njk"
-
+tags:
+  - FH-Aachen
+state:
+  - "10"
+type:
+  - Synthese
+publish:
+  - public
 eleventyNavigation:
   key: Kurzvorstellung
 ---

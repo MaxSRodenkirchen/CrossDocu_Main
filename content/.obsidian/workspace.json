@@ -4,35 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "aa2a7068ba5c7fad",
+        "id": "338227d15cdadced",
         "type": "tabs",
         "children": [
           {
-            "id": "ba021705ed865022",
+            "id": "e38aa316d14de453",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kurzvorstellung.md",
+                "file": "Capture and loop movement in p5.js.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Kurzvorstellung"
+              "title": "Capture and loop movement in p5.js"
             }
           },
           {
-            "id": "60a14adfbe0d6a09",
+            "id": "ef3460af1c8ab571",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "A random story for testing.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "A random story for testing"
             }
           }
         ],
@@ -68,15 +68,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#untagged",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Suchen"
+              "title": "Search"
             }
           },
           {
@@ -86,11 +86,11 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Lesezeichen"
+              "title": "Bookmarks"
             }
           },
           {
-            "id": "c6cb9b8e106fef20",
+            "id": "49ba6e6eaf8602d1",
             "type": "leaf",
             "state": {
               "type": "notebook-navigator",
@@ -104,7 +104,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 817
+    "width": 725
   },
   "right": {
     "id": "6e08fdf0e350c873",
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "A random story for testing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +130,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rückverweise auf index"
+              "title": "Backlinks for A random story for testing"
             }
           },
           {
@@ -148,6 +148,35 @@
             }
           },
           {
+            "id": "6b8675b998b1b624",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "ef397b872a6f63a3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "A random story for testing.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of A random story for testing"
+            }
+          },
+          {
             "id": "d8726cbb98791948",
             "type": "leaf",
             "state": {
@@ -161,37 +190,9 @@
               "icon": "lucide-tags",
               "title": "Tags"
             }
-          },
-          {
-            "id": "6b8675b998b1b624",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-archive",
-              "title": "Alle Eigenschaften"
-            }
-          },
-          {
-            "id": "ef397b872a6f63a3",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "index.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Gliederung von index"
-            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -211,27 +212,42 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "60a14adfbe0d6a09",
+  "active": "ef3460af1c8ab571",
   "lastOpenFiles": [
-    "Who am I.md",
+    "What is the idea behind CrossDocu.md",
+    "How to document a design experiment.md",
+    "Frontmatter Template.md",
+    "What is needed for building a problem-oriented System.md",
     "index.md",
-    "content.11tydata.js",
+    "What are ways to visualize bodymovement digitally.md",
+    "Who am I.md",
+    "Creating a Webpage for collecting and visualizing peoples definitions on Creative Coding.md",
+    "How can we explain and teach Creative Coding.md",
+    "Capture and loop movement in p5.js.md",
     "A random story for testing.md",
     "CrossDocu.md",
-    "What are things to be done with CrossDocu.md",
-    "What is possible in CrossDocu with Markdown Syntax.md",
-    "Ressourcen.md",
-    "How to use.md",
-    "Untitled.md",
-    "daehbdhkjew.md",
-    "README.md",
+    "What is CrossDocu.md",
+    "What is possible in CrossDocu with Markdown syntax.md",
+    "Can PoseNet in ML5.js also be used for capturing data.md",
+    "What are ways to visualize body movement digitally.md",
+    "What are challenges in explaining Creative Coding to Design students.md",
+    "What are definitions for Creative Coding.md",
+    "What are techniques to make digital more organic.md",
+    "What are things to be done in CrossDocu.md",
+    "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
+    "How is AI affecting our way of working.md",
+    "The concept of atomics.md",
+    "The How Might We concept.md",
+    "The concept of Feynmans 12 favorite problems.md",
+    "_explore Creative Coding.base",
+    "What are challenges building a whole web-application with AI.md",
+    "content.11tydata.js",
     "images/Profilbild.jpeg",
     "images/EOTD_Person.jpg",
     "images/MyScore.png",
     "images/EOTD.jpg",
     "images/SDM.png",
     "images/CrossDocu_dieIdee.png",
-    "images/CrossDocu.md",
     "images/CrossDocu_Grafik.png",
     "content.json",
     "content.11ty.js",
@@ -242,14 +258,6 @@
     "_site/_includes/images",
     "_site/styles/variables.css",
     "_site/styles/testStyle.css",
-    "_site/styles/style.css",
-    "_site/images/CrossDocu_Grafik.png",
-    "Unbenannt.md",
-    "trash/ToDos.md",
-    "trash/Ressourcen.md",
-    "trash/README.md",
-    "trash/How to use.md",
-    "trash/geschichte.md",
-    "trash/CrossDocu.md"
+    "_site/images/CrossDocu_Grafik.png"
   ]
 }

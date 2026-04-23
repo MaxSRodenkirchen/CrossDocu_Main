@@ -4,7 +4,20 @@
       "id": "default",
       "name": "Default",
       "fileVisibility": "supported",
-      "propertyKeys": [],
+      "propertyKeys": [
+        {
+          "key": "state",
+          "showInNavigation": true,
+          "showInList": true,
+          "showInFileMenu": false
+        },
+        {
+          "key": "type",
+          "showInNavigation": true,
+          "showInList": true,
+          "showInFileMenu": false
+        }
+      ],
       "hiddenFolders": [],
       "hiddenTags": [],
       "hiddenFileNames": [],
@@ -464,7 +477,12 @@
   "propertyBackgroundColors": {},
   "propertySortOverrides": {},
   "propertyTreeSortOverrides": {},
-  "propertyAppearances": {},
+  "propertyAppearances": {
+    "key:state=1": {
+      "titleRows": 2,
+      "mode": "compact"
+    }
+  },
   "virtualFolderColors": {},
   "virtualFolderBackgroundColors": {},
   "navigationSeparators": {},
