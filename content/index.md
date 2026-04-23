@@ -1,22 +1,18 @@
 ---
-# layout: "layouts/web.njk"
-title: Homepage / Index
-id: 31241234
-
 eleventyNavigation:
-  key: Testtext
+  key: index
 ---
 
 ## Das ist der Titel
 
 ---
-[[Kurzvorstellung]]
+[[Who am I]]
 
-[[geschichte]]
+[[A random story for testing]]
 
 ![[Profilbild.jpeg]]
 
-[Die Geschichte](geschichte)
+[Die Geschichte](A%20random%20story%20for%20testing.md)
 
 ---
 

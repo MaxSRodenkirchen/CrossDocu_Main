@@ -28,7 +28,7 @@
               "type": "markdown",
               "state": {
                 "file": "index.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
@@ -88,12 +88,23 @@
               "icon": "lucide-bookmark",
               "title": "Lesezeichen"
             }
+          },
+          {
+            "id": "c6cb9b8e106fef20",
+            "type": "leaf",
+            "state": {
+              "type": "notebook-navigator",
+              "state": {},
+              "icon": "notebook-navigator",
+              "title": "Notebook Navigator"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 817
   },
   "right": {
     "id": "6e08fdf0e350c873",
@@ -195,19 +206,24 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "templater-obsidian:Templater": false,
+      "notebook-navigator:Notebook Navigator": false
     }
   },
   "active": "60a14adfbe0d6a09",
   "lastOpenFiles": [
-    "markdown-showcase.md",
-    "geschichte.md",
+    "Who am I.md",
     "index.md",
-    "ToDos.md",
+    "content.11tydata.js",
+    "A random story for testing.md",
+    "CrossDocu.md",
+    "What are things to be done with CrossDocu.md",
+    "What is possible in CrossDocu with Markdown Syntax.md",
+    "Ressourcen.md",
+    "How to use.md",
     "Untitled.md",
     "daehbdhkjew.md",
-    "Kurzvorstellung.md",
-    "Ressourcen.md",
     "README.md",
     "images/Profilbild.jpeg",
     "images/EOTD_Person.jpg",
@@ -218,7 +234,6 @@
     "images/CrossDocu.md",
     "images/CrossDocu_Grafik.png",
     "content.json",
-    "content.11tydata.js",
     "content.11ty.js",
     "content.js",
     "layout.js",
