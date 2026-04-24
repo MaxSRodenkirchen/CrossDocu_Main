@@ -19,11 +19,27 @@
 <body>
 
     <div id="mainContainer">
+
+
+        {# {{page.url}} #}
+
+        {{ page.url | log }}
+
         {% include "partials/header.njk" %}
 
         <aside id="sidebar">
+            <ul>
+                {% for post in collections.posts %}
 
-            {% include "partials/navbar.njk" %}
+                <li>
+                    <a href="{{ post.url }}"> {{ post.data.title }} </a>
+                </li>
+
+                {% endfor %}
+
+            </ul>
+
+            {# {% include "partials/navbar.njk" %} #}
         </aside>
 
         <template id="templateSource">

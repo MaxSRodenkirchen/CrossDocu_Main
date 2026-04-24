@@ -12,6 +12,8 @@ export default function (eleventyConfig) {
         mdLib.use(wikilinksPlus, {
             pageLink: {
                 relativeBaseURL: './',
+                absoluteBaseURL: './',
+                forceAllLinksAbsolute: true
             },
             imageEmbed: {
                 defaultAltText: true,
@@ -29,9 +31,20 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy('content/images');
     eleventyConfig.addPassthroughCopy('fonts');
-
     eleventyConfig.addPassthroughCopy('styles');
 
+    eleventyConfig.addCollection('posts', (collection) => {
+        return collection
+            .getFilteredByGlob('./content/*.md')
+    })
+
+
+    eleventyConfig.addFilter("log", (value) => {
+        console.log(value);
+        // return value; // damit der Template-Flow nicht unterbrochen wird
+    });
+
+    // console.log(collection.creativecoding)
     // Input Directory
     // eleventyConfig.setInputDirectory(content);
 };
