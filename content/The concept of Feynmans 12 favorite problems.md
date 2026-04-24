@@ -3,7 +3,7 @@ tags:
   - untagged
 state:
 type:
-  - unknown
+  - Theoretical Foundation
 publish:
   - public
 ---

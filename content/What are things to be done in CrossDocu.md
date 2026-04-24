@@ -3,11 +3,9 @@ tags:
   - untagged
 state:
 type:
-  - Process
+  - 3-Ideate
 publish:
   - public
-eleventyNavigation:
-  key: To Do's
 ---
 
 

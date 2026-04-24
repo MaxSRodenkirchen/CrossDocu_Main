@@ -2,10 +2,9 @@
 tags:
   - CreativeCoding
 state:
-  - "1"
   - "0"
 type:
-  - unknown
+  - 1-Emapthize
 publish:
   - public
 ---

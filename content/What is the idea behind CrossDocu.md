@@ -3,7 +3,8 @@ tags:
   - CrossDocu
 state:
   - "7"
-type: unknown
+type:
+  - 3-Ideate
 publish:
   - public
 ---

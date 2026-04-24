@@ -4,11 +4,10 @@ tags:
 state:
   - "10"
 type:
-  - Synthese
+  - Synthesis
+  - 6 Communication
 publish:
   - public
-eleventyNavigation:
-  key: Kurzvorstellung
 ---
 
 # Kurzvorstellung 

@@ -1,9 +1,10 @@
 ---
 tags:
-  - untagged
+  - CrossDocu
 state:
+  - "0"
 type:
-  - Thoughts
+  - 1-Emapthize
 publish:
   - public
 ---

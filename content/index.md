@@ -4,11 +4,10 @@ tags:
 state:
   - "4"
 type:
-  - Synthese
+  - Synthesis
+  - 6 Communication
 publish:
   - public
-eleventyNavigation:
-  key: index
 ---
 
 ## Das ist der Titel

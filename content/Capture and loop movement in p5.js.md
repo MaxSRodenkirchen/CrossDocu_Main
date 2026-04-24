@@ -3,7 +3,8 @@ tags:
   - CreativeCoding
 state:
   - "4"
-type: Experiment
+type:
+  - 4-Prototype
 publish:
   - public
 ---

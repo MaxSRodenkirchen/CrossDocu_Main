@@ -4,7 +4,6 @@ tags:
 state:
   - "10"
 type:
-  - Tutorial
 publish:
   - public
 ---

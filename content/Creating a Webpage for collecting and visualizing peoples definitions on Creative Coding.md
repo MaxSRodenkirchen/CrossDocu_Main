@@ -4,7 +4,6 @@ tags:
 state:
   - "1"
 type:
-  - Idea
 publish:
   - public
 ---

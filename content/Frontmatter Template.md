@@ -1,10 +1,9 @@
 ---
 tags:
-  - CrossDocu
+  - untagged
 state:
-  - "10"
+  - "0"
 type:
-  - Template
 publish:
   - private
 ---

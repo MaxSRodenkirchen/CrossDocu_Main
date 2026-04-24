@@ -6,8 +6,6 @@ state:
 type:
 publish:
   - public
-eleventyNavigation:
-  key: A random story for testing
 ---
 
 **🌟 *Die geheimnisvolle Reise des fliegenden Gurkens* 🌟**
