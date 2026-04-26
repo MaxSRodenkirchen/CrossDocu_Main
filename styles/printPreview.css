@@ -2,11 +2,29 @@
   @page {
     size: A4;
     bleed: 6mm;
-    marks: crop;
-
+    marks: crop cross;
     @bottom-center {
       content: counter(page);
     }
   }
+  
+  @page:left {
+    margin-left: 25mm;
+    margin-right: 10mm;
+  }
 
+  @page:right {
+    margin-left: 10mm;
+    margin-right: 25mm;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+  }
+
+  @page: blank {
+    @bottom-center {
+      content: none;
+    }
+  } ;
 }

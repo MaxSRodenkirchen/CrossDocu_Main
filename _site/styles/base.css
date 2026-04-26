@@ -62,6 +62,7 @@
         grid-column: 1;
         grid-row: 2;
         padding-top: 1rem;
+        overflow: scroll !important;
 
     }
 
@@ -73,7 +74,8 @@
 
     #sidebar li {
         list-style-type: circle;
-
+        list-style: circle;
+        list-style-position: outside;
         margin-bottom: .5rem;
     }
 
@@ -87,8 +89,7 @@
     }
 
     #content {
-        /* background: var(--color-5); */
-
+        container-type: inline-size;
         display: flex;
         flex-direction: column;
         gap: .1rem;
@@ -150,12 +151,16 @@
         margin-bottom: 1rem;
     }
 
-    /* Print-Regeln wurden ins HTML verschoben, damit Paged.js sie nicht kaputt macht! */
 
-    .pagedjs_page {
-        background: rgb(255, 255, 255);
-        box-shadow: 10px 12px 30px 0 rgba(0, 0, 0, 0.1);
-        margin: 1rem;
+
+     .pagedjs_pages {
+
+        transform-origin: top left;
+        transform: scale(20%);
+        /* transform: scale(0.3); */
+        /* width: 1920px !important; */
+        width: fit-content;
+
     }
 
     h3,
@@ -175,3 +180,4 @@
     }
 
 }
+

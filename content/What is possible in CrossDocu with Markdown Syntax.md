@@ -12,9 +12,9 @@ publish:
 
 Diese Seite zeigt alle verfügbaren Markdown-Features. Zuerst der Code, dann das Ergebnis.
 
----
 
-## Überschriften
+
+### Überschriften
 
 ```
 # Überschrift 1
@@ -25,14 +25,8 @@ Diese Seite zeigt alle verfügbaren Markdown-Features. Zuerst der Code, dann das
 ###### Überschrift 6
 ```
 
-### Überschrift 3
-#### Überschrift 4
-##### Überschrift 5
-###### Überschrift 6
 
----
-
-## Text-Formatierung
+### Text-Formatierung
 
 ```
 **fetter Text**
@@ -48,9 +42,8 @@ Diese Seite zeigt alle verfügbaren Markdown-Features. Zuerst der Code, dann das
 ~~durchgestrichen~~
 `inline code`
 
----
 
-## Links
+### Links
 
 ```
 [Google](https://google.com)
@@ -60,9 +53,8 @@ Diese Seite zeigt alle verfügbaren Markdown-Features. Zuerst der Code, dann das
 [Google](https://google.com)
 [Mit Hover-Titel](https://google.com "Das sieht man beim Hovern")
 
----
 
-## Wikilinks (Plugin)
+### Wikilinks (Plugin)
 
 ```
 [[geschichte]]
@@ -74,11 +66,11 @@ Diese Seite zeigt alle verfügbaren Markdown-Features. Zuerst der Code, dann das
 [[A random story for testing|Zur Geschichte]]
 [[A random story for testing|**Fetter** Link-Text]]
 
----
 
-## Bilder
 
-### Standard Markdown
+### Bilder
+
+#### Standard Markdown
 
 ```
 ![Alt-Text](/images/CrossDocu_Grafik.png)
@@ -86,7 +78,7 @@ Diese Seite zeigt alle verfügbaren Markdown-Features. Zuerst der Code, dann das
 
 ![Alt-Text](/images/CrossDocu_Grafik.png)
 
-### Wikilink Bild-Embeds
+#### Wikilink Bild-Embeds
 
 ```
 ![[CrossDocu_Grafik.png]]
@@ -97,9 +89,8 @@ Diese Seite zeigt alle verfügbaren Markdown-Features. Zuerst der Code, dann das
 
 ![[CrossDocu_Grafik.png|Logo mit Größe|200x100]]
 
----
 
-## Ungeordnete Listen
+### Ungeordnete Listen
 
 ```
 - Erster Punkt

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "The concept of Feynmans 12 favorite problems.md",
+                "file": "What is the plan for this semester - The self-briefing.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "The concept of Feynmans 12 favorite problems"
+              "title": "What is the plan for this semester - The self-briefing"
             }
           }
         ]
@@ -89,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 782
+    "width": 910.001522064209
   },
   "right": {
     "id": "6e08fdf0e350c873",
@@ -199,8 +199,11 @@
   },
   "active": "598a66d173875733",
   "lastOpenFiles": [
-    "What would be a good structure for Exploring Creative Technologies.md",
+    "What is possible in CrossDocu with Markdown Syntax.md",
+    "plan.md",
+    "What is the plan for this semester - The self-briefing.md",
     "The concept of Feynmans 12 favorite problems.md",
+    "What would be a good structure for Exploring Creative Technologies.md",
     "Frontmatter Template.md",
     "How to document a design experiment.md",
     "Who am I.md",
@@ -223,9 +226,6 @@
     "Can PoseNet in ML5.js also be used for capturing data.md",
     "What are ways to visualize body movement digitally.md",
     "What are challenges in explaining Creative Coding to Design students.md",
-    "What are techniques to make digital more organic.md",
-    "The concept of atomics.md",
-    "The How Might We concept.md",
     "_explore Creative Coding.base",
     "images/Profilbild.jpeg",
     "images/EOTD_Person.jpg",
