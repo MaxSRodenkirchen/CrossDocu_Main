@@ -96,7 +96,7 @@
 
         margin-left: 2rem;
         margin-right: 2rem;
-        padding-top: 1rem;
+        /* padding-top: 1rem; */
 
 
         grid-column: 2;
@@ -153,13 +153,14 @@
 
 
 
-     .pagedjs_pages {
+     .pagedjs_page {
 
-        transform-origin: top left;
-        transform: scale(20%);
+        margin-bottom: 2rem;
+        /* transform-origin: top left; */
+        /* transform: scale(20%); */
         /* transform: scale(0.3); */
         /* width: 1920px !important; */
-        width: fit-content;
+        /* width: fit-content; */
 
     }
 

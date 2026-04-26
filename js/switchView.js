@@ -1,4 +1,7 @@
 import { Previewer } from "/js/paged.esm.js"
+import { fitPage } from "/js/fitPage.js";
+import { switchPages } from "/js/slidesUI.js";
+
 
 export function switchView(mode = 'default') {
 
@@ -24,6 +27,7 @@ window.switchView = switchView;
 
 export function setView() {
 
+
     const params = new URLSearchParams(window.location.search);
     const viewMode = params.get('view');
 
@@ -39,6 +43,10 @@ export function setView() {
             )
             .then(flow => {
                 console.log("preview rendered, total pages", flow.total, { flow });
+                fitPage();
+                window.addEventListener('resize', fitPage);
+                document.querySelector("#content").contentEditable = "true";
+
             });
 
     } else if (viewMode === 'slide') {
@@ -50,7 +58,16 @@ export function setView() {
                 document.querySelector("#content")
             )
             .then(flow => {
+
                 console.log("preview rendered, total pages", flow.total, { flow });
+                fitPage();
+                window.addEventListener('resize', fitPage);
+                document.querySelector("#content").contentEditable = "true";
+
+
+                switchPages(flow.total);
+
+                
             });
 
     } else {
