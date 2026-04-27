@@ -4,6 +4,12 @@ import { switchPages } from "/js/slidesUI.js";
 
 
 export function switchView(mode = 'default') {
+
+    localStorage.setItem('currentView', mode);
+
+    let currentView = mode;
+    window.currentView = currentView;
+
     const url = new URL(window.location.href);
 
     if (mode === 'print') {
@@ -15,6 +21,7 @@ export function switchView(mode = 'default') {
     }
 // history.pushState({}, "", url)
     window.location.href = url.toString();
+
 }
 
 
@@ -22,10 +29,17 @@ window.switchView = switchView;
 
 export function setView() {
     const params = new URLSearchParams(window.location.search);
-    const viewMode = params.get('view');
-    const content = document.querySelector("#content");
+    let viewMode = params.get('view');
 
-    // content.contentEditable = "true";
+    // Wenn die URL einen Parameter hat, speichern wir ihn.
+    // Wenn nicht, holen wir uns den zuletzt gespeicherten Modus aus dem localStorage.
+    if (viewMode) {
+        localStorage.setItem('currentView', viewMode);
+    } else {
+        viewMode = localStorage.getItem('currentView') || 'default';
+    }
+
+    const content = document.querySelector("#content");
 
     if (viewMode === 'print') {
         const previewer = new Previewer();

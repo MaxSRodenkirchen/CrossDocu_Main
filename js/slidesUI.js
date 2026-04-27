@@ -2,7 +2,6 @@ export function switchPages(totalPages, currentPage = 1) {
     let container = document.getElementById("content");
 
     function scrollToPage(event) {
-        console.log(currentPage);
         if (currentPage < totalPages && event.deltaY > 0) {
             currentPage++;
         } else if (currentPage > 1 && event.deltaY < 0) {

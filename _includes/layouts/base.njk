@@ -31,8 +31,9 @@
             <ul>
                 {% for post in collections.posts %}
 
-                <li>
+                <li >
                     <a href="{{ post.url }}"> {{ post.data.title }} </a>
+
                 </li>
 
                 {% endfor %}
@@ -69,7 +70,6 @@
         
         import { setView } from "/js/switchView.js";
         setView();
-
 
 
     </script>
