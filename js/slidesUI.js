@@ -1,21 +1,19 @@
-let currentPage = 1;
+export function switchPages(totalPages, currentPage = 1) {
+    let container = document.getElementById("content");
 
-export function switchPages(totalPages){
-
-addEventListener("mousedown", (event) => { 
-
-
-        if(currentPage < totalPages && event.buttons == 1){
+    function scrollToPage(event) {
+        console.log(currentPage);
+        if (currentPage < totalPages && event.deltaY > 0) {
             currentPage++;
-            
-        } else if(currentPage > 1 && event.buttons == 2){
+        } else if (currentPage > 1 && event.deltaY < 0) {
             currentPage--;
-
         }
-        
-        document.querySelector(`#page-${currentPage}`).scrollIntoView();
-    
-})
 
+        const targetPage = document.querySelector(`#page-${currentPage}`);
+        if (targetPage) {
+            targetPage.scrollIntoView();
+        }
+    }
 
+    container.addEventListener("wheel", scrollToPage);
 }

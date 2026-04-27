@@ -15,9 +15,9 @@ publish:
 ### "CrossDocu" 
 is still in a very experimental state!
 
-### Exploring Creative Technologies
+### > Exploring Creative Technologies
 
-### Exploring **Creative Technologies**
+### > Exploring **Creative Technologies**
 
 - Interactive Media
 - Creative Coding
@@ -31,7 +31,7 @@ is still in a very experimental state!
 - Media Arts
 - ...
 
-### **Exploring** Creative Technologies
+### > **Exploring** Creative Technologies
 
 - Asking questions
 - Discussing topics

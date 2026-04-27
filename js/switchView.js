@@ -4,34 +4,28 @@ import { switchPages } from "/js/slidesUI.js";
 
 
 export function switchView(mode = 'default') {
-
     const url = new URL(window.location.href);
 
     if (mode === 'print') {
         url.searchParams.set('view', 'print');
     } else if (mode === 'slide') {
         url.searchParams.set('view', 'slide');
-
-
     } else {
         url.searchParams.delete('view');
     }
-
-    history.pushState({}, "", url)
-
-    setView();
+// history.pushState({}, "", url)
+    window.location.href = url.toString();
 }
 
-// Global 
+
 window.switchView = switchView;
 
 export function setView() {
-
-
     const params = new URLSearchParams(window.location.search);
     const viewMode = params.get('view');
+    const content = document.querySelector("#content");
 
-    document.querySelector("#content").innerHTML = ""
+    // content.contentEditable = "true";
 
     if (viewMode === 'print') {
         const previewer = new Previewer();
@@ -39,14 +33,12 @@ export function setView() {
             .preview(
                 document.querySelector("#templateContent").content,
                 ["/styles/printPreview.css"],
-                document.querySelector("#content")
+                content
             )
             .then(flow => {
-                console.log("preview rendered, total pages", flow.total, { flow });
+                console.log("Print preview rendered", flow);
                 fitPage();
                 window.addEventListener('resize', fitPage);
-                document.querySelector("#content").contentEditable = "true";
-
             });
 
     } else if (viewMode === 'slide') {
@@ -55,36 +47,29 @@ export function setView() {
             .preview(
                 document.querySelector("#templateContent").content,
                 ["/styles/slidePreview.css"],
-                document.querySelector("#content")
+                content
             )
             .then(flow => {
-
-                console.log("preview rendered, total pages", flow.total, { flow });
+                console.log("Slide preview rendered", flow);
                 fitPage();
                 window.addEventListener('resize', fitPage);
-                document.querySelector("#content").contentEditable = "true";
-
-
-                switchPages(flow.total);
-
                 
+                switchPages(flow.total);
+                content.style.overflow = "hidden";
             });
 
     } else {
-        const templateContent = document.querySelector('#templateSource').innerHTML;
-        const content = document.querySelector('#content');
-        content.innerHTML = templateContent;
+       
+        const templateSource = document.querySelector('#templateSource').innerHTML;
+        content.innerHTML = templateSource;
+        content.style.overflow = "scroll";
 
-        // Paged.js Cleanup: Entferne die Styles, die Paged.js in den <head> geschrieben hat
-        document.querySelectorAll('style[data-pagedjs-inserted]').forEach(style => style.remove());
-
-        // Manche Paged.js Versionen vergeben auch andere IDs, wir löschen sicherheitshalber alle pagedjs-Styles:
-        document.querySelectorAll('style').forEach(style => {
-            if (style.innerHTML.includes('pagedjs') || style.getAttribute('data-pagedjs-inserted')) {
-                style.remove();
-            }
-        });
+        // add webView.css 
+        let link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/styles/webView.css';
+        document.head.appendChild(link);
     }
-
 };
 
