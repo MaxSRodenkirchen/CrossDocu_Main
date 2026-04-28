@@ -3,28 +3,33 @@
     size: A4;
     bleed: 6mm;
     marks: crop cross;
+    background: var(--color-white);
+
     @bottom-center {
       content: counter(page);
+
     }
   }
-  
-  @page:left {
+
+  @page: left {
     margin-left: 250mm;
     margin-right: 10mm;
   }
 
-  @page:right {
+  @page: right {
     margin-left: 10mm;
     margin-right: 25mm;
   }
 
-  a::after {
+  /* a::after {
     content: " (" attr(href) ")";
-  }
+  } */
 
   @page: blank {
     @bottom-center {
       content: none;
     }
-  } ;
+  }
+
+  ;
 }

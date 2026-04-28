@@ -1,5 +1,6 @@
-#content{
+#content {
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.05);
+    background: var(--color-white);
+    border-radius: .5rem;
 
 }

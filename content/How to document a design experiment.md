@@ -4,7 +4,7 @@ tags:
 state:
   - "5"
 type:
-  - 2 Define
+  - Template
 publish:
   - public
 ---
@@ -14,7 +14,7 @@ publish:
 - **Kontext**: Warum ist das Experiment relevant? (z. B. im Rahmen eines UX-Projekts zu Plastikverschmutzung oder Klimawandel)
 
 
-#### **Wie lange hat das Experimentgedauert?** 
+#### **Wie lange hat das Experiment gedauert?** 
 
 ### Methodik
 

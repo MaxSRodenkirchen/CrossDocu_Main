@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "What is the plan for this semester - The self-briefing.md",
+                "file": "How can we explain and teach Creative Coding.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "What is the plan for this semester - The self-briefing"
+              "title": "How can we explain and teach Creative Coding"
+            }
+          },
+          {
+            "id": "cdbdedc8b4753cef",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "What would be a good structure for Exploring Creative Technologies.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "What would be a good structure for Exploring Creative Technologies"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -89,7 +104,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 910.001522064209
+    "width": 817.0069465637207
   },
   "right": {
     "id": "6e08fdf0e350c873",
@@ -194,16 +209,20 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "templater-obsidian:Templater": false,
-      "notebook-navigator:Notebook Navigator": false
+      "notebook-navigator:Notebook Navigator": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "49ba6e6eaf8602d1",
+  "active": "cdbdedc8b4753cef",
   "lastOpenFiles": [
-    "What is possible in CrossDocu with Markdown Syntax.md",
-    "plan.md",
     "What is the plan for this semester - The self-briefing.md",
-    "The concept of Feynmans 12 favorite problems.md",
+    "What is possible in CrossDocu with Markdown Syntax.md",
+    "What are challenges building a whole web-application with AI.md",
+    "How can we explain and teach Creative Coding.md",
+    "Capture and loop movement in p5.js.md",
+    "What are ways to visualize body movement digitally.md",
     "What would be a good structure for Exploring Creative Technologies.md",
+    "The concept of Feynmans 12 favorite problems.md",
     "Frontmatter Template.md",
     "How to document a design experiment.md",
     "Who am I.md",
@@ -211,9 +230,7 @@
     "What are definitions for Creative Coding.md",
     "What is needed for building a problem-oriented System.md",
     "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
-    "How can we explain and teach Creative Coding.md",
     "What are things to be done in CrossDocu.md",
-    "Capture and loop movement in p5.js.md",
     "What is the idea behind CrossDocu.md",
     "What is possible in CrossDocu with Markdown syntax.md",
     "How is AI affecting our way of working.md",
@@ -224,7 +241,6 @@
     "CrossDocu.md",
     "What is CrossDocu.md",
     "Can PoseNet in ML5.js also be used for capturing data.md",
-    "What are ways to visualize body movement digitally.md",
     "What are challenges in explaining Creative Coding to Design students.md",
     "_explore Creative Coding.base",
     "images/Profilbild.jpeg",
