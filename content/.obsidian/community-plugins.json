@@ -1,5 +1,7 @@
 [
   "templater-obsidian",
   "metadata-menu",
-  "notebook-navigator"
+  "notebook-navigator",
+  "obsidian-style-settings",
+  "obsidian-emoji-toolbar"
 ]

@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "How can we explain and teach Creative Coding.md",
+                "file": "What is the plan for this semester - The self-briefing.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "How can we explain and teach Creative Coding"
-            }
-          },
-          {
-            "id": "cdbdedc8b4753cef",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "What would be a good structure for Exploring Creative Technologies.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "What would be a good structure for Exploring Creative Technologies"
+              "title": "What is the plan for this semester - The self-briefing"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 817.0069465637207
+    "width": 809
   },
   "right": {
     "id": "6e08fdf0e350c873",
@@ -209,23 +194,25 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "templater-obsidian:Templater": false,
-      "notebook-navigator:Notebook Navigator": false,
-      "omnisearch:Omnisearch": false
+      "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "cdbdedc8b4753cef",
+  "active": "598a66d173875733",
   "lastOpenFiles": [
+    "images/obsidian-view.png",
+    "images/CCG.png",
     "What is the plan for this semester - The self-briefing.md",
+    "How to document a design experiment.md",
+    "How can we explain and teach Creative Coding.md",
+    "What are ways to visualize body movement digitally.md",
+    "images/The definition of creative coding.pdf",
+    "Who am I.md",
+    "What would be a good structure for Exploring Creative Technologies.md",
     "What is possible in CrossDocu with Markdown Syntax.md",
     "What are challenges building a whole web-application with AI.md",
-    "How can we explain and teach Creative Coding.md",
     "Capture and loop movement in p5.js.md",
-    "What are ways to visualize body movement digitally.md",
-    "What would be a good structure for Exploring Creative Technologies.md",
     "The concept of Feynmans 12 favorite problems.md",
     "Frontmatter Template.md",
-    "How to document a design experiment.md",
-    "Who am I.md",
     "index.md",
     "What are definitions for Creative Coding.md",
     "What is needed for building a problem-oriented System.md",
@@ -241,7 +228,6 @@
     "CrossDocu.md",
     "What is CrossDocu.md",
     "Can PoseNet in ML5.js also be used for capturing data.md",
-    "What are challenges in explaining Creative Coding to Design students.md",
     "_explore Creative Coding.base",
     "images/Profilbild.jpeg",
     "images/EOTD_Person.jpg",
@@ -257,8 +243,6 @@
     "_site/_includes/images/CrossDocu_Grafik.png",
     "_site/ToDos/index.html",
     "_site/_includes/images",
-    "_site/styles/variables.css",
-    "_site/styles/testStyle.css",
-    "_site/images/CrossDocu_Grafik.png"
+    "_site/styles/variables.css"
   ]
 }
