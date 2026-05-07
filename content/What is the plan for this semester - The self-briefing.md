@@ -72,6 +72,7 @@ so that every process can directly be documented!
 how does the tool know how the content should look on a slide or a printed paper?
 
 ### Writing conventions! ✏️
+[[Writing Conventions in CrossDocu]]
 
 e.g.
 - every h3-element starts a new slide
@@ -101,11 +102,12 @@ It evolved from this question:
 ### Estimated Time for the semester ⏲️
 
 - **Four weeks** until Concept-Presentation 
-	- have a working structure system
+	- User Journey
 	- have a working prototype 
 	- further explorations!
 	  
 - **Nine weeks** until Design-Presentation
+	- have a working structure system
 	- work on small projects
 	- iterate trough
 	  

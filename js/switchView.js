@@ -71,8 +71,7 @@ export function setView() {
         for (let i = 1; i <= flow.total; i++) {
           const targetPage = document.querySelector(`#page-${i}`);
           const rdn = (Math.random() - 0.5) * 2;
-          targetPage.style.transform = `rotate(${rdn}deg)`;
-          console.log(rdn);
+          // targetPage.style.transform = `rotate(${rdn}deg)`;
         }
       });
   } else {

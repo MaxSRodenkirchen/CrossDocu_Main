@@ -7,7 +7,7 @@ type:
 publish:
   - public
 ---
-
+[[Writing Conventions in CrossDocu]]
 # Markdown Showcase & Tutorial (AI generiert)
 
 Diese Seite zeigt alle verfügbaren Markdown-Features. Zuerst der Code, dann das Ergebnis.

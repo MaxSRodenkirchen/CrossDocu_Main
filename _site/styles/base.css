@@ -38,7 +38,7 @@
     background: var(--color-5);
   }
 
-  #mainContainer > aside,
+  #mainContainer>aside,
   header,
   footer,
   article {
@@ -108,7 +108,7 @@
     /* z-index: -1000; */
   }
 
-  footer > p {
+  footer>p {
     margin: 0;
   }
 
@@ -143,9 +143,9 @@
     overflow: scroll !important;
     resize: vertical;
     border-radius: 0.5rem;
-    transform: rotate(-0.25deg);
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    /* transform: rotate(-0.25deg); */
+    /* margin-top: 10rem;
+    margin-bottom: 10rem; */
   }
 
   #sidebar ul {
