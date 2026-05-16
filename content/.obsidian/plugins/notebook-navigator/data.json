@@ -217,9 +217,8 @@
   "listPaneTitle": "header",
   "noteGrouping": "date",
   "showSelectedNavigationPills": false,
+  "stickyGroupHeaders": true,
   "filterPinnedByFolder": false,
-  "showPinnedGroupHeader": true,
-  "showPinnedIcon": true,
   "compactItemHeight": 28,
   "compactItemHeightScaleText": true,
   "showQuickActions": true,
@@ -240,11 +239,13 @@
   "showFileBackgroundUnfinishedTask": false,
   "unfinishedTaskBackgroundColor": "#ef000050",
   "showFileIcons": true,
+  "useFolderIconForFiles": false,
   "showFilenameMatchIcons": false,
   "fileNameIconMap": {},
   "showCategoryIcons": false,
   "fileTypeIconMap": {},
   "fileNameRows": 1,
+  "useFolderColorForTitles": false,
   "showFilePreview": true,
   "skipHeadingsInPreview": true,
   "skipCodeBlocksInPreview": true,
@@ -276,6 +277,7 @@
   "showFileDate": true,
   "alphabeticalDateMode": "modified",
   "showParentFolder": true,
+  "showParentFolderFullPath": false,
   "parentFolderClickRevealsFile": false,
   "showParentFolderColor": false,
   "showParentFolderIcon": false,
@@ -458,6 +460,7 @@
   },
   "customVaultName": "",
   "pinnedNotes": {},
+  "collapsedPinnedContexts": {},
   "fileIcons": {},
   "fileColors": {},
   "fileBackgroundColors": {},
@@ -474,7 +477,9 @@
   "tagTreeSortOverrides": {},
   "tagAppearances": {},
   "propertyIcons": {},
-  "propertyColors": {},
+  "propertyColors": {
+    "key:state=0": "#14b8a6"
+  },
   "propertyBackgroundColors": {},
   "propertySortOverrides": {},
   "propertyTreeSortOverrides": {},
@@ -486,7 +491,9 @@
   },
   "virtualFolderColors": {},
   "virtualFolderBackgroundColors": {},
-  "navigationSeparators": {},
+  "navigationSeparators": {
+    "section:tags": true
+  },
   "userColors": [
     "#ffffff",
     "#d9d9d9",
@@ -509,7 +516,7 @@
     "#404040",
     "#404040"
   ],
-  "lastShownVersion": "2.6.3",
+  "lastShownVersion": "2.6.5",
   "rootFolderOrder": [],
   "rootTagOrder": [],
   "rootPropertyOrder": []

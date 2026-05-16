@@ -27,30 +27,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "What is the plan for this semester - The self-briefing.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "What is the plan for this semester - The self-briefing"
-            }
-          },
-          {
-            "id": "e69c8343bcee48e1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "What is possible in CrossDocu with Markdown Syntax.md",
+                "file": "Styling System for CrossDocu.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "What is possible in CrossDocu with Markdown Syntax"
+              "title": "Styling System for CrossDocu"
+            }
+          },
+          {
+            "id": "04e7765d9b8f6811",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
+          },
+          {
+            "id": "ca5d0a53856e52f8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Writing Conventions in CrossDocu.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Writing Conventions in CrossDocu"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -82,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#untagged",
+                "query": "tag:#CrossDocu",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -113,12 +127,11 @@
               "title": "Notebook Navigator"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 817.0069465637207
+    "width": 588.0110321044922
   },
   "right": {
     "id": "6e08fdf0e350c873",
@@ -127,6 +140,7 @@
       {
         "id": "69a0d21b4c1a63f4",
         "type": "tabs",
+        "dimension": 84.15213946117274,
         "children": [
           {
             "id": "17bf0c4e66e4b979",
@@ -134,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "The concept of Feynmans 12 favorite problems.md",
+                "file": "Base Template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +158,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for The concept of Feynmans 12 favorite problems"
+              "title": "Backlinks for Base Template"
             }
           },
           {
@@ -176,21 +190,6 @@
             }
           },
           {
-            "id": "ef397b872a6f63a3",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "The concept of Feynmans 12 favorite problems.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of The concept of Feynmans 12 favorite problems"
-            }
-          },
-          {
             "id": "d8726cbb98791948",
             "type": "leaf",
             "state": {
@@ -206,7 +205,29 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
+      },
+      {
+        "id": "777df11fe70bca0f",
+        "type": "tabs",
+        "dimension": 15.847860538827257,
+        "children": [
+          {
+            "id": "ef397b872a6f63a3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "index.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of index"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
@@ -226,21 +247,26 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "cdbdedc8b4753cef",
+  "active": "04e7765d9b8f6811",
   "lastOpenFiles": [
     "Einführung in p5.js.md",
-    "Hybrid Search concept.md",
+    "Customized editor for CrossDocu.md",
     "Writing Conventions in CrossDocu.md",
-    "Frontmatter Template.md",
-    "What is the plan for this semester - The self-briefing.md",
+    "Base Template.md",
+    "Content Loader for CrossDocu.md",
+    "Styling System for CrossDocu.md",
     "What is possible in CrossDocu with Markdown Syntax.md",
+    "What are ways to visualize body movement digitally.md",
+    "What are ways to visualize bodymovement digitally.md",
+    "What is the plan for this semester - The self-briefing.md",
+    "Hybrid Search concept.md",
+    "Frontmatter Template.md",
     "What would be a good structure for Exploring Creative Technologies.md",
     "images/obsidian-view.png",
     "images/CCG.png",
     "What are challenges building a whole web-application with AI.md",
     "How can we explain and teach Creative Coding.md",
     "Capture and loop movement in p5.js.md",
-    "What are ways to visualize body movement digitally.md",
     "The concept of Feynmans 12 favorite problems.md",
     "How to document a design experiment.md",
     "Who am I.md",
@@ -251,12 +277,7 @@
     "What are things to be done in CrossDocu.md",
     "What is the idea behind CrossDocu.md",
     "What is possible in CrossDocu with Markdown syntax.md",
-    "How is AI affecting our way of working.md",
-    "Creating a Webpage for collecting and visualizing peoples definitions on Creative Coding.md",
-    "A random story for testing.md",
     "content.11tydata.js",
-    "What are ways to visualize bodymovement digitally.md",
-    "CrossDocu.md",
     "_explore Creative Coding.base",
     "images/Profilbild.jpeg",
     "images/EOTD_Person.jpg",

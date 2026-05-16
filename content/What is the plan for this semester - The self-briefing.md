@@ -9,7 +9,7 @@ publish:
   - public
 ---
 
-#  Self-Briefing
+#  Self-Briefing 
 #### > What is the plan for this semester? 🌱
 
 This note is written for a presentation! 

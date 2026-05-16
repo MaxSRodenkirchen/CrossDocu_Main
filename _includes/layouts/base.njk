@@ -25,22 +25,29 @@
 
         {{ page.url | log }}
 
-        {% include "partials/header.njk" %}
 
         <aside id="sidebar">
+
+            {% include "partials/header.njk" %}
+
             <ul>
                 {% for post in collections.posts %}
+                <li>
+                    <a href="{{ post.url }}">
 
-                <li >
-                    <a href="{{ post.url }}"> {{ post.data.title }} </a>
+                        {{ post.templateContent | firstImage | safe }}
 
+                        <p>{{ post.data.title }}</p>
+                    </a>
                 </li>
-
                 {% endfor %}
 
             </ul>
 
             {# {% include "partials/navbar.njk" %} #}
+
+
+
         </aside>
 
         <template id="templateSource">
@@ -52,8 +59,12 @@
             {{ content | safe }}
         </template>
 
-        <article  id="content">
-        </article>
+        <div id="midContainer">
+            <article id="content">
+            </article>
+
+        </div>
+
 
         <aside id="config">
             {% include "partials/config.njk" %}
@@ -66,13 +77,8 @@
 
 
     <script type="module">
-
-        
         import { setView } from "/js/switchView.js";
         setView();
-
-
-
     </script>
 
 

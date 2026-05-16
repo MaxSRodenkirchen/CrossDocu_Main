@@ -10,18 +10,25 @@ publish:
   - public
 ---
 
+
+![[Profilbild.jpeg]]
+
+
 ## Das ist der Titel
 
 ---
+
+
+
 [[Who am I]]
 
 [[A random story for testing]]
 
-![[Profilbild.jpeg]]
+
 
 [Die Geschichte](A%20random%20story%20for%20testing.md)
 
----
+
 
 This is just the landing page for The CrossDocu Project. Which content will be shown here in future? 
 

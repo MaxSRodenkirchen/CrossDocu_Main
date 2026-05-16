@@ -41,7 +41,14 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addFilter("log", (value) => {
         console.log(value);
-        // return value; // damit der Template-Flow nicht unterbrochen wird
+        // return value;
+    });
+
+    eleventyConfig.addFilter("firstImage", (content) => {
+        const match = content.match(/<img[^>]+>/); //Regular Expression, only take the first img tag
+        return match ? match[0] : '<img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">';
+
+
     });
 
     // console.log(collection.creativecoding)
