@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "MOC Der Baum hat Zeit - Journal.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "MOC Der Baum hat Zeit - Journal"
             }
           },
           {
@@ -131,7 +131,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 588.0110321044922
+    "width": 648
   },
   "right": {
     "id": "6e08fdf0e350c873",
@@ -249,11 +249,14 @@
   },
   "active": "04e7765d9b8f6811",
   "lastOpenFiles": [
+    "Content Loader for CrossDocu.md",
+    "Definitions of Creative Coding.md",
+    "MOC Der Baum hat Zeit - Journal.md",
+    "index.md",
     "Einführung in p5.js.md",
     "Customized editor for CrossDocu.md",
     "Writing Conventions in CrossDocu.md",
     "Base Template.md",
-    "Content Loader for CrossDocu.md",
     "Styling System for CrossDocu.md",
     "What is possible in CrossDocu with Markdown Syntax.md",
     "What are ways to visualize body movement digitally.md",
@@ -270,13 +273,10 @@
     "The concept of Feynmans 12 favorite problems.md",
     "How to document a design experiment.md",
     "Who am I.md",
-    "index.md",
     "What are definitions for Creative Coding.md",
     "What is needed for building a problem-oriented System.md",
     "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
     "What are things to be done in CrossDocu.md",
-    "What is the idea behind CrossDocu.md",
-    "What is possible in CrossDocu with Markdown syntax.md",
     "content.11tydata.js",
     "_explore Creative Coding.base",
     "images/Profilbild.jpeg",

@@ -27,11 +27,16 @@
 
 
         <aside id="sidebar">
+                            {% include "partials/header.njk" %}
 
-            {% include "partials/header.njk" %}
 
-            <ul>
-                {% for post in collections.posts | reverse %}
+            <ul >        
+                <div id="mocSidebar">
+                {{ content | mocSidebar(collections.all) | safe }}
+                </div>
+
+                <div id="credit"> Made with CrossDocu by Max S. Rodenkirchen</div>
+                {# {% for post in collections.posts %}
                 <li>
                     <a href="{{ post.url }}">
 
@@ -40,7 +45,7 @@
                         <p>{{ post.data.title }}</p>
                     </a>
                 </li>
-                {% endfor %}
+                {% endfor %} #}
 
             </ul>
 

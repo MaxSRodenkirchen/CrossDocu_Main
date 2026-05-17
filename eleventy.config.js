@@ -38,6 +38,10 @@ export default function (eleventyConfig) {
             .getFilteredByGlob('./content/*.md')
     })
 
+    eleventyConfig.addCollection('mocs', (collection) => {
+        return collection.getFilteredByGlob('./content/*.md')
+    })
+
 
     eleventyConfig.addFilter("log", (value) => {
         console.log(value);
@@ -49,6 +53,38 @@ export default function (eleventyConfig) {
         return match ? match[0] : '<img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">';
 
 
+    });
+
+    eleventyConfig.addFilter("mocSidebar", function(content, collectionsAll) {
+        if (!content) return "";
+        const collections = collectionsAll || (this.ctx && this.ctx.collections && this.ctx.collections.all) || [];
+
+        // Matcht <li><a href="...">Linktext</a></li> und fängt href und Linktext ab
+        const regex = /<li>\s*<a\s+[^>]*?href="([^"]+)"[^>]*?>([^<]+)<\/a>\s*<\/li>/gi;
+        
+        return content.replace(regex, (match, href, linkText) => {
+
+            console.log(linkText)
+
+            const targetTitle = linkText.trim();
+            
+            // Finde die Seite mit diesem Titel oder Dateinamen
+            const page = collections.find(p => 
+                p.data?.title?.toLowerCase() === targetTitle.toLowerCase() ||
+                p.filePathStem?.split('/').pop().toLowerCase() === targetTitle.toLowerCase()
+            );
+            
+            // Hole das erste Bild der Seite oder nutze den Platzhalter
+            const imgMatch = page?.templateContent?.match(/<img[^>]+>/);
+            const imgHtml = imgMatch ? imgMatch[0] : '<img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13?q=80&w=1035&auto=format&fit=crop">';
+
+            return `<li>
+                <a href="${href}">
+                    ${imgHtml}
+                    <p>${linkText}</p>
+                </a>
+            </li>`;
+        });
     });
 
     // console.log(collection.creativecoding)

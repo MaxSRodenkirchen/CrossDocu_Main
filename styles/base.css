@@ -54,9 +54,9 @@
 
 
   #midContainer {
-    width: 800px;
+    width: 900px;
 
-    margin-left: 2rem;
+    margin-left: 4rem;
     margin-right: 1rem;
     margin-top: 0;
 
@@ -120,6 +120,13 @@
     margin-left: 4rem;
     overflow: scroll !important;
     max-width: 200px;
+
+  }
+
+  #sidebar *{
+    /* border:1px solid red; */
+        color: var(--color-white)
+
   }
 
   header {
@@ -153,7 +160,16 @@
     margin: 0;
     scrollbar-width: none;
   }
+  
+  #mocSidebar{
+      overflow-wrap: break-word;
+      overflow-x: scroll;
+  }
 
+  #mocSidebar h1{
+    font-size: 17pt;
+    margin-bottom: 3rem;
+  }
 
   #sidebar li a {
     display: flex;
@@ -165,7 +181,8 @@
     height: 80px;
     background: var(--color-white);
     text-decoration: none;
-    color: inherit;
+    color: var(--color-black) !important;
+
     overflow: hidden;
     filter: grayscale(100%) opacity(100%);
     mix-blend-mode: screen;
@@ -190,9 +207,20 @@
     padding: .5em;
     margin: 0;
     background: var(--color-white);
+    color: var(--color-black) !important;
+    /* border: 1px solid black; */
 
   }
 
+  #credit{
+    /* display: none; */
+    font-size: 9px;
+    font-weight: 300;
+    font-style: italic;
+
+    margin-top: 4rem;
+    height:100px;
+  }
 
   #sidebar li {
     list-style-position: inside;
