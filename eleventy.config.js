@@ -64,8 +64,6 @@ export default function (eleventyConfig) {
         
         return content.replace(regex, (match, href, linkText) => {
 
-            console.log(linkText)
-
             const targetTitle = linkText.trim();
             
             // Finde die Seite mit diesem Titel oder Dateinamen

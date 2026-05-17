@@ -1,3 +1,37 @@
-<nav id=navbar>
-    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
-</nav>
+{% include "partials/header.njk" %}
+
+
+    {% for moc in collections.moc %}
+        <button onclick="switchMoc('{{ moc.url }}')">{{ moc.data.title | safe }}</button>
+    {% endfor %}
+
+<ul id="sidebarContent">
+    <!-- 1. Die Standard-Sidebar (mit allen Posts) -->
+    <div class="sidebar-group" id="sidebar-default">
+        {% for post in collections.posts | reverse %}
+            {# <li>
+                <a href="{{ post.url }}">
+                    {{ post.templateContent | firstImage | safe }}
+                    <p>{{ post.data.title }}</p>
+                </a>
+            </li> #}
+        {% endfor %}
+    </div>
+
+    {% for moc in collections.moc %}
+        <div class="sidebar-group moc-sidebar-container" data-moc-url="{{ moc.url }}" style="display: none;">
+            {{ moc.templateContent | mocSidebar(collections.all) | safe }}
+        </div>
+    {% endfor %}
+
+    <div id="credit">Made with CrossDocu by Max S. Rodenkirchen</div>
+
+</ul>
+
+
+
+{# {% if tags and "moc" in tags %} #}
+
+{# {% endif %}  #}
+
+

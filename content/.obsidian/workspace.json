@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MOC Der Baum hat Zeit - Journal.md",
+                "file": "Journal - Der Baum hat Zeit.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MOC Der Baum hat Zeit - Journal"
+              "title": "Journal - Der Baum hat Zeit"
             }
           },
           {
@@ -249,9 +249,10 @@
   },
   "active": "04e7765d9b8f6811",
   "lastOpenFiles": [
+    "moc anderes.md",
+    "Journal - Der Baum hat Zeit.md",
     "Content Loader for CrossDocu.md",
     "Definitions of Creative Coding.md",
-    "MOC Der Baum hat Zeit - Journal.md",
     "index.md",
     "Einführung in p5.js.md",
     "Customized editor for CrossDocu.md",
@@ -276,7 +277,6 @@
     "What are definitions for Creative Coding.md",
     "What is needed for building a problem-oriented System.md",
     "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
-    "What are things to be done in CrossDocu.md",
     "content.11tydata.js",
     "_explore Creative Coding.base",
     "images/Profilbild.jpeg",

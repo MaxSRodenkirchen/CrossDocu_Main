@@ -7,7 +7,6 @@ state:
 type:
 publish:
   - public
-layout: layouts/moc.njk
 ---
 
 # Ablauf des Semesterprojekts im Kurs: Der Baum hat Zeit

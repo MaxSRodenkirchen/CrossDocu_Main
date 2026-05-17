@@ -9,6 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=web" />
     <link rel="stylesheet" href="/styles/variables.css">
     <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
+    <link rel="stylesheet" href="/styles/sidebar.css" data-pagedjs-ignore>
     <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
 
     {% block head %}{% endblock %}
@@ -20,33 +21,19 @@
 
     <div id="mainContainer">
 
+        
+        {# {% for moc in collections.moc %}
+        <script>
+            window.sidebarContent.push("{{moc.url}}");
+            console.log(window.sidebarContent)
+        </script>
 
+        {% endfor %} #}
         {# {{page.url}} #}
-
-        {# {{ collections.moc | log}} #}
-
 
         <aside id="sidebar">
 
-            {% include "partials/header.njk" %}
-
-            <ul>
-                {% for post in collections.posts | reverse %}
-                <li>
-                    <a href="{{ post.url }}">
-
-                        {{ post.templateContent | firstImage | safe }}
-
-                        <p>{{ post.data.title }}</p>
-                    </a>
-                </li>
-                {% endfor %}
-
-            </ul>
-
-            {# {% include "partials/navbar.njk" %} #}
-
-
+            {% include "partials/navbar.njk" %}
 
         </aside>
 
@@ -79,6 +66,37 @@
     <script type="module">
         import { setView } from "/js/switchView.js";
         setView();
+
+        function toggleSidebar() {
+            const activeMocUrl = localStorage.sidebarContent;
+            
+            // 1. Verstecke alle Sidebar-Gruppen
+            document.querySelectorAll('.sidebar-group').forEach(group => {
+                group.style.display = 'none';
+            });
+
+            // 2. Zeige das aktive MOC an, falls gesetzt
+            if (activeMocUrl) {
+                const activeContainer = document.querySelector(`.sidebar-group[data-moc-url="${activeMocUrl}"]`);
+                if (activeContainer) {
+                    activeContainer.style.display = 'block';
+                    return;
+                }
+            }
+
+            // 3. Fallback: Zeige die Standard-Sidebar mit allen Posts
+            const defaultSidebar = document.getElementById('sidebar-default');
+            if (defaultSidebar) {
+                defaultSidebar.style.display = 'block';
+            }
+        }
+
+        window.switchMoc = function(url) {
+            localStorage.sidebarContent = url;
+            toggleSidebar();
+        };
+
+        toggleSidebar();
     </script>
 
 

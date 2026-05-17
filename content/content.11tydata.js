@@ -8,7 +8,9 @@ export default {
       // nehmen wir den Pfad-Stamm (Dateiname ohne Endung).
       if (data.page.filePathStem) {
         const name = data.page.filePathStem.split('/').pop();
+        
         return name;
+        
       }
       return data.title;
     }
