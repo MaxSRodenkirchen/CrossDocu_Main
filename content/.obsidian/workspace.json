@@ -8,63 +8,76 @@
         "type": "tabs",
         "children": [
           {
-            "id": "598a66d173875733",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "How can we explain and teach Creative Coding.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "How can we explain and teach Creative Coding"
-            }
-          },
-          {
-            "id": "cdbdedc8b4753cef",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Styling System for CrossDocu.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Styling System for CrossDocu"
-            }
-          },
-          {
             "id": "04e7765d9b8f6811",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Journal - Der Baum hat Zeit.md",
+                "file": "Concept Presentation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Journal - Der Baum hat Zeit"
+              "title": "Concept Presentation"
             }
           },
           {
-            "id": "ca5d0a53856e52f8",
+            "id": "b3f1c7b844b82513",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Writing Conventions in CrossDocu.md",
+                "file": "The idea behind CrossDocu.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Writing Conventions in CrossDocu"
+              "title": "The idea behind CrossDocu"
+            }
+          },
+          {
+            "id": "ffeb9c8ad5abcbde",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hybrid Search concept.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Hybrid Search concept"
+            }
+          },
+          {
+            "id": "b131d1e8615b1472",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "In one sentence - Exploring Creative Technologies.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "In one sentence - Exploring Creative Technologies"
+            }
+          },
+          {
+            "id": "506d4048127789f5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Questions behind Exploring Creative Technologies.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Questions behind Exploring Creative Technologies"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +109,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#CrossDocu",
+                "query": " ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -127,11 +140,12 @@
               "title": "Notebook Navigator"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 648
+    "width": 588.0110321044922
   },
   "right": {
     "id": "6e08fdf0e350c873",
@@ -218,13 +232,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md",
+                "file": "Concept Presentation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
+              "title": "Outline of Concept Presentation"
             }
           }
         ]
@@ -249,34 +263,34 @@
   },
   "active": "04e7765d9b8f6811",
   "lastOpenFiles": [
-    "moc anderes.md",
+    "The idea behind CrossDocu.md",
+    "Concept Presentation.md",
+    "Hybrid Search concept.md",
+    "Structure for Exploring Creative Technologies.md",
     "Journal - Der Baum hat Zeit.md",
-    "Content Loader for CrossDocu.md",
-    "Definitions of Creative Coding.md",
+    "MVP - Exploring Creative Technologies.md",
+    "Styling System for CrossDocu.md",
+    "Questions behind Exploring Creative Technologies.md",
+    "In one sentence - Exploring Creative Technologies.md",
+    "Writing Conventions in CrossDocu.md",
+    "What is the plan for this semester - The self-briefing.md",
+    "Anleitung zum Müßiggang - Referat.md",
     "index.md",
+    "MOC Der Baum hat Zeit - Journal.md",
+    "Definitions of Creative Coding.md",
     "Einführung in p5.js.md",
     "Customized editor for CrossDocu.md",
-    "Writing Conventions in CrossDocu.md",
     "Base Template.md",
-    "Styling System for CrossDocu.md",
+    "Content Loader for CrossDocu.md",
     "What is possible in CrossDocu with Markdown Syntax.md",
     "What are ways to visualize body movement digitally.md",
     "What are ways to visualize bodymovement digitally.md",
-    "What is the plan for this semester - The self-briefing.md",
-    "Hybrid Search concept.md",
     "Frontmatter Template.md",
-    "What would be a good structure for Exploring Creative Technologies.md",
     "images/obsidian-view.png",
     "images/CCG.png",
     "What are challenges building a whole web-application with AI.md",
     "How can we explain and teach Creative Coding.md",
     "Capture and loop movement in p5.js.md",
-    "The concept of Feynmans 12 favorite problems.md",
-    "How to document a design experiment.md",
-    "Who am I.md",
-    "What are definitions for Creative Coding.md",
-    "What is needed for building a problem-oriented System.md",
-    "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
     "content.11tydata.js",
     "_explore Creative Coding.base",
     "images/Profilbild.jpeg",

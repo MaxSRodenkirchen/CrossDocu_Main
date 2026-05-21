@@ -2,12 +2,14 @@
 tags:
   - CrossDocu
 state:
-  - "7"
+  - "10"
 type:
   - 3-Ideate
 publish:
   - public
 ---
+![[CrossDocu_dieIdee.png]]
+
 **The goal of CrossDocu is to simplify project and process documentation by automatically converting content into various formats.**
 
 Collecting content and designing layouts takes up valuable time in projects. Different formats are often needed for presentations and collaboration, which is why text, images, and other media have to be copied back and forth.

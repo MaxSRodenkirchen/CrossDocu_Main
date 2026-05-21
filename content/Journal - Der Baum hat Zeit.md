@@ -15,7 +15,7 @@ Anfang April
 
 - [[Definitions of Creative Coding]]
 - [[What is the plan for this semester - The self-briefing]]
-- [[What would be a good structure for Exploring Creative Technologies]]
+- [[Structure for Exploring Creative Technologies]]
 ___
 6.Mai
 

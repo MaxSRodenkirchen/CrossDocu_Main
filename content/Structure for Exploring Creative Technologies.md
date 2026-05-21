@@ -8,8 +8,21 @@ type:
 publish:
   - public
 ---
+Atomics
 
-### Double Diamond
+Internal Links
+
+MOCs 
+
+Tags
+
+(Hybrid) Search
+
+
+
+---
+
+%% ### Double Diamond
 
 	Allgemeine Herausforderung
 #### Problemraum 
@@ -33,4 +46,4 @@ publish:
 - Ideate **???**
 - Design / Prototype **!!!**
 - Evaluate **???**
-
+ %%

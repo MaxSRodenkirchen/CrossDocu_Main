@@ -11,7 +11,7 @@ publish:
 ---
 
 
-![[Profilbild.jpeg]]
+![[EOTD_Person.jpg]]
 
 
 ## Das ist der Titel

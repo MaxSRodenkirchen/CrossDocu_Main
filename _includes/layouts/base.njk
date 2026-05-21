@@ -67,6 +67,7 @@
         import { setView } from "/js/switchView.js";
         setView();
 
+
         function toggleSidebar() {
             const activeMocUrl = localStorage.sidebarContent;
             
@@ -97,6 +98,11 @@
         };
 
         toggleSidebar();
+
+        setInterval(()=>{
+        console.log(document.querySelector('.sidebarContent').scrollTop);
+
+        },1000)
     </script>
 
 

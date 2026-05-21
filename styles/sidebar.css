@@ -115,13 +115,14 @@
   #sidebarContent li a p {
     position: absolute;
     top: 0px;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 16px;
     padding: .5em;
     margin: 0;
     background: var(--color-white);
     color: var(--color-black) !important;
+    width:100%;
   }
 
   #credit {
