@@ -21,6 +21,19 @@ export default function (eleventyConfig) {
                 forceAllImageUrlsAbsolute: true
             },
         });
+
+        // Eigene Regel hinzufügen, um -> in → umzuwandeln
+        mdLib.core.ruler.push('replace_arrow', function (state) {
+            for (let i = state.tokens.length - 1; i >= 0; i--) {
+                if (state.tokens[i].type !== 'inline') continue;
+                let tokens = state.tokens[i].children;
+                for (let j = tokens.length - 1; j >= 0; j--) {
+                    if (tokens[j].type === 'text') {
+                        tokens[j].content = tokens[j].content.replace(/->/g, '→');
+                    }
+                }
+            }
+        });
     });
 
     // Paged.js und CSS in den Output kopieren
@@ -41,6 +54,18 @@ export default function (eleventyConfig) {
     eleventyConfig.addCollection('mocs', (collection) => {
         return collection.getFilteredByGlob('./content/*.md')
     })
+
+    // Transform to parse %% comments %% and turn them into HTML comments <!-- -->
+    eleventyConfig.addTransform("markdown-comments", function(content) {
+        if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
+            // Replace block comments (wrapped in <p>)
+            let replaced = content.replace(/<p>\s*%%([\s\S]*?)%%\s*<\/p>/g, "<!-- $1 -->");
+            // Replace inline comments
+            replaced = replaced.replace(/%%([\s\S]*?)%%/g, "<!-- $1 -->");
+            return replaced;
+        }
+        return content;
+    });
 
 
     eleventyConfig.addFilter("log", (value) => {
@@ -91,10 +116,10 @@ export default function (eleventyConfig) {
                 }
             }
             
-            // Fallback auf Placeholder wenn kein Bild gefunden
-            if (!imgHtml) {
-                imgHtml = '<img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13?q=80&w=1035&auto=format&fit=crop">';
-            }
+            // Fallback auf Placeholder wenn kein Bild gefunden (Entfernt, stattdessen bleibt imgHtml leer für weißen Hintergrund)
+            // if (!imgHtml) {
+            //     imgHtml = '<img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13?q=80&w=1035&auto=format&fit=crop">';
+            // }
 
             return `<li>
                 <a href="${href}">

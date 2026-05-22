@@ -7,6 +7,9 @@ type:
 publish:
   - public
 ---
+![[oneSentence.png]]
+
+
 # In one sentence
 
 *state 06.05.26*

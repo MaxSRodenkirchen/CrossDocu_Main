@@ -76,11 +76,22 @@
                 group.style.display = 'none';
             });
 
+            // Highlight den aktiven MOC-Button
+            document.querySelectorAll('button[data-moc-btn-url]').forEach(btn => {
+                btn.classList.remove('active-moc');
+                if (activeMocUrl && btn.getAttribute('data-moc-btn-url') === activeMocUrl) {
+                    btn.classList.add('active-moc');
+                }
+            });
+
+            const mocControls = document.getElementById('mocControls');
+
             // 2. Zeige das aktive MOC an, falls gesetzt
             if (activeMocUrl) {
                 const activeContainer = document.querySelector(`.sidebar-group[data-moc-url="${activeMocUrl}"]`);
                 if (activeContainer) {
                     activeContainer.style.display = 'block';
+                    if (mocControls) mocControls.style.display = 'flex';
                     return;
                 }
             }
@@ -90,22 +101,83 @@
             if (defaultSidebar) {
                 defaultSidebar.style.display = 'block';
             }
+            if (mocControls) mocControls.style.display = 'none';
         }
 
         window.switchMoc = function(url) {
             localStorage.sidebarContent = url;
             toggleSidebar();
+            highlightCurrentPage();
         };
 
+        function highlightCurrentPage() {
+            const currentPath = decodeURI(window.location.pathname);
+            const links = document.querySelectorAll('#sidebarContent li a');
+            let activeLink = null;
+
+            links.forEach(link => {
+                const linkPath = decodeURI(new URL(link.href).pathname);
+                if (linkPath === currentPath || linkPath === currentPath + '/' || linkPath + '/' === currentPath) {
+                    link.classList.add('active');
+                    const group = link.closest('.sidebar-group');
+                    if (group && group.style.display !== 'none') {
+                        activeLink = link;
+                    }
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            if (activeLink) {
+                // setTimeout ensures the display: block has taken effect before calculating scroll
+                setTimeout(() => {
+                    activeLink.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 50);
+            }
+        }
+
         toggleSidebar();
+        highlightCurrentPage();
+        window.navigateMoc = function(direction) {
+            const activeMocUrl = localStorage.sidebarContent;
+            if (!activeMocUrl) return;
 
-        // setInterval(()=>{
-        // console.log(document.querySelector('.sidebarContent').scrollTop);
+            const group = document.querySelector(`.sidebar-group[data-moc-url="${activeMocUrl}"]`);
+            if (!group || group.style.display === 'none') return;
 
-        // },1000)
+            const links = Array.from(group.querySelectorAll('a'));
+            if (links.length === 0) return;
+
+            const currentPath = decodeURI(window.location.pathname);
+            let currentIndex = links.findIndex(link => {
+                const linkPath = decodeURI(new URL(link.href).pathname);
+                return linkPath === currentPath || linkPath === currentPath + '/' || linkPath + '/' === currentPath;
+            });
+
+            let targetIndex = 0;
+            if (currentIndex !== -1) {
+                targetIndex = currentIndex + direction;
+            } else {
+                targetIndex = direction > 0 ? 0 : links.length - 1;
+            }
+
+            if (targetIndex >= 0 && targetIndex < links.length) {
+                window.location.href = links[targetIndex].href;
+            }
+        };
+
+        window.addEventListener('keydown', (event) => {
+            if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') return;
+
+            if (event.key === 'ArrowUp') {
+                event.preventDefault();
+                navigateMoc(-1);
+            } else if (event.key === 'ArrowDown') {
+                event.preventDefault();
+                navigateMoc(1);
+            }
+        });
     </script>
 
-
 </body>
-
 </html>

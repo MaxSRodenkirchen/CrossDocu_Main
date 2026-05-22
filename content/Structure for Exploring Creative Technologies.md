@@ -8,19 +8,9 @@ type:
 publish:
   - public
 ---
-Atomics
+![[structure.png]]
 
-Internal Links
-
-MOCs 
-
-Tags
-
-(Hybrid) Search
-
-
-
----
+![[structure2.png]]
 
 %% ### Double Diamond
 

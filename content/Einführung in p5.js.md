@@ -7,7 +7,6 @@ type:
 publish:
   - public
 ---
-
 ![[MyScore.png]]
 
 # Einführung in p5.js und Creative Coding

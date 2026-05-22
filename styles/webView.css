@@ -14,3 +14,17 @@
   /* max-height: 60vh; */
   /* object-fit: contain; */
 }
+
+/* Pull the first image to the very top of the container */
+#content > img:first-child,
+#content > p:first-child img:first-child,
+#content > a:first-child img:first-child {
+  margin-top: -2rem;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+#content > p:first-child:has(img:first-child),
+#content > a:first-child:has(img:first-child) {
+  margin-top: 0;
+}

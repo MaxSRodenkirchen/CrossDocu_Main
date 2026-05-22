@@ -23,7 +23,7 @@
       "Open Sans",
       "Helvetica Neue",
       sans-serif;
-    font-size: 60px;
+    font-size: 30px;
     box-shadow: 20px;
     background: var(--color-white);
 
@@ -43,9 +43,9 @@
     }
 
     h1 {
-      font-size: 120px;
+      font-size: 112.1pt;
       font-weight: 900;
-      line-height: 120px;
+      line-height: 112.1pt;
       /* text-transform: uppercase; */
       max-width: 80%;
     }
@@ -65,8 +65,11 @@
       /* content: "🫏 "; */
     }
     img {
-      width: 100%;
-      height: 100%;
+      position: absolute;
+      top: -40px;
+      left: -40px;
+      width: calc(100% + 140px);
+      height: calc(100% + 140px);
       object-fit: cover;
       display: block;
       z-index: -1;
@@ -104,5 +107,24 @@
   h1,
   hr {
     break-before: page;
+  }
+
+  p:has(img) {
+    break-before: page;
+    break-after: page;
+  }
+
+  .pagedjs_area {
+    position: relative;
+    z-index: 0;
+  }
+
+  .pagedjs_page {
+    opacity: 0.3;
+    transition: opacity 0.4s ease;
+  }
+
+  .pagedjs_page.active-slide {
+    opacity: 1;
   }
 }

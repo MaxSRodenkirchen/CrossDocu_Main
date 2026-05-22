@@ -35,6 +35,8 @@ export function setView() {
     viewMode = localStorage.getItem("currentView") || "default";
   }
 
+  document.body.dataset.view = viewMode;
+
   const content = document.querySelector("#content");
 
   if (viewMode === "print") {

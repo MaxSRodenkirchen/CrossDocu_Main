@@ -13,13 +13,17 @@
     font-family: sans-serif;
     font-style: bold;
 
-    background: var(--color-5);
+    background: var(--color-6);
     margin: 0;
     padding: 0;
     color: var(--color-6);
 
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  h1 {
+    font-family: 'Bold';
   }
 
   * {
@@ -39,15 +43,25 @@
     /* padding: 1rem; */
     height: 100vh;
     width: 100vw;
+    position: relative;
+    z-index: 1;
     /* grid-template-columns: calc(200px + 3rem) auto 50px;
 
     grid-template-rows: 50px auto 1rem;
     gap: 0rem; */
 
     /* background: var(--color-4); */
+  }
+
+  #mainContainer::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
     background-image: url("https://images.unsplash.com/photo-1620812097331-ff636155488f?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-
-
+    background-size: cover;
+    background-position: center;
+    opacity: .5;
+    z-index: -1;
   }
 
 
@@ -61,6 +75,7 @@
     margin-top: 0;
 
     padding-top: 4rem;
+    scroll-padding-top: 4rem;
     background-clip: content-box;
 
     overflow-y: scroll;
@@ -69,22 +84,21 @@
 
   }
 
-
-
+  body[data-view="slide"] #midContainer {
+    width: auto;
+    flex-grow: 1;
+    margin-right: 60px; /* Platz für die Config lassen */
+    filter: none;
+  }
 
   #config {
     position: absolute;
     right: 0;
     display: flex;
-    /* display: none; */
     flex-direction: column;
-
-    /* padding-top: 1rem; */
     margin-top: 4rem;
-    /* gap: 0.3rem;
-    grid-column: 3;
-    grid-row: 2; */
     width: 50px;
+    z-index: 1000;
   }
 
   footer {
@@ -142,5 +156,24 @@
 
   .pagedjs_page {
     border-radius: 1rem;
+  }
+
+  /* Fullscreen specific styles */
+  #mainContainer:fullscreen {
+    background-color: var(--color-4);
+  }
+
+  #mainContainer:fullscreen #sidebar,
+  #mainContainer:fullscreen #config {
+    display: none !important;
+  }
+
+  #mainContainer:fullscreen #midContainer {
+    margin: 0;
+    padding-top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
   }
 }

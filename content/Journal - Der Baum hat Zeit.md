@@ -11,16 +11,6 @@ publish:
 
 # Ablauf des Semesterprojekts im Kurs: Der Baum hat Zeit
 
-Anfang April 
-
-- [[Definitions of Creative Coding]]
-- [[Self-briefing - Der Baum hat Zeit]]
-- [[Structure for Exploring Creative Technologies]]
-___
-6.Mai
-
-- [[Einführung in p5.js]]
-- [[Content Loader for CrossDocu]]
-- [[Hybrid Search concept]]
-
-<^°_°^>
+- [[Who am I |Intro presentation]]
+- 
+- [[Self-briefing - Der Baum hat Zeit|Self-briefing presentation]]
