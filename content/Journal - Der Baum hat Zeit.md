@@ -14,7 +14,7 @@ publish:
 Anfang April 
 
 - [[Definitions of Creative Coding]]
-- [[What is the plan for this semester - The self-briefing]]
+- [[Self-briefing - Der Baum hat Zeit]]
 - [[Structure for Exploring Creative Technologies]]
 ___
 6.Mai

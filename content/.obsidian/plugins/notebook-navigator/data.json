@@ -489,7 +489,9 @@
   "folderTreeSortOverrides": {},
   "folderAppearances": {},
   "tagIcons": {},
-  "tagColors": {},
+  "tagColors": {
+    "untagged": "#f43f5e"
+  },
   "tagBackgroundColors": {},
   "tagSortOverrides": {},
   "tagTreeSortOverrides": {},

@@ -52,7 +52,6 @@ export default function (eleventyConfig) {
         const match = content.match(/<img[^>]+>/); //Regular Expression, only take the first img tag
         return match ? match[0] : '<img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">';
 
-
     });
 
     eleventyConfig.addFilter("mocSidebar", function(content, collectionsAll) {
@@ -60,21 +59,42 @@ export default function (eleventyConfig) {
         const collections = collectionsAll || (this.ctx && this.ctx.collections && this.ctx.collections.all) || [];
 
         // Matcht <li><a href="...">Linktext</a></li> und fängt href und Linktext ab
-        const regex = /<li>\s*<a\s+[^>]*?href="([^"]+)"[^>]*?>([^<]+)<\/a>\s*<\/li>/gi;
+        const regex = /<li>\s*<a\s*[^>]*?href="([^"]+)"[^>]*?>([^<]+)<\/a>\s*<\/li>/gi;
         
         return content.replace(regex, (match, href, linkText) => {
 
-            const targetTitle = linkText.trim();
+            // Finde die Seite anhand der URL statt des Linktextes
+            const page = collections.find(p => {
+                // Normalisiere URLs
+                const pageUrl = p.url?.replace(/\/$/, '').replace(/%20/g, ' ');
+                const hrefUrl = href?.replace(/\/\.\//g, '/').replace(/\/$/, '').replace(/%20/g, ' ');
+                
+                
+                return pageUrl === hrefUrl;
+            });
             
-            // Finde die Seite mit diesem Titel oder Dateinamen
-            const page = collections.find(p => 
-                p.data?.title?.toLowerCase() === targetTitle.toLowerCase() ||
-                p.filePathStem?.split('/').pop().toLowerCase() === targetTitle.toLowerCase()
-            );
             
-            // Hole das erste Bild der Seite oder nutze den Platzhalter
-            const imgMatch = page?.templateContent?.match(/<img[^>]+>/);
-            const imgHtml = imgMatch ? imgMatch[0] : '<img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13?q=80&w=1035&auto=format&fit=crop">';
+            // Hole das erste Bild der Seite (HTML oder Wikilink)
+            let imgHtml = '';
+            
+            if (page?.templateContent) {
+                // Versuche HTML img-Tag zu finden
+                const imgMatch = page.templateContent.match(/<img[^>]+>/);
+                if (imgMatch) {
+                    imgHtml = imgMatch[0];
+                } else {
+                    // Fallback: Versuche Wikilink-Bild zu finden
+                    const wikiMatch = page.templateContent.match(/!\[\[([^\]]+\.(png|jpg|jpeg|gif|webp))\]\]/i);
+                    if (wikiMatch) {
+                        imgHtml = `<img src="/images/${wikiMatch[1]}" alt="${wikiMatch[1]}">`;
+                    }
+                }
+            }
+            
+            // Fallback auf Placeholder wenn kein Bild gefunden
+            if (!imgHtml) {
+                imgHtml = '<img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13?q=80&w=1035&auto=format&fit=crop">';
+            }
 
             return `<li>
                 <a href="${href}">

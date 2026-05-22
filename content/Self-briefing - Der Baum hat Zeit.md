@@ -1,15 +1,16 @@
 ---
 tags:
-  - 
+  - FH-Aachen
+  - Der-Baum-hat-Zeit
 state:
-  - "0"
+  - "10"
 type:
   - 
 publish:
   - public
 ---
 
-#  Self-Briefing 
+# What is the plan for this semester - The self-briefing
 
 #### > What is the plan for this semester? 🌱
 
