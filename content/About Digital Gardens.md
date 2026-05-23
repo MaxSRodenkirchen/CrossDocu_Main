@@ -8,14 +8,14 @@ type:
 publish:
   - public
 ---
-![[Hypertext Gardens.png]]
-
-
 ### Digital Gardens and Streams
 
 - Digital Streams -> Information comes and leaves directly *(e.g. with Instagram Stories)*
 - Digital Gardens -> Information gathers and grows over time
 
+![[digitalStreams.png]]
+
+![[Hypertext Gardens.png]]
 ### Source and further read
 
 **A Brief History & Ethos of the Digital Garden**

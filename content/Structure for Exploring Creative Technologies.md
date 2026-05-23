@@ -1,8 +1,9 @@
 ---
 tags:
   - CrossDocu
+  - Der-Baum-hat-Zeit
 state:
-  - "1"
+  - "8"
 type:
   - 3-Ideate
 publish:
@@ -11,6 +12,11 @@ publish:
 ![[structure.png]]
 
 ![[structure2.png]]
+
+![[structure3.png]]
+
+![[StructureInObsidian.png]]
+
 
 %% ### Double Diamond
 

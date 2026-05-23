@@ -17,13 +17,13 @@ at [[Der Baum hat Zeit - FH Aachen - Prof. Eva Vitting]] %%
 **Assignment for the semester** 
 
 - [[In one sentence - Exploring Creative Technologies |In one sentence]]
+- [[Mapping - Exploring Creative Technologies |Mapping the project]]
 - [[Questions behind Exploring Creative Technologies]]
-- [[MVP - Exploring Creative Technologies |What is the content?]]
+%% - [[MVP - Exploring Creative Technologies |What is the content?]] %%
 
 **About the medium** 💻🌼
 
-- [[About Digital Gardens]]
-- [[About Learning in Public]]
+- [[About Digital Gardens|Digital Garden as the medium]]
 - [[Structure for Exploring Creative Technologies |Structuring]]
 - [[User Journeys - Exploring Creative Technologies |User Journeys ]]
 - [[The idea behind CrossDocu |The CrossDocu System]] 

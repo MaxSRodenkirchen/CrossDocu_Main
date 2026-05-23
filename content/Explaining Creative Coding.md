@@ -9,7 +9,7 @@ publish:
   - public
 ---
 
-# Ablauf des Semesterprojekts im Kurs: Der Baum hat Zeit
+# Workshop: 
 
 - [[Who am I |Intro presentation]]
 - 
