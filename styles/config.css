@@ -12,9 +12,15 @@
     background: var(--color-white);
     /* border: 1px solid red; */
     padding: .5rem;
-    /* filter: opacity(.2); */
     /* z-index: 1000; */
     /* display: none; */
+    filter: opacity(.2);
+    transition: all .1s ease;
+
+  }
+
+  #config:hover {
+    filter: opacity(1);
   }
 
   .viewModeButton {
@@ -37,11 +43,16 @@
     stroke-width: 8px;
     height: 28px;
     border-radius: 0.5rem;
+        filter: opacity(.4);
+            transition: all .1s ease;
+
+
   }
 
   .button-svg:hover {
     /* fill: var(--color-black);
     stroke: var(--color-black); */
+    filter: opacity(1);
     cursor: pointer;
   }
 

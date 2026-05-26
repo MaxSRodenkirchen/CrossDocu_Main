@@ -29,7 +29,8 @@ at [[Der Baum hat Zeit - FH Aachen - Prof. Eva Vitting]] %%
 	2. [[Structure for Exploring Creative Technologies |Structuring]]
 	3. [[User Journeys - Exploring Creative Technologies |User Journeys ]]
 	4. [[The idea behind CrossDocu |The CrossDocu System]] 
-	5. [[A CrossDocu Workflow]]
+	   
+	%% [[A CrossDocu Workflow]] %%
 
 
 	%% Make it clear that the semester project uses and helps develop CrossDocu, but that its primary focus is not on further developing CrossDocu! %%

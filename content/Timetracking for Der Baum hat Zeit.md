@@ -11,6 +11,8 @@ publish:
 
 This note gets regularly updated. Last edit: **May, 26th**
 
+![[timetable_26-05.png]]
+
 | **task**                                                     | **assumed time**           |
 | ------------------------------------------------------------ | -------------------------- |
 | format existing notes                                        | 6                          |

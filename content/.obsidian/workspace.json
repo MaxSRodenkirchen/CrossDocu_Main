@@ -24,21 +24,7 @@
             }
           },
           {
-            "id": "31bd1f36bedbf224",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "In one sentence - Exploring Creative Technologies.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "In one sentence - Exploring Creative Technologies"
-            }
-          },
-          {
-            "id": "f388242824c14e8b",
+            "id": "e7b9b1a27f8d2660",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -52,21 +38,50 @@
             }
           },
           {
-            "id": "b2611eb0ded8200e",
+            "id": "8297f82ee3632934",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "In one sentence - Exploring Creative Technologies.md",
-                "mode": "source",
-                "source": false
+                "file": "Overview.canvas",
+                "viewState": {
+                  "x": 575.8183578547657,
+                  "y": -0.4357496691985574,
+                  "zoom": -0.4186574805761479
+                }
               },
-              "icon": "lucide-file",
-              "title": "In one sentence - Exploring Creative Technologies"
+              "pinned": true,
+              "icon": "lucide-layout-dashboard",
+              "title": "Overview"
             }
           },
           {
-            "id": "8297f82ee3632934",
+            "id": "528eb48c417af439",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "images/Mapping ETC.png"
+              },
+              "icon": "lucide-image",
+              "title": "Mapping ETC"
+            }
+          },
+          {
+            "id": "b8f32620fd8413d4",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "images/Zeitplan Eva.png"
+              },
+              "icon": "lucide-image",
+              "title": "Zeitplan Eva"
+            }
+          },
+          {
+            "id": "96004fb20c6e403d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -80,7 +95,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -148,7 +163,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 884.0041885375977
+    "width": 776
   },
   "right": {
     "id": "6e08fdf0e350c873",
@@ -264,25 +279,37 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "8297f82ee3632934",
+  "active": "49ba6e6eaf8602d1",
   "lastOpenFiles": [
     "Concept Presentation - Exploring Creative Technologies.md",
-    "In one sentence - Exploring Creative Technologies.md",
-    "About Digital Gardens.md",
-    "Timetracking for Der Baum hat Zeit.md",
-    "Overview.canvas",
-    "Hybrid Search concept.md",
-    "index.md",
-    "Writing Conventions in CrossDocu.md",
+    "images/Mapping ETC.png",
+    "images/timetable_26-05.png",
+    "images/Zeitplan Eva.png",
     "Mapping - Exploring Creative Technologies.md",
+    "Overview.canvas",
+    "Projektideen - Der Baum hat Zeit.md",
+    "Rolle von Controllern in Creative Coding.md",
+    "The concept of Feynmans 12 favorite problems.md",
+    "What is needed for building a problem-oriented System.md",
+    "What are things to be done in CrossDocu.md",
+    "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
+    "What are definitions for Creative Coding.md",
+    "How is AI affecting our way of working.md",
+    "How can we bring together digital and real world environment.md",
+    "Can PoseNet in ML5.js also be used for capturing data.md",
+    "Hybrid Search concept.md",
+    "In one sentence - Exploring Creative Technologies.md",
+    "The idea behind CrossDocu.md",
+    "index.md",
+    "Einführung in p5.js.md",
     "Explaining Creative Coding.md",
+    "Timetracking for Der Baum hat Zeit.md",
+    "About Digital Gardens.md",
+    "Writing Conventions in CrossDocu.md",
     "About Learning in Public.md",
     "Thank you.md",
     "MVP - Exploring Creative Technologies.md",
     "Structure for Exploring Creative Technologies.md",
-    "User Journeys - Exploring Creative Technologies.md",
-    "Self-briefing - Der Baum hat Zeit.md",
-    "Questions behind Exploring Creative Technologies.md",
     "images/userjourney_toni.png",
     "images/userjourney_nacken.png",
     "images/userjourney_wrede.png",
@@ -290,21 +317,9 @@
     "Pasted image 20260523164139.png",
     "images/structure3.png",
     "images/digitalStreams.png",
-    "images/MappingECT.jpeg",
     "MappingECT.heic",
     "images/MappingECT 1.heic",
     "images/MappingECT.heic",
-    "images/structure2.png",
-    "images/oneSentence.png",
-    "A CrossDocu Workflow.md",
-    "Einführung in p5.js.md",
-    "The idea behind CrossDocu.md",
-    "Frontmatter Template.md",
-    "Styling System for CrossDocu.md",
-    "Anleitung zum Müßiggang - Referat.md",
-    "MOC Der Baum hat Zeit - Journal.md",
-    "Definitions of Creative Coding.md",
-    "Customized editor for CrossDocu.md",
     "content.11tydata.js",
     "_explore Creative Coding.base",
     "content.json",

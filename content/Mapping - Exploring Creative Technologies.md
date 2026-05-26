@@ -7,4 +7,6 @@ type:
 publish:
   - public
 ---
+![[Mapping ETC.png]]
+
 ![[MappingECT.jpeg]]
