@@ -26,7 +26,7 @@
       vertical-align: bottom;
       font-family: 'Graebenbach Regular', sans-serif;
       font-size: 20px;
-        letter-spacing: 3px;
+      letter-spacing: 3px;
       color: var(--color-4);
 
     }
@@ -48,17 +48,26 @@
       /* text-transform: uppercase; */
       max-width: 100%;
       color: var(--color-4);
-      margin:0 0 8rem 0;
+      margin: 0 0 8rem 0;
       text-align: right;
     }
 
     h3 {
       font-size: 80px;
-            margin:0 0 8rem 0;
+      margin: 0 0 8rem 0;
 
       /* font-weight: 900; */
       line-height: 80px;
-            text-align: right;
+      text-align: right;
+
+    }
+
+    h6 {
+      font-family: 'Graebenbach Regular', sans-serif;
+      font-weight: 300;
+      letter-spacing: 3px;
+      font-size: 20px;
+      color: var(--color-4);
 
     }
 
@@ -85,7 +94,8 @@
 
     a {
       color: inherit;
-      display: inline-block; /* Inline-Elemente ignorieren margin-bottom/padding-bottom sonst */
+      /* display: inline-block; */
+      /* Inline-Elemente ignorieren margin-bottom/padding-bottom sonst */
       /* margin-bottom: 80px;   */
       text-decoration-line: underline;
       text-decoration-style: dotted;
@@ -97,10 +107,17 @@
       /* margin-left: 6rem; */
     }
 
-    ul>li{
-            font-size: 50px;
-            margin-top: 3rem; 
+    ul>li {
+      font-size: 50px;
+      margin-top: 3rem;
 
+    }
+
+    th,
+    td {
+      font-size: 40px;
+      text-align: left;
+      padding-right: 8rem;
     }
 
   }
@@ -127,7 +144,7 @@
   }
 
   .pagedjs_page {
-    opacity: 0.2;
+    opacity: 0.05;
     transition: opacity 0.4s ease;
   }
 

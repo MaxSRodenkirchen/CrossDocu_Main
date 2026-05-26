@@ -24,6 +24,20 @@
             }
           },
           {
+            "id": "31bd1f36bedbf224",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "In one sentence - Exploring Creative Technologies.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "In one sentence - Exploring Creative Technologies"
+            }
+          },
+          {
             "id": "f388242824c14e8b",
             "type": "leaf",
             "state": {
@@ -43,16 +57,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "About Digital Gardens.md",
+                "file": "In one sentence - Exploring Creative Technologies.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "About Digital Gardens"
+              "title": "In one sentence - Exploring Creative Technologies"
+            }
+          },
+          {
+            "id": "8297f82ee3632934",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Timetracking for Der Baum hat Zeit.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Timetracking for Der Baum hat Zeit"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -120,7 +148,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 919.0041885375977
+    "width": 884.0041885375977
   },
   "right": {
     "id": "6e08fdf0e350c873",
@@ -236,13 +264,18 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "b2611eb0ded8200e",
+  "active": "8297f82ee3632934",
   "lastOpenFiles": [
     "Concept Presentation - Exploring Creative Technologies.md",
-    "Mapping - Exploring Creative Technologies.md",
-    "Timetracking for Der Baum hat Zeit.md",
-    "Explaining Creative Coding.md",
+    "In one sentence - Exploring Creative Technologies.md",
     "About Digital Gardens.md",
+    "Timetracking for Der Baum hat Zeit.md",
+    "Overview.canvas",
+    "Hybrid Search concept.md",
+    "index.md",
+    "Writing Conventions in CrossDocu.md",
+    "Mapping - Exploring Creative Technologies.md",
+    "Explaining Creative Coding.md",
     "About Learning in Public.md",
     "Thank you.md",
     "MVP - Exploring Creative Technologies.md",
@@ -260,19 +293,15 @@
     "images/MappingECT.jpeg",
     "MappingECT.heic",
     "images/MappingECT 1.heic",
-    "In one sentence - Exploring Creative Technologies.md",
     "images/MappingECT.heic",
     "images/structure2.png",
     "images/oneSentence.png",
     "A CrossDocu Workflow.md",
     "Einführung in p5.js.md",
     "The idea behind CrossDocu.md",
-    "Hybrid Search concept.md",
     "Frontmatter Template.md",
     "Styling System for CrossDocu.md",
-    "Writing Conventions in CrossDocu.md",
     "Anleitung zum Müßiggang - Referat.md",
-    "index.md",
     "MOC Der Baum hat Zeit - Journal.md",
     "Definitions of Creative Coding.md",
     "Customized editor for CrossDocu.md",

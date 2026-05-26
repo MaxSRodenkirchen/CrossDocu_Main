@@ -9,6 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=web" />
     <link rel="stylesheet" href="/styles/variables.css">
     <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
+    <link rel="stylesheet" href="/styles/config.css" data-pagedjs-ignore>
     <link rel="stylesheet" href="/styles/sidebar.css" data-pagedjs-ignore>
     <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
 
@@ -21,7 +22,7 @@
 
     <div id="mainContainer">
 
-        
+
         {# {% for moc in collections.moc %}
         <script>
             window.sidebarContent.push("{{moc.url}}");
@@ -70,7 +71,7 @@
 
         function toggleSidebar() {
             const activeMocUrl = localStorage.sidebarContent;
-            
+
             // 1. Verstecke alle Sidebar-Gruppen
             document.querySelectorAll('.sidebar-group').forEach(group => {
                 group.style.display = 'none';
@@ -104,7 +105,7 @@
             if (mocControls) mocControls.style.display = 'none';
         }
 
-        window.switchMoc = function(url) {
+        window.switchMoc = function (url) {
             localStorage.sidebarContent = url;
             toggleSidebar();
             highlightCurrentPage();
@@ -130,15 +131,15 @@
 
             if (activeLink) {
                 // setTimeout ensures the display: block has taken effect before calculating scroll
-                setTimeout(() => {
-                    activeLink.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 50);
+                // setTimeout(() => {
+                //     activeLink.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // }, 50);
             }
         }
 
         toggleSidebar();
         highlightCurrentPage();
-        window.navigateMoc = function(direction) {
+        window.navigateMoc = function (direction) {
             const activeMocUrl = localStorage.sidebarContent;
             if (!activeMocUrl) return;
 
@@ -180,4 +181,5 @@
     </script>
 
 </body>
+
 </html>

@@ -33,6 +33,10 @@
         {
           "type": "note",
           "path": "Explaining Creative Coding.md"
+        },
+        {
+          "type": "note",
+          "path": "Overview.canvas"
         }
       ],
       "navRainbow": {
@@ -287,8 +291,9 @@
   "showPropertiesOnSeparateRows": false,
   "enablePropertyInternalLinks": true,
   "enablePropertyExternalLinks": true,
-  "showWordCount": false,
-  "wordCountPlacement": "title",
+  "textCountDisplay": "none",
+  "textCountPlacement": "title",
+  "characterCountSpaces": "include",
   "wordCountTargetProperty": "word-goal",
   "showWordCountPercentage": false,
   "showFileDate": true,
@@ -536,7 +541,7 @@
     "#404040",
     "#404040"
   ],
-  "lastShownVersion": "3.0.0",
+  "lastShownVersion": "3.0.1",
   "rootFolderOrder": [],
   "rootTagOrder": [],
   "rootPropertyOrder": []

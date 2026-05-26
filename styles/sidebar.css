@@ -4,13 +4,13 @@
     flex-direction: column;
     grid-column: 1;
     grid-row: 2;
-    margin-left: 4rem;
+    margin-left: 2rem;
     overflow: scroll !important;
     max-width: 300px;
     font-family: 'Graebenbach Regular', sans-serif;
   }
 
-  
+
   /* Style für die MOC-Umschaltknöpfe */
   #sidebar button {
     background: transparent;
@@ -35,7 +35,7 @@
 
   #sidebar button.active-moc {
     /* border-width: 3px; */
-        background: var(--color-white);
+    background: var(--color-white);
 
     font-weight: 900;
   }
@@ -79,7 +79,7 @@
     margin: 0;
     scrollbar-width: none;
 
-    
+
   }
 
   .moc-sidebar-container {
@@ -126,12 +126,12 @@
     font-size: 10px;
   }
 
-  .moc-sidebar-container > ol > li {
+  .moc-sidebar-container>ol>li {
     padding-top: 20px !important;
 
   }
 
-    .moc-sidebar-container > ol > li > p {
+  .moc-sidebar-container>ol>li>p {
     padding-left: .5rem;
 
   }
@@ -185,14 +185,19 @@
   }
 
 
-  .moc-sidebar-container > ol > li a:hover ,
-  .moc-sidebar-container > ol > li a.active {
+  .moc-sidebar-container>ol>li a:hover,
+  .moc-sidebar-container>ol>li a.active {
     font-family: 'Graebenbach Regular Italic', sans-serif;
 
   }
 
-  .moc-sidebar-container > ol > li a:hover p,
-  .moc-sidebar-container > ol > li a.active p {
+  .moc-sidebar-container>ol>li a.active::after {
+    content: '←';
+    align-self: center;
+  }
+
+  .moc-sidebar-container>ol>li a:hover p,
+  .moc-sidebar-container>ol>li a.active p {
     color: var(--color-white) !important;
   }
 

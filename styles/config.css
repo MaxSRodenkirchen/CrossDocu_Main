@@ -1,0 +1,51 @@
+@media screen {
+  #config {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    /* display: flex; */
+    /* flex-direction: column; */
+    margin-right: 2rem;
+    margin-top: 4rem;
+    /* width: 50px; */
+    color: var(--color-white);
+    background: var(--color-white);
+    /* border: 1px solid red; */
+    padding: .5rem;
+    /* filter: opacity(.2); */
+    /* z-index: 1000; */
+    /* display: none; */
+  }
+
+  .viewModeButton {
+    /* border-radius: 100%; */
+    border: none;
+    /* position: absolute;
+        right: 0; */
+
+    padding: 0;
+    /* margin: 0 auto; */
+    background: none;
+    overflow: auto;
+    width: max-content;
+    stroke: var(--color-white);
+  }
+
+  .button-svg {
+    fill: var(--color-white);
+    stroke: var(--color-4);
+    stroke-width: 8px;
+    height: 28px;
+    border-radius: 0.5rem;
+  }
+
+  .button-svg:hover {
+    /* fill: var(--color-black);
+    stroke: var(--color-black); */
+    cursor: pointer;
+  }
+
+  #mainContainer:fullscreen #config {
+    display: none !important;
+  }
+}
