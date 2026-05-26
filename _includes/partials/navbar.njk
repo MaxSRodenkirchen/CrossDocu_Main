@@ -1,4 +1,3 @@
-{% include "partials/header.njk" %}
 
 
     {% for moc in collections.moc %}
@@ -6,6 +5,9 @@
     {% endfor %}
 
 <ul id="sidebarContent">
+
+    {% include "partials/header.njk" %}
+
     <!-- 1. Die Standard-Sidebar (mit allen Posts) -->
     <div class="sidebar-group" id="sidebar-default">
         {% for post in collections.posts | reverse %}

@@ -8,7 +8,7 @@ type:
 publish:
   - public
 ---
-### Digital Gardens and Streams
+# Digital Gardens and Streams
 
 - Digital Streams -> Information comes and leaves directly *(e.g. with Instagram Stories)*
 - Digital Gardens -> Information gathers and grows over time

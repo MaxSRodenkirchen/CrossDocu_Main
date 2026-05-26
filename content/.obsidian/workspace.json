@@ -24,37 +24,7 @@
             }
           },
           {
-            "id": "710fc4510fc8aac4",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Explaining Creative Coding.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "Explaining Creative Coding"
-            }
-          },
-          {
-            "id": "4e01480795743efa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "About Digital Gardens.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "About Digital Gardens"
-            }
-          },
-          {
-            "id": "62c22f1b7f623225",
+            "id": "f388242824c14e8b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -68,49 +38,7 @@
             }
           },
           {
-            "id": "62ef009be0881604",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "In one sentence - Exploring Creative Technologies.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "In one sentence - Exploring Creative Technologies"
-            }
-          },
-          {
-            "id": "b81d7e9ac4816768",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "About Learning in Public.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "About Learning in Public"
-            }
-          },
-          {
-            "id": "a91a8b6cfc53257f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Thank you.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Thank you"
-            }
-          },
-          {
-            "id": "6b3db27495266c81",
+            "id": "b2611eb0ded8200e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -121,122 +49,10 @@
               },
               "icon": "lucide-file",
               "title": "About Digital Gardens"
-            }
-          },
-          {
-            "id": "2730e6439da38514",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MVP - Exploring Creative Technologies.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MVP - Exploring Creative Technologies"
-            }
-          },
-          {
-            "id": "f7e3ebb7681371d7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Structure for Exploring Creative Technologies.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Structure for Exploring Creative Technologies"
-            }
-          },
-          {
-            "id": "0564c98fe4ed4c33",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "User Journeys - Exploring Creative Technologies.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "User Journeys - Exploring Creative Technologies"
-            }
-          },
-          {
-            "id": "12a13ac0a0cdcc04",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mapping - Exploring Creative Technologies.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Mapping - Exploring Creative Technologies"
-            }
-          },
-          {
-            "id": "860ed59452be2e43",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "User Journeys - Exploring Creative Technologies.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "User Journeys - Exploring Creative Technologies"
-            }
-          },
-          {
-            "id": "d67440541e339dae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Timetracking for Der Baum hat Zeit.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Timetracking for Der Baum hat Zeit"
-            }
-          },
-          {
-            "id": "8de738134b85dadc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Self-briefing - Der Baum hat Zeit.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Self-briefing - Der Baum hat Zeit"
-            }
-          },
-          {
-            "id": "400bf3740d38dcf5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Questions behind Exploring Creative Technologies.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Questions behind Exploring Creative Technologies"
             }
           }
         ],
-        "currentTab": 15
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -420,25 +236,26 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "400bf3740d38dcf5",
+  "active": "b2611eb0ded8200e",
   "lastOpenFiles": [
     "Concept Presentation - Exploring Creative Technologies.md",
-    "Timetracking for Der Baum hat Zeit.md",
-    "Self-briefing - Der Baum hat Zeit.md",
-    "User Journeys - Exploring Creative Technologies.md",
     "Mapping - Exploring Creative Technologies.md",
+    "Timetracking for Der Baum hat Zeit.md",
+    "Explaining Creative Coding.md",
+    "About Digital Gardens.md",
+    "About Learning in Public.md",
+    "Thank you.md",
+    "MVP - Exploring Creative Technologies.md",
+    "Structure for Exploring Creative Technologies.md",
+    "User Journeys - Exploring Creative Technologies.md",
+    "Self-briefing - Der Baum hat Zeit.md",
+    "Questions behind Exploring Creative Technologies.md",
     "images/userjourney_toni.png",
     "images/userjourney_nacken.png",
     "images/userjourney_wrede.png",
-    "Structure for Exploring Creative Technologies.md",
-    "Explaining Creative Coding.md",
     "images/StructureInObsidian.png",
     "Pasted image 20260523164139.png",
-    "MVP - Exploring Creative Technologies.md",
-    "About Digital Gardens.md",
-    "Thank you.md",
     "images/structure3.png",
-    "Questions behind Exploring Creative Technologies.md",
     "images/digitalStreams.png",
     "images/MappingECT.jpeg",
     "MappingECT.heic",
@@ -447,7 +264,6 @@
     "images/MappingECT.heic",
     "images/structure2.png",
     "images/oneSentence.png",
-    "About Learning in Public.md",
     "A CrossDocu Workflow.md",
     "Einführung in p5.js.md",
     "The idea behind CrossDocu.md",

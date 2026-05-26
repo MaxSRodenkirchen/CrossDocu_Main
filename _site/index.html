@@ -15,7 +15,7 @@
     
 
 
-    <title>index</title>
+    <title> Exploring Creative Technologies</title>
 </head>
 
 <body>
@@ -28,18 +28,20 @@
 
         <aside id="sidebar">
 
-            <header>
-    <h3>Exploring Creative Technologies</h3>
-</header>
+            
 
-
-    
-        <button data-moc-btn-url="/Explaining Creative Coding/" onclick="switchMoc('/Explaining Creative Coding/')">Explaining Creative Coding</button>
     
         <button data-moc-btn-url="/Concept Presentation - Exploring Creative Technologies/" onclick="switchMoc('/Concept Presentation - Exploring Creative Technologies/')">Concept Presentation - Exploring Creative Technologies</button>
     
+        <button data-moc-btn-url="/Explaining Creative Coding/" onclick="switchMoc('/Explaining Creative Coding/')">Explaining Creative Coding</button>
+    
 
 <ul id="sidebarContent">
+
+    <header>
+    <h3>Exploring Creative Technologies</h3>
+</header>
+
     <!-- 1. Die Standard-Sidebar (mit allen Posts) -->
     <div class="sidebar-group" id="sidebar-default">
         
@@ -136,33 +138,15 @@
     </div>
 
     
-        <div class="sidebar-group moc-sidebar-container" data-moc-url="/Explaining Creative Coding/" style="display: none;">
-            <h1>Workshop:</h1>
-<ul>
-<li>
-                <a href="/./Who am I">
-                    <img src="/images/CrossDocu_dieIdee.png" alt="CrossDocu_Grafik">
-                    <p>Intro presentation</p>
-                </a>
-            </li>
-<li></li>
-<li>
-                <a href="/./Self-briefing - Der Baum hat Zeit">
-                    <img src="/images/CCG.png" alt="CCG">
-                    <p>Self-briefing presentation</p>
-                </a>
-            </li>
-</ul>
-
-        </div>
-    
         <div class="sidebar-group moc-sidebar-container" data-moc-url="/Concept Presentation - Exploring Creative Technologies/" style="display: none;">
             <h1>Concept Presentation</h1>
 <!--  Max S. Rodenkirchen
 27.05.2026
 at <a href="/./Der Baum hat Zeit - FH Aachen - Prof. Eva Vitting">Der Baum hat Zeit - FH Aachen - Prof. Eva Vitting</a>  -->
+<ol>
+<li>
 <p><strong>Assignment for the semester</strong></p>
-<ul>
+<ol>
 <li>
                 <a href="/./In one sentence - Exploring Creative Technologies">
                     <img src="/images/oneSentence.png" alt="oneSentence">
@@ -175,11 +159,18 @@ at <a href="/./Der Baum hat Zeit - FH Aachen - Prof. Eva Vitting">Der Baum hat Z
                     <p>Mapping the project</p>
                 </a>
             </li>
-<li><a href="/./Questions behind Exploring Creative Technologies">Questions behind Exploring Creative Technologies</a>
-<!--  - <a href="/./MVP - Exploring Creative Technologies">What is the content?</a>  --></li>
-</ul>
+<li>
+                <a href="/./Questions behind Exploring Creative Technologies">
+                    
+                    <p>Questions behind Exploring Creative Technologies</p>
+                </a>
+            </li>
+</ol>
+<!--  - <a href="/./MVP - Exploring Creative Technologies">What is the content?</a>  -->
+</li>
+<li>
 <p><strong>About the medium</strong> 💻🌼</p>
-<ul>
+<ol>
 <li>
                 <a href="/./About Digital Gardens">
                     <img src="/images/digitalStreams.png" alt="digitalStreams">
@@ -210,10 +201,12 @@ at <a href="/./Der Baum hat Zeit - FH Aachen - Prof. Eva Vitting">Der Baum hat Z
                     <p>A CrossDocu Workflow</p>
                 </a>
             </li>
-</ul>
+</ol>
 <!--  Make it clear that the semester project uses and helps develop CrossDocu, but that its primary focus is not on further developing CrossDocu!  -->
+</li>
+<li>
 <p><strong>Next steps</strong></p>
-<ul>
+<ol>
 <li>
                 <a href="/./Timetracking for Der Baum hat Zeit">
                     
@@ -224,6 +217,28 @@ at <a href="/./Der Baum hat Zeit - FH Aachen - Prof. Eva Vitting">Der Baum hat Z
                 <a href="/./Thank you">
                     
                     <p>Thank you</p>
+                </a>
+            </li>
+</ol>
+</li>
+</ol>
+
+        </div>
+    
+        <div class="sidebar-group moc-sidebar-container" data-moc-url="/Explaining Creative Coding/" style="display: none;">
+            <h1>Workshop:</h1>
+<ul>
+<li>
+                <a href="/./Who am I">
+                    <img src="/images/CrossDocu_dieIdee.png" alt="CrossDocu_Grafik">
+                    <p>Intro presentation</p>
+                </a>
+            </li>
+<li></li>
+<li>
+                <a href="/./Self-briefing - Der Baum hat Zeit">
+                    <img src="/images/CCG.png" alt="CCG">
+                    <p>Self-briefing presentation</p>
                 </a>
             </li>
 </ul>
@@ -344,17 +359,17 @@ at <a href="/./Der Baum hat Zeit - FH Aachen - Prof. Eva Vitting">Der Baum hat Z
 <div id="slideControls" style="display: none; flex-direction: column; gap: 0.3rem; margin-top: 1rem;">
     <button class="viewModeButton" onclick="prevSlide()" title="Previous Slide">
         <svg class="button-svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-            <path d="M28,14 L16,24 L28,34" fill="none" stroke="var(--color-white)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M28,14 L16,24 L28,34" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </button>
     <button class="viewModeButton" onclick="nextSlide()" title="Next Slide">
         <svg class="button-svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-            <path d="M20,14 L32,24 L20,34" fill="none" stroke="var(--color-white)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20,14 L32,24 L20,34" fill="none"  stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </button>
     <button class="viewModeButton" onclick="toggleFullscreen()" title="Toggle Fullscreen">
         <svg class="button-svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-            <path d="M12,12 L20,12 M12,12 L12,20 M36,12 L28,12 M36,12 L36,20 M12,36 L20,36 M12,36 L12,28 M36,36 L28,36 M36,36 L36,28" fill="none" stroke="var(--color-white)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12,12 L20,12 M12,12 L12,20 M36,12 L28,12 M36,12 L36,20 M12,36 L20,36 M12,36 L12,28 M36,36 L28,36 M36,36 L36,28" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </button>
 </div>
@@ -362,12 +377,12 @@ at <a href="/./Der Baum hat Zeit - FH Aachen - Prof. Eva Vitting">Der Baum hat Z
 <div id="mocControls" style="display: none; flex-direction: column; gap: 0.3rem; margin-top: 1rem;">
     <button class="viewModeButton" onclick="navigateMoc(-1)" title="Previous in MOC">
         <svg class="button-svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-            <path d="M14,28 L24,16 L34,28" fill="none" stroke="var(--color-white)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14,28 L24,16 L34,28" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </button>
     <button class="viewModeButton" onclick="navigateMoc(1)" title="Next in MOC">
         <svg class="button-svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-            <path d="M14,20 L24,32 L34,20" fill="none" stroke="var(--color-white)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14,20 L24,32 L34,20" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </button>
 </div>

@@ -7,6 +7,7 @@ type:
 publish:
   - public
 ---
+This note gets regularly updated. Last edit: **May, 26th**
 
 | task                                                         | assumed time      |
 | ------------------------------------------------------------ | ----------------- |
