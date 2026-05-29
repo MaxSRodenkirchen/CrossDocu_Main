@@ -1,78 +1,14 @@
 {
   "main": {
-    "id": "c29c83a8b132f52f",
+    "id": "a38288b4ab0f1bb9",
     "type": "split",
     "children": [
       {
-        "id": "8c135089def68e87",
+        "id": "3aaa43b164249b05",
         "type": "tabs",
         "children": [
           {
-            "id": "7693bf733387e982",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Concept Presentation.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "Concept Presentation"
-            }
-          },
-          {
-            "id": "c92506ed92e3efd6",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-<<<<<<< Updated upstream
-                "file": "Capture and loop movement in p5.js.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Capture and loop movement in p5.js"
-            }
-          },
-          {
-            "id": "c9b50c7080d30a54",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Concept presentation start.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Concept presentation start"
-            }
-          },
-          {
-            "id": "0cca700ea8998ae1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Concept presentation start.md",
-=======
-                "file": "Journal.md",
->>>>>>> Stashed changes
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "Journal"
-            }
-          },
-          {
-            "id": "2c4dd6f322d26c12",
+            "id": "d8dbe2afe9d0e1df",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -85,22 +21,21 @@
               "title": "Capture and loop movement in p5.js"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "24a9d242659b785f",
+    "id": "caa3b90e313656c6",
     "type": "split",
     "children": [
       {
-        "id": "c9b5bd2b12d779e9",
+        "id": "39ee00fba6636245",
         "type": "tabs",
         "children": [
           {
-            "id": "b32dcde9d1402087",
+            "id": "447985832c7a8cd0",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -113,15 +48,15 @@
             }
           },
           {
-            "id": "0339f1a7876a64fb",
+            "id": "5035de8d78cd691b",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": " ",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": true,
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               },
@@ -130,7 +65,7 @@
             }
           },
           {
-            "id": "433a10884d581df8",
+            "id": "40490bf576d59d3e",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -138,40 +73,28 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
-          },
-          {
-            "id": "49ba6e6eaf8602d1",
-            "type": "leaf",
-            "state": {
-              "type": "notebook-navigator",
-              "state": {},
-              "icon": "notebook-navigator",
-              "title": "Notebook Navigator"
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 776
+    "width": 502.00418853759766
   },
   "right": {
-    "id": "6e08fdf0e350c873",
+    "id": "0d88643e45ad4bee",
     "type": "split",
     "children": [
       {
-        "id": "69a0d21b4c1a63f4",
+        "id": "771d143900b0e372",
         "type": "tabs",
-        "dimension": 84.15213946117274,
         "children": [
           {
-            "id": "17bf0c4e66e4b979",
+            "id": "81f8636c1adbfadf",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Base Template.md",
+                "file": "Capture and loop movement in p5.js.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -181,25 +104,40 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Base Template"
+              "title": "Backlinks for Capture and loop movement in p5.js"
             }
           },
           {
-            "id": "8265f5bf530c5ce1",
+            "id": "7c035d5c0817a10c",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "Capture and loop movement in p5.js.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von index öffnen"
+              "title": "Outgoing links from Capture and loop movement in p5.js"
             }
           },
           {
-            "id": "6b8675b998b1b624",
+            "id": "6f392b06a2b72319",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6caebf245380b5ab",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -213,41 +151,18 @@
             }
           },
           {
-            "id": "d8726cbb98791948",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
-            }
-          }
-        ],
-        "currentTab": 3
-      },
-      {
-        "id": "777df11fe70bca0f",
-        "type": "tabs",
-        "dimension": 15.847860538827257,
-        "children": [
-          {
-            "id": "ef397b872a6f63a3",
+            "id": "f995f7c47e005a21",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Concept Presentation.md",
+                "file": "Capture and loop movement in p5.js.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Concept Presentation"
+              "title": "Outline of Capture and loop movement in p5.js"
             }
           }
         ]
@@ -270,69 +185,9 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "2c4dd6f322d26c12",
+  "active": "d8dbe2afe9d0e1df",
   "lastOpenFiles": [
-<<<<<<< Updated upstream
-    "Concept Presentation - Exploring Creative Technologies.md",
-    "Concept presentation start.md",
-    "Capture and loop movement in p5.js.md",
-    "What are ways to visualize body movement digitally.md",
-    "images/ExplainingRecordMovementInP5.mp4",
-    "images/ConceptPresentation_ExploringCreativeTechnologies.mp4",
-=======
->>>>>>> Stashed changes
-    "Mapping - Exploring Creative Technologies.md",
-    "images/Mapping ETC.png",
-    "images/Zeitplan Eva.png",
-    "Timetracking for Der Baum hat Zeit.md",
-    "Thank you.md",
-    "Capture and loop movement in p5.js.md",
     "Concept Presentation.md",
-    "Journal.md",
-    "Einführung in p5.js.md",
-    "MVP - Exploring Creative Technologies.md",
-    "About Learning in Public.md",
-    "User Journeys - Exploring Creative Technologies.md",
-    "Questions behind Exploring Creative Technologies.md",
-    "Map for Exploring Creative Technologies.canvas",
-    "Concept presentation start.md",
-    "images/timetable_26-05.png",
-    "Projektideen - Der Baum hat Zeit.md",
-    "Rolle von Controllern in Creative Coding.md",
-    "The concept of Feynmans 12 favorite problems.md",
-    "What is needed for building a problem-oriented System.md",
-    "What are things to be done in CrossDocu.md",
-    "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
-    "What are definitions for Creative Coding.md",
-    "How is AI affecting our way of working.md",
-    "How can we bring together digital and real world environment.md",
-    "Can PoseNet in ML5.js also be used for capturing data.md",
-    "Hybrid Search concept.md",
-    "In one sentence - Exploring Creative Technologies.md",
-    "The idea behind CrossDocu.md",
-<<<<<<< Updated upstream
-    "index.md",
-    "Einführung in p5.js.md",
-    "Explaining Creative Coding.md",
-    "About Digital Gardens.md",
-    "Writing Conventions in CrossDocu.md",
-    "About Learning in Public.md",
-=======
->>>>>>> Stashed changes
-    "images/userjourney_toni.png",
-    "images/userjourney_nacken.png",
-    "images/userjourney_wrede.png",
-    "images/StructureInObsidian.png",
-    "Pasted image 20260523164139.png",
-    "images/structure3.png",
-    "images/digitalStreams.png",
-    "MappingECT.heic",
-    "images/MappingECT 1.heic",
-    "images/MappingECT.heic",
-    "content.11tydata.js",
-    "_explore Creative Coding.base",
-    "content.json",
-    "content.11ty.js",
-    "content.js"
+    "Capture and loop movement in p5.js.md"
   ]
 }
