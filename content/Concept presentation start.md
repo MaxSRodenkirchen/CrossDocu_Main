@@ -10,10 +10,7 @@ publish:
 ---
 # Exploring Creative Technologies
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eupgg4jdBes?si=Vyk3Y4pbUYe-kary" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-![[ConceptPresentation_ExploringCreativeTechnologies.mp4]]
-
+<iframe src="https://archive.org/embed/concept-presentation-exploring-creative-technologies" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 
 ###### **Max S. Rodenkirchen**
 ###### 27.05.2026 
