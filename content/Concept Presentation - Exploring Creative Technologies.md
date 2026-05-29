@@ -11,12 +11,9 @@ publish:
 ---
 # Concept Presentation
 
-%% Max S. Rodenkirchen
-27.05.2026 
-at [[Der Baum hat Zeit - FH Aachen - Prof. Eva Vitting]] %%
-
 
 1. [[Concept presentation start|**Welcome to my presentation**]]
+	
 
 2. **Assignment for the semester** 
 
