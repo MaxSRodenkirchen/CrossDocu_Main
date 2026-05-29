@@ -3,7 +3,7 @@ tags:
   - FH-Aachen
   - ExploringCreativeTechnologies
 state:
-  - "0"
+  - "4"
 type:
 publish:
   - public

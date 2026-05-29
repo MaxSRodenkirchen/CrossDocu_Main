@@ -14,21 +14,23 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Concept Presentation - Exploring Creative Technologies.md",
+                "file": "Concept Presentation.md",
                 "mode": "source",
                 "source": false
               },
               "pinned": true,
               "icon": "lucide-file",
-              "title": "Concept Presentation - Exploring Creative Technologies"
+              "title": "Concept Presentation"
             }
           },
           {
             "id": "c92506ed92e3efd6",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< Updated upstream
                 "file": "Capture and loop movement in p5.js.md",
                 "mode": "source",
                 "source": false
@@ -58,11 +60,15 @@
               "type": "markdown",
               "state": {
                 "file": "Concept presentation start.md",
+=======
+                "file": "Journal.md",
+>>>>>>> Stashed changes
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "Concept presentation start"
+              "title": "Journal"
             }
           },
           {
@@ -78,108 +84,9 @@
               "icon": "lucide-file",
               "title": "Capture and loop movement in p5.js"
             }
-          },
-          {
-            "id": "e7b9b1a27f8d2660",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mapping - Exploring Creative Technologies.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Mapping - Exploring Creative Technologies"
-            }
-          },
-          {
-            "id": "8297f82ee3632934",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Overview.canvas",
-                "viewState": {
-                  "x": 575.8183578547657,
-                  "y": -0.4357496691985574,
-                  "zoom": -0.4186574805761479
-                }
-              },
-              "pinned": true,
-              "icon": "lucide-layout-dashboard",
-              "title": "Overview"
-            }
-          },
-          {
-            "id": "528eb48c417af439",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "images/Mapping ETC.png"
-              },
-              "icon": "lucide-image",
-              "title": "Mapping ETC"
-            }
-          },
-          {
-            "id": "b8f32620fd8413d4",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "images/Zeitplan Eva.png"
-              },
-              "icon": "lucide-image",
-              "title": "Zeitplan Eva"
-            }
-          },
-          {
-            "id": "96004fb20c6e403d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Timetracking for Der Baum hat Zeit.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Timetracking for Der Baum hat Zeit"
-            }
-          },
-          {
-            "id": "d8edb9b8cce86ace",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Thank you.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Thank you"
-            }
-          },
-          {
-            "id": "6203a68e179405da",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Capture and loop movement in p5.js.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Capture and loop movement in p5.js"
-            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -363,21 +270,33 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "c92506ed92e3efd6",
+  "active": "2c4dd6f322d26c12",
   "lastOpenFiles": [
+<<<<<<< Updated upstream
     "Concept Presentation - Exploring Creative Technologies.md",
     "Concept presentation start.md",
     "Capture and loop movement in p5.js.md",
     "What are ways to visualize body movement digitally.md",
     "images/ExplainingRecordMovementInP5.mp4",
     "images/ConceptPresentation_ExploringCreativeTechnologies.mp4",
+=======
+>>>>>>> Stashed changes
     "Mapping - Exploring Creative Technologies.md",
-    "Thank you.md",
-    "Timetracking for Der Baum hat Zeit.md",
     "images/Mapping ETC.png",
-    "images/timetable_26-05.png",
     "images/Zeitplan Eva.png",
-    "Overview.canvas",
+    "Timetracking for Der Baum hat Zeit.md",
+    "Thank you.md",
+    "Capture and loop movement in p5.js.md",
+    "Concept Presentation.md",
+    "Journal.md",
+    "Einführung in p5.js.md",
+    "MVP - Exploring Creative Technologies.md",
+    "About Learning in Public.md",
+    "User Journeys - Exploring Creative Technologies.md",
+    "Questions behind Exploring Creative Technologies.md",
+    "Map for Exploring Creative Technologies.canvas",
+    "Concept presentation start.md",
+    "images/timetable_26-05.png",
     "Projektideen - Der Baum hat Zeit.md",
     "Rolle von Controllern in Creative Coding.md",
     "The concept of Feynmans 12 favorite problems.md",
@@ -391,12 +310,15 @@
     "Hybrid Search concept.md",
     "In one sentence - Exploring Creative Technologies.md",
     "The idea behind CrossDocu.md",
+<<<<<<< Updated upstream
     "index.md",
     "Einführung in p5.js.md",
     "Explaining Creative Coding.md",
     "About Digital Gardens.md",
     "Writing Conventions in CrossDocu.md",
     "About Learning in Public.md",
+=======
+>>>>>>> Stashed changes
     "images/userjourney_toni.png",
     "images/userjourney_nacken.png",
     "images/userjourney_wrede.png",

@@ -28,15 +28,11 @@
       "shortcuts": [
         {
           "type": "note",
-          "path": "Concept Presentation - Exploring Creative Technologies.md"
+          "path": "Journal.md"
         },
         {
           "type": "note",
-          "path": "Explaining Creative Coding.md"
-        },
-        {
-          "type": "note",
-          "path": "Overview.canvas"
+          "path": "Concept Presentation.md"
         }
       ],
       "navRainbow": {
@@ -485,7 +481,10 @@
   "pinnedNotes": {},
   "collapsedPinnedContexts": {},
   "fileIcons": {},
-  "fileColors": {},
+  "fileColors": {
+    "Concept Presentation.md": "#64748b",
+    "Journal.md": "#f59e0b"
+  },
   "fileBackgroundColors": {},
   "folderIcons": {},
   "folderColors": {},
@@ -541,7 +540,7 @@
     "#404040",
     "#404040"
   ],
-  "lastShownVersion": "3.0.1",
+  "lastShownVersion": "3.0.2",
   "rootFolderOrder": [],
   "rootTagOrder": [],
   "rootPropertyOrder": []

@@ -1,7 +1,7 @@
 ---
 tags:
 state:
-  - "0"
+  - "10"
 type:
 publish:
   - public
