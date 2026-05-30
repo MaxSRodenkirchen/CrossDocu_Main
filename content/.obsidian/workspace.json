@@ -13,12 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Concept presentation start.md",
+                "file": "Einführung in p5.js.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
-              "title": "Concept presentation start"
+              "title": "Einführung in p5.js"
             }
           }
         ]
@@ -73,12 +83,23 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "ebc1aaa38d3e2ab7",
+            "type": "leaf",
+            "state": {
+              "type": "notebook-navigator",
+              "state": {},
+              "icon": "notebook-navigator",
+              "title": "Notebook Navigator"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 502.00418853759766
+    "width": 824
   },
   "right": {
     "id": "0d88643e45ad4bee",
@@ -187,7 +208,13 @@
   },
   "active": "d8dbe2afe9d0e1df",
   "lastOpenFiles": [
+    "What are challenges in explaining Creative Coding to Design students.md",
+    "Einführung in p5.js.md",
+    "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
+    "What is needed for building a problem-oriented System.md",
+    "How can we explain and teach Creative Coding.md",
     "Concept Presentation.md",
+    "Concept presentation start.md",
     "Capture and loop movement in p5.js.md"
   ]
 }

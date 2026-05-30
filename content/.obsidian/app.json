@@ -1,5 +1,6 @@
 {
   "alwaysUpdateLinks": true,
   "foldHeading": true,
-  "showInlineTitle": false
+  "showInlineTitle": false,
+  "strictLineBreaks": false
 }

@@ -1,7 +1,7 @@
 [
   "templater-obsidian",
-  "notebook-navigator",
   "obsidian-style-settings",
   "obsidian-emoji-toolbar",
-  "deepl"
+  "deepl",
+  "notebook-navigator"
 ]

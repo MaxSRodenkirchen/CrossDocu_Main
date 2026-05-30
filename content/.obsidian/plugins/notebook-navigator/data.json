@@ -9,13 +9,7 @@
           "key": "state",
           "showInNavigation": true,
           "showInList": true,
-          "showInFileMenu": false
-        },
-        {
-          "key": "type",
-          "showInNavigation": true,
-          "showInList": true,
-          "showInFileMenu": false
+          "showInFileMenu": true
         }
       ],
       "hiddenFolders": [],
@@ -482,42 +476,34 @@
   "collapsedPinnedContexts": {},
   "fileIcons": {},
   "fileColors": {
-    "Concept Presentation.md": "#64748b",
     "Journal.md": "#f59e0b"
   },
   "fileBackgroundColors": {},
   "folderIcons": {},
   "folderColors": {},
   "folderBackgroundColors": {},
-  "folderSortOverrides": {},
+  "folderSortOverrides": {
+    "/": "modified-desc"
+  },
   "folderTreeSortOverrides": {},
   "folderAppearances": {},
   "tagIcons": {},
-  "tagColors": {
-    "untagged": "#f43f5e"
-  },
+  "tagColors": {},
   "tagBackgroundColors": {},
   "tagSortOverrides": {},
   "tagTreeSortOverrides": {},
   "tagAppearances": {},
   "propertyIcons": {},
   "propertyColors": {
-    "key:state=0": "#f43f5e"
+    "key:state=0": "#c64444"
   },
   "propertyBackgroundColors": {},
   "propertySortOverrides": {},
   "propertyTreeSortOverrides": {},
-  "propertyAppearances": {
-    "key:state=1": {
-      "titleRows": 2,
-      "mode": "compact"
-    }
-  },
+  "propertyAppearances": {},
   "virtualFolderColors": {},
   "virtualFolderBackgroundColors": {},
-  "navigationSeparators": {
-    "section:tags": true
-  },
+  "navigationSeparators": {},
   "userColors": [
     "#ffffff",
     "#d9d9d9",
