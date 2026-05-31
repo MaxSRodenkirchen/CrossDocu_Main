@@ -4,7 +4,14 @@
       "id": "default",
       "name": "Default",
       "fileVisibility": "supported",
-      "propertyKeys": [],
+      "propertyKeys": [
+        {
+          "key": "state",
+          "showInNavigation": true,
+          "showInList": true,
+          "showInFileMenu": true
+        }
+      ],
       "hiddenFolders": [],
       "hiddenTags": [],
       "hiddenFileNames": [],
@@ -16,6 +23,10 @@
         {
           "type": "note",
           "path": "Journal.md"
+        },
+        {
+          "type": "note",
+          "path": "Concept Presentation.md"
         }
       ],
       "navRainbow": {
@@ -465,13 +476,15 @@
   "collapsedPinnedContexts": {},
   "fileIcons": {},
   "fileColors": {
-    "Journal.md": "#06b6d4"
+    "Journal.md": "#f59e0b"
   },
   "fileBackgroundColors": {},
   "folderIcons": {},
   "folderColors": {},
   "folderBackgroundColors": {},
-  "folderSortOverrides": {},
+  "folderSortOverrides": {
+    "/": "modified-desc"
+  },
   "folderTreeSortOverrides": {},
   "folderAppearances": {},
   "tagIcons": {},
@@ -481,7 +494,9 @@
   "tagTreeSortOverrides": {},
   "tagAppearances": {},
   "propertyIcons": {},
-  "propertyColors": {},
+  "propertyColors": {
+    "key:state=0": "#c64444"
+  },
   "propertyBackgroundColors": {},
   "propertySortOverrides": {},
   "propertyTreeSortOverrides": {},

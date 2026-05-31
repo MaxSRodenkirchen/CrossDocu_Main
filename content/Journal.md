@@ -3,7 +3,7 @@ tags:
   - moc
   - ExploringCreativeTechnologies
 state:
-  - "0"
+  - "9"
 type:
 publish:
   - public
@@ -17,13 +17,13 @@ publish:
 	3. [[User Journeys]]
 	4. [[Structuring the Platform]]
 
-2. Mai 27
+2. 2026-05-27
 	1. [[Concept Presentation]]
 
 3. 2026-05-31
-	1. [[Finger Interaction with ml5.js]]
+	1. [[Experience with Handtracking in ml5.js]]
 
-5. Next steps
+4. following
 	1. ways for interacting with a wall
 	2. Project Mapping
 	3. Fetch Live Data
