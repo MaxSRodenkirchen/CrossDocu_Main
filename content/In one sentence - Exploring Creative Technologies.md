@@ -18,4 +18,4 @@ publish:
 
 
 
-[[Questions behind Exploring Creative Technologies]]
+[[Questions behind ECT]]

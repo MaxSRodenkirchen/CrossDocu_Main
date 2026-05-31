@@ -4,7 +4,7 @@ tags:
 ---
 🌴🌴🌴
 
-![[Rolle von Controllern in Creative Coding]]
+![[Alternative Interfaces]]
 
 Eva: Training von offline KI-Modellen 
 
