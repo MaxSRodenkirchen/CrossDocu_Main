@@ -15,19 +15,29 @@
               "state": {
                 "file": "Experience with Handtracking in ml5.js.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
               "title": "Experience with Handtracking in ml5.js"
             }
           },
           {
-            "id": "6ecc0990c417c11b",
+            "id": "d22aac56efacc785",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Concept Presentation.md",
+                "file": "Movement Data in Touchdesigner.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -42,10 +52,83 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Concept Presentation"
+              "title": "Movement Data in Touchdesigner"
+            }
+          },
+          {
+            "id": "23633fbda9e2025f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Movement Data in Touchdesigner.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Movement Data in Touchdesigner"
+            }
+          },
+          {
+            "id": "61719001a3dbd52c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Movement Data in Touchdesigner.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Movement Data in Touchdesigner"
+            }
+          },
+          {
+            "id": "1fbb880a6b72e330",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Movement Data in Touchdesigner.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Movement Data in Touchdesigner"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -99,7 +182,7 @@
             }
           },
           {
-            "id": "372b222126633c3b",
+            "id": "ebc1aaa38d3e2ab7",
             "type": "leaf",
             "state": {
               "type": "notebook-navigator",
@@ -113,7 +196,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 827.0031242370605
+    "width": 824
   },
   "right": {
     "id": "0d88643e45ad4bee",
@@ -129,7 +212,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Experience with Handtracking in ml5.js.md",
+                "file": "Capture and loop movement in p5.js.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +222,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Experience with Handtracking in ml5.js"
+              "title": "Backlinks for Capture and loop movement in p5.js"
             }
           },
           {
@@ -209,6 +292,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -217,41 +302,35 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "templater-obsidian:Templater": false,
-      "notebook-navigator:Notebook Navigator": false,
-      "darlal-switcher-plus:Open in Headings Mode": false,
-      "darlal-switcher-plus:Open Symbols for the active editor": false
+      "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "d8dbe2afe9d0e1df",
+  "active": "d22aac56efacc785",
   "lastOpenFiles": [
-    "Journal.md",
-    "Finger Interaction with ml5.js.md",
+    "Movement Data in Touchdesigner.md",
     "Experience with Handtracking in ml5.js.md",
-    "Concept Presentation.md",
-    "A CrossDocu Workflow.md",
-    "Questions behind ECT.md",
-    "Things to be done in CrossDocu.md",
-    "Who am I.md",
-    "The concept of Feynmans 12 favorite problems.md",
-    "_explore Creative Coding.base",
-    "The concept of atomics.md",
-    "How can we bring together digital and real world environment.md",
-    "What are techniques to make digital more organic.md",
-    "What are challenges building a whole web-application with AI.md",
-    "The How Might We concept.md",
-    "How is AI affecting our way of working.md",
-    "What are challenges in explaining Creative Coding to Design students.md",
-    "What are definitions for Creative Coding.md",
-    "Styling System for CrossDocu.md",
-    "MVP - Exploring Creative Technologies.md",
-    "Structuring the Platform.md",
-    "Content Map.canvas",
-    "Capture and loop movement in p5.js.md",
+    "Journal.md",
+    "Customized Editor for CrossDocu.md",
+    "images/capturingMovementWebcam_Touchdesigner.png",
+    "Base Template.md",
+    "About Learning in Public.md",
     "Welcome to my Concept Presentation.md",
     "User Journeys.md",
-    "Projektideen - Der Baum hat Zeit.md",
+    "Things to be done in CrossDocu.md",
+    "Structuring the Platform.md",
+    "Questions behind ECT.md",
+    "Introduction to Creative Coding with p5.js.md",
     "Hybrid Search - The Concept.md",
+    "Content Map.canvas",
+    "Alternative Interfaces.md",
     "About Digital Gardens and Streams.md",
-    "images/Mapping ETC.png"
+    "Einführung in p5.js.md",
+    "What are challenges in explaining Creative Coding to Design students.md",
+    "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
+    "What is needed for building a problem-oriented System.md",
+    "How can we explain and teach Creative Coding.md",
+    "Concept Presentation.md",
+    "Concept presentation start.md",
+    "Capture and loop movement in p5.js.md"
   ]
 }

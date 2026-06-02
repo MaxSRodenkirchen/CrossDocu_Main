@@ -1,0 +1,32 @@
+@media print {
+  /* Hide all non-essential UI elements during printing */
+  #sidebar,
+  #config,
+  footer,
+  .viewModeButton,
+  #slideControls,
+  #mocControls,
+  #credit {
+    display: none !important;
+  }
+
+  /* Reset main layouts so they don't break page breaks */
+  body,
+  #mainContainer,
+  #midContainer {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+
+  /* Make sure all pages (slides) print with full opacity */
+  .pagedjs_page {
+    opacity: 1 !important;
+    break-inside: avoid !important;
+    break-after: page !important;
+  }
+}

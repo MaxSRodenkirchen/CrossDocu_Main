@@ -13,7 +13,7 @@ publish:
 Following questions lead into testing ml5.js:
 **Can you build an Interface that gets controlled by the users webcam input? Does ml5.js and their hand-tracking model work for that?**
 
-<iframe src="https://archive.org/embed/experience-with-the-hand-pose-model-in-ml-5" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+<iframe src="https://archive.org/embed/experience-with-the-hand-pose-model-in-ml-5"  frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 
 ### Test: Building a small UI controlled by users finger tips 👆
 

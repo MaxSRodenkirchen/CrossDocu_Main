@@ -1,30 +1,82 @@
 #content {
   background: var(--color-white);
-  border-radius: .5rem;
+  /* border-radius: 0.5rem; */
   padding: 2rem;
-
+  margin-left: 8rem;
+  font-family: "Graebenbach Regular", sans-serif;
+  font-size: 19px;
+  line-height:150%;
+  /* width: 1400px; */
+  
+  max-width: 100%;
+  color:var(--color-4)
 }
 
-
-#content img {
+#content img,
+iframe {
   display: block;
   width: calc(100% + 4rem);
-  margin: 1rem -2rem;
+  margin-left: -2rem;
   max-width: none;
+  margin-top: 4rem;
+
   /* max-height: 60vh; */
   /* object-fit: contain; */
 }
 
-/* Pull the first image to the very top of the container */
+#content iframe {
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+#content > h1:not(:first-child),
+#content > h2:not(:first-child),
+#content > h3:not(:first-child){
+  margin-top: 4rem;
+
+}
+hr{
+  margin-bottom: 4rem;
+  color: var(--color-4);
+}
+
+h1,h2,h3{
+  font-family: "Graebenbach Bold", sans-serif;
+  color:var(--color-2)
+}
+
+h1{
+  font-size: 48px;
+  line-height: 56px;
+}
+
+h4{
+    font-size: 26px;
+  line-height: 140%;
+}
+
+h4,
+h5,
+h6,
+p {
+  max-width: 800px;
+}
+
+
+
+a{color:var(--color-3)}
+
+/* Pull the first image to the very top of the container
 #content > img:first-child,
 #content > p:first-child img:first-child,
 #content > a:first-child img:first-child {
   margin-top: -2rem;
-  border-top-left-radius: .5rem;
-  border-top-right-radius: .5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 #content > p:first-child:has(img:first-child),
 #content > a:first-child:has(img:first-child) {
   margin-top: 0;
-}
+} */

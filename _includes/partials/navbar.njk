@@ -9,12 +9,12 @@
     <!-- 1. Die Standard-Sidebar (mit allen Posts) -->
     <div class="sidebar-group" id="sidebar-default">
         {% for post in collections.posts | reverse %}
-        {# <li>
+        <li>
             <a href="{{ post.url }}">
                 {{ post.templateContent | firstImage | safe }}
                 <p>{{ post.data.title }}</p>
             </a>
-        </li> #}
+        </li>
         {% endfor %}
     </div>
 

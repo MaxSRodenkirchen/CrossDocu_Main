@@ -4,28 +4,29 @@
     flex-direction: column;
     grid-column: 1;
     grid-row: 2;
-    margin-left: 2rem;
+    margin-left: 4rem;
+    margin-top: 4rem;
     overflow: scroll !important;
-    max-width: 300px;
-    font-family: 'Graebenbach Regular', sans-serif;
+    max-width: 400px;
+    font-family: "Graebenbach Regular", sans-serif;
   }
-
 
   /* Style für die MOC-Umschaltknöpfe */
   #sidebar button {
     background: transparent;
-    border: 1px solid var(--color-black);
-    color: var(--color-black);
-    border-radius: 0.25rem;
+    border: none;
+    border-bottom: 1px solid var(--color-white);
+    color: var(--color-white);
+    /* border-radius: 0.25rem; */
     padding: 0.5rem 1rem;
     margin-bottom: 0.5rem;
     cursor: pointer;
     font-size: 11px;
-    font-weight: 600;
+    /* font-weight: 600; */
     transition: all 0.2s ease;
     width: 100%;
     text-align: left;
-    display: none;
+    /* display: none; */
   }
 
   #sidebar button:hover {
@@ -36,17 +37,17 @@
   #sidebar button.active-moc {
     /* border-width: 3px; */
     background: var(--color-white);
+    color: var(--color-black);
 
-    font-weight: 900;
+    /* font-weight: 900; */
   }
-
 
   #sidebar * {
     color: var(--color-white);
   }
 
   #sidebar p strong {
-    font-family: 'Graebenbach Bold', sans-serif;
+    font-family: "Graebenbach Bold", sans-serif;
     font-weight: normal;
   }
 
@@ -78,18 +79,16 @@
     overflow: scroll;
     margin: 0;
     scrollbar-width: none;
-
-
   }
 
   .moc-sidebar-container {
-    padding-top: 4rem;
+    /* padding-top: 4rem; */
     overflow-wrap: break-word;
     overflow-x: scroll;
   }
 
   .moc-sidebar-container h1 {
-    font-size: 17pt;
+    font-size: 32pt;
     /* margin-bottom: 2rem; */
     /* color: var(--color-2); */
   }
@@ -102,7 +101,7 @@
   }
 
   #sidebarContent li {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     padding: 0;
     /* list-style: square; */
   }
@@ -116,24 +115,26 @@
 
   #sidebarContent ol li {
     counter-increment: item;
-
   }
 
   #sidebarContent ol li::marker {
     content: counters(item, ".") ". ";
     /* color: var(--color-black); */
-    font-family: 'Graebenbach Regular', sans-serif;
+    font-family: "Graebenbach Regular", sans-serif;
     font-size: 10px;
+    filter: opacity(0.5);
   }
 
-  .moc-sidebar-container>ol>li {
+  .moc-sidebar-container > ol > li {
     padding-top: 20px !important;
-
   }
 
-  .moc-sidebar-container>ol>li>p {
-    padding-left: .5rem;
+  .moc-sidebar-container > ol > li > p {
+    padding-left: 0.5rem;
+    font-size: 12px;
+    filter: opacity(0.5);
 
+    /* color: red !important; */
   }
 
   #sidebarContent li a {
@@ -150,7 +151,6 @@
     /* mix-blend-mode: screen; */
   }
 
-
   #sidebarContent li a img {
     position: absolute;
     right: 0;
@@ -165,10 +165,10 @@
   }
 
   #sidebarContent li a p {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 16px;
-    padding: .5em;
+  font-size: 19px;
+  line-height:150%;    font-weight: 300;
+    line-height: 26px;
+    padding: 0.5em;
     margin: 0;
     /* background: var(--color-white); */
     /* color: var(--color-white) !important; */
@@ -184,21 +184,18 @@
     height: 100px;
   }
 
-
-  .moc-sidebar-container>ol>li a:hover,
-  .moc-sidebar-container>ol>li a.active {
-    font-family: 'Graebenbach Regular Italic', sans-serif;
-
+  .moc-sidebar-container > ol > li a:hover,
+  .moc-sidebar-container > ol > li a.active {
+    font-family: "Graebenbach Regular Italic", sans-serif;
   }
 
-  .moc-sidebar-container>ol>li a.active::after {
-    content: '←';
+  .moc-sidebar-container > ol > li a.active::after {
+    content: "←";
     align-self: center;
   }
 
-  .moc-sidebar-container>ol>li a:hover p,
-  .moc-sidebar-container>ol>li a.active p {
+  .moc-sidebar-container > ol > li a:hover p,
+  .moc-sidebar-container > ol > li a.active p {
     color: var(--color-white) !important;
   }
-
 }

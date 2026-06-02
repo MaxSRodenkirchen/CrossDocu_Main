@@ -11,7 +11,7 @@
   @page {
     size: 1920px 1080px;
     margin: 40px 40px 100px 40px;
-    font-family: 'Graebenbach Regular', sans-serif;
+    font-family: "Graebenbach Regular", sans-serif;
 
     font-size: 45px;
     line-height: 60px;
@@ -24,18 +24,17 @@
       margin: 0;
       padding-bottom: var(--paddinglow);
       vertical-align: bottom;
-      font-family: 'Graebenbach Regular', sans-serif;
+      font-family: "Graebenbach Regular", sans-serif;
       font-size: 20px;
       letter-spacing: 3px;
       color: var(--color-4);
-
     }
 
     @bottom-right {
       content: "slide " counter(page) " / " counter(pages);
       padding-bottom: var(--paddinglow);
       vertical-align: bottom;
-      font-family: 'Graebenbach Regular', sans-serif;
+      font-family: "Graebenbach Regular", sans-serif;
       letter-spacing: 3px;
       font-size: 20px;
       color: var(--color-4);
@@ -59,25 +58,22 @@
       /* font-weight: 900; */
       line-height: 80px;
       text-align: right;
-
     }
 
     h6 {
-      font-family: 'Graebenbach Regular', sans-serif;
+      font-family: "Graebenbach Regular", sans-serif;
       font-weight: 300;
       letter-spacing: 3px;
       font-size: 20px;
       color: var(--color-4);
-
     }
 
     p {
       max-width: 70%;
-
     }
 
     strong {
-      font-family: 'Bold';
+      font-family: "Graebenbach Bold";
       color: var(--color-2);
     }
 
@@ -90,6 +86,17 @@
       object-fit: cover;
       display: block;
       z-index: -1;
+    }
+
+    iframe {
+      object-fit: cover;
+
+      display: block;
+      height: 100%;
+      width: 100%;
+      aspect-ratio: 16/9;
+      max-width: 100%;
+      border: 0;
     }
 
     a {
@@ -107,10 +114,9 @@
       /* margin-left: 6rem; */
     }
 
-    ul>li {
+    ul > li {
       font-size: 50px;
       margin-top: 3rem;
-
     }
 
     th,
@@ -119,7 +125,6 @@
       text-align: left;
       padding-right: 8rem;
     }
-
   }
 
   h1 {
@@ -134,6 +139,11 @@
   }
 
   p:has(img) {
+    break-before: page;
+    break-after: page;
+  }
+
+  iframe {
     break-before: page;
     break-after: page;
   }
