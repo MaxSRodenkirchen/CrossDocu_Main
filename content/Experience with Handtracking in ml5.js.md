@@ -8,10 +8,10 @@ type:
 publish:
   - public
 ---
-# Experience and issues using the HandPose model of ml5.js
+# Experiences and issues using the HandPose model in ml5.js
 
-Following questions lead me into testing ml5.js:
-**Can we build an Interface that gets controlled by the users webcam input? Can the finger position, tracked by ml5.js, be used for that?**
+Following questions lead into testing ml5.js:
+**Can you build an Interface that gets controlled by the users webcam input? Does ml5.js and their hand-tracking model work for that?**
 
 <iframe src="https://archive.org/embed/experience-with-the-hand-pose-model-in-ml-5" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 
