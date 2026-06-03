@@ -8,54 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d8dbe2afe9d0e1df",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Experience with Handtracking in ml5.js.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Experience with Handtracking in ml5.js"
-            }
-          },
-          {
-            "id": "d22aac56efacc785",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Journal.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Journal"
-            }
-          },
-          {
             "id": "4875de628f3b11a8",
             "type": "leaf",
             "state": {
@@ -78,81 +30,8 @@
               "icon": "lucide-file",
               "title": "Projection Mapping in Touchdesigner"
             }
-          },
-          {
-            "id": "23633fbda9e2025f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Movement Data in Touchdesigner.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Movement Data in Touchdesigner"
-            }
-          },
-          {
-            "id": "61719001a3dbd52c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Movement Data in Touchdesigner.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Movement Data in Touchdesigner"
-            }
-          },
-          {
-            "id": "1fbb880a6b72e330",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Movement Data in Touchdesigner.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Movement Data in Touchdesigner"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -220,7 +99,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 824
+    "width": 989
   },
   "right": {
     "id": "0d88643e45ad4bee",
@@ -329,16 +208,72 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
+  "floating": {
+    "id": "7d290f5120642d52",
+    "type": "floating",
+    "children": [
+      {
+        "id": "2f67e2f1f4823c70",
+        "type": "window",
+        "children": [
+          {
+            "id": "ad51fed5e2551f85",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "ce6ec568a0df789c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Timetracking for Der Baum hat Zeit.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "Timetracking for Der Baum hat Zeit"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": -1546,
+        "y": 801,
+        "width": 1521,
+        "height": 1336,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
   "active": "4875de628f3b11a8",
   "lastOpenFiles": [
     "Movement Data in Touchdesigner.md",
+    "MVP - Exploring Creative Technologies.md",
     "Journal.md",
+    "Concept Presentation.md",
+    "2026-06-03.md",
     "Projection Mapping in Touchdesigner.md",
+    "Design Concept.md",
+    "ECT.md",
+    "Timetracking for Der Baum hat Zeit.md",
+    "Experience with Handtracking in ml5.js.md",
+    "Alternative Interfaces.md",
     "images/ProjectMappingTest 1.png",
     "ProjectMappingTest.png",
     "images/ProjectMappingTest.png",
     "images/firstKantanMapperTest.png",
-    "Experience with Handtracking in ml5.js.md",
     "Customized Editor for CrossDocu.md",
     "images/capturingMovementWebcam_Touchdesigner.png",
     "Base Template.md",
@@ -351,15 +286,10 @@
     "Introduction to Creative Coding with p5.js.md",
     "Hybrid Search - The Concept.md",
     "Content Map.canvas",
-    "Alternative Interfaces.md",
     "About Digital Gardens and Streams.md",
     "Einführung in p5.js.md",
     "What are challenges in explaining Creative Coding to Design students.md",
     "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
-    "What is needed for building a problem-oriented System.md",
-    "How can we explain and teach Creative Coding.md",
-    "Concept Presentation.md",
-    "Concept presentation start.md",
-    "Capture and loop movement in p5.js.md"
+    "What is needed for building a problem-oriented System.md"
   ]
 }

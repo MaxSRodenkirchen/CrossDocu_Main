@@ -16,6 +16,10 @@
         {
           "type": "note",
           "path": "Journal.md"
+        },
+        {
+          "type": "note",
+          "path": "Concept Presentation.md"
         }
       ],
       "navRainbow": {
@@ -461,11 +465,23 @@
     ]
   },
   "customVaultName": "",
-  "pinnedNotes": {},
+  "pinnedNotes": {
+    "Journal.md": {
+      "folder": true,
+      "tag": false,
+      "property": false
+    },
+    "Concept Presentation.md": {
+      "folder": true,
+      "tag": false,
+      "property": false
+    }
+  },
   "collapsedPinnedContexts": {},
   "fileIcons": {},
   "fileColors": {
-    "Journal.md": "#06b6d4"
+    "Journal.md": "#06b6d4",
+    "Concept Presentation.md": "#eab308"
   },
   "fileBackgroundColors": {},
   "folderIcons": {},
