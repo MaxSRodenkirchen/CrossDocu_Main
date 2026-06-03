@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Movement Data in Touchdesigner.md",
+                "file": "Journal.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Movement Data in Touchdesigner"
+              "title": "Journal"
+            }
+          },
+          {
+            "id": "4875de628f3b11a8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projection Mapping in Touchdesigner.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Projection Mapping in Touchdesigner"
             }
           },
           {
@@ -128,7 +152,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -305,11 +329,16 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "d22aac56efacc785",
+  "active": "4875de628f3b11a8",
   "lastOpenFiles": [
     "Movement Data in Touchdesigner.md",
-    "Experience with Handtracking in ml5.js.md",
     "Journal.md",
+    "Projection Mapping in Touchdesigner.md",
+    "images/ProjectMappingTest 1.png",
+    "ProjectMappingTest.png",
+    "images/ProjectMappingTest.png",
+    "images/firstKantanMapperTest.png",
+    "Experience with Handtracking in ml5.js.md",
     "Customized Editor for CrossDocu.md",
     "images/capturingMovementWebcam_Touchdesigner.png",
     "Base Template.md",

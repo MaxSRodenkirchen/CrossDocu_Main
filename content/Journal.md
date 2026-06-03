@@ -26,7 +26,10 @@ publish:
 4. 2026-06-02
 	1. [[Movement Data in Touchdesigner]]
 
-5. following
+5. 2026-06-03
+	1. [[Projection Mapping in Touchdesigner]]
+
+6. following
 	1. ways for interacting with a wall
 	2. Building a Low-Tech Server
 	3. Project Mapping
