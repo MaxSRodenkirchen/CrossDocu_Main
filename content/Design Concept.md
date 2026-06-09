@@ -1,5 +1,6 @@
 ---
 tags:
+  - Der-Baum-hat-Zeit
 state:
   - "0"
 type:
@@ -8,7 +9,7 @@ publish:
 ---
 # Design concept for **Exploring Creative Technologies**
 
-### Design problem
+## Design problem
 
 The content might **get confusing** to people!
 The content also might **get complicated.**
@@ -21,13 +22,31 @@ Support exchange!
 3. A professional yet not overly complicated system
 4. Little unique twists 
 
-### Key elements:
+## Key elements:
 
-- Playful landing page
+content: 
+- Tags
+- Text + formats
+- Internal links
+- External links
+- Ordered and unordered lists
+- %% Footnotes %%
+- Images
+- Videos
+- Audio
+- p5.js sketches 
+
+surrounding elements:
 - Moc-navigation (basically md-files in the sidebar)
+	- Template / writing system
+	- Journal system
+	- Button navigation
 - Tag-navigation - pool of content
-- CrossDocu interface & view modes
+- CrossDocu interface
+- View modes
+- Playful landing page
 - ~ Search (if needed)
+
 
 ### The landing page
 
@@ -59,8 +78,14 @@ as a pool of content under one joint topic.
 
 ### Web view mode
 
+- Table of content 
 
 ### Print view mode
 
 
 ### Slide view mode 
+
+- Table of content 
+
+
+## Design System

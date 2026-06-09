@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projection Mapping in Touchdesigner.md",
+                "file": "Journal.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Projection Mapping in Touchdesigner"
+              "title": "Journal"
             }
           }
         ]
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Capture and loop movement in p5.js.md",
+                "file": "Journal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Capture and loop movement in p5.js"
+              "title": "Backlinks for Journal"
             }
           },
           {
@@ -170,28 +170,33 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "a55285e61ad30735",
+        "type": "tabs",
+        "children": [
           {
             "id": "f995f7c47e005a21",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Capture and loop movement in p5.js.md",
+                "file": "Journal.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Capture and loop movement in p5.js"
+              "title": "Outline of Journal"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,66 +213,19 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "floating": {
-    "id": "7d290f5120642d52",
-    "type": "floating",
-    "children": [
-      {
-        "id": "2f67e2f1f4823c70",
-        "type": "window",
-        "children": [
-          {
-            "id": "ad51fed5e2551f85",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "ce6ec568a0df789c",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Timetracking for Der Baum hat Zeit.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
-                  "icon": "lucide-file",
-                  "title": "Timetracking for Der Baum hat Zeit"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": -1546,
-        "y": 801,
-        "width": 1521,
-        "height": 1336,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "4875de628f3b11a8",
   "lastOpenFiles": [
-    "Movement Data in Touchdesigner.md",
-    "MVP - Exploring Creative Technologies.md",
+    "Design Concept.md",
     "Journal.md",
     "Concept Presentation.md",
-    "2026-06-03.md",
     "Projection Mapping in Touchdesigner.md",
-    "Design Concept.md",
-    "ECT.md",
+    "Feedback Effect in Touchdesigner.md",
+    "images/simpleFeedback-inTd.png",
     "Timetracking for Der Baum hat Zeit.md",
+    "Movement Data in Touchdesigner.md",
+    "MVP - Exploring Creative Technologies.md",
+    "2026-06-03.md",
+    "ECT.md",
     "Experience with Handtracking in ml5.js.md",
     "Alternative Interfaces.md",
     "images/ProjectMappingTest 1.png",
@@ -288,8 +246,6 @@
     "Content Map.canvas",
     "About Digital Gardens and Streams.md",
     "Einführung in p5.js.md",
-    "What are challenges in explaining Creative Coding to Design students.md",
-    "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
-    "What is needed for building a problem-oriented System.md"
+    "What are challenges in explaining Creative Coding to Design students.md"
   ]
 }

@@ -18,33 +18,34 @@ publish:
 	5. 
 
 19. CW 31
-	1. 
 
 20. CW 30: Final Presentation & Exhibition
-	1. 
+
 
 21. CW 29 
-	1. 
+
 
 22. CW 28
-	1. 
+
 
 23. CW 27
-	1. 
+
 
 24. CW 26
-	1. 
+
 
 25. CW 25: Design Presentation
-	1. 
 
 26. CW 24
 	1. [[Projection Mapping in Touchdesigner]]
 	2. [[Design Concept]]
+	3. [[Feedback Effect in Touchdesigner]]
+	4.  Learned Touchdesigner 102 - TOPs: Working with Images
 
 27. CW 23
 	1. [[Experience with Handtracking in ml5.js]]
 	2. [[Movement Data in Touchdesigner]]
+	3. Learned Touchdesigner 101 - Navigating the Environment
 
 28. CW 22: Concept Presentation
 	1. [[Concept Presentation]]
