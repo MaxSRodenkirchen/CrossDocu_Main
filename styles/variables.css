@@ -16,4 +16,11 @@
   --internalLink: #BA5E5E;
   --internalInteraction: #535D6A;
 
+  --gapBig: 90px;
+  --gap: 60px;
+  --gapSmall: 30px;
+  --gapSmaller: 15px;
+  --gapSmallest: 5px;
+
+  --lineWeight: 1px;
 }

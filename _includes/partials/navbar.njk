@@ -1,10 +1,10 @@
-{% for moc in collections.moc %}
+{# {% for moc in collections.moc %}
 <button data-moc-btn-url="{{ moc.url }}" onclick="switchMoc('{{ moc.url }}')">{{ moc.data.title | safe }}</button>
-{% endfor %}
+{% endfor %} #}
 
 <ul id="sidebarContent">
 
-    {% include "partials/header.njk" %}
+    {# {% include "partials/header.njk" %} #}
 
     <!-- 1. Die Standard-Sidebar (mit allen Posts) -->
     <div class="sidebar-group" id="sidebar-default">
@@ -24,7 +24,7 @@
     </div>
     {% endfor %}
 
-    <div id="credit">Made with CrossDocu by Max S. Rodenkirchen</div>
+    {# <div id="credit">Made with CrossDocu by Max S. Rodenkirchen</div> #}
 
 </ul>
 

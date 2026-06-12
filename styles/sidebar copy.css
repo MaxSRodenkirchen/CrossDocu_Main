@@ -1,0 +1,177 @@
+@media screen {
+  #sidebar {
+    overflow: hidden !important;
+    width:350px;
+    max-width: 350px;
+    font-family: "Graebenbach Regular", sans-serif;
+    background-color: var(--bg);
+  }
+
+  /* Style für die MOC-Umschaltknöpfe */
+  #sidebar button {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-white);
+    color: var(--color-white);
+    /* border-radius: 0.25rem; */
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    font-size: 11px;
+    /* font-weight: 600; */
+    transition: all 0.2s ease;
+    width: 100%;
+    text-align: left;
+    /* display: none; */
+  }
+
+  #sidebar button:hover {
+    background: var(--color-white);
+    color: var(--color-black) !important;
+  }
+
+  #sidebar button.active-moc {
+    /* border-width: 3px; */
+    background: var(--color-white);
+    color: var(--color-black);
+
+    /* font-weight: 900; */
+  }
+
+  #sidebar * {
+    color: var(--internalinteraction);
+  }
+
+  #sidebar p strong {
+    font-family: "Graebenbach Bold", sans-serif;
+    font-weight: normal;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    font-weight: 900;
+    font-size: smaller;
+    color: var(--color-white);
+    display: none;
+  }
+
+  header h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  #sidebarContent {
+    /* display: flex;
+    flex-wrap: wrap; */
+    gap: 0.5rem;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: scroll;
+    margin: 0;
+    scrollbar-width: none;
+    height: 100%;
+  }
+
+  /* ==========================================================================
+     MOC SIDEBAR CONTAINER & STRUKTUR
+     ========================================================================== */
+
+
+  .moc-sidebar-container {
+    margin-top: var(--gap);
+    background-color: var(--bgLight);
+    overflow-wrap: break-word;
+    overflow: scroll;
+    border-top: var(--lineWeight) solid var(--internalLink);
+    border-bottom: var(--lineWeight) solid var(--internalLink);
+  }
+
+  /* TITEL */
+  .moc-sidebar-container h1 {
+    font-size: 32pt;
+    background-color: var(--internalLink);
+    color: var(--bgLight) !important;
+    margin: 0;
+    padding-left: var(--gapSmall);
+  }
+
+  /* Sektion Inhalt*/
+  #sidebarContent ol {
+    counter-reset: item;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  /* li: ALLE SEKTIONEN / PUNKTE (Grid für saubere Marker- & Textausrichtung) */
+  #sidebarContent ol li {
+    counter-increment: item;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: stretch;
+  }
+
+  /* li:not(:has(ol)): Blattelemente erhalten ihren Rahmen direkt auf dem li */
+  #sidebarContent ol li:not(:has(ol)) {
+    /* border-bottom: var(--lineWeight) solid var(--internalLink); */
+  }
+
+  /* li::before: Die Nummerierungs-Marker (z.B. "26.1 ") */
+  #sidebarContent ol li::before {
+    content: counters(item, ".") " ";
+    font-size: 11px;
+    padding-right: var(--gapSmaller);
+    padding-left:var(--gapSmaller);
+    display: flex;
+    align-items: center;
+    
+  }
+
+  /* li:has(ol) > a / p: Nur bei Elementen MIT Unterliste kommt der Rahmen auf den Text & Marker */
+  #sidebarContent ol li:has(ol)::before,
+  #sidebarContent ol li:has(ol) > a,
+  #sidebarContent ol li:has(ol) > p {
+    border-bottom: var(--lineWeight) solid var(--internalLink);
+  }
+
+  /* li > a, li > p: Stehen in der rechten Spalte des Grid */
+  #sidebarContent ol li > a,
+  #sidebarContent ol li > p {
+    grid-column: 2;
+  }
+
+  /* li > ol: Verschachtelter SEKTION-INHALT bricht in neue Zeile um */
+  #sidebarContent ol li > ol {
+    grid-column: 1 / -1;
+  }
+
+
+
+
+
+  .moc-sidebar-container > ol > li a:hover,
+  .moc-sidebar-container > ol > li a.active {
+    font-family: "Graebenbach Regular Italic", sans-serif;
+  }
+
+  .moc-sidebar-container > ol > li a.active::after {
+    content: "←";
+    align-self: center;
+  }
+
+  .moc-sidebar-container > ol > li a:hover p,
+  .moc-sidebar-container > ol > li a.active p {
+    color: var(--color-white) !important;
+  }
+}
+
+
+  #sidebarContent li a img {
+    display: none;
+  }

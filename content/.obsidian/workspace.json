@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projection Mapping in Touchdesigner.md",
+                "file": "Journal.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Projection Mapping in Touchdesigner"
+              "title": "Journal"
             }
           }
         ]
@@ -210,6 +210,7 @@
   },
   "active": "4875de628f3b11a8",
   "lastOpenFiles": [
+    "Projection Mapping in Touchdesigner.md",
     "Connecting a Kinect 1 to TD.md",
     "Experience with Handtracking in ml5.js.md",
     "Journal.md",
@@ -217,7 +218,6 @@
     "images/simpleFeedback-inTd.png",
     "Feedback Effect in Touchdesigner.md",
     "Design Concept.md",
-    "Projection Mapping in Touchdesigner.md",
     "images/ProjectMappingTest 1.png",
     "ProjectMappingTest.png",
     "images/ProjectMappingTest.png",

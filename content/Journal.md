@@ -9,7 +9,7 @@ publish:
   - public
 ---
 # Journal
-
+{# 
 18. following
 	1. ways for interacting with a wall
 	2. Building a Low-Tech Server
@@ -34,9 +34,10 @@ publish:
 24. CW 26
 
 
-25. CW 25: Design Presentation
+25. CW 25: Design Presentation #}
 
-26. CW 24
+26. Calendar Week 24
+
 	1. [[Projection Mapping in Touchdesigner]]
 	2. [[Design Concept]]
 	3. [[Feedback Effect in Touchdesigner]]
@@ -44,10 +45,11 @@ publish:
 	5. [[Connecting a Kinect 1 to TD]]
 
 27. CW 23
+    
 	1. [[Experience with Handtracking in ml5.js]]
 	2. [[Movement Data in Touchdesigner]]
 	3. Learned Touchdesigner 101 - Navigating the Environment
-
+{# 
 28. CW 22: Concept Presentation
 	1. [[Concept Presentation]]
 
@@ -75,4 +77,4 @@ publish:
 35. CW 15:
 	1. 
 
-
+ #}

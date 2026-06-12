@@ -1,14 +1,9 @@
 #content {
-  background: var(--color-white);
-  /* border-radius: 0.5rem; */
-  padding: 2rem;
-  margin-left: 8rem;
+  background: var(--bgLight);
   font-family: "Graebenbach Regular", sans-serif;
   font-size: 19px;
   line-height:150%;
-  /* width: 1400px; */
-  
-  max-width: 100%;
+  max-width: 950px;
   color:var(--color-4)
 }
 
