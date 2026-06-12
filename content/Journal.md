@@ -41,6 +41,7 @@ publish:
 	2. [[Design Concept]]
 	3. [[Feedback Effect in Touchdesigner]]
 	4.  Learned Touchdesigner 102 - TOPs: Working with Images
+	5. [[Connecting a Kinect 1 to TD]]
 
 27. CW 23
 	1. [[Experience with Handtracking in ml5.js]]

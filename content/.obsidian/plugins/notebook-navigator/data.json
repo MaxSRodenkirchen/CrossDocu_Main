@@ -19,6 +19,10 @@
         },
         {
           "type": "note",
+          "path": "Design Concept.md"
+        },
+        {
+          "type": "note",
           "path": "Concept Presentation.md"
         }
       ],
@@ -485,7 +489,8 @@
   "fileIcons": {},
   "fileColors": {
     "Journal.md": "#06b6d4",
-    "Concept Presentation.md": "#eab308"
+    "Concept Presentation.md": "#eab308",
+    "Design Concept.md": "#f59e0b"
   },
   "fileBackgroundColors": {},
   "folderIcons": {},

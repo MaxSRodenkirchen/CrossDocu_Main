@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Journal.md",
+                "file": "Projection Mapping in Touchdesigner.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Journal"
+              "title": "Projection Mapping in Touchdesigner"
             }
           }
         ]
@@ -99,7 +99,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 989
+    "width": 874.0031242370605
   },
   "right": {
     "id": "0d88643e45ad4bee",
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Journal.md",
+                "file": "Capture and loop movement in p5.js.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Journal"
+              "title": "Backlinks for Capture and loop movement in p5.js"
             }
           },
           {
@@ -170,33 +170,28 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
-          }
-        ]
-      },
-      {
-        "id": "a55285e61ad30735",
-        "type": "tabs",
-        "children": [
+          },
           {
             "id": "f995f7c47e005a21",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Journal.md",
+                "file": "Capture and loop movement in p5.js.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Journal"
+              "title": "Outline of Capture and loop movement in p5.js"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -215,19 +210,14 @@
   },
   "active": "4875de628f3b11a8",
   "lastOpenFiles": [
-    "Design Concept.md",
-    "Journal.md",
-    "Concept Presentation.md",
-    "Projection Mapping in Touchdesigner.md",
-    "Feedback Effect in Touchdesigner.md",
-    "images/simpleFeedback-inTd.png",
-    "Timetracking for Der Baum hat Zeit.md",
-    "Movement Data in Touchdesigner.md",
-    "MVP - Exploring Creative Technologies.md",
-    "2026-06-03.md",
-    "ECT.md",
+    "Connecting a Kinect 1 to TD.md",
     "Experience with Handtracking in ml5.js.md",
-    "Alternative Interfaces.md",
+    "Journal.md",
+    "Movement Data in Touchdesigner.md",
+    "images/simpleFeedback-inTd.png",
+    "Feedback Effect in Touchdesigner.md",
+    "Design Concept.md",
+    "Projection Mapping in Touchdesigner.md",
     "images/ProjectMappingTest 1.png",
     "ProjectMappingTest.png",
     "images/ProjectMappingTest.png",
@@ -244,8 +234,14 @@
     "Introduction to Creative Coding with p5.js.md",
     "Hybrid Search - The Concept.md",
     "Content Map.canvas",
+    "Alternative Interfaces.md",
     "About Digital Gardens and Streams.md",
     "Einführung in p5.js.md",
-    "What are challenges in explaining Creative Coding to Design students.md"
+    "What are challenges in explaining Creative Coding to Design students.md",
+    "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
+    "What is needed for building a problem-oriented System.md",
+    "How can we explain and teach Creative Coding.md",
+    "Concept Presentation.md",
+    "Concept presentation start.md"
   ]
 }
