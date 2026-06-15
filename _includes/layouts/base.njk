@@ -40,11 +40,11 @@
 
         <template id="templateSource">
 
-            {{ content | safe }}
+            {{ content | injectTags(tags) | safe }}
         </template>
 
         <template id="templateContent">
-            {{ content | safe }}
+            {{ content | injectTags(tags) | safe }}
         </template>
 
         <div id="midContainer">
@@ -53,14 +53,10 @@
 
         </div>
 
-
         <aside id="config">
             {% include "partials/config.njk" %}
         </aside>
 
-        <footer>
-            <p>Max S. Rodenkirchen - CrossDocu v.1</p>
-        </footer>
     </div>
 
 
@@ -123,14 +119,24 @@
             let activeLink = null;
 
             links.forEach(link => {
-                const linkPath = decodeURI(new URL(link.href).pathname);
-                if (linkPath === currentPath || linkPath === currentPath + '/' || linkPath + '/' === currentPath) {
-                    link.classList.add('active');
-                    const group = link.closest('.sidebar-group');
-                    if (group && group.style.display !== 'none') {
-                        activeLink = link;
+                const href = link.getAttribute('href');
+                if (!href) {
+                    link.classList.remove('active');
+                    return;
+                }
+
+                try {
+                    const linkPath = decodeURI(new URL(link.href).pathname);
+                    if (linkPath === currentPath || linkPath === currentPath + '/' || linkPath + '/' === currentPath) {
+                        link.classList.add('active');
+                        const group = link.closest('.sidebar-group');
+                        if (group && group.style.display !== 'none') {
+                            activeLink = link;
+                        }
+                    } else {
+                        link.classList.remove('active');
                     }
-                } else {
+                } catch (e) {
                     link.classList.remove('active');
                 }
             });

@@ -152,7 +152,14 @@
 </li>
 </ol>
 
+            
+            <div id="mocControls">
+                <a onclick="navigateMoc(-1)" title="Previous in MOC">Last Note</a>
+                <a onclick="navigateMoc(1)" title="Next in MOC">Next Note</a>
+            </div>
+
         </div>
+        
     
         <div class="sidebar-group moc-sidebar-container" data-moc-url="/Journal/" style="display: none;">
             <h1>Journal</h1>
@@ -207,7 +214,14 @@
 </li>
 </ol>
 
+            
+            <div id="mocControls">
+                <a onclick="navigateMoc(-1)" title="Previous in MOC">Last Note</a>
+                <a onclick="navigateMoc(1)" title="Next in MOC">Next Note</a>
+            </div>
+
         </div>
+        
     
 
 
@@ -219,7 +233,7 @@
         <template id="templateSource">
 
             <p><img src="/images/EOTD_Person.jpg" alt="EOTD_Person"></p>
-<h2>Das ist der Titel</h2>
+<h2>Das ist der Titel</h2><div class="content-tags"><span class="content-tag">CrossDocu</span></div>
 <hr>
 <p><a href="/./Who am I">Who am I</a></p>
 <p><a href="/./A random story for testing">A random story for testing</a></p>
@@ -250,7 +264,7 @@
 
         <template id="templateContent">
             <p><img src="/images/EOTD_Person.jpg" alt="EOTD_Person"></p>
-<h2>Das ist der Titel</h2>
+<h2>Das ist der Titel</h2><div class="content-tags"><span class="content-tag">CrossDocu</span></div>
 <hr>
 <p><a href="/./Who am I">Who am I</a></p>
 <p><a href="/./A random story for testing">A random story for testing</a></p>
@@ -284,7 +298,6 @@
             </article>
 
         </div>
-
 
         <aside id="config">
             <button id="webButton" class="viewModeButton" onclick="switchView('web')">
@@ -333,25 +346,9 @@
     </button>
 </div>
 
-<div id="mocControls" style="display: none; flex-direction: column; gap: 0.3rem; margin-top: 1rem;">
-    <button class="viewModeButton" onclick="navigateMoc(-1)" title="Previous in MOC">
-        <svg class="button-svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-            <path d="M14,28 L24,16 L34,28" fill="none" stroke-width="4" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </svg>
-    </button>
-    <button class="viewModeButton" onclick="navigateMoc(1)" title="Next in MOC">
-        <svg class="button-svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-            <path d="M14,20 L24,32 L34,20" fill="none" stroke-width="4" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </svg>
-    </button>
-</div>
+
         </aside>
 
-        <footer>
-            <p>Max S. Rodenkirchen - CrossDocu v.1</p>
-        </footer>
     </div>
 
 
@@ -414,14 +411,24 @@
             let activeLink = null;
 
             links.forEach(link => {
-                const linkPath = decodeURI(new URL(link.href).pathname);
-                if (linkPath === currentPath || linkPath === currentPath + '/' || linkPath + '/' === currentPath) {
-                    link.classList.add('active');
-                    const group = link.closest('.sidebar-group');
-                    if (group && group.style.display !== 'none') {
-                        activeLink = link;
+                const href = link.getAttribute('href');
+                if (!href) {
+                    link.classList.remove('active');
+                    return;
+                }
+
+                try {
+                    const linkPath = decodeURI(new URL(link.href).pathname);
+                    if (linkPath === currentPath || linkPath === currentPath + '/' || linkPath + '/' === currentPath) {
+                        link.classList.add('active');
+                        const group = link.closest('.sidebar-group');
+                        if (group && group.style.display !== 'none') {
+                            activeLink = link;
+                        }
+                    } else {
+                        link.classList.remove('active');
                     }
-                } else {
+                } catch (e) {
                     link.classList.remove('active');
                 }
             });

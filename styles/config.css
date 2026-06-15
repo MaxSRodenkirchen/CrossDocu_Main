@@ -4,7 +4,9 @@
     background: var(--bg);
     padding: .5rem;
     transition: all .1s ease;
-    width: 350px;
+    /* width:100%; */
+    flex: auto;
+    min-width: 150px;
     max-width: 350px;
   }
 

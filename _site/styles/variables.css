@@ -24,3 +24,43 @@
 
   --lineWeight: 1px;
 }
+
+  @font-face {
+    font-family: Medium;
+    src: url(/fonts/Favorit-Regular.otf);
+  }
+
+  @font-face {
+    font-family: Favorite Lining Regular;
+    src: url(/fonts/FavoritLining-Regular.otf);
+  }
+
+  @font-face {
+    font-family: Favorite Regular ;
+    src: url(/fonts/Favorit-Regular.otf);
+  }
+  @font-face {
+    font-family: "Graebenbach Bold";
+    src: url(/fonts/Graebenbach-Bold.ttf);
+  }
+
+  @font-face {
+    font-family: "Graebenbach Regular";
+    src: url(/fonts/Graebenbach-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: "Graebenbach Medium";
+    src: url(/fonts/Graebenbach-Medium.ttf);
+  }
+
+  @font-face {
+    font-family: "Graebenbach Regular Italic";
+    src: url(/fonts/Graebenbach-RegularItalic.ttf);
+  }
+
+  
+  @font-face {
+    font-family: "Graebenbach Mono Regular";
+    src: url(/fonts/GraebenbachMono-Regular.ttf);
+  }

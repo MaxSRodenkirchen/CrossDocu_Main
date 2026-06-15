@@ -79,6 +79,20 @@ export default function (eleventyConfig) {
 
     });
 
+    eleventyConfig.addFilter("injectTags", function(content, tags) {
+        if (!tags || !Array.isArray(tags) || tags.length === 0) return content;
+
+        const tagsHtml = `<div class="content-tags">${tags.map(tag => `<span class="content-tag">${tag}</span>`).join('')}</div>`;
+
+        // Erste Überschrift (h1, h2 oder h3) finden
+        const match = content.match(/<h[1-3][^>]*>[\s\S]*?<\/h[1-3]>/i);
+        if (match) {
+            const insertIndex = match.index + match[0].length;
+            return content.slice(0, insertIndex) + tagsHtml + content.slice(insertIndex);
+        }
+        return tagsHtml + content;
+    });
+
     eleventyConfig.addFilter("mocSidebar", function(content, collectionsAll) {
         if (!content) return "";
         const collections = collectionsAll || (this.ctx && this.ctx.collections && this.ctx.collections.all) || [];

@@ -1,54 +1,46 @@
-:root {
-  --paddinglow: 20px;
-  --paddingMid: 40px;
-}
-
 @media print {
-  div {
+     div {
     /* border: 1px solid rgba(255, 0, 0, 0.685); */
-  }
+  } 
 
   @page {
     size: 1920px 1080px;
-    margin: 40px 40px 100px 40px;
+    margin: var(--gap);
     font-family: "Graebenbach Regular", sans-serif;
 
     font-size: 45px;
     line-height: 60px;
     box-shadow: 20px;
-    background: var(--color-white);
-    color: var(--color-3);
+    background: var(--bgLight);
+    color: var(--internalInteraction);
+
+
 
     @bottom-left {
       content: string(title);
       margin: 0;
-      padding-bottom: var(--paddinglow);
+      padding-bottom: var(--gapSmall);
       vertical-align: bottom;
-      font-family: "Graebenbach Regular", sans-serif;
+      font-family: "Graebenbach Mono Regular", sans-serif;
       font-size: 20px;
-      letter-spacing: 3px;
-      color: var(--color-4);
+      /* letter-spacing: 3px; */
     }
 
     @bottom-right {
-      content: "slide " counter(page) " / " counter(pages);
-      padding-bottom: var(--paddinglow);
+      content: "slide " counter(page) " | " counter(pages);
+      padding-bottom: var(--gapSmall);
       vertical-align: bottom;
-      font-family: "Graebenbach Regular", sans-serif;
-      letter-spacing: 3px;
+      font-family: "Graebenbach Mono Regular", sans-serif;
+      /* letter-spacing: 3px; */
       font-size: 20px;
-      color: var(--color-4);
     }
 
     h1 {
-      font-size: 112.1pt;
-      font-weight: 900;
+      font-family: Favorite Lining Regular;
+      font-size: 110pt;
       line-height: 112.1pt;
-      /* text-transform: uppercase; */
       max-width: 100%;
-      color: var(--color-4);
       margin: 0 0 8rem 0;
-      text-align: right;
     }
 
     h3 {
@@ -61,36 +53,29 @@
     }
 
     h6 {
-      font-family: "Graebenbach Regular", sans-serif;
+      font-family: "Graebenbach Mono Regular", sans-serif;
       font-weight: 300;
-      letter-spacing: 3px;
+      /* letter-spacing: 3px; */
       font-size: 20px;
-      color: var(--color-4);
     }
 
-    p {
+    p:not(:has(img)) {
       max-width: 70%;
-    }
-
-    strong {
-      font-family: "Graebenbach Bold";
-      color: var(--color-2);
     }
 
     img {
       position: absolute;
-      top: -40px;
-      left: -40px;
-      width: calc(100% + 140px);
-      height: calc(100% + 140px);
-      object-fit: cover;
+      top: calc(-1 * var(--gap)*1.5);
+      left: calc(-1 * var(--gap)*1.5);
+      width: calc(100% + (2 * var(--gap)*1.5));
+      height: calc(100% + (2 * var(--gap)*1.5));
+      object-fit: cover; /* Verhindert Verzerrung, füllt die Fläche komplett aus */
       display: block;
       z-index: -1;
     }
 
     iframe {
       object-fit: cover;
-
       display: block;
       height: 100%;
       width: 100%;
@@ -125,6 +110,10 @@
       text-align: left;
       padding-right: 8rem;
     }
+
+     .content-tag{
+      font-size: 20px;
+     }
   }
 
   h1 {
@@ -154,11 +143,16 @@
   }
 
   .pagedjs_page {
-    opacity: 0.05;
+    opacity: 0.1;
     transition: opacity 0.4s ease;
+    border-top: calc(var(--lineWeight) / var(--slide-scale, 1)) solid var(--internalInteraction);
+    border-bottom: calc(var(--lineWeight) / var(--slide-scale, 1)) solid var(--internalInteraction);
+    margin-bottom: var(--gapSmall);
   }
 
   .pagedjs_page.active-slide {
     opacity: 1;
   }
 }
+
+

@@ -21,6 +21,7 @@ export function fitPage() {
     const scale = Math.min(scaleWidth, scaleHeight);
 
     pagesContainer.style.transform = `scale(${scale})`;
+    pagesContainer.style.setProperty('--slide-scale', scale);
     
     // console.log(container);
 }
