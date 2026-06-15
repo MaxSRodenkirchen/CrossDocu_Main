@@ -68,6 +68,12 @@
         import { setView } from "/js/switchView.js";
         setView();
 
+        document.querySelectorAll('.moc-sidebar-container:not(#sidebar-default) > h1').forEach(h1 => {
+            h1.addEventListener('click', () => {
+                switchMoc(''); 
+            });
+            h1.style.cursor = "pointer";
+        });
 
         function toggleSidebar() {
             const activeMocUrl = localStorage.sidebarContent;

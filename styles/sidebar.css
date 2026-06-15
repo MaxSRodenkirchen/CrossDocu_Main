@@ -1,17 +1,24 @@
 @media screen {
   #sidebar {
     overflow: hidden !important;
-    width:350px;
+    width: 100%;
     max-width: 350px;
     font-family: "Graebenbach Regular", sans-serif;
     background-color: var(--bg);
   }
 
-  #sidebar p a {
-    font-size: 6pt;
+  #sidebar{
+    font-family: "Graebenbach Mono Regular", sans-serif;
+    font-size: 9pt;
+    line-height: 140%;
   }
 
   /* Internal Links */
+
+  #sidebar a {
+    cursor: pointer;
+  }
+
   #sidebar a > p{
     border: 1px solid var(--internalLink);
     padding: var(--gapSmallest) ;
@@ -22,8 +29,6 @@
     background: var(--internalLink);
     color: var(--bgLight);
   } 
-
-
 
   #sidebarContent {
     gap: 0.5rem;
@@ -59,15 +64,30 @@
   }
 
   .moc-sidebar-container > h1 {
-    font-size: 32pt;
+    font-family: Favorite Lining Regular, sans-serif;
+    font-size: 26pt;
+    line-height: 120%;
     background-color: var(--internalLink);
     color: var(--bgLight) !important;
     margin: 0;
     padding-left: var(--gapSmall);
+    padding-top: var(--gapSmaller);
+    padding-bottom: var(--gapSmaller);
+  }
+
+  #sidebar-default > h1 {
+    background-color: transparent !important;
+    color: var(--internalLink) !important;
+  }
+
+  .moc-sidebar-container:not(#sidebar-default) > h1::before{
+    font-family: Favorite Regular, sans-serif;
+    content: "<- ";
+    cursor: pointer;
   }
 
   .moc-sidebar-container > ol {
-    padding: var(--gapSmall);
+    padding: var(--gapSmall) var(--gapSmall) var(--gapSmall);
   }
 
   .moc-sidebar-container > ol > li{
@@ -78,7 +98,6 @@
   .moc-sidebar-container > ol > li > p {
     margin-bottom: var(--gapSmaller);
     border-bottom: var(--lineWeight) solid var(--internalLink);
-
   } 
 
   .moc-sidebar-container > ol > li > ol{
