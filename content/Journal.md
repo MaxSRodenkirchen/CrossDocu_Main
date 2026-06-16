@@ -37,20 +37,22 @@ publish:
 25. CW 25: Design Presentation 
 
 	1. [[Markdown-Test]]
+	2. [[MD-Test]]
+	3. [[Design Presentation]]
 
-26. 1 Calendar Week 24
+26. Calendar Week 24
 
 	1. [[Projection Mapping in Touchdesigner]]
 	2. [[Design Concept]]
 	3. [[Feedback Effect in Touchdesigner]]
-	4.  Learned Touchdesigner 102 - TOPs: Working with Images
+	4.  Learned TD 102
 	5. [[Connecting a Kinect 1 to TD]]
 
-27. 2 Calendar Week 23
+27. Calendar Week 23
     
 	1. [[Experience with Handtracking in ml5.js]]
 	2. [[Movement Data in Touchdesigner]]
-	3. Learned Touchdesigner 101 - Navigating the Environment
+	3. Learned TD 101
 {# 
 28. CW 22: Concept Presentation
 	1. [[Concept Presentation]]

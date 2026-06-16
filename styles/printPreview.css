@@ -1,8 +1,8 @@
 @media print {
   @page {
     size: A4;
-    bleed: 6mm;
-    marks: crop cross;
+    bleed: 3mm;
+    marks: crop;
     background: var(--color-white);
 
     @bottom-center {

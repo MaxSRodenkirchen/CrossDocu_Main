@@ -13,6 +13,11 @@
                         </a>
                     </li>
                 {% endfor %}
+                <li>
+                    <a data-moc-btn-url="/all-notes/" onclick="switchMoc('/all-notes/')">
+                        <p>All Notes</p>
+                    </a>
+                </li>
             </ol>
         </li>
     </ol>
@@ -26,13 +31,33 @@
             {{ moc.templateContent | mocSidebar(collections.all) | safe }}
             
             <div id="mocControls">
-                <a onclick="navigateMoc(-1)" title="Previous in MOC">Last Note</a>
-                <a onclick="navigateMoc(1)" title="Next in MOC">Next Note</a>
+                <a onclick="navigateMoc(-1)" title="Previous in MOC">{% icon "arrow-up" %} Last Note</a>
+                <a onclick="navigateMoc(1)" title="Next in MOC">{% icon "arrow-down" %} Next Note</a>
             </div>
 
         </div>
         
     {% endfor %}
 
+    <div class="sidebar-group moc-sidebar-container" data-moc-url="/all-notes/" style="display: none;">
+        <h1>All Notes</h1>
+        <ol>
+            <li>
+                <ol>
+                    {% set allNotesList %}
+                        {% for post in collections.posts %}
+                            <li><a href="{{ post.url }}">{{ post.data.title | default(post.fileSlug) }}</a></li>
+                        {% endfor %}
+                    {% endset %}
+                    {{ allNotesList | mocSidebar(collections.all) | safe }}
+                </ol>
+            </li>
+        </ol>
+        
+        <div id="mocControls">
+            <a onclick="navigateMoc(-1)" title="Previous in MOC">{% icon "arrow-up" %} Last Note</a>
+            <a onclick="navigateMoc(1)" title="Next in MOC">{% icon "arrow-down" %} Next Note</a>
+        </div>
+    </div>
 
 </ul>

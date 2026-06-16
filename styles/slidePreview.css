@@ -27,7 +27,7 @@
     }
 
     @bottom-right {
-      content: "slide " counter(page) " | " counter(pages);
+      content: counter(page) " | " counter(pages);
       padding-bottom: var(--gapSmall);
       vertical-align: bottom;
       font-family: "Graebenbach Mono Regular", sans-serif;
@@ -68,9 +68,10 @@
       left: calc(-1 * var(--gap)*1.5);
       width: calc(100% + (2 * var(--gap)*1.5));
       height: calc(100% + (2 * var(--gap)*1.5));
-      object-fit: cover; /* Verhindert Verzerrung, füllt die Fläche komplett aus */
+      object-fit: contain; /* Verhindert Verzerrung, füllt die Fläche komplett aus */
       display: block;
       z-index: -1;
+      /* border: var(--lineWeight) solid var(--internalInteraction); */
     }
 
     iframe {
@@ -103,7 +104,7 @@
     }
 
      .content-tag{
-      font-size: 20px;
+      font-size: 45px;
      }
   }
 
@@ -134,7 +135,7 @@
   }
 
   .pagedjs_page {
-    /* opacity: 0.1; */
+    opacity: 0.1;
     transition: opacity 0.4s ease;
     border-top: calc(var(--lineWeight) / var(--slide-scale, 1)) solid var(--internalInteraction);
     border-bottom: calc(var(--lineWeight) / var(--slide-scale, 1)) solid var(--internalInteraction);
@@ -143,6 +144,12 @@
 
   .pagedjs_page.active-slide {
     opacity: 1;
+  }
+
+  /* Hide page numbers and titles on slides that contain an image */
+  .pagedjs_page:has(img) .pagedjs_margin-bottom-right,
+  .pagedjs_page:has(img) .pagedjs_margin-bottom-left {
+    display: none !important;
   }
 }
 

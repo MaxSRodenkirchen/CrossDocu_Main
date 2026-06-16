@@ -68,6 +68,8 @@
   #content {
   margin-top: var(--gap) !important;
   }  
+
+
   .pagedjs_page {
     scroll-margin-top: var(--gap);
   }
@@ -78,15 +80,15 @@
     gap: var(--gapSmaller);
     padding-bottom: var(--gapSmaller);
     padding-top: var(--gapSmaller);
-    border-bottom: var(--lineWeight) solid var(--internalLink);
-    border-top: var(--lineWeight) solid var(--internalLink);
+    /* border-bottom: var(--lineWeight) solid var(--internalLink);
+    border-top: var(--lineWeight) solid var(--internalLink); */
 
   }
 
   .content-tag {
     font-family: "Graebenbach Mono Regular", monospace;
-    font-size: 14px;
-    line-height: 120%;
+    /* font-size: 14px;
+    line-height: 120%; */
     border-radius: 100px;
     background-color: var(--internalLink);
     color: var(--bgLight);
@@ -118,7 +120,7 @@
   .externalLink {
     font-family: "Graebenbach Mono Regular", monospace;
     border: var(--lineWeight) solid var(--externalLink);
-    padding: var(--gapSmaller) ;
+    padding: var(--gapSmallest) var(--gapSmall) ;
     width: fit-content;
     color: inherit;
     display:inline-flex;
@@ -130,4 +132,15 @@
     background-color: var(--externalLink);
     color: var(--bgLight);
   }
+}
+
+/* Meteor Icons Configuration */
+.i {
+  stroke-width: var(--i-stroke, var(--lineWeight));
+  width: var(--i-size, 14px);
+  height: var(--i-size, 14px);
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }

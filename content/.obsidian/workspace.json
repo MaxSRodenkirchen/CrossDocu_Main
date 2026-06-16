@@ -37,9 +37,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Markdown-Test.md",
+                "file": "Journal.md",
                 "mode": "source",
-                "source": true,
+                "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -52,11 +52,113 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Markdown-Test"
+              "title": "Journal"
+            }
+          },
+          {
+            "id": "a06caec0756808ec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Design Presentation.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Design Presentation"
+            }
+          },
+          {
+            "id": "f4d99cd5f8ba434c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Design System.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Design System"
+            }
+          },
+          {
+            "id": "cb0e57592adc61e2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Design Problem.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "The Design Problem"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
+      },
+      {
+        "id": "56761d18086e7fed",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2caeb8f984fd4c26",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Design Concept.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Design Concept"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -124,7 +226,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 874.0031242370605
+    "width": 759
   },
   "right": {
     "id": "0d88643e45ad4bee",
@@ -233,23 +335,32 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "b6e010d7d6416138",
+  "active": "a06caec0756808ec",
   "lastOpenFiles": [
-    "Journal.md",
-    "Projection Mapping in Touchdesigner.md",
+    "images/svg-sprite.svg",
+    "The Design Problem.md",
+    "Design System.md",
+    "Design Presentation.md",
+    "images/fonts and color.png",
+    "images/slide mode design.png",
+    "images/Screenshot 2026-06-16 at 18-30-25 Exploring Creative Technologies.png",
+    "images/User Interface Design.png",
+    "images/Design Elements.png",
+    "images/print mode design.png",
+    "images/web design.png",
     "Markdown-Test.md",
+    "Journal.md",
+    "MD-Test.md",
+    "Design Concept.md",
+    "Projection Mapping in Touchdesigner.md",
     "Connecting a Kinect 1 to TD.md",
     "Experience with Handtracking in ml5.js.md",
     "Movement Data in Touchdesigner.md",
     "images/simpleFeedback-inTd.png",
     "Feedback Effect in Touchdesigner.md",
-    "Design Concept.md",
     "images/ProjectMappingTest 1.png",
     "ProjectMappingTest.png",
-    "images/ProjectMappingTest.png",
-    "images/firstKantanMapperTest.png",
     "Customized Editor for CrossDocu.md",
-    "images/capturingMovementWebcam_Touchdesigner.png",
     "Base Template.md",
     "About Learning in Public.md",
     "Welcome to my Concept Presentation.md",
@@ -262,11 +373,6 @@
     "Content Map.canvas",
     "Alternative Interfaces.md",
     "About Digital Gardens and Streams.md",
-    "Einführung in p5.js.md",
-    "What are challenges in explaining Creative Coding to Design students.md",
-    "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
-    "What is needed for building a problem-oriented System.md",
-    "How can we explain and teach Creative Coding.md",
-    "Concept Presentation.md"
+    "Einführung in p5.js.md"
   ]
 }

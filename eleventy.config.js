@@ -46,6 +46,10 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('fonts');
     eleventyConfig.addPassthroughCopy('styles');
 
+    eleventyConfig.addShortcode("icon", function(iconName) {
+        return `<svg class="i i-${iconName}"><use href="/images/svg-sprite.svg#${iconName}"/></svg>`;
+    });
+
     eleventyConfig.addCollection('posts', (collection) => {
         return collection
             .getFilteredByGlob('./content/*.md')
