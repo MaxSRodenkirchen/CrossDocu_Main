@@ -1,0 +1,156 @@
+@media print {
+     div {
+    /* border: 1px solid rgba(255, 0, 0, 0.685); */
+  } 
+
+  @page {
+    size: 1920px 1080px;
+    margin: var(--gap);
+    font-family: "Graebenbach Regular", sans-serif;
+
+    font-size: 45px;
+    line-height: 60px;
+    box-shadow: 20px;
+    background: var(--bgLight);
+    color: var(--internalInteraction);
+
+
+
+    @bottom-left {
+      content: string(title);
+      margin: 0;
+      padding-bottom: var(--gapSmall);
+      vertical-align: bottom;
+      font-family: "Graebenbach Mono Regular", sans-serif;
+      font-size: 20px;
+      opacity: 0.7;
+    }
+
+    @bottom-right {
+      content: counter(page) " | " counter(pages);
+      padding-bottom: var(--gapSmall);
+      vertical-align: bottom;
+      font-family: "Graebenbach Mono Regular", sans-serif;
+      /* letter-spacing: 3px; */
+      font-size: 20px;
+      opacity: 0.7;
+
+    }
+
+    h1 {
+      font-family: Favorite Lining Regular;
+      font-size: 110pt;
+      line-height: 112.1pt;
+      max-width: 100%;
+      margin: 0 0 8rem 0;
+    }
+
+    h3 {
+      font-size: 80px;
+      margin: 0 0 8rem 0;
+      line-height: 80px;
+    }
+
+    h6 {
+      font-family: "Graebenbach Mono Regular", sans-serif;
+      font-weight: 300;
+      /* letter-spacing: 3px; */
+      font-size: 20px;
+    }
+
+    p:not(:has(img)) {
+      max-width: 70%;
+    }
+
+    img {
+      position: absolute;
+      top: calc(-1 * var(--gap)*1.5);
+      left: calc(-1 * var(--gap)*1.5);
+      width: calc(100% + (2 * var(--gap)*1.5));
+      height: calc(100% + (2 * var(--gap)*1.5));
+      object-fit: contain; /* Verhindert Verzerrung, füllt die Fläche komplett aus */
+      display: block;
+      z-index: -1;
+      /* border: var(--lineWeight) solid var(--internalInteraction); */
+    }
+
+    iframe {
+      object-fit: cover;
+      display: block;
+      height: 100%;
+      width: 100%;
+      aspect-ratio: 16/9;
+      max-width: 100%;
+      border: 0;
+    }
+
+
+
+    ul {
+      max-width: 70%;
+      /* margin-left: 6rem; */
+    }
+
+    ul > li {
+      font-size: 50px;
+      margin-top: 3rem;
+    }
+
+    th,
+    td {
+      font-size: 40px;
+      text-align: left;
+      padding-right: 8rem;
+    }
+
+     .content-tag{
+      font-size: 45px;
+     }
+  }
+
+  h1 {
+    string-set: title content(text);
+  }
+
+  h3,
+  h2,
+  h1
+   {
+    break-before: page;
+  }
+
+  p:has(img) {
+    break-before: page;
+    break-after: page;
+  }
+
+  iframe {
+    break-before: page;
+    break-after: page;
+  }
+
+  .pagedjs_area {
+    position: relative;
+    z-index: 0;
+  }
+
+  .pagedjs_page {
+    opacity: 0.1;
+    transition: opacity 0.4s ease;
+    border-top: calc(var(--lineWeight) / var(--slide-scale, 1)) solid var(--internalInteraction);
+    border-bottom: calc(var(--lineWeight) / var(--slide-scale, 1)) solid var(--internalInteraction);
+    margin-bottom: var(--gapSmall);
+  }
+
+  .pagedjs_page.active-slide {
+    opacity: 1;
+  }
+
+  /* Hide page numbers and titles on slides that contain an image */
+  .pagedjs_page:has(img) .pagedjs_margin-bottom-right,
+  .pagedjs_page:has(img) .pagedjs_margin-bottom-left {
+    display: none !important;
+  }
+}
+
+
