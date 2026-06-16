@@ -17,6 +17,17 @@
     height: 100%;
   }
 
+  #config.collapsed {
+    min-width: 50px;
+    max-width: 50px;
+    width: 50px;
+    cursor: pointer;
+  }
+
+  #config.collapsed > * {
+    display: none;
+  }
+
   #config h1{
     font-family: Favorite Lining Regular, sans-serif;
     font-size: 26pt;

@@ -33,9 +33,12 @@
         {# {{page.url}} #}
 
         <aside id="sidebar">
-
+            <script>
+                if (localStorage.getItem('sidebarCollapsed') === 'true') {
+                    document.getElementById('sidebar').classList.add('collapsed');
+                }
+            </script>
             {% include "partials/navbar.njk" %}
-
         </aside>
 
         <template id="templateSource">
@@ -54,6 +57,11 @@
         </div>
 
         <aside id="config">
+            <script>
+                if (localStorage.getItem('configCollapsed') === 'true') {
+                    document.getElementById('config').classList.add('collapsed');
+                }
+            </script>
             {% include "partials/config.njk" %}
         </aside>
 
@@ -191,6 +199,45 @@
                 navigateMoc(1);
             }
         });
+
+        // Main sidebar toggling with smooth slide scaling
+        const mainSidebar = document.getElementById('sidebar');
+        if (mainSidebar) {
+            mainSidebar.addEventListener('dblclick', function(e) {
+                if(e.target.tagName !== 'BUTTON' && e.target.tagName !== 'A' && !e.target.closest('button') && !e.target.closest('a')) {
+                    const isCollapsed = this.classList.toggle('collapsed');
+                    localStorage.setItem('sidebarCollapsed', isCollapsed);
+                    
+                    let start = performance.now();
+                    requestAnimationFrame(function step(time) {
+                        window.dispatchEvent(new Event('resize'));
+                        if (time - start < 150) {
+                            requestAnimationFrame(step);
+                        }
+                    });
+                }
+            });
+        }
+
+        // Config sidebar toggling with smooth slide scaling
+        const configSidebar = document.getElementById('config');
+        if (configSidebar) {
+            configSidebar.addEventListener('dblclick', function(e) {
+                if(e.target.tagName !== 'BUTTON' && e.target.tagName !== 'A' && !e.target.closest('button') && !e.target.closest('a')) {
+                    const isCollapsed = this.classList.toggle('collapsed');
+                    localStorage.setItem('configCollapsed', isCollapsed);
+                    
+                    // Trigger resize events during CSS transition to scale slides smoothly
+                    let start = performance.now();
+                    requestAnimationFrame(function step(time) {
+                        window.dispatchEvent(new Event('resize'));
+                        if (time - start < 150) {
+                            requestAnimationFrame(step);
+                        }
+                    });
+                }
+            });
+        }
     </script>
 
 </body>

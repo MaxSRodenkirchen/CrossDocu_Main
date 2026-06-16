@@ -18,4 +18,5 @@ publish:
 
 	1. [[Markdown-Test]]
 	2. [[Design Concept |Sections Showcase]]
-	3. [[Cross-media Designs]]
+	3. [[Use Cases Moodboard]]
+	4. [[Cross-media Designs]]

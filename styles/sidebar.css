@@ -12,8 +12,19 @@
     font-family: "Graebenbach Mono Regular", sans-serif;
     font-size: 9pt;
     line-height: 140%;
+    transition: all .1s ease;
   }
 
+  #sidebar.collapsed {
+    min-width: 50px;
+    max-width: 50px;
+    width: 50px;
+    cursor: pointer;
+  }
+
+  #sidebar.collapsed > * {
+    display: none;
+  }
   /* Internal Links */
 
   #sidebar a {

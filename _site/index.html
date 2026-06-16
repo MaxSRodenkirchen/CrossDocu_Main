@@ -28,7 +28,11 @@
         
 
         <aside id="sidebar">
-
+            <script>
+                if (localStorage.getItem('sidebarCollapsed') === 'true') {
+                    document.getElementById('sidebar').classList.add('collapsed');
+                }
+            </script>
             <ul id="sidebarContent">
 
     <div class="sidebar-group moc-sidebar-container" id="sidebar-default">
@@ -296,6 +300,12 @@
                 <a href="/./Design Concept">
                     
                     <p>Sections Showcase</p>
+                </a>
+            </li>
+<li>
+                <a href="/./Use Cases Moodboard">
+                    
+                    <p>Use Cases Moodboard</p>
                 </a>
             </li>
 <li>
@@ -654,7 +664,6 @@
 
 </ul>
 
-
         </aside>
 
         <template id="templateSource">
@@ -727,6 +736,11 @@
         </div>
 
         <aside id="config">
+            <script>
+                if (localStorage.getItem('configCollapsed') === 'true') {
+                    document.getElementById('config').classList.add('collapsed');
+                }
+            </script>
             <div id="sections">
 
     <h1>Sections</h1>
@@ -903,6 +917,45 @@
                 navigateMoc(1);
             }
         });
+
+        // Main sidebar toggling with smooth slide scaling
+        const mainSidebar = document.getElementById('sidebar');
+        if (mainSidebar) {
+            mainSidebar.addEventListener('dblclick', function(e) {
+                if(e.target.tagName !== 'BUTTON' && e.target.tagName !== 'A' && !e.target.closest('button') && !e.target.closest('a')) {
+                    const isCollapsed = this.classList.toggle('collapsed');
+                    localStorage.setItem('sidebarCollapsed', isCollapsed);
+                    
+                    let start = performance.now();
+                    requestAnimationFrame(function step(time) {
+                        window.dispatchEvent(new Event('resize'));
+                        if (time - start < 150) {
+                            requestAnimationFrame(step);
+                        }
+                    });
+                }
+            });
+        }
+
+        // Config sidebar toggling with smooth slide scaling
+        const configSidebar = document.getElementById('config');
+        if (configSidebar) {
+            configSidebar.addEventListener('dblclick', function(e) {
+                if(e.target.tagName !== 'BUTTON' && e.target.tagName !== 'A' && !e.target.closest('button') && !e.target.closest('a')) {
+                    const isCollapsed = this.classList.toggle('collapsed');
+                    localStorage.setItem('configCollapsed', isCollapsed);
+                    
+                    // Trigger resize events during CSS transition to scale slides smoothly
+                    let start = performance.now();
+                    requestAnimationFrame(function step(time) {
+                        window.dispatchEvent(new Event('resize'));
+                        if (time - start < 150) {
+                            requestAnimationFrame(step);
+                        }
+                    });
+                }
+            });
+        }
     </script>
 
 </body>

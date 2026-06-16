@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design Presentation.md",
+                "file": "Use Cases Moodboard.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Design Presentation"
+              "title": "Use Cases Moodboard"
             }
           },
           {
@@ -337,17 +337,21 @@
   },
   "active": "a06caec0756808ec",
   "lastOpenFiles": [
-    "images/svg-sprite.svg",
+    "images/OnePager.png",
+    "images/Mockup Exhibition 3.jpg",
+    "Use Cases Moodboard.md",
+    "Design Presentation.md",
+    "images/Generated Image June 16, 2026 - 10_31PM.jpg",
+    "images/Mockup Exhibition 2.jpg",
+    "images/Generated Image June 16, 2026 - 10_30PM.jpg",
+    "images/Mockup Exhibition.jpg",
+    "images/Generated Image June 16, 2026 - 10_27PM.jpg",
+    "images/OnePager3.png",
+    "images/Mockup Handout 3.jpg",
+    "images/Mockup Handout 2.jpg",
+    "images/Mockup Handout 1.jpg",
     "The Design Problem.md",
     "Design System.md",
-    "Design Presentation.md",
-    "images/fonts and color.png",
-    "images/slide mode design.png",
-    "images/Screenshot 2026-06-16 at 18-30-25 Exploring Creative Technologies.png",
-    "images/User Interface Design.png",
-    "images/Design Elements.png",
-    "images/print mode design.png",
-    "images/web design.png",
     "Markdown-Test.md",
     "Journal.md",
     "MD-Test.md",
@@ -356,10 +360,7 @@
     "Connecting a Kinect 1 to TD.md",
     "Experience with Handtracking in ml5.js.md",
     "Movement Data in Touchdesigner.md",
-    "images/simpleFeedback-inTd.png",
     "Feedback Effect in Touchdesigner.md",
-    "images/ProjectMappingTest 1.png",
-    "ProjectMappingTest.png",
     "Customized Editor for CrossDocu.md",
     "Base Template.md",
     "About Learning in Public.md",
@@ -372,7 +373,6 @@
     "Hybrid Search - The Concept.md",
     "Content Map.canvas",
     "Alternative Interfaces.md",
-    "About Digital Gardens and Streams.md",
-    "Einführung in p5.js.md"
+    "About Digital Gardens and Streams.md"
   ]
 }
