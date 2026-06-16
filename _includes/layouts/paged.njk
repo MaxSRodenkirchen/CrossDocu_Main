@@ -6,7 +6,7 @@
 
 {% block content %}
   <template id="content">
-    {{ content | safe }}
+    {{ content | addHeadingIds | safe }}
     <p>This is the "paged.njk" Layout.</p>
   </template>
 

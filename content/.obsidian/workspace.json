@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "Journal"
             }
+          },
+          {
+            "id": "b6e010d7d6416138",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Markdown-Test.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Markdown-Test"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -208,12 +233,13 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "4875de628f3b11a8",
+  "active": "b6e010d7d6416138",
   "lastOpenFiles": [
+    "Journal.md",
     "Projection Mapping in Touchdesigner.md",
+    "Markdown-Test.md",
     "Connecting a Kinect 1 to TD.md",
     "Experience with Handtracking in ml5.js.md",
-    "Journal.md",
     "Movement Data in Touchdesigner.md",
     "images/simpleFeedback-inTd.png",
     "Feedback Effect in Touchdesigner.md",
@@ -241,7 +267,6 @@
     "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
     "What is needed for building a problem-oriented System.md",
     "How can we explain and teach Creative Coding.md",
-    "Concept Presentation.md",
-    "Concept presentation start.md"
+    "Concept Presentation.md"
   ]
 }

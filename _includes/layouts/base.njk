@@ -40,11 +40,11 @@
 
         <template id="templateSource">
 
-            {{ content | injectTags(tags) | safe }}
+            {{ content | injectTags(tags) | linkClass | addHeadingIds | safe }}
         </template>
 
         <template id="templateContent">
-            {{ content | injectTags(tags) | safe }}
+            {{ content | injectTags(tags) | linkClass | addHeadingIds | safe }}
         </template>
 
         <div id="midContainer">

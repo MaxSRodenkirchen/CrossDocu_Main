@@ -23,12 +23,13 @@
   #sidebar a > p{
     border: var(--lineWeight) solid var(--internalLink);
     padding: var(--gapSmallest) ;
+    color: var(--internalLink);
   } 
 
  #sidebar a:hover > p,
  .active > p{
     background: var(--internalLink);
-    color: var(--bgLight);
+    color: var(--bgLight) !important;
   } 
 
   #sidebarContent {
@@ -54,7 +55,7 @@
     overflow-wrap: break-word;
     overflow: scroll;
     border-top: var(--lineWeight) solid var(--internalLink);
-    border-bottom: var(--lineWeight) solid var(--internalLink);
+    border-bottom: var(--lineWeight) solid var(--internalInteraction);
   }
 
   .moc-sidebar-container * {

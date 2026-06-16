@@ -23,7 +23,7 @@
       vertical-align: bottom;
       font-family: "Graebenbach Mono Regular", sans-serif;
       font-size: 20px;
-      /* letter-spacing: 3px; */
+      opacity: 0.7;
     }
 
     @bottom-right {
@@ -33,6 +33,8 @@
       font-family: "Graebenbach Mono Regular", sans-serif;
       /* letter-spacing: 3px; */
       font-size: 20px;
+      opacity: 0.7;
+
     }
 
     h1 {
@@ -46,10 +48,7 @@
     h3 {
       font-size: 80px;
       margin: 0 0 8rem 0;
-
-      /* font-weight: 900; */
       line-height: 80px;
-      text-align: right;
     }
 
     h6 {
@@ -84,15 +83,7 @@
       border: 0;
     }
 
-    a {
-      color: inherit;
-      /* display: inline-block; */
-      /* Inline-Elemente ignorieren margin-bottom/padding-bottom sonst */
-      /* margin-bottom: 80px;   */
-      text-decoration-line: underline;
-      text-decoration-style: dotted;
-      text-decoration-thickness: 4px;
-    }
+
 
     ul {
       max-width: 70%;
@@ -122,8 +113,8 @@
 
   h3,
   h2,
-  h1,
-  hr {
+  h1
+   {
     break-before: page;
   }
 
@@ -143,7 +134,7 @@
   }
 
   .pagedjs_page {
-    opacity: 0.1;
+    /* opacity: 0.1; */
     transition: opacity 0.4s ease;
     border-top: calc(var(--lineWeight) / var(--slide-scale, 1)) solid var(--internalInteraction);
     border-bottom: calc(var(--lineWeight) / var(--slide-scale, 1)) solid var(--internalInteraction);

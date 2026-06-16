@@ -93,10 +93,41 @@
     padding: var(--gapSmallest) var(--gapSmaller);
     cursor: pointer;
     border: var(--lineWeight) solid var(--internalLink);
-
   }
   .content-tag:hover{
     color: var(--internalLink);
     background-color: var(--bgLight);
+  }
+
+  .internalLink {
+    font-family: "Graebenbach Mono Regular", monospace;
+    border: var(--lineWeight) solid var(--internalLink);
+    padding: var(--gapSmallest) var(--gapSmall) ;
+    width: fit-content;
+    color: var(--internalLink);
+    display:inline-flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+  }
+
+  .internalLink:hover{
+    background-color: var(--internalLink);
+    color: var(--bgLight);
+  }
+
+  .externalLink {
+    font-family: "Graebenbach Mono Regular", monospace;
+    border: var(--lineWeight) solid var(--externalLink);
+    padding: var(--gapSmaller) ;
+    width: fit-content;
+    color: inherit;
+    display:inline-flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+  }
+
+  .externalLink:hover{
+    background-color: var(--externalLink);
+    color: var(--bgLight);
   }
 }

@@ -1,53 +1,138 @@
 @media screen {
   #config {
     color: var(--internalinteraction);
-    background: var(--bg);
-    padding: .5rem;
+    background: var(--bg); 
     transition: all .1s ease;
-    /* width:100%; */
+    width:100%;
     flex: auto;
     min-width: 150px;
     max-width: 350px;
+
+    font-family: "Graebenbach Mono Regular", sans-serif;
+    font-size: 9pt;
+    line-height: 140%;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
-  #config:hover {
-    filter: opacity(1);
+  #config h1{
+    font-family: Favorite Lining Regular, sans-serif;
+    font-size: 26pt;
+    line-height: 120%;
+    margin: 0;
+    padding-left: var(--gapSmall);
+    padding-top: var(--gapSmaller);
+    padding-bottom: var(--gapSmaller);
+  }
+
+  #sections{
+    background-color: var(--bgLight);
+    margin-top: var(--gap);
+    margin-bottom:var(--gap);
+    padding-bottom: var(--gapSmaller);
+    border-top: var(--lineWeight) solid var(--internalInteraction);
+    border-bottom: var(--lineWeight) solid var(--internalInteraction);
+  }
+
+  #sections ol,
+  #sections li {
+    line-height: 160%;
+    margin: var(--gapSmaller) 0;
+  }
+
+  #sections ol {
+    list-style-type: none;
+    counter-reset: section;
+    padding-left: var(--gapSmall);
+    padding-right: var(--gapSmall);
+  }
+
+  #sections ol ol {
+    padding-left: var(--gapSmaller);
+  }
+
+  #sections li {
+    padding: 0;
+  }
+
+  #sections li::before {
+
+    counter-increment: section;
+    content: counters(section, ".") " ";
+    opacity: .75;
+    
+  }
+
+  #sections a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  #sections a:hover,
+  #sections li:has(> a:hover)::before {
+    font-family: "Graebenbach Mono Bold", monospace;
+  }
+
+  #sections a.activeSection,
+  #sections li:has(> a.activeSection)::before {
+    font-family: "Graebenbach Mono Bold", monospace;
+  }
+
+  #slideControls{
+    width:100%;
+    margin:var(--gapSmall) 0 0 0;
+    padding-top: var(--gapSmaller);
+    border-top: var(--lineWeight) solid var(--internalInteraction);
+  }
+
+  .sectionButton{
+    background-color: var(--bgLight);
+    border: none;
+    padding: 0 var(--gapSmall);
+    margin: var(--gapSmallest) 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0;
+    appearance: none;
+    text-align: left;
+
+  }
+
+  .sectionButton:hover{
+    background-color:var(--internalLink);
+    color: var(--bgLight)
+  }
+
+  #viewModeContainer{
+    display:flex;
+    flex-direction: column;
+    background-color: var(--bgLight);
+    margin-top: auto;
+    margin-bottom: var(--gap);
   }
 
   .viewModeButton {
-    /* border-radius: 100%; */
+    background-color: var(--bgLight);
     border: none;
-    /* position: absolute;
-        right: 0; */
-
-    padding: 0;
-    /* margin: 0 auto; */
-    background: none;
-    overflow: auto;
-    width: max-content;
-    stroke: var(--color-white);
-  }
-
-  .button-svg {
-    fill: var(--color-white);
-    stroke: var(--color-4);
-    stroke-width: 8px;
-    height: 28px;
-    border-radius: 0.5rem;
-        filter: opacity(.4);
-            transition: all .1s ease;
-
-
-  }
-
-  .button-svg:hover {
-    /* fill: var(--color-black);
-    stroke: var(--color-black); */
-    filter: opacity(1);
+    padding: var(--gapSmallest) var(--gapSmall);
+    margin: 0;
+    font: inherit;
+    color: inherit;
     cursor: pointer;
+    outline: none;
+    border-radius: 0;
+    appearance: none;
+    text-align: left;
   }
 
-  #mainContainer:fullscreen #config {
-    display: none !important;
+  .activeViewButton,
+  .viewModeButton:hover{
+    background-color: var(--internalLink);
+    color: var(--bgLight);
+
   }
 }

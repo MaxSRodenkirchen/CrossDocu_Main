@@ -56,6 +56,7 @@ export default function (eleventyConfig) {
     })
 
     // Transform to parse %% comments %% and turn them into HTML comments <!-- -->
+    // Transform to parse %% comments %% and turn them into HTML comments <!-- -->
     eleventyConfig.addTransform("markdown-comments", function(content) {
         if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
             // Replace block comments (wrapped in <p>)
@@ -65,6 +66,20 @@ export default function (eleventyConfig) {
             return replaced;
         }
         return content;
+    });
+
+    // Filter to add slugified IDs to h1, h2, h3 tags for table of contents navigation
+    eleventyConfig.addFilter("addHeadingIds", function(content) {
+        if (typeof content !== 'string') return '';
+        const slugify = (text) => text.toLowerCase().replace(/[^a-z0-9\u00df-\u00ff]+/gi, '-').replace(/(^-|-$)/g, '');
+        return content.replace(/<h([1-3])\b([^>]*)>([\s\S]*?)<\/h\1>/gi, (match, level, attrs, text) => {
+            if (attrs.includes('id=')) {
+                return match;
+            }
+            const cleanText = text.replace(/<[^>]+>/g, '').trim();
+            const id = slugify(cleanText);
+            return `<h${level} id="${id}" ${attrs}>${text}</h${level}>`;
+        });
     });
 
 
@@ -142,6 +157,93 @@ export default function (eleventyConfig) {
                 </a>
             </li>`;
         });
+    });
+
+    eleventyConfig.addFilter("linkClass", (content) => {
+        if (typeof content !== 'string') return '';
+        
+        // If the content looks like HTML, process all <a> tags inside it
+        if (/<[a-z][\s\S]*>/i.test(content)) {
+            return content.replace(/<a\s+([^>]*href=["']([^"']*)["']([^>]*))>/gi, (match, body, href) => {
+                const isExternal = /^(https?:)?\/\//.test(href);
+                const className = isExternal ? 'externalLink' : 'internalLink';
+                
+                if (/class=["']/i.test(body)) {
+                    return `<a ${body.replace(/class=(["'])(.*?)\1/gi, `class=$1$2 ${className}$1`)}>`;
+                } else {
+                    return `<a class="${className}" ${body}>`;
+                }
+            });
+        }
+
+        // Otherwise, treat as a single URL string and return the class name
+        const isExternal = /^(https?:)?\/\//.test(content);
+        return isExternal ? 'externalLink' : 'internalLink';
+    });
+    
+    eleventyConfig.addFilter("getSections", (content) => {
+        if (typeof content !== 'string') return '';
+        
+        const slugify = (text) => text.toLowerCase().replace(/[^a-z0-9\u00df-\u00ff]+/gi, '-').replace(/(^-|-$)/g, '');
+        const headingRegex = /<h([1-3])\b([^>]*)>([\s\S]*?)<\/h\1>/gi;
+        const headings = [];
+        let match;
+        
+        while ((match = headingRegex.exec(content)) !== null) {
+            const level = parseInt(match[1], 10);
+            const attrs = match[2];
+            const rawText = match[3];
+            
+            // Extract ID attribute or generate it
+            const idMatch = attrs.match(/id=["']([^"']+)["']/i);
+            const text = rawText.replace(/<[^>]+>/g, '').trim();
+            const id = idMatch ? idMatch[1] : slugify(text);
+            
+            if (text) {
+                headings.push({ level, text, id });
+            }
+        }
+        
+        if (headings.length === 0) return '';
+        
+        // Build the nested ordered lists using a stack
+        let html = "";
+        const stack = [];
+        
+        for (const h of headings) {
+            const link = `<a href="#${h.id}">${h.text}</a>`;
+            
+            if (stack.length === 0) {
+                html += "<ol>";
+                stack.push(h.level);
+            } else {
+                let lastLevel = stack[stack.length - 1];
+                if (h.level > lastLevel) {
+                    html += "<ol>";
+                    stack.push(h.level);
+                } else {
+                    while (stack.length > 0 && h.level < stack[stack.length - 1]) {
+                        html += "</li></ol>";
+                        stack.pop();
+                    }
+                    if (stack.length > 0 && h.level === stack[stack.length - 1]) {
+                        html += "</li>";
+                    } else {
+                        html += "<ol>";
+                        stack.push(h.level);
+                    }
+                }
+            }
+            
+            html += `<li>${link}`;
+        }
+        
+        while (stack.length > 0) {
+            html += "</li></ol>";
+            stack.pop();
+        }
+        
+        return html;
     });
 
     // console.log(collection.creativecoding)

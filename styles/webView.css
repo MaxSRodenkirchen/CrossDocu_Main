@@ -38,7 +38,8 @@ hr{
 
 h1,h2,h3{
   font-family: "Graebenbach Bold", sans-serif;
-  color:var(--color-2)
+  color:var(--color-2);
+  scroll-margin-top: var(--gap);
 }
 
 h1{
