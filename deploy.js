@@ -17,6 +17,11 @@ console.log("📝 Generating .gitignore to exclude massive files from deployment
 fs.writeFileSync(path.join(siteDir, '.gitignore'), '*.mp4\n');
 
 console.log("📦 Preparing local git repository for deployment...");
+// Wipe previous .git directory to ensure no large files are kept in history
+try {
+  fs.rmSync(path.join(siteDir, '.git'), { recursive: true, force: true });
+} catch (e) {}
+
 try {
   execSync('git init', { cwd: siteDir, stdio: 'inherit' });
   execSync('git add .', { cwd: siteDir, stdio: 'inherit' });
