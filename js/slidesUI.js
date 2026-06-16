@@ -16,10 +16,16 @@ export function switchPages(totalPages, currentPage = 1) {
         }
     }
 
+    let lastWheelTime = 0;
     function scrollToPage(event) {
+        const now = Date.now();
+        if (now - lastWheelTime < 600) return; // 600ms cooldown
+        
         if (event.deltaY > 0) {
+            lastWheelTime = now;
             goToPage(currentPage + 1);
         } else if (event.deltaY < 0) {
+            lastWheelTime = now;
             goToPage(currentPage - 1);
         }
     }
@@ -27,15 +33,25 @@ export function switchPages(totalPages, currentPage = 1) {
     container.addEventListener("wheel", scrollToPage);
 
     // Keyboard navigation
+    let lastKeyTime = 0;
     window.addEventListener("keydown", (event) => {
-        if (event.key === "ArrowRight") {
-            goToPage(currentPage + 1);
-        } else if (event.key === "ArrowLeft") {
-            goToPage(currentPage - 1);
+        if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') return;
+
+        const now = Date.now();
+        if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+            if (now - lastKeyTime < 300) return; // 300ms cooldown
+            lastKeyTime = now;
+            
+            if (event.key === "ArrowRight") {
+                goToPage(currentPage + 1);
+            } else if (event.key === "ArrowLeft") {
+                goToPage(currentPage - 1);
+            }
         }
     });
 
-    // Expose functions for buttons
+    // Expose functions for buttons and external scripts
+    window.goToPage = goToPage;
     window.nextSlide = () => goToPage(currentPage + 1);
     window.prevSlide = () => goToPage(currentPage - 1);
     
@@ -53,6 +69,14 @@ export function switchPages(totalPages, currentPage = 1) {
     // Show slide controls if they exist
     const slideControls = document.getElementById("slideControls");
     if (slideControls) slideControls.style.display = "flex";
+
+    // Pin current slide during resize
+    window.addEventListener("resize", () => {
+        const targetPage = document.querySelector(`#page-${currentPage}`);
+        if (targetPage) {
+            targetPage.scrollIntoView({ behavior: 'auto', block: 'start' });
+        }
+    });
 
     // Initialize first page state
     goToPage(currentPage);

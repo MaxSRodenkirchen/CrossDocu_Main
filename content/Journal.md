@@ -9,38 +9,23 @@ publish:
   - public
 ---
 # Journal
-{# 
-18. following
-	1. ways for interacting with a wall
-	2. Building a Low-Tech Server
-	3. Project Mapping
-	4. Fetch Live Data
-	5. 
 
-19. CW 31
+28. CW 21
+	1. [[Mapping - Exploring Creative Technologies]]
+	2. [[Questions behind ECT]]
+	3. [[User Journeys]]
+	4. [[Structuring the Platform]]
 
-20. CW 30: Final Presentation & Exhibition
+27. CW 22: Concept Presentation
+	1. [[Concept Presentation]]
 
+27. CW 23
+    
+	1. [[Experience with Handtracking in ml5.js]]
+	2. [[Movement Data in Touchdesigner]]
+	3. Learned TD 101
 
-21. CW 29 
-
-
-22. CW 28
-
-
-23. CW 27
-
-
-24. CW 26 #}
-
-
-25. CW 25: Design Presentation 
-
-	1. [[Markdown-Test]]
-	2. [[MD-Test]]
-	3. [[Design Presentation]]
-
-26. Calendar Week 24
+26. CW 24
 
 	1. [[Projection Mapping in Touchdesigner]]
 	2. [[Design Concept]]
@@ -48,37 +33,28 @@ publish:
 	4.  Learned TD 102
 	5. [[Connecting a Kinect 1 to TD]]
 
-27. Calendar Week 23
-    
-	1. [[Experience with Handtracking in ml5.js]]
-	2. [[Movement Data in Touchdesigner]]
-	3. Learned TD 101
-{# 
-28. CW 22: Concept Presentation
-	1. [[Concept Presentation]]
+25. CW 25: Design Presentation 
 
-29. CW 21
-	1. [[Mapping - Exploring Creative Technologies]]
-	2. [[Questions behind ECT]]
-	3. [[User Journeys]]
-	4. [[Structuring the Platform]]
+	1. [[Markdown-Test]]
+	2. [[MD-Test]]
+	3. [[Design Presentation]]
 
-30. CW 20
-	1. 
+24. CW 26 
 
-31. CW 19
-	1. 
+23. CW 27
 
-32. CW 18
-	1. 
+22. CW 28
 
-33. CW 17
-	1. 
+21. CW 29 
 
-34. CW 16
-	1. 
+20. CW 30: Final Presentation & Exhibition
 
-35. CW 15:
-	1. 
+19. CW 31
 
- #}
+18. following
+	1. ways for interacting with a wall
+	2. Building a Low-Tech Server
+	3. Project Mapping
+	4. Fetch Live Data
+	5.
+
