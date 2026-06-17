@@ -1,9 +1,9 @@
 @media screen {
   #config {
     color: var(--internalinteraction);
-    background: var(--bg); 
+    background: var(--bg);
     transition: all .1s ease;
-    width:100%;
+    width: 100%;
     flex: auto;
     min-width: 150px;
     max-width: 350px;
@@ -17,6 +17,16 @@
     height: 100%;
   }
 
+  .close {
+    background-color: var(--bg);
+    height: var(--gap);
+    cursor: pointer;
+  }
+
+  .close:hover {
+    background-color: var(--bgLight);
+  }
+
   #config.collapsed {
     min-width: 50px;
     max-width: 50px;
@@ -24,11 +34,11 @@
     cursor: pointer;
   }
 
-  #config.collapsed > * {
+  #config.collapsed>* {
     display: none;
   }
 
-  #config h1{
+  #config h1 {
     font-family: Favorite Lining Regular, sans-serif;
     font-size: 26pt;
     line-height: 120%;
@@ -38,10 +48,10 @@
     padding-bottom: var(--gapSmaller);
   }
 
-  #sections{
+  #sections {
     background-color: var(--bgLight);
-    margin-top: var(--gap);
-    margin-bottom:var(--gap);
+    /* margin-top: var(--gap); */
+    margin-bottom: var(--gap);
     padding-bottom: var(--gapSmallest);
     border-top: var(--lineWeight) solid var(--internalInteraction);
     border-bottom: var(--lineWeight) solid var(--internalInteraction);
@@ -73,7 +83,7 @@
     counter-increment: section;
     content: counters(section, ".") " ";
     opacity: .75;
-    
+
   }
 
   #sections a {
@@ -91,17 +101,17 @@
     font-family: "Graebenbach Mono Bold", monospace;
   }
 
-  #slideControls{
-    width:100%;
-    margin:var(--gapSmall) 0 0 0;
+  #slideControls {
+    width: 100%;
+    margin: var(--gapSmall) 0 0 0;
     padding-top: var(--gapSmallest);
     border-top: var(--lineWeight) solid var(--internalInteraction);
     flex-wrap: wrap;
   }
 
-  .sectionButton{
-    display: flex; 
-    align-items: center; 
+  .sectionButton {
+    display: flex;
+    align-items: center;
     gap: var(--gapSmaller);
     background-color: var(--bgLight);
     border: none;
@@ -117,13 +127,13 @@
     white-space: nowrap;
   }
 
-  .sectionButton:hover{
-    background-color:var(--internalLink);
+  .sectionButton:hover {
+    background-color: var(--internalLink);
     color: var(--bgLight)
   }
 
-  #viewModeContainer{
-    display:flex;
+  #viewModeContainer {
+    display: flex;
     flex-direction: column;
     background-color: var(--bgLight);
     margin-top: auto;
@@ -145,7 +155,7 @@
   }
 
   .activeViewButton,
-  .viewModeButton:hover{
+  .viewModeButton:hover {
     background-color: var(--internalLink);
     color: var(--bgLight);
 
