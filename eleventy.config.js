@@ -94,12 +94,6 @@ export default function (eleventyConfig) {
         // return value;
     });
 
-    eleventyConfig.addFilter("firstImage", (content) => {
-        const match = content.match(/<img[^>]+>/); //Regular Expression, only take the first img tag
-        return match ? match[0] : '<img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">';
-
-    });
-
     eleventyConfig.addFilter("injectTags", function(content, tags) {
         if (!tags || !Array.isArray(tags) || tags.length === 0) return content;
 
@@ -114,51 +108,15 @@ export default function (eleventyConfig) {
         return tagsHtml + content;
     });
 
-    eleventyConfig.addFilter("mocSidebar", function(content, collectionsAll) {
+    eleventyConfig.addFilter("mocSidebar", function(content) {
         if (!content) return "";
-        const collections = collectionsAll || (this.ctx && this.ctx.collections && this.ctx.collections.all) || [];
 
         // Matcht <li><a href="...">Linktext</a></li> und fängt href und Linktext ab
         const regex = /<li>\s*<a\s*[^>]*?href="([^"]+)"[^>]*?>([^<]+)<\/a>\s*<\/li>/gi;
         
         return content.replace(regex, (match, href, linkText) => {
-
-            // Finde die Seite anhand der URL statt des Linktextes
-            const page = collections.find(p => {
-                // Normalisiere URLs
-                const pageUrl = p.url?.replace(/\/$/, '').replace(/%20/g, ' ');
-                const hrefUrl = href?.replace(/\/\.\//g, '/').replace(/\/$/, '').replace(/%20/g, ' ');
-                
-                
-                return pageUrl === hrefUrl;
-            });
-            
-            
-            // Hole das erste Bild der Seite (HTML oder Wikilink)
-            let imgHtml = '';
-            
-            if (page?.templateContent) {
-                // Versuche HTML img-Tag zu finden
-                const imgMatch = page.templateContent.match(/<img[^>]+>/);
-                if (imgMatch) {
-                    imgHtml = imgMatch[0];
-                } else {
-                    // Fallback: Versuche Wikilink-Bild zu finden
-                    const wikiMatch = page.templateContent.match(/!\[\[([^\]]+\.(png|jpg|jpeg|gif|webp))\]\]/i);
-                    if (wikiMatch) {
-                        imgHtml = `<img src="/images/${wikiMatch[1]}" alt="${wikiMatch[1]}">`;
-                    }
-                }
-            }
-            
-            // Fallback auf Placeholder wenn kein Bild gefunden (Entfernt, stattdessen bleibt imgHtml leer für weißen Hintergrund)
-            // if (!imgHtml) {
-            //     imgHtml = '<img src="https://images.unsplash.com/photo-1560015534-cee980ba7e13?q=80&w=1035&auto=format&fit=crop">';
-            // }
-
             return `<li>
                 <a href="${href}">
-                    ${imgHtml}
                     <p>${linkText}</p>
                 </a>
             </li>`;

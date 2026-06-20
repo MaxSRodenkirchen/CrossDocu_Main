@@ -2,7 +2,7 @@
 
   body {
     background: var(--bgLight);
-    padding:0 var(--gap) 0 var(--gap) ;
+    /* padding:0 var(--gap) 0 var(--gap) ; */
     margin: 0;
     color: var(--internalInteraction);
     scrollbar-width: none;
@@ -146,6 +146,55 @@
     background-color: var(--externalLink);
     color: var(--bgLight);
     text-decoration: none;
+  }
+
+  #leftModuleBar, #rightModuleBar{
+    position: absolute;
+    top: 0;
+    /* padding: var(--gap) 0; */
+    height: 100%;
+    width:50px;
+    background-color: var(--bg);
+    color: var(--internalLink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #leftModuleBar{
+    left: 0;
+  }
+
+  #rightModuleBar{
+    right: 0;
+  }
+
+  .moduleName{
+    font-family: "Favorite Lining Regular";
+    font-size: 30px;
+    
+    writing-mode: vertical-rl;
+    
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  #leftModuleBar .moduleName{
+    transform: rotate(180deg);
+  }
+
+  .moduleName:hover,
+  .moduleName.active {
+    background-color: var(--internalLink);
+    color: var(--bgLight);
   }
 
 /* Meteor Icons Configuration */

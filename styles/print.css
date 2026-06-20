@@ -6,7 +6,8 @@
   .viewModeButton,
   #slideControls,
   #mocControls,
-  #credit {
+  #credit,
+  #leftModuleBar {
     display: none !important;
   }
 

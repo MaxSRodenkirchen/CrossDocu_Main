@@ -1,4 +1,4 @@
-<ul id="sidebarContent">
+<ul id="orderedContent">
 
     <div class="sidebar-group moc-sidebar-container" id="sidebar-default">
 
@@ -61,3 +61,47 @@
     </div>
 
 </ul>
+
+<div class="module" id="searchContent">
+</div>
+
+<div class="module" id="tagsContent">
+    <div class="tag-sidebar-group moc-sidebar-container" id="tags-default">
+        <h1>All Tags</h1>
+        <ol>
+            <li>
+                <ol>
+                    {% for tag, posts in collections %}
+                        {% if tag != "all" and tag != "post" and tag != "posts" and tag != "moc" and tag != "mocs" %}
+                            <li>
+                                <a data-tag-btn-name="{{ tag }}" onclick="switchTag('{{ tag }}')">
+                                    <p>{{ tag }} ({{ posts.length }})</p>
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </li>
+        </ol>
+    </div>
+
+    {% for tag, posts in collections %}
+        {% if tag != "all" and tag != "post" and tag != "posts" and tag != "moc" and tag != "mocs" %}
+            <div class="tag-sidebar-group moc-sidebar-container" data-tag-name="{{ tag }}" style="display: none;">
+                <h1 onclick="switchTag('')" style="cursor: pointer;" title="Back to Tags"># {{ tag }}</h1>
+                <ol>
+                    <li>
+                        <ol>
+                            {% set tagNotesList %}
+                                {% for post in posts %}
+                                    <li><a href="{{ post.url }}">{{ post.data.title | default(post.fileSlug) }}</a></li>
+                                {% endfor %}
+                            {% endset %}
+                            {{ tagNotesList | mocSidebar(collections.all) | safe }}
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>

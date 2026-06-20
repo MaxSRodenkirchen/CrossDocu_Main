@@ -14,7 +14,7 @@
   --bg: #F5EDDF;
   --bgLight: #FFF7E8;
   --internalLink: #BA5E5E;
-  --internalInteraction: #3f464f;
+  --internalInteraction: #33393f;
   --externalLink: #535D6A;
   
   --gapBig: 90px;
@@ -38,12 +38,12 @@
 
   @font-face {
     font-family: Favorite Lining Regular;
-    src: url(/fonts/FavoritLining-Regular.otf);
+    src: url(/fonts/Fontspring-DEMO-alergia_remix-medium.otf);
   }
 
     @font-face {
     font-family: Favorite Lining Bold;
-    src: url(/fonts/FavoritLining-Bold.otf);
+    src: url(/fonts/Fontspring-DEMO-alergia_remix-medium.otf);
   }
 
   @font-face {

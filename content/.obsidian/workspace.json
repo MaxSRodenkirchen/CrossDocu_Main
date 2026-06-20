@@ -205,9 +205,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "deleteMe.md",
+                "file": "Color Detection in TD.md",
                 "mode": "source",
-                "source": true,
+                "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -220,7 +220,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "deleteMe"
+              "title": "Color Detection in TD"
             }
           },
           {
@@ -437,8 +437,8 @@
   },
   "active": "618df392b4a87199",
   "lastOpenFiles": [
-    "MD-Test.md",
     "deleteMe.md",
+    "MD-Test.md",
     "The Design Problem.md",
     "In one sentence - Exploring Creative Technologies.md",
     "A Color Detecting Controller.md",

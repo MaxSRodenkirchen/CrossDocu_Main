@@ -23,14 +23,11 @@
     <div id="mainContainer">
 
 
-        {# {% for moc in collections.moc %}
-        <script>
-            window.sidebarContent.push("{{moc.url}}");
-            console.log(window.sidebarContent)
-        </script>
-
-        {% endfor %} #}
-        {# {{page.url}} #}
+        <aside id="leftModuleBar">
+            <a class="moduleName active" id="btnToggleOrdered">Ordered Lists</a>
+            <a class="moduleName" id="btnToggleSearch">Search</a>
+            <a class="moduleName" id="btnToggleTags">Tags</a>
+        </aside>
 
         <aside id="sidebar">
             <script>
@@ -38,7 +35,7 @@
                     document.getElementById('sidebar').classList.add('collapsed');
                 }
             </script>
-            {% include "partials/navbar.njk" %}
+            {% include "partials/sidebar.njk" %}
         </aside>
 
         <template id="templateSource">
@@ -64,7 +61,11 @@
             </script>
             {% include "partials/config.njk" %}
         </aside>
+        <aside id="rightModuleBar">
 
+        <a class="moduleName active" id="btnToggleSections">Sections</a>
+        <a class="moduleName active" id="btnToggleViewModes">View Modes</a>
+        </aside>
     </div>
 
 
@@ -80,7 +81,7 @@
         });
 
         function toggleSidebar() {
-            const activeMocUrl = localStorage.sidebarContent;
+            const activeMocUrl = localStorage.orderedContent;
 
             // 1. Verstecke alle Sidebar-Gruppen
             document.querySelectorAll('.sidebar-group').forEach(group => {
@@ -115,15 +116,45 @@
             if (mocControls) mocControls.style.display = 'none';
         }
 
+        function toggleTags() {
+            const activeTag = localStorage.activeTag;
+
+            // 1. Verstecke alle Tag-Gruppen
+            document.querySelectorAll('.tag-sidebar-group').forEach(group => {
+                group.style.display = 'none';
+            });
+
+            // 2. Zeige den aktiven Tag an, falls gesetzt
+            if (activeTag) {
+                const activeContainer = document.querySelector(`.tag-sidebar-group[data-tag-name="${activeTag}"]`);
+                if (activeContainer) {
+                    activeContainer.style.display = 'block';
+                    return;
+                }
+            }
+
+            // 3. Fallback: Zeige die Standard-Tags
+            const defaultTags = document.getElementById('tags-default');
+            if (defaultTags) {
+                defaultTags.style.display = 'block';
+            }
+        }
+
         window.switchMoc = function (url) {
-            localStorage.sidebarContent = url;
+            localStorage.orderedContent = url;
             toggleSidebar();
+            highlightCurrentPage();
+        };
+
+        window.switchTag = function (tag) {
+            localStorage.activeTag = tag;
+            toggleTags();
             highlightCurrentPage();
         };
 
         function highlightCurrentPage() {
             const currentPath = decodeURI(window.location.pathname);
-            const links = document.querySelectorAll('#sidebarContent li a');
+            const links = document.querySelectorAll('#orderedContent li a, #tagsContent li a');
             let activeLink = null;
 
             links.forEach(link => {
@@ -158,10 +189,11 @@
         }
 
         toggleSidebar();
+        toggleTags();
         highlightCurrentPage();
         
         window.navigateMoc = function (direction) {
-            const activeMocUrl = localStorage.sidebarContent;
+            const activeMocUrl = localStorage.orderedContent;
             if (!activeMocUrl) return;
 
             const group = document.querySelector(`.sidebar-group[data-moc-url="${activeMocUrl}"]`);
@@ -238,6 +270,82 @@
                 }
             });
         }
+        // Right module bar logic
+        const btnToggleSections = document.getElementById('btnToggleSections');
+        const btnToggleViewModes = document.getElementById('btnToggleViewModes');
+        const sectionsDiv = document.getElementById('sections');
+        const viewModeContainer = document.getElementById('viewModeContainer');
+        const configSidebarEl = document.getElementById('config');
+
+        function updateConfigSidebarVisibility() {
+            if (!sectionsDiv || !viewModeContainer || !configSidebarEl) return;
+            const sectionsVisible = window.getComputedStyle(sectionsDiv).display !== 'none';
+            const viewModesVisible = window.getComputedStyle(viewModeContainer).display !== 'none';
+
+            if (!sectionsVisible && !viewModesVisible) {
+                configSidebarEl.style.display = 'none';
+            } else {
+                configSidebarEl.style.display = ''; // fallback to stylesheet
+            }
+        }
+
+        function setupToggle(btn, contentDiv, storageKey, defaultDisplay, updateVisibilityFn) {
+            if (!btn || !contentDiv) return;
+
+            // 1. Restore state from localStorage
+            const savedState = localStorage.getItem(storageKey);
+            if (savedState !== null) {
+                contentDiv.style.display = savedState === 'true' ? defaultDisplay : 'none';
+            }
+
+            // 2. Set initial active class
+            btn.classList.toggle('active', window.getComputedStyle(contentDiv).display !== 'none');
+
+            // 3. Click handler
+            btn.addEventListener('click', () => {
+                const isCurrentlyVisible = window.getComputedStyle(contentDiv).display !== 'none';
+                const newState = !isCurrentlyVisible;
+                contentDiv.style.display = newState ? defaultDisplay : 'none';
+                btn.classList.toggle('active', newState);
+                localStorage.setItem(storageKey, newState);
+                if (updateVisibilityFn) updateVisibilityFn();
+                window.dispatchEvent(new Event('resize'));
+            });
+        }
+
+        setupToggle(btnToggleSections, sectionsDiv, 'module_sections', 'block', updateConfigSidebarVisibility);
+        setupToggle(btnToggleViewModes, viewModeContainer, 'module_viewModes', 'flex', updateConfigSidebarVisibility);
+        updateConfigSidebarVisibility();
+
+        // Left module bar logic
+        const btnToggleOrdered = document.getElementById('btnToggleOrdered');
+        const btnToggleSearch = document.getElementById('btnToggleSearch');
+        const btnToggleTags = document.getElementById('btnToggleTags');
+        
+        const orderedContentDiv = document.getElementById('orderedContent');
+        const searchContentDiv = document.getElementById('searchContent');
+        const tagsContentDiv = document.getElementById('tagsContent');
+        
+        const mainSidebarEl = document.getElementById('sidebar');
+
+        function updateMainSidebarVisibility() {
+            if (!orderedContentDiv || !searchContentDiv || !tagsContentDiv || !mainSidebarEl) return;
+            const orderedVisible = window.getComputedStyle(orderedContentDiv).display !== 'none';
+            const searchVisible = window.getComputedStyle(searchContentDiv).display !== 'none';
+            const tagsVisible = window.getComputedStyle(tagsContentDiv).display !== 'none';
+
+            if (!orderedVisible && !searchVisible && !tagsVisible) {
+                mainSidebarEl.style.display = 'none';
+            } else {
+                mainSidebarEl.style.display = ''; // fallback to stylesheet
+            }
+        }
+
+        setupToggle(btnToggleOrdered, orderedContentDiv, 'module_orderedLists', '', updateMainSidebarVisibility);
+        setupToggle(btnToggleSearch, searchContentDiv, 'module_search', '', updateMainSidebarVisibility);
+        setupToggle(btnToggleTags, tagsContentDiv, 'module_tags', '', updateMainSidebarVisibility);
+        updateMainSidebarVisibility();
+
     </script>
 
 </body>
