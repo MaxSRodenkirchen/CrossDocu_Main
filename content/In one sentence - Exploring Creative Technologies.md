@@ -1,6 +1,6 @@
 ---
 tags:
-  - ExploringCreativeTechnologies
+  - Exploring-Creative-Technologies
 state:
   - "10"
 type:

@@ -307,7 +307,7 @@
   "calendarHighlightToday": true,
   "calendarShowFeatureImage": true,
   "calendarMonthHighlights": {},
-  "calendarShowWeekNumber": false,
+  "calendarShowWeekNumber": true,
   "calendarShowQuarter": false,
   "calendarShowYearCalendar": true,
   "calendarLeftPlacement": "navigation",

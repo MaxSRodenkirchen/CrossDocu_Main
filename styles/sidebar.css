@@ -9,9 +9,7 @@
   }
 
   #sidebar{
-    font-family: "Graebenbach Mono Regular", sans-serif;
-    font-size: 9pt;
-    line-height: 140%;
+    font:var(--font-mono-small);
     transition: all .1s ease;
   }
 

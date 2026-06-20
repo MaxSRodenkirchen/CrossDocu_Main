@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design Presentation.md",
+                "file": "Color Detection in TD.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,175 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Design Presentation"
+              "title": "Color Detection in TD"
+            }
+          },
+          {
+            "id": "146d124e6ea6cde1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "A Color Detecting Controller.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "A Color Detecting Controller"
+            }
+          },
+          {
+            "id": "c649c39e77f9c944",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "In one sentence - Exploring Creative Technologies.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "In one sentence - Exploring Creative Technologies"
+            }
+          },
+          {
+            "id": "b4ae9d24705d53ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Design Problem.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "The Design Problem"
+            }
+          },
+          {
+            "id": "e8c639dd734533b9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Movement Data in Touchdesigner.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Movement Data in Touchdesigner"
+            }
+          },
+          {
+            "id": "671c5aaf1e179006",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Feedback Effect in Touchdesigner.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Feedback Effect in Touchdesigner"
+            }
+          },
+          {
+            "id": "1d3c392b0ae566fe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Experience with Handtracking in ml5.js.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Experience with Handtracking in ml5.js"
+            }
+          },
+          {
+            "id": "0035732b0b70897e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MD-Test.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "MD-Test"
             }
           },
           {
@@ -54,62 +222,9 @@
               "icon": "lucide-file",
               "title": "Design System"
             }
-          },
-          {
-            "id": "cb0e57592adc61e2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "The Design Problem.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "The Design Problem"
-            }
           }
-        ]
-      },
-      {
-        "id": "56761d18086e7fed",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "2caeb8f984fd4c26",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Design Concept.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Design Concept"
-            }
-          }
-        ]
+        ],
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -177,7 +292,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 759
+    "width": 869
   },
   "right": {
     "id": "0d88643e45ad4bee",
@@ -263,6 +378,16 @@
               "icon": "lucide-list",
               "title": "Outline of Capture and loop movement in p5.js"
             }
+          },
+          {
+            "id": "e3ead2d4d52018e8",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
           }
         ]
       }
@@ -286,12 +411,21 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "a06caec0756808ec",
+  "active": "0035732b0b70897e",
   "lastOpenFiles": [
-    "Capture and loop movement in p5.js.md",
-    "Design Presentation.md",
-    "Journal.md",
     "The Design Problem.md",
+    "In one sentence - Exploring Creative Technologies.md",
+    "A Color Detecting Controller.md",
+    "Color Detection in TD.md",
+    "Feedback Effect in Touchdesigner.md",
+    "Movement Data in Touchdesigner.md",
+    "MD-Test.md",
+    "Experience with Handtracking in ml5.js.md",
+    "Journal.md",
+    "Design System.md",
+    "images/color_detection_td.png",
+    "Design Presentation.md",
+    "Capture and loop movement in p5.js.md",
     "Thank you.md",
     "Use Cases Moodboard.md",
     "images/OnePager.png",
@@ -303,16 +437,10 @@
     "images/Generated Image June 16, 2026 - 10_27PM.jpg",
     "images/OnePager3.png",
     "images/Mockup Handout 3.jpg",
-    "images/Mockup Handout 2.jpg",
-    "Design System.md",
     "Markdown-Test.md",
-    "MD-Test.md",
     "Design Concept.md",
     "Projection Mapping in Touchdesigner.md",
     "Connecting a Kinect 1 to TD.md",
-    "Experience with Handtracking in ml5.js.md",
-    "Movement Data in Touchdesigner.md",
-    "Feedback Effect in Touchdesigner.md",
     "Customized Editor for CrossDocu.md",
     "Base Template.md",
     "About Learning in Public.md",
@@ -321,9 +449,6 @@
     "Things to be done in CrossDocu.md",
     "Structuring the Platform.md",
     "Questions behind ECT.md",
-    "Introduction to Creative Coding with p5.js.md",
-    "Hybrid Search - The Concept.md",
-    "Content Map.canvas",
-    "Alternative Interfaces.md"
+    "Content Map.canvas"
   ]
 }

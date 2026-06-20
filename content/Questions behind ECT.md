@@ -1,7 +1,7 @@
 ---
 tags:
   - FH-Aachen
-  - ExploringCreativeTechnologies
+  - Exploring-Creative-Technologies
 state:
   - "4"
 type:

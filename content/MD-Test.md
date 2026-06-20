@@ -1,21 +1,24 @@
 ---
 title: MD-Test - Exploring Creative Technologies
-tags: ["Creative Coding", "Digital Gardens", "TouchDesigner"]
+tags:
+  - TouchDesigner
+  - CreativeCoding
+  - OutputDevices
 ---
 
 # Creative Technologies & Digital Gardens
 
-This is a test document. It showcases the formatting capabilities of CrossDocu. The content focuses on creative coding and non-linear knowledge management.
+This is a AI generated Markdown test document. It showcases the formatting capabilities of CrossDocu. The content focuses on creative coding and non-linear knowledge management.
 
 ## Digital Gardens as a Concept
 
-A Digital Garden is different from a standard blog. It is a place where ideas grow over time. You can read more about it here: [[About Digital Gardens and Streams]].
+A Digital Garden is different from a standard blog. It is a place where ideas grow over time. You can read more about it here: [[About Digital Gardens and Streams]]
 
-External resources are also important. {% icon "external-link" %} The [Maggie Appleton Blog](https://maggieappleton.com/garden) is a great place to start exploring this topic.
+External resources are also important. The [Maggie Appleton Blog](https://maggieappleton.com/garden) is a great place to start exploring this topic.
 
 ### Tools for Creative Coding
 
-Creative Coding allows uns to express complex ideas visually. Two popular tools are p5.js and TouchDesigner.
+Creative Coding allows us to express complex ideas visually. Two popular tools are p5.js and TouchDesigner.
 
 #### p5.js
 
@@ -36,7 +39,7 @@ Here is an example of capturing movement in TouchDesigner:
 
 How do we navigate these gardens? 
 1. Through semantic links
-2. Using alternative interfaces like the [[Content Map.canvas]]
+2. Using alternative interfaces 
 3. By exploring tags
 
 Here is an example of an embedded iframe (a p5.js sketch):

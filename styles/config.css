@@ -8,9 +8,7 @@
     min-width: 150px;
     max-width: 350px;
 
-    font-family: "Graebenbach Mono Regular", sans-serif;
-    font-size: 9pt;
-    line-height: 140%;
+    font: var(--font-mono-small);
 
     display: flex;
     flex-direction: column;
@@ -49,7 +47,7 @@
 
   #sections ol,
   #sections li {
-    line-height: 160%;
+    /* line-height: 160%; */
     margin: var(--gapSmaller) 0;
   }
 

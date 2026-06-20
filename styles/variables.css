@@ -24,6 +24,11 @@
   --gapSmallest: 5px;
 
   --lineWeight: 1px;
+
+  /* Typography shortcuts */
+  --font-mono-small: 9pt/180% "Graebenbach Mono Regular", sans-serif;
+  --font-body: 16px/150% "Graebenbach Regular", sans-serif;
+
 }
 
   @font-face {
@@ -34,6 +39,11 @@
   @font-face {
     font-family: Favorite Lining Regular;
     src: url(/fonts/FavoritLining-Regular.otf);
+  }
+
+    @font-face {
+    font-family: Favorite Lining Bold;
+    src: url(/fonts/FavoritLining-Bold.otf);
   }
 
   @font-face {

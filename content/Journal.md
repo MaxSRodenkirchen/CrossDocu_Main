@@ -1,7 +1,7 @@
 ---
 tags:
   - moc
-  - ExploringCreativeTechnologies
+  - Exploring-Creative-Technologies
 state:
   - "9"
 type:
@@ -38,6 +38,7 @@ publish:
 	1. [[Markdown-Test]]
 	2. [[MD-Test]]
 	3. [[Design Presentation]]
+	4. [[Color Detection in TD]]
 
 24. CW 26 
 
@@ -56,5 +57,6 @@ publish:
 	2. Building a Low-Tech Server
 	3. Project Mapping
 	4. Fetch Live Data
+	5. [[A Color Detecting Controller]]
 	5.
 

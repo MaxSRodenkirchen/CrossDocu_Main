@@ -9,6 +9,8 @@ export default function (eleventyConfig) {
 
     // Wikilinks Plugin aktivieren ([[seite]] und ![[bild.png]])
     eleventyConfig.amendLibrary("md", (mdLib) => {
+        mdLib.set({ breaks: true }); //enable single line breaks - like in Obsidian and VS-Code etc. 
+        
         mdLib.use(wikilinksPlus, {
             pageLink: {
                 relativeBaseURL: './',
@@ -248,6 +250,36 @@ export default function (eleventyConfig) {
         }
         
         return html;
+    });
+
+    eleventyConfig.addFilter("contentContainer", function(content) {
+        if (typeof content !== 'string') return '';
+        
+        const firstHeadingMatch = content.match(/<h[1-3]\b|<hr\b/i);
+        
+        let prefix = '';
+        let rest = content;
+        
+        if (firstHeadingMatch && firstHeadingMatch.index > 0) {
+            prefix = content.substring(0, firstHeadingMatch.index);
+            rest = content.substring(firstHeadingMatch.index);
+        } else if (!firstHeadingMatch) {
+            prefix = content;
+            rest = '';
+        }
+        
+        let result = '';
+        if (prefix.trim() !== '') {
+            result += `<div class="contentContainer">\n${prefix}\n</div>\n`;
+        }
+        
+        if (rest.trim() !== '') {
+            result += rest.replace(/(<h[1-3]\b[^>]*>[\s\S]*?<\/h[1-3]>|<hr\b[^>]*>)([\s\S]*?)(?=<h[1-3]\b|<hr\b|$)/gi, (match, heading, innerContent) => {
+                return `<div class="contentContainer">\n${heading}\n${innerContent}\n</div>`;
+            });
+        }
+        
+        return result;
     });
 
     // console.log(collection.creativecoding)

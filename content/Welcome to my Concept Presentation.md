@@ -1,7 +1,7 @@
 ---
 tags:
   - Der-Baum-hat-Zeit
-  - ExploringCreativeTechnologies
+  - Exploring-Creative-Technologies
 state:
   - "10"
 type:
