@@ -13,70 +13,71 @@
   padding: var(--gapSmall) var(--gapSmall); 
 }
 
-h1,h2,h3{
+#content h1,#content h2,#content h3{
   scroll-margin-top: var(--gap);
   margin: var(--gapSmallest) 0 var(--gapSmall) 0;
 
 }
 
-h1{
+#content h1{
   font-family: "Favorite Lining Bold", sans-serif;
   font-size: 54px;
   line-height: 120%;
   max-width: 800px;
 }
 
-h2{
+#content h2{
   font-family: "Favorite Lining Regular", sans-serif;
   font-size: 40px;
   margin-bottom: var(--gap);
 }
 
-h3{
+#content h3{
   font-family: "Favorite Lining Regular", sans-serif;
   font-size: 26px;
 
 }
 
-h4{
+#content h4{
   font-family: "Favorite Regular";
   font-size: 20px;
   font-weight: 300;
 }
 
-h6{
+#content h6{
   font: var(--font-mono-small);
 }
 
-h5,
-h6,
-p:not(:has(img)) {
+#content h5,
+#content h6,
+#content p:not(:has(img)) {
   font: var(--font-body);
   max-width: 600px;
   margin-bottom: var(--gapSmall);
 }
 
-code{
+
+#content code{
   font: var(--font-mono-small);
   padding: 0 4px;
   border-radius: 3px;
 }
 
-pre {
+#content pre {
   padding: var(--gapSmall);
   border-radius: 5px;
   overflow-x: auto;
   margin: var(--gapSmaller) 0;
 }
 
-pre code {
+#content pre code {
   display: block;
   padding: 0;
   background: transparent;
   white-space: pre;
 }
 
-hr{
+#content hr{
   display: none;
 }
 

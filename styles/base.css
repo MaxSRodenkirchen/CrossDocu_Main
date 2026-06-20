@@ -74,10 +74,16 @@
   margin: var(--gap) 0 !important;
   }  
 
-
   .pagedjs_page {
     scroll-margin-top: var(--gap);
+    border-top: var(--lineWeight) solid var(--internalInteraction);
+    border-bottom: var(--lineWeight) solid var(--internalInteraction);
+    margin-bottom: var(--gapSmaller);
   }
+
+
+
+}
 
   .content-tags {
     display: flex;
@@ -141,7 +147,6 @@
     color: var(--bgLight);
     text-decoration: none;
   }
-}
 
 /* Meteor Icons Configuration */
 .i {

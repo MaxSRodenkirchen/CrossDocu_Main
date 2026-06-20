@@ -50,6 +50,12 @@
     font-family: Favorite Regular ;
     src: url(/fonts/Favorit-Regular.otf);
   }
+
+    @font-face {
+    font-family: Favorite Bold ;
+    src: url(/fonts/Favorit-Bold.otf);
+  }
+
   @font-face {
     font-family: "Graebenbach Bold";
     src: url(/fonts/Graebenbach-Bold.ttf);

@@ -46,6 +46,8 @@
     }
 
     h3 {
+      font-family: Favorite Lining Regular;
+
       font-size: 80px;
       margin: 0 0 8rem 0;
       line-height: 80px;
@@ -106,24 +108,29 @@
      .content-tag{
       font-size: 45px;
      }
+     
   }
 
   h1 {
     string-set: title content(text);
   }
-
+/* 
   h3,
   h2,
   h1
    {
     break-before: page;
-  }
+  } */
 
   p:has(img) {
     break-before: page;
     break-after: page;
   }
 
+
+  .contentContainer{
+    break-inside: avoid;
+  }
   iframe {
     break-before: page;
     break-after: page;

@@ -200,6 +200,30 @@
             }
           },
           {
+            "id": "618df392b4a87199",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "deleteMe.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "deleteMe"
+            }
+          },
+          {
             "id": "f4d99cd5f8ba434c",
             "type": "leaf",
             "state": {
@@ -224,7 +248,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -411,15 +435,16 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "0035732b0b70897e",
+  "active": "618df392b4a87199",
   "lastOpenFiles": [
+    "MD-Test.md",
+    "deleteMe.md",
     "The Design Problem.md",
     "In one sentence - Exploring Creative Technologies.md",
     "A Color Detecting Controller.md",
     "Color Detection in TD.md",
     "Feedback Effect in Touchdesigner.md",
     "Movement Data in Touchdesigner.md",
-    "MD-Test.md",
     "Experience with Handtracking in ml5.js.md",
     "Journal.md",
     "Design System.md",
@@ -448,7 +473,6 @@
     "User Journeys.md",
     "Things to be done in CrossDocu.md",
     "Structuring the Platform.md",
-    "Questions behind ECT.md",
     "Content Map.canvas"
   ]
 }
