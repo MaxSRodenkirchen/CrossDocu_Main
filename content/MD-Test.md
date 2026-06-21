@@ -2,8 +2,8 @@
 title: MD-Test - Exploring Creative Technologies
 tags:
   - TouchDesigner
-  - CreativeCoding
-  - OutputDevices
+  - Creative-Coding
+  - Output-Devices
 ---
 
 # Creative Technologies & Digital Gardens

@@ -205,7 +205,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Color Detection in TD.md",
+                "file": "Journal.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -220,7 +220,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Color Detection in TD"
+              "title": "Journal"
             }
           },
           {
@@ -437,19 +437,19 @@
   },
   "active": "618df392b4a87199",
   "lastOpenFiles": [
+    "Design Presentation.md",
+    "Color Detection in TD.md",
     "deleteMe.md",
     "MD-Test.md",
     "The Design Problem.md",
     "In one sentence - Exploring Creative Technologies.md",
     "A Color Detecting Controller.md",
-    "Color Detection in TD.md",
     "Feedback Effect in Touchdesigner.md",
     "Movement Data in Touchdesigner.md",
     "Experience with Handtracking in ml5.js.md",
     "Journal.md",
     "Design System.md",
     "images/color_detection_td.png",
-    "Design Presentation.md",
     "Capture and loop movement in p5.js.md",
     "Thank you.md",
     "Use Cases Moodboard.md",

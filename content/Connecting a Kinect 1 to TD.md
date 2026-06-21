@@ -1,7 +1,7 @@
 ---
 tags:
   - Tracking-Movement
-  - Touchdesigner
+  - TouchDesigner
 state:
   - "0"
 type:

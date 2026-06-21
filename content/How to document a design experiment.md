@@ -1,6 +1,6 @@
 ---
 tags:
-  - CreativePatterns
+  - Creative-Patterns
 state:
   - "5"
 type:

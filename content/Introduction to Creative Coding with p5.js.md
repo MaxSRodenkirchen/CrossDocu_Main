@@ -1,6 +1,6 @@
 ---
 tags:
-  - CreativeCoding
+  - Creative-Coding
 state:
   - "9"
 type:

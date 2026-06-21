@@ -2,7 +2,7 @@
 
     <div class="sidebar-group moc-sidebar-container" id="sidebar-default">
 
-    <h1>Ordered Content</h1>
+    <h1>Ordered Lists</h1>
     <ol>
         <li>
             <ol>
@@ -71,30 +71,36 @@
         <ol>
             <li>
                 <ol>
-                    {% for tag, posts in collections %}
-                        {% if tag != "all" and tag != "post" and tag != "posts" and tag != "moc" and tag != "mocs" %}
+                    {% for item in collections | sortTagsByCount %}
+                        {% set tag = item.tag %}
+                        {% set posts = item.posts %}
                             <li>
                                 <a data-tag-btn-name="{{ tag }}" onclick="switchTag('{{ tag }}')">
-                                    <p>{{ tag }} ({{ posts.length }})</p>
+                                    <div class="tag">
+                                        <span class="tag-count">{{ posts.length }}</span>
+                                        <p>{{ tag | cleanTags}}</p>
+                                    </div>
                                 </a>
                             </li>
-                        {% endif %}
                     {% endfor %}
                 </ol>
             </li>
         </ol>
     </div>
 
-    {% for tag, posts in collections %}
-        {% if tag != "all" and tag != "post" and tag != "posts" and tag != "moc" and tag != "mocs" %}
+    {% for item in collections | sortTagsByCount %}
+        {% set tag = item.tag %}
+        {% set posts = item.posts %}
             <div class="tag-sidebar-group moc-sidebar-container" data-tag-name="{{ tag }}" style="display: none;">
-                <h1 onclick="switchTag('')" style="cursor: pointer;" title="Back to Tags"># {{ tag }}</h1>
+                <h1 onclick="switchTag('')" style="cursor: pointer;" title="Back to Tags"> {{ tag | cleanTags}}</h1>
                 <ol>
                     <li>
                         <ol>
                             {% set tagNotesList %}
                                 {% for post in posts %}
-                                    <li><a href="{{ post.url }}">{{ post.data.title | default(post.fileSlug) }}</a></li>
+                                    <li>
+                                        <a href="{{ post.url }}">{{ post.data.title | default(post.fileSlug) }}</a>
+                                    </li>
                                 {% endfor %}
                             {% endset %}
                             {{ tagNotesList | mocSidebar(collections.all) | safe }}
@@ -102,6 +108,6 @@
                     </li>
                 </ol>
             </div>
-        {% endif %}
+        
     {% endfor %}
 </div>

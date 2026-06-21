@@ -97,7 +97,14 @@ export default function (eleventyConfig) {
     eleventyConfig.addFilter("injectTags", function(content, tags) {
         if (!tags || !Array.isArray(tags) || tags.length === 0) return content;
 
-        const tagsHtml = `<div class="content-tags">${tags.map(tag => `<span class="content-tag">${tag}</span>`).join('')}</div>`;
+        const tagsHtml = `<div class="content-tags">
+            ${tags.map(tag => `<div class="content-tag" onclick="openTagModule('${tag}')">
+                <svg>
+                    <rect width="100%" height="100%"/>
+                </svg>
+                <p>${tag.replace(/-/g, ' ')}</p>
+            </div>`).join('')}
+        </div>`;
 
         // Erste Überschrift (h1, h2 oder h3) finden
         const match = content.match(/<h[1-3][^>]*>[\s\S]*?<\/h[1-3]>/i);
@@ -238,6 +245,22 @@ export default function (eleventyConfig) {
         }
         
         return result;
+    });
+
+    eleventyConfig.addFilter("cleanTags", function(content) {
+        if (typeof content !== 'string') return content;
+        return content.replace(/-/g, ' ');
+    });
+
+    eleventyConfig.addFilter("sortTagsByCount", function(collections) {
+        let tagsArray = [];
+        for (let tag in collections) {
+            if (tag !== "all" && tag !== "post" && tag !== "posts" && tag !== "moc" && tag !== "mocs") {
+                tagsArray.push({ tag: tag, posts: collections[tag] });
+            }
+        }
+        tagsArray.sort((a, b) => b.posts.length - a.posts.length);
+        return tagsArray;
     });
 
     // console.log(collection.creativecoding)

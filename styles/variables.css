@@ -11,6 +11,7 @@
   --color-alpha: #ffffff7a;
 
 
+  --bgLines: #33393f61;
   --bg: #F5EDDF;
   --bgLight: #FFF7E8;
   --internalLink: #BA5E5E;
@@ -26,7 +27,7 @@
   --lineWeight: 1px;
 
   /* Typography shortcuts */
-  --font-mono-small: 12pt/180% "Graebenbach Mono Regular", sans-serif;
+  --font-mono-small: 12pt/140% "Graebenbach Mono Regular", sans-serif;
   --font-body: 16px/150% "Graebenbach Regular", sans-serif;
 
 }
@@ -38,12 +39,12 @@
 
   @font-face {
     font-family: Favorite Lining Regular;
-    src: url(/fonts/Fontspring-DEMO-alergia_remix-black.otf);
+    src: url(/fonts/Fontspring-DEMO-alergia_remix-medium.otf);
   }
 
     @font-face {
     font-family: Favorite Lining Bold;
-    src: url(/fonts/Fontspring-DEMO-alergia_remix-black.otf);
+    src: url(/fonts/Fontspring-DEMO-alergia_remix-medium.otf);
   }
 
   @font-face {

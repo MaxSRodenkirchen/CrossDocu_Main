@@ -1,6 +1,6 @@
 ---
 tags:
-  - CreativeCoding
+  - Creative-Coding
   - AI
   - Tracking-Movement
 state:

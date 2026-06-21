@@ -23,14 +23,14 @@ publish:
     
 	1. [[Experience with Handtracking in ml5.js]]
 	2. [[Movement Data in Touchdesigner]]
-	3. Learned TD 101
+	3. *Learned TD 101*
 
 26. CW 24
 
 	1. [[Projection Mapping in Touchdesigner]]
 	2. [[Design Concept]]
 	3. [[Feedback Effect in Touchdesigner]]
-	4.  Learned TD 102
+	4.  *Learned TD 102*
 	5. [[Connecting a Kinect 1 to TD]]
 
 25. CW 25: Design Presentation 

@@ -1,7 +1,7 @@
 ---
 tags:
-  - Touchdesigner
-  - CreativeCoding
+  - TouchDesigner
+  - Creative-Coding
 state:
   - "0"
 type:

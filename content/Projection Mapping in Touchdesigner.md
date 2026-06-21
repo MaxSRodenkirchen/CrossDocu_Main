@@ -1,6 +1,6 @@
 ---
 tags:
-  - OutputDevices
+  - Output-Devices
   - Light-and-Shadow
 state:
   - "7"
