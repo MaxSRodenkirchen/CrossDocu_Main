@@ -29,6 +29,7 @@
   #mainContainer {
     display: flex;
     justify-content: center;
+    gap: var(--gapSmaller);
     margin: 0;
     /* padding: 1rem; */
     height: 100vh;
@@ -38,13 +39,15 @@
   }
 
   #midContainer {
-    /* flex-grow: 1; */
-    /* scroll-padding-top: 4rem; */
+    flex: 1;
+    min-width: 350px;
+    max-width: 1000px;
     background-clip: content-box;
     overflow-y: scroll;
+    overflow-x: hidden;
     scrollbar-width: none;
-    margin-left: var(--gapSmaller);
-    margin-right: var(--gapSmaller);
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--bg);
   }
 
@@ -168,9 +171,7 @@
   }
 
   #leftModuleBar, #rightModuleBar{
-    position: absolute;
-    top: 0;
-    /* padding: var(--gap) 0; */
+    flex-shrink: 0;
     height: 100%;
     width:50px;
     background-color: var(--bg);
@@ -180,13 +181,7 @@
     align-items: center;
   }
 
-  #leftModuleBar{
-    left: 0;
-  }
 
-  #rightModuleBar{
-    right: 0;
-  }
 
   .moduleName{
     font-family: "Favorite Lining Regular";

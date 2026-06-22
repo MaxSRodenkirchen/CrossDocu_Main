@@ -224,6 +224,30 @@
             }
           },
           {
+            "id": "f4c59a98f239734e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projection Mapping in Touchdesigner.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Projection Mapping in Touchdesigner"
+            }
+          },
+          {
             "id": "f4d99cd5f8ba434c",
             "type": "leaf",
             "state": {
@@ -248,7 +272,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -435,8 +459,9 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "618df392b4a87199",
+  "active": "f4c59a98f239734e",
   "lastOpenFiles": [
+    "Journal.md",
     "Design Presentation.md",
     "Color Detection in TD.md",
     "deleteMe.md",
@@ -447,7 +472,6 @@
     "Feedback Effect in Touchdesigner.md",
     "Movement Data in Touchdesigner.md",
     "Experience with Handtracking in ml5.js.md",
-    "Journal.md",
     "Design System.md",
     "images/color_detection_td.png",
     "Capture and loop movement in p5.js.md",

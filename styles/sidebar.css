@@ -1,9 +1,8 @@
 @media screen {
   #sidebar {
     overflow-y: auto;
-    width: 100%;
-    min-width: 150px;
-    max-width: 350px;
+    width: 350px;
+    flex-shrink: 0;
     font-family: "Graebenbach Regular", sans-serif;
     background-color: var(--bg);
     display: flex;

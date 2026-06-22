@@ -3,10 +3,8 @@
     color: var(--internalinteraction);
     background: var(--bg);
     transition: all .1s ease;
-    width: 100%;
-    flex: auto;
-    min-width: 150px;
-    max-width: 350px;
+    width: 350px;
+    flex-shrink: 0;
 
     font: var(--font-mono-small);
 
@@ -14,17 +12,6 @@
     flex-direction: column;
     height: 100%;
   }
-
-  .close {
-    background-color: var(--bg);
-    height: var(--gap);
-    cursor: pointer;
-  }
-
-  .close:hover {
-    background-color: var(--bgLight);
-  }
-
 
 
   #config h1 {
@@ -39,7 +26,7 @@
 
   #sections {
     background-color: var(--bgLight);
-    /* margin-top: var(--gap); */
+    margin-top: var(--gap);
     margin-bottom: var(--gap);
     padding-bottom: var(--gapSmallest);
     border-top: var(--lineWeight) solid var(--internalInteraction);

@@ -313,4 +313,40 @@ export function updateModules() {
 
     setupExclusiveToggle(leftModules, updateMainSidebarVisibility);
     updateMainSidebarVisibility();
+
+    function checkResponsiveSidebars() {
+        const mainContainer = document.getElementById('mainContainer');
+        if (!mainContainer) return;
+
+        if (mainContainer.scrollWidth > mainContainer.clientWidth + 1) {
+            const btnToggleViewModes = document.getElementById('btnToggleViewModes');
+            const btnToggleSections = document.getElementById('btnToggleSections');
+            
+            let closedConfig = false;
+            if (btnToggleViewModes && btnToggleViewModes.classList.contains('active')) {
+                btnToggleViewModes.click();
+                closedConfig = true;
+            } else if (btnToggleSections && btnToggleSections.classList.contains('active')) {
+                btnToggleSections.click();
+                closedConfig = true;
+            }
+            
+            if (!closedConfig) {
+                const btnToggleOrdered = document.getElementById('btnToggleOrdered');
+                const btnToggleSearch = document.getElementById('btnToggleSearch');
+                const btnToggleTags = document.getElementById('btnToggleTags');
+                
+                if (btnToggleOrdered && btnToggleOrdered.classList.contains('active')) {
+                    btnToggleOrdered.click();
+                } else if (btnToggleSearch && btnToggleSearch.classList.contains('active')) {
+                    btnToggleSearch.click();
+                } else if (btnToggleTags && btnToggleTags.classList.contains('active')) {
+                    btnToggleTags.click();
+                }
+            }
+        }
+    }
+
+    window.addEventListener('resize', checkResponsiveSidebars);
+    setTimeout(checkResponsiveSidebars, 100);
 }
