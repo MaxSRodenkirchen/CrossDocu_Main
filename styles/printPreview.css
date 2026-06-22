@@ -59,7 +59,7 @@
     h1 {
       font-family: Favorite Lining Bold;
       font-size: 44pt;
-      line-height: 120%;
+      line-height: 100%;
       margin: 0;
       margin-bottom: var(--gapSmall);
       /* padding-bottom: var(--gapSmall);
@@ -69,7 +69,7 @@
     h2 {
       font-family: Favorite Lining Regular;
       font-size: 26pt;
-      line-height: 120%;
+      line-height: 100%;
       margin: 0;
       margin-bottom: var(--gapSmall);
 
@@ -79,7 +79,7 @@
     h3 {
       font-family: Favorite Lining Regular;
       font-size: 24pt;
-      line-height: 120%;
+      line-height: 100%;
       margin: 0;
       margin-bottom: var(--gapSmall);
     }
@@ -135,6 +135,52 @@
       background: transparent;
       white-space: pre;
     }
+
+    .print-only-links {
+      display: block !important;
+      margin-top: var(--gapSmall);
+      padding-top: var(--gapSmallest);
+      /* border-top: var(--lineWeight) dotted var(--internalInteraction); */
+      page-break-inside: avoid;
+    }
+
+    /* .print-only-links ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    } */
+
+    /* .print-only-links li {
+      font-family: "Graebenbach Mono Regular", monospace;
+      font-size: 9pt;
+      margin-bottom: 4px;
+      line-height: 140%;
+      word-break: break-all;
+    } */
+
+    /* 
+    .print-only-links span {
+      font-family: Graebenbach Bold, sans-serif;
+    }
+
+    .print-only-links a {
+      text-decoration: none !important;
+      color: inherit !important;
+      display: inline !important;
+      padding: 0 !important;
+      transform: none !important;
+      background: none !important;
+    } */
+
+    /* .print-only-links .internalLink::before {
+      content: "[Internal] ";
+      font-weight: bold;
+    }
+
+    .print-only-links .externalLink::before {
+      content: "[External] ";
+      font-weight: bold;
+    } */
 
     hr {
       display: none;

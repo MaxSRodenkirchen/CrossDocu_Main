@@ -10,7 +10,7 @@ export default function (eleventyConfig) {
     // Wikilinks Plugin aktivieren ([[seite]] und ![[bild.png]])
     eleventyConfig.amendLibrary("md", (mdLib) => {
         mdLib.set({ breaks: true }); //enable single line breaks - like in Obsidian and VS-Code etc. 
-        
+
         mdLib.use(wikilinksPlus, {
             pageLink: {
                 relativeBaseURL: './',
@@ -48,7 +48,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('fonts');
     eleventyConfig.addPassthroughCopy('styles');
 
-    eleventyConfig.addShortcode("icon", function(iconName) {
+    eleventyConfig.addShortcode("icon", function (iconName) {
         return `<svg class="i i-${iconName}"><use href="/images/svg-sprite.svg#${iconName}"/></svg>`;
     });
 
@@ -63,7 +63,7 @@ export default function (eleventyConfig) {
 
     // Transform to parse %% comments %% and turn them into HTML comments <!-- -->
     // Transform to parse %% comments %% and turn them into HTML comments <!-- -->
-    eleventyConfig.addTransform("markdown-comments", function(content) {
+    eleventyConfig.addTransform("markdown-comments", function (content) {
         if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
             // Replace block comments (wrapped in <p>)
             let replaced = content.replace(/<p>\s*%%([\s\S]*?)%%\s*<\/p>/g, "<!-- $1 -->");
@@ -75,7 +75,7 @@ export default function (eleventyConfig) {
     });
 
     // Filter to add slugified IDs to h1, h2, h3 tags for table of contents navigation
-    eleventyConfig.addFilter("addHeadingIds", function(content) {
+    eleventyConfig.addFilter("addHeadingIds", function (content) {
         if (typeof content !== 'string') return '';
         const slugify = (text) => text.toLowerCase().replace(/[^a-z0-9\u00df-\u00ff]+/gi, '-').replace(/(^-|-$)/g, '');
         return content.replace(/<h([1-3])\b([^>]*)>([\s\S]*?)<\/h\1>/gi, (match, level, attrs, text) => {
@@ -94,7 +94,7 @@ export default function (eleventyConfig) {
         // return value;
     });
 
-    eleventyConfig.addFilter("injectTags", function(content, tags) {
+    eleventyConfig.addFilter("injectTags", function (content, tags) {
         if (!tags || !Array.isArray(tags) || tags.length === 0) return content;
 
         const tagsHtml = `<div class="content-tags">
@@ -115,12 +115,12 @@ export default function (eleventyConfig) {
         return tagsHtml + content;
     });
 
-    eleventyConfig.addFilter("mocSidebar", function(content) {
+    eleventyConfig.addFilter("mocSidebar", function (content) {
         if (!content) return "";
 
         // Matcht <li><a href="...">Linktext</a></li> und fängt href und Linktext ab
         const regex = /<li>\s*<a\s*[^>]*?href="([^"]+)"[^>]*?>([^<]+)<\/a>\s*<\/li>/gi;
-        
+
         return content.replace(regex, (match, href, linkText) => {
             return `<li>
                 <a href="${href}">
@@ -132,13 +132,13 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addFilter("linkClass", (content) => {
         if (typeof content !== 'string') return '';
-        
+
         // If the content looks like HTML, process all <a> tags inside it
         if (/<[a-z][\s\S]*>/i.test(content)) {
             return content.replace(/<a\s+([^>]*href=["']([^"']*)["']([^>]*))>/gi, (match, body, href) => {
                 const isExternal = /^(https?:)?\/\//.test(href);
                 const className = isExternal ? 'externalLink' : 'internalLink';
-                
+
                 if (/class=["']/i.test(body)) {
                     return `<a ${body.replace(/class=(["'])(.*?)\1/gi, `class=$1$2 ${className}$1`)}>`;
                 } else {
@@ -151,39 +151,39 @@ export default function (eleventyConfig) {
         const isExternal = /^(https?:)?\/\//.test(content);
         return isExternal ? 'externalLink' : 'internalLink';
     });
-    
+
     eleventyConfig.addFilter("getSections", (content) => {
         if (typeof content !== 'string') return '';
-        
+
         const slugify = (text) => text.toLowerCase().replace(/[^a-z0-9\u00df-\u00ff]+/gi, '-').replace(/(^-|-$)/g, '');
         const headingRegex = /<h([1-3])\b([^>]*)>([\s\S]*?)<\/h\1>/gi;
         const headings = [];
         let match;
-        
+
         while ((match = headingRegex.exec(content)) !== null) {
             const level = parseInt(match[1], 10);
             const attrs = match[2];
             const rawText = match[3];
-            
+
             // Extract ID attribute or generate it
             const idMatch = attrs.match(/id=["']([^"']+)["']/i);
             const text = rawText.replace(/<[^>]+>/g, '').trim();
             const id = idMatch ? idMatch[1] : slugify(text);
-            
+
             if (text) {
                 headings.push({ level, text, id });
             }
         }
-        
+
         if (headings.length === 0) return '';
-        
+
         // Build the nested ordered lists using a stack
         let html = "";
         const stack = [];
-        
+
         for (const h of headings) {
             const link = `<a href="#${h.id}">${h.text}</a>`;
-            
+
             if (stack.length === 0) {
                 html += "<ol>";
                 stack.push(h.level);
@@ -205,26 +205,26 @@ export default function (eleventyConfig) {
                     }
                 }
             }
-            
+
             html += `<li>${link}`;
         }
-        
+
         while (stack.length > 0) {
             html += "</li></ol>";
             stack.pop();
         }
-        
+
         return html;
     });
 
-    eleventyConfig.addFilter("contentContainer", function(content) {
+    eleventyConfig.addFilter("contentContainer", function (content) {
         if (typeof content !== 'string') return '';
-        
+
         const firstHeadingMatch = content.match(/<h[1-3]\b|<hr\b/i);
-        
+
         let prefix = '';
         let rest = content;
-        
+
         if (firstHeadingMatch && firstHeadingMatch.index > 0) {
             prefix = content.substring(0, firstHeadingMatch.index);
             rest = content.substring(firstHeadingMatch.index);
@@ -232,27 +232,51 @@ export default function (eleventyConfig) {
             prefix = content;
             rest = '';
         }
-        
+
+        const appendLinks = (htmlBlock) => {
+            const links = [];
+            const linkRegex = /<a\s+[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
+            let match;
+            while ((match = linkRegex.exec(htmlBlock)) !== null) {
+                const href = match[1];
+                const text = match[2].replace(/<[^>]+>/g, '').trim();
+                // Exclude anchor links and purely empty text links
+                if (href && !href.startsWith('#') && text) {
+                    links.push({ href, text });
+                }
+            }
+            if (links.length > 0) {
+                let linksHtml = `<div class="print-only-links">\n<ul>\n`;
+                links.forEach(l => {
+                    // Render as an actual <a> tag so that the 'linkClass' filter (which runs after) can add the appropriate CSS classes
+                    linksHtml += `<li><span>${l.text}:</span> <a href="${l.href}">${l.href}</a></li>\n`;
+                });
+                linksHtml += `</ul>\n</div>`;
+                return htmlBlock + '\n' + linksHtml;
+            }
+            return htmlBlock;
+        };
+
         let result = '';
         if (prefix.trim() !== '') {
-            result += `<div class="contentContainer">\n${prefix}\n</div>\n`;
+            result += `<div class="contentContainer">\n${appendLinks(prefix)}\n</div>\n`;
         }
-        
+
         if (rest.trim() !== '') {
             result += rest.replace(/(<h[1-3]\b[^>]*>[\s\S]*?<\/h[1-3]>|<hr\b[^>]*>)([\s\S]*?)(?=<h[1-3]\b|<hr\b|$)/gi, (match, heading, innerContent) => {
-                return `<div class="contentContainer">\n${heading}\n${innerContent}\n</div>`;
+                return `<div class="contentContainer">\n${appendLinks(heading + '\n' + innerContent)}\n</div>`;
             });
         }
-        
+
         return result;
     });
 
-    eleventyConfig.addFilter("cleanTags", function(content) {
+    eleventyConfig.addFilter("cleanTags", function (content) {
         if (typeof content !== 'string') return content;
         return content.replace(/-/g, ' ');
     });
 
-    eleventyConfig.addFilter("sortTagsByCount", function(collections) {
+    eleventyConfig.addFilter("sortTagsByCount", function (collections) {
         let tagsArray = [];
         for (let tag in collections) {
             if (tag !== "all" && tag !== "post" && tag !== "posts" && tag !== "moc" && tag !== "mocs") {

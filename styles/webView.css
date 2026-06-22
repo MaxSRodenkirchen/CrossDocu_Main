@@ -23,21 +23,24 @@
 
 #content h1 {
   font-family: "Favorite Lining Bold", sans-serif;
-  font-size: 54px;
-  line-height: 120%;
+  font-size: 80px;
+  line-height: 100%;
   max-width: 800px;
 
 }
 
 #content h2 {
   font-family: "Favorite Lining Regular", sans-serif;
-  font-size: 40px;
+  font-size: 60px;
+  line-height: 100%;
+
   margin-bottom: var(--gap);
 }
 
 #content h3 {
   font-family: "Favorite Lining Regular", sans-serif;
-  font-size: 26px;
+  font-size: 40px;
+  line-height: 100%;
 
 }
 

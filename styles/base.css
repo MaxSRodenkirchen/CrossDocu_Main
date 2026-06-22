@@ -74,8 +74,8 @@
   }
 
   #content {
-  margin: var(--gap) 0 !important;
-  }  
+    margin: var(--gap) 0 !important;
+  }
 
   .pagedjs_page {
     scroll-margin-top: var(--gap);
@@ -88,129 +88,132 @@
 
 }
 
-  .content-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gapSmaller);
-    padding-bottom: var(--gapSmaller);
-    padding-top: var(--gapSmaller);
-    /* border-bottom: var(--lineWeight) solid var(--internalLink);
+.content-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gapSmaller);
+  padding-bottom: var(--gapSmaller);
+  padding-top: var(--gapSmaller);
+  /* border-bottom: var(--lineWeight) solid var(--internalLink);
     border-top: var(--lineWeight) solid var(--internalLink); */
 
-  }
+}
 
-  .content-tag {
-    display: flex;
-    align-items: center;
-    font: var(--font-mono-small);
-    /* border-radius: 100px; */
-    background-color: var(--internalLink);
-    color: var(--bgLight) ;
-    padding-right: var(--gapSmaller) ;
-    gap: var(--gapSmallest);
-    cursor: pointer;
-    margin:0;
-  }
+.content-tag {
+  display: flex;
+  align-items: center;
+  font: var(--font-mono-small);
+  /* border-radius: 100px; */
+  background-color: var(--internalLink);
+  color: var(--bgLight);
+  padding-right: var(--gapSmaller);
+  gap: var(--gapSmallest);
+  cursor: pointer;
+  margin: 0;
+}
 
-  .content-tag p {
-    font: inherit !important;
-    max-width: inherit !important;
-    margin:0 !important;
-  }
+.content-tag p {
+  font: inherit !important;
+  max-width: inherit !important;
+  margin: 0 !important;
+  color: inherit !important;
+}
 
-  .content-tag svg {
-    margin-left: .5em;
-    transform: scale(-0.8);
-    height: 1em;
-    aspect-ratio: 1 / 1;
-    fill: currentColor;
-    flex-shrink: 0;
-  }
+.content-tag svg {
+  margin-left: .5em;
+  transform: scale(-0.8);
+  height: 1em;
+  aspect-ratio: 1 / 1;
+  fill: currentColor;
+  flex-shrink: 0;
+}
 
-  .content-tag:hover{
-    color: var(--internalLink) ;
-    background-color: var(--bgLight) ;
-  }
+.content-tag:hover {
+  color: var(--internalLink);
+  background-color: var(--bgLight);
+}
 
-  .internalLink {
-    /* font-family: "Graebenbach Mono Regular", monospace; */
-    text-decoration: underline dotted;
-    /* border-bottom: var(--lineWeight) solid var(--internalLink); */
-    padding: 0 var(--gapSmallest) ;
-    transform: translate(0px, 2px);    width: fit-content;
-    color: var(--internalLink);
-    display:inline-flex;
-    flex-wrap: wrap;
-    /* text-decoration: none; */
-  }
+.internalLink {
+  /* font-family: "Graebenbach Mono Regular", monospace; */
+  text-decoration: underline dotted;
+  /* border-bottom: var(--lineWeight) solid var(--internalLink); */
+  padding: 0 var(--gapSmallest);
+  transform: translate(0px, 2px);
+  width: fit-content;
+  color: var(--internalLink);
+  display: inline-flex;
+  flex-wrap: wrap;
+  /* text-decoration: none; */
+}
 
-  .internalLink:hover{
-    background-color: var(--internalLink);
-    color: var(--bgLight);
-    text-decoration: none;
-  }
+.internalLink:hover {
+  background-color: var(--internalLink);
+  color: var(--bgLight);
+  text-decoration: none;
+}
 
-  .externalLink {
-    /* font-family: "Graebenbach Mono Regular", monospace; */
-        text-decoration: underline dotted;
+.externalLink {
+  /* font-family: "Graebenbach Mono Regular", monospace; */
+  text-decoration: underline dotted;
 
-    /* border: var(--lineWeight) solid var(--externalLink); */
-    padding: 0 var(--gapSmallest) ;
-    transform: translate(0px, 2px);
-    width: fit-content;
-    color: inherit;
-    display:inline-flex;
-    flex-wrap: wrap;
-    /* text-decoration: none; */
-  }
+  /* border: var(--lineWeight) solid var(--externalLink); */
+  padding: 0 var(--gapSmallest);
+  transform: translate(0px, 2px);
+  width: fit-content;
+  color: inherit;
+  display: inline-flex;
+  flex-wrap: wrap;
+  /* text-decoration: none; */
+}
 
-  .externalLink:hover{
-    background-color: var(--externalLink);
-    color: var(--bgLight);
-    text-decoration: none;
-  }
+.externalLink:hover {
+  background-color: var(--externalLink);
+  color: var(--bgLight);
+  text-decoration: none;
+}
 
-  #leftModuleBar, #rightModuleBar{
-    flex-shrink: 0;
-    height: 100%;
-    width:50px;
-    background-color: var(--bg);
-    color: var(--internalLink);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+#leftModuleBar,
+#rightModuleBar {
+  flex-shrink: 0;
+  height: 100%;
+  width: 50px;
+  background-color: var(--bg);
+  color: var(--internalLink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 
 
-  .moduleName{
-    font-family: "Favorite Lining Regular";
-    font-size: 30px;
-    
-    writing-mode: vertical-rl;
-    
-    width: 100%;
-    cursor: pointer;
-    text-decoration: none;
-    box-sizing: border-box;
+.moduleName {
+  font-family: "Favorite Lining Regular";
+  font-size: 30px;
 
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  writing-mode: vertical-rl;
 
-  
-  #leftModuleBar .moduleName{
-    transform: rotate(180deg);
-  }
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
 
-  .moduleName:hover,
-  .moduleName.active,
-  .moduleName.hover-sync {
-    background-color: var(--internalLink);
-    color: var(--bgLight);
-  }
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#leftModuleBar .moduleName {
+  transform: rotate(180deg);
+}
+
+.moduleName:hover,
+.moduleName.active,
+.moduleName.hover-sync {
+  background-color: var(--internalLink);
+  color: var(--bgLight);
+}
 
 /* Meteor Icons Configuration */
 .i {

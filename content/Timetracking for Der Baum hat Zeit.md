@@ -9,7 +9,17 @@ publish:
 ---
 # Tasks and Timetable
 
-This note gets regularly updated. Last edit: **May, 26th**
+###### This note gets regularly updated. 
+
+### Monday, June 22nd 2026
+
+One month left until final presentation and exhibition. 
+
+Priority List:
+1. Develop Installation Medium
+
+
+### Last edit: **May, 26th**
 
 ![[timetable_26-05.png]]
 
