@@ -16,7 +16,8 @@ publish:
 One month left until final presentation and exhibition. 
 
 Priority List:
-1. Develop Installation Medium
+1. [[Installation for Exhibition|Develop Installation for Exhibition]]
+
 
 
 ### Last edit: **May, 26th**

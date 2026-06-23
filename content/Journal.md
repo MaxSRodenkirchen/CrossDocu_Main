@@ -23,36 +23,40 @@ publish:
     
 	1. [[Experience with Handtracking in ml5.js]]
 	2. [[Movement Data in Touchdesigner]]
-	3. *Learned TD 101*
+	3. [[TouchDesigner Lesson 101]]
 
 26. CW 24
 
 	1. [[Projection Mapping in Touchdesigner]]
 	2. [[Design Concept]]
 	3. [[Feedback Effect in Touchdesigner]]
-	4.  *Learned TD 102*
+	4.  [[TouchDesigner Lesson 102]]
 	5. [[Connecting a Kinect 1 to TD]]
 
 25. CW 25: Design Presentation 
 
 	1. [[Markdown-Test]]
 	2. [[MD-Test]]
-	3. [[Design Presentation]]
-	4. [[Color Detection in TD]]
+	3. [[TouchDesigner Lesson 103]]
+	4. [[Design Presentation]]
+	5. [[Color Detection in TD]]
 
-24. CW 26 
+26. CW 26 
 
-23. CW 27
+	1. [[Timetracking for Der Baum hat Zeit|Timetracking]] 
+	2. [[Creative Patterns Taglist]]
 
-22. CW 28
+28. CW 27
 
-21. CW 29 
+29. CW 28
 
-20. CW 30: Final Presentation & Exhibition
+30. CW 29 
 
-19. CW 31
+31. CW 30: Final Presentation & Exhibition
 
-18. following
+32. CW 31
+
+33. following
 	1. ways for interacting with a wall
 	2. Building a Low-Tech Server
 	3. Project Mapping

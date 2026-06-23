@@ -5,9 +5,9 @@
   footer,
   .viewModeButton,
   #slideControls,
-  #mocControls,
   #credit,
-  #leftModuleBar {
+  #leftModuleBar,
+  #rightModuleBar {
     display: none !important;
   }
 

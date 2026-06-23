@@ -29,11 +29,7 @@
     {% for moc in collections.moc %}
         <div class="sidebar-group moc-sidebar-container" data-moc-url="{{ moc.url }}" style="display: none;">
             {{ moc.templateContent | mocSidebar(collections.all) | safe }}
-            
-            <div id="mocControls">
-                <a onclick="navigateMoc(-1)" title="Previous in MOC">{% icon "arrow-up" %} Last Note</a>
-                <a onclick="navigateMoc(1)" title="Next in MOC">{% icon "arrow-down" %} Next Note</a>
-            </div>
+
 
         </div>
         
@@ -53,17 +49,11 @@
                 </ol>
             </li>
         </ol>
-        
-        <div id="mocControls">
-            <a onclick="navigateMoc(-1)" title="Previous in MOC">{% icon "arrow-up" %} Last Note</a>
-            <a onclick="navigateMoc(1)" title="Next in MOC">{% icon "arrow-down" %} Next Note</a>
-        </div>
+
     </div>
 
 </ul>
 
-<div class="module" id="searchContent">
-</div>
 
 <div class="module" id="tagsContent">
     <div class="tag-sidebar-group moc-sidebar-container" id="tags-default">
@@ -110,4 +100,7 @@
             </div>
         
     {% endfor %}
+</div>
+
+<div class="module" id="searchContent">
 </div>

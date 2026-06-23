@@ -7,6 +7,8 @@
     flex-shrink: 0;
 
     font: var(--font-mono-small);
+    overflow: auto;
+        scrollbar-width: none;
 
     display: flex;
     flex-direction: column;
@@ -44,6 +46,7 @@
     counter-reset: section;
     padding-left: var(--gapSmall);
     padding-right: var(--gapSmall);
+
   }
 
   #sections ol ol {
@@ -51,15 +54,27 @@
   }
 
   #sections li {
-    padding: 0;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: start;
+    padding:  0 ;
+    padding-left: var(--gapSmallest);
+    border-bottom: var(--lineWeight) dashed var(--bgLines);
+    border-left: var(--lineWeight) dashed var(--bgLines);
+  }
+
+  #sections li > ol {
+    grid-column: 1 / -1;
+    
   }
 
   #sections li::before {
-
     counter-increment: section;
     content: counters(section, ".") " ";
-    opacity: .75;
-
+    opacity: .5;
+    font-size: 12px;
+    margin-right: var(--gapSmall);
+    
   }
 
   #sections a {
@@ -68,13 +83,10 @@
   }
 
   #sections a:hover,
-  #sections li:has(> a:hover)::before {
-    font-family: "Graebenbach Mono Bold", monospace;
-  }
-
+  #sections li:has(> a:hover)::before,
   #sections a.activeSection,
   #sections li:has(> a.activeSection)::before {
-    font-family: "Graebenbach Mono Bold", monospace;
+    font-family: "Graebenbach Bold", sans-serif;
   }
 
   #slideControls {

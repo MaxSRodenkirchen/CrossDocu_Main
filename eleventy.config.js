@@ -62,7 +62,6 @@ export default function (eleventyConfig) {
     })
 
     // Transform to parse %% comments %% and turn them into HTML comments <!-- -->
-    // Transform to parse %% comments %% and turn them into HTML comments <!-- -->
     eleventyConfig.addTransform("markdown-comments", function (content) {
         if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
             // Replace block comments (wrapped in <p>)
@@ -70,6 +69,18 @@ export default function (eleventyConfig) {
             // Replace inline comments
             replaced = replaced.replace(/%%([\s\S]*?)%%/g, "<!-- $1 -->");
             return replaced;
+        }
+        return content;
+    });
+
+    // Filter to ensure there is an h1 at the start of the content
+    eleventyConfig.addFilter("ensureH1", function (content) {
+        if (typeof content !== 'string') return '';
+        const title = this.ctx.title || 'Untitled';
+        // Remove HTML comments and leading whitespace to check the first tag
+        const stripped = content.replace(/<!--[\s\S]*?-->/g, '').trim();
+        if (!stripped.startsWith('<h1')) {
+            return `<h1>${title}</h1>\n${content}`;
         }
         return content;
     });
@@ -246,7 +257,7 @@ export default function (eleventyConfig) {
                 }
             }
             if (links.length > 0) {
-                let linksHtml = `<div class="print-only-links">\n<ul>\n`;
+                let linksHtml = `<div class="print-only-links" style="display: none;">\n<ul>\n`;
                 links.forEach(l => {
                     // Render as an actual <a> tag so that the 'linkClass' filter (which runs after) can add the appropriate CSS classes
                     linksHtml += `<li><span>${l.text}:</span> <a href="${l.href}">${l.href}</a></li>\n`;

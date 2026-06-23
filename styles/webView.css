@@ -2,7 +2,7 @@
   background: var(--bgLight);
   font: var(--font-body);
   width: 100%;
-  max-width: 950px;
+  /* max-width: 950px; */
   color: var(--internalInteraction);
   /* padding: 0 var(--gap); */
 }

@@ -8,204 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a06caec0756808ec",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Color Detection in TD.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Color Detection in TD"
-            }
-          },
-          {
-            "id": "146d124e6ea6cde1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "A Color Detecting Controller.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "A Color Detecting Controller"
-            }
-          },
-          {
-            "id": "c649c39e77f9c944",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "In one sentence - Exploring Creative Technologies.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "In one sentence - Exploring Creative Technologies"
-            }
-          },
-          {
-            "id": "b4ae9d24705d53ed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "The Design Problem.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "The Design Problem"
-            }
-          },
-          {
-            "id": "e8c639dd734533b9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Movement Data in Touchdesigner.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Movement Data in Touchdesigner"
-            }
-          },
-          {
-            "id": "671c5aaf1e179006",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Feedback Effect in Touchdesigner.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Feedback Effect in Touchdesigner"
-            }
-          },
-          {
-            "id": "1d3c392b0ae566fe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Experience with Handtracking in ml5.js.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Experience with Handtracking in ml5.js"
-            }
-          },
-          {
-            "id": "0035732b0b70897e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MD-Test.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "MD-Test"
-            }
-          },
-          {
             "id": "618df392b4a87199",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Journal.md",
+                "file": "Installation for Exhibition.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -220,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Journal"
+              "title": "Installation for Exhibition"
             }
           },
           {
-            "id": "f4c59a98f239734e",
+            "id": "fff213a4ba5d02a4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projection Mapping in Touchdesigner.md",
+                "file": "Manipulating Light.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -244,11 +52,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Projection Mapping in Touchdesigner"
+              "title": "Manipulating Light"
             }
           },
           {
-            "id": "b35191c991be404e",
+            "id": "6bf5266fed672c06",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "User Journeys.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "User Journeys"
+            }
+          },
+          {
+            "id": "4ff21fa257ae3be3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Touchdesigner to VCV Rack.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Touchdesigner to VCV Rack"
+            }
+          },
+          {
+            "id": "f4d99cd5f8ba434c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -272,12 +128,12 @@
             }
           },
           {
-            "id": "f4d99cd5f8ba434c",
+            "id": "c898bc0de4960169",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design System.md",
+                "file": "Arduino Beginners Workshop.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -292,11 +148,83 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Design System"
+              "title": "Arduino Beginners Workshop"
+            }
+          },
+          {
+            "id": "5f080e135b47970c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TouchDesigner Lesson 101.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "TouchDesigner Lesson 101"
+            }
+          },
+          {
+            "id": "8984c3c6b2890dfe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TouchDesigner Lesson 102.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "TouchDesigner Lesson 102"
+            }
+          },
+          {
+            "id": "d176db180f58bfd7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TouchDesigner Lesson 103.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "TouchDesigner Lesson 103"
             }
           }
         ],
-        "currentTab": 10
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -483,25 +411,37 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "b35191c991be404e",
+  "active": "fff213a4ba5d02a4",
   "lastOpenFiles": [
-    "Projection Mapping in Touchdesigner.md",
+    "User Journeys.md",
+    "Manipulating Light.md",
+    "Installation for Exhibition.md",
+    "Touchdesigner to VCV Rack.md",
+    "TouchDesigner Lesson 101.md",
+    "Arduino Beginners Workshop.md",
+    "Timetracking for Der Baum hat Zeit.md",
     "Journal.md",
-    "Design Presentation.md",
-    "Color Detection in TD.md",
-    "deleteMe.md",
+    "TouchDesigner Lesson 103.md",
+    "TouchDesigner Lesson 102.md",
+    "Mapping - Exploring Creative Technologies.md",
+    "Creative Patterns Taglist.md",
+    "images/Input-Output-Method-of-Data-Driven-Generative-Design-1920x768-8705909 - Patrick Huebner.png",
+    "Who am I.md",
+    "Content Map.canvas",
+    "Anleitung zum Müßiggang - Referat.md",
+    "Design System.md",
     "MD-Test.md",
+    "Experience with Handtracking in ml5.js.md",
+    "Feedback Effect in Touchdesigner.md",
+    "Movement Data in Touchdesigner.md",
     "The Design Problem.md",
     "In one sentence - Exploring Creative Technologies.md",
     "A Color Detecting Controller.md",
-    "Feedback Effect in Touchdesigner.md",
-    "Movement Data in Touchdesigner.md",
-    "Experience with Handtracking in ml5.js.md",
-    "Design System.md",
+    "Design Concept.md",
+    "Design Presentation.md",
+    "Color Detection in TD.md",
+    "deleteMe.md",
     "images/color_detection_td.png",
-    "Capture and loop movement in p5.js.md",
-    "Thank you.md",
-    "Use Cases Moodboard.md",
     "images/OnePager.png",
     "images/Mockup Exhibition 3.jpg",
     "images/Generated Image June 16, 2026 - 10_31PM.jpg",
@@ -509,18 +449,6 @@
     "images/Generated Image June 16, 2026 - 10_30PM.jpg",
     "images/Mockup Exhibition.jpg",
     "images/Generated Image June 16, 2026 - 10_27PM.jpg",
-    "images/OnePager3.png",
-    "images/Mockup Handout 3.jpg",
-    "Markdown-Test.md",
-    "Design Concept.md",
-    "Connecting a Kinect 1 to TD.md",
-    "Customized Editor for CrossDocu.md",
-    "Base Template.md",
-    "About Learning in Public.md",
-    "Welcome to my Concept Presentation.md",
-    "User Journeys.md",
-    "Things to be done in CrossDocu.md",
-    "Structuring the Platform.md",
-    "Content Map.canvas"
+    "images/OnePager3.png"
   ]
 }

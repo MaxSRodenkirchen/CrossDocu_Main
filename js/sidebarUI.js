@@ -42,13 +42,11 @@ export function initMoc() {
             }
         });
 
-        const mocControls = document.getElementById('mocControls');
 
         if (activeMocUrl) {
             const activeContainer = document.querySelector(`.sidebar-group[data-moc-url="${activeMocUrl}"]`);
             if (activeContainer) {
                 activeContainer.style.display = 'block';
-                if (mocControls) mocControls.style.display = 'flex';
                 return;
             }
         }
@@ -57,7 +55,6 @@ export function initMoc() {
         if (defaultSidebar) {
             defaultSidebar.style.display = 'block';
         }
-        if (mocControls) mocControls.style.display = 'none';
     }
 
     window.switchMoc = function (url) {
@@ -73,45 +70,6 @@ export function initMoc() {
         h1.style.cursor = "pointer";
     });
 
-    window.navigateMoc = function (direction) {
-        const activeMocUrl = localStorage.orderedContent;
-        if (!activeMocUrl) return;
-
-        const group = document.querySelector(`.sidebar-group[data-moc-url="${activeMocUrl}"]`);
-        if (!group || group.style.display === 'none') return;
-
-        const links = Array.from(group.querySelectorAll('a'));
-        if (links.length === 0) return;
-
-        const currentPath = decodeURI(window.location.pathname);
-        let currentIndex = links.findIndex(link => {
-            const linkPath = decodeURI(new URL(link.href).pathname);
-            return linkPath === currentPath || linkPath === currentPath + '/' || linkPath + '/' === currentPath;
-        });
-
-        let targetIndex = 0;
-        if (currentIndex !== -1) {
-            targetIndex = currentIndex + direction;
-        } else {
-            targetIndex = direction > 0 ? 0 : links.length - 1;
-        }
-
-        if (targetIndex >= 0 && targetIndex < links.length) {
-            window.location.href = links[targetIndex].href;
-        }
-    };
-
-    window.addEventListener('keydown', (event) => {
-        if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') return;
-
-        if (event.key === 'ArrowUp') {
-            event.preventDefault();
-            navigateMoc(-1);
-        } else if (event.key === 'ArrowDown') {
-            event.preventDefault();
-            navigateMoc(1);
-        }
-    });
 
     updateMocVisibility();
     highlightCurrentPage();
