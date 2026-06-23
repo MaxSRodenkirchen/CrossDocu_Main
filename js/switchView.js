@@ -1,6 +1,6 @@
-import { Previewer } from "/js/paged.esm.js";
-import { fitPage } from "/js/fitPage.js";
-import { switchPages } from "/js/slidesUI.js";
+import { Previewer } from "./paged.esm.js";
+import { fitPage } from "./fitPage.js";
+import { switchPages } from "./slidesUI.js";
 
 export function switchView(mode = "default") {
   localStorage.setItem("currentView", mode);
