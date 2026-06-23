@@ -1,34 +1,22 @@
 @media screen {
   #config {
     color: var(--internalinteraction);
-    background: var(--bg); 
+    background: var(--bg);
     transition: all .1s ease;
-    width:100%;
-    flex: auto;
-    min-width: 150px;
-    max-width: 350px;
+    width: 350px;
+    flex-shrink: 0;
 
-    font-family: "Graebenbach Mono Regular", sans-serif;
-    font-size: 9pt;
-    line-height: 140%;
+    font: var(--font-mono-small);
+    overflow: auto;
+        scrollbar-width: none;
 
     display: flex;
     flex-direction: column;
     height: 100%;
   }
 
-  #config.collapsed {
-    min-width: 50px;
-    max-width: 50px;
-    width: 50px;
-    cursor: pointer;
-  }
 
-  #config.collapsed > * {
-    display: none;
-  }
-
-  #config h1{
+  #config h1 {
     font-family: Favorite Lining Regular, sans-serif;
     font-size: 26pt;
     line-height: 120%;
@@ -38,10 +26,10 @@
     padding-bottom: var(--gapSmaller);
   }
 
-  #sections{
+  #sections {
     background-color: var(--bgLight);
     margin-top: var(--gap);
-    margin-bottom:var(--gap);
+    margin-bottom: var(--gap);
     padding-bottom: var(--gapSmallest);
     border-top: var(--lineWeight) solid var(--internalInteraction);
     border-bottom: var(--lineWeight) solid var(--internalInteraction);
@@ -49,7 +37,7 @@
 
   #sections ol,
   #sections li {
-    line-height: 160%;
+    /* line-height: 160%; */
     margin: var(--gapSmaller) 0;
   }
 
@@ -58,6 +46,7 @@
     counter-reset: section;
     padding-left: var(--gapSmall);
     padding-right: var(--gapSmall);
+
   }
 
   #sections ol ol {
@@ -65,14 +54,26 @@
   }
 
   #sections li {
-    padding: 0;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: start;
+    padding:  0 ;
+    padding-left: var(--gapSmallest);
+    border-bottom: var(--lineWeight) dashed var(--bgLines);
+    border-left: var(--lineWeight) dashed var(--bgLines);
+  }
+
+  #sections li > ol {
+    grid-column: 1 / -1;
+    
   }
 
   #sections li::before {
-
     counter-increment: section;
     content: counters(section, ".") " ";
-    opacity: .75;
+    opacity: .5;
+    font-size: 12px;
+    margin-right: var(--gapSmall);
     
   }
 
@@ -82,26 +83,23 @@
   }
 
   #sections a:hover,
-  #sections li:has(> a:hover)::before {
-    font-family: "Graebenbach Mono Bold", monospace;
-  }
-
+  #sections li:has(> a:hover)::before,
   #sections a.activeSection,
   #sections li:has(> a.activeSection)::before {
-    font-family: "Graebenbach Mono Bold", monospace;
+    font-family: "Graebenbach Bold", sans-serif;
   }
 
-  #slideControls{
-    width:100%;
-    margin:var(--gapSmall) 0 0 0;
+  #slideControls {
+    width: 100%;
+    margin: var(--gapSmall) 0 0 0;
     padding-top: var(--gapSmallest);
     border-top: var(--lineWeight) solid var(--internalInteraction);
     flex-wrap: wrap;
   }
 
-  .sectionButton{
-    display: flex; 
-    align-items: center; 
+  .sectionButton {
+    display: flex;
+    align-items: center;
     gap: var(--gapSmaller);
     background-color: var(--bgLight);
     border: none;
@@ -117,13 +115,13 @@
     white-space: nowrap;
   }
 
-  .sectionButton:hover{
-    background-color:var(--internalLink);
+  .sectionButton:hover {
+    background-color: var(--internalLink);
     color: var(--bgLight)
   }
 
-  #viewModeContainer{
-    display:flex;
+  #viewModeContainer {
+    display: flex;
     flex-direction: column;
     background-color: var(--bgLight);
     margin-top: auto;
@@ -145,7 +143,7 @@
   }
 
   .activeViewButton,
-  .viewModeButton:hover{
+  .viewModeButton:hover {
     background-color: var(--internalLink);
     color: var(--bgLight);
 

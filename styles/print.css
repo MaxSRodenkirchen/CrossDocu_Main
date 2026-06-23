@@ -5,8 +5,9 @@
   footer,
   .viewModeButton,
   #slideControls,
-  #mocControls,
-  #credit {
+  #credit,
+  #leftModuleBar,
+  #rightModuleBar {
     display: none !important;
   }
 
@@ -28,5 +29,7 @@
     opacity: 1 !important;
     break-inside: avoid !important;
     break-after: page !important;
+
   }
+
 }

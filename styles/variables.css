@@ -11,12 +11,13 @@
   --color-alpha: #ffffff7a;
 
 
+  --bgLines: #33393f61;
   --bg: #F5EDDF;
   --bgLight: #FFF7E8;
   --internalLink: #BA5E5E;
-  --internalInteraction: #3f464f;
+  --internalInteraction: #33393f;
   --externalLink: #535D6A;
-  
+
   --gapBig: 90px;
   --gap: 60px;
   --gapSmall: 30px;
@@ -24,48 +25,65 @@
   --gapSmallest: 5px;
 
   --lineWeight: 1px;
+
+  /* Typography shortcuts */
+  --font-mono-small: 12pt/140% "Graebenbach Mono Regular", sans-serif;
+  --font-body: 22px/160% "Graebenbach Regular", sans-serif;
+
 }
 
-  @font-face {
-    font-family: Medium;
-    src: url(/fonts/Favorit-Regular.otf);
-  }
+@font-face {
+  font-family: Medium;
+  src: url(/fonts/Favorit-Regular.otf);
+}
 
-  @font-face {
-    font-family: Favorite Lining Regular;
-    src: url(/fonts/FavoritLining-Regular.otf);
-  }
+@font-face {
+  font-family: Favorite Lining Regular;
+  src: url(/fonts/Fontspring-DEMO-alergia_remix-medium.otf);
+}
 
-  @font-face {
-    font-family: Favorite Regular ;
-    src: url(/fonts/Favorit-Regular.otf);
-  }
-  @font-face {
-    font-family: "Graebenbach Bold";
-    src: url(/fonts/Graebenbach-Bold.ttf);
-  }
+@font-face {
+  font-family: Favorite Lining Bold;
+  src: url(/fonts/Fontspring-DEMO-alergia_remix-medium.otf);
+}
 
-  @font-face {
-    font-family: "Graebenbach Regular";
-    src: url(/fonts/Graebenbach-Regular.ttf);
-  }
+@font-face {
+  font-family: Favorite Regular;
+  src: url(/fonts/Favorit-Regular.otf);
+}
 
-  @font-face {
-    font-family: "Graebenbach Medium";
-    src: url(/fonts/Graebenbach-Medium.ttf);
-  }
+@font-face {
+  font-family: Favorite Bold;
+  src: url(/fonts/Favorit-Bold.otf);
+}
 
-  @font-face {
-    font-family: "Graebenbach Regular Italic";
-    src: url(/fonts/Graebenbach-RegularItalic.ttf);
-  }
+@font-face {
+  font-family: "Graebenbach Bold";
+  src: url(/fonts/Graebenbach-Bold.ttf);
+}
 
-  
-  @font-face {
-    font-family: "Graebenbach Mono Regular";
-    src: url(/fonts/GraebenbachMono-Regular.ttf);
-  }  
-  @font-face {
-    font-family: "Graebenbach Mono Bold";
-    src: url(/fonts/GraebenbachMono-Bold.ttf);
-  }
+@font-face {
+  font-family: "Graebenbach Regular";
+  src: url(/fonts/Graebenbach-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Graebenbach Medium";
+  src: url(/fonts/Graebenbach-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Graebenbach Regular Italic";
+  src: url(/fonts/Graebenbach-RegularItalic.ttf);
+}
+
+
+@font-face {
+  font-family: "Graebenbach Mono Regular";
+  src: url(/fonts/Graebenbach-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Graebenbach Mono Bold";
+  src: url(/fonts/GraebenbachMono-Bold.ttf);
+}

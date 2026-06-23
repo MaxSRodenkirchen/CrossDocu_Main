@@ -1,22 +1,103 @@
 #content {
   background: var(--bgLight);
-  font-family: "Graebenbach Regular", sans-serif;
-  font-size: 19px;
-  line-height:150%;
-  max-width: 950px;
-  color:var(--color-4)
+  font: var(--font-body);
+  width: 100%;
+  /* max-width: 950px; */
+  color: var(--internalInteraction);
+  /* padding: 0 var(--gap); */
 }
+
+.contentContainer {
+  border-top: var(--lineWeight) solid var(--internalInteraction);
+  border-bottom: var(--lineWeight) solid var(--internalInteraction);
+  padding: var(--gapSmall) var(--gapSmall);
+}
+
+#content h1,
+#content h2,
+#content h3 {
+  scroll-margin-top: var(--gap);
+  margin: var(--gapSmallest) 0 var(--gapSmall) 0;
+
+}
+
+#content h1 {
+  font-family: "Favorite Lining Bold", sans-serif;
+  font-size: 80px;
+  line-height: 100%;
+  max-width: 800px;
+
+}
+
+#content h2 {
+  font-family: "Favorite Lining Regular", sans-serif;
+  font-size: 60px;
+  line-height: 100%;
+
+  margin-bottom: var(--gap);
+}
+
+#content h3 {
+  font-family: "Favorite Lining Regular", sans-serif;
+  font-size: 40px;
+  line-height: 100%;
+
+}
+
+#content h4 {
+  font-family: "Favorite Regular";
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#content h6 {
+  font: var(--font-mono-small);
+}
+
+#content h5,
+#content h6,
+#content p:not(:has(img)) {
+  font: var(--font-body);
+  max-width: 600px;
+  margin-bottom: var(--gapSmall);
+}
+
+
+#content code {
+  font: var(--font-mono-small);
+  padding: 0 4px;
+  border-radius: 3px;
+}
+
+#content pre {
+  padding: var(--gapSmall);
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: var(--gapSmaller) 0;
+}
+
+#content pre code {
+  display: block;
+  padding: 0;
+  background: transparent;
+  white-space: pre;
+}
+
+#content hr {
+  display: none;
+}
+
 
 #content img,
 iframe {
   display: block;
-  width: calc(100% + 4rem);
-  margin-left: -2rem;
+  /* width: calc(100% + 4rem);*/
+  margin-left: calc(-1*var(--gapSmall));
+  width: calc(100% + var(--gapSmall)*2);
   max-width: none;
-  margin-top: 4rem;
-
-  /* max-height: 60vh; */
-  /* object-fit: contain; */
+  /* margin-top: 4rem; */
+  border-top: var(--lineWeight) solid var(--internalInteraction);
+  border-bottom: var(--lineWeight) solid var(--internalInteraction);
 }
 
 #content iframe {
@@ -24,55 +105,3 @@ iframe {
   aspect-ratio: 16 / 9;
   border: 0;
 }
-
-#content > h1:not(:first-child),
-#content > h2:not(:first-child),
-#content > h3:not(:first-child){
-  margin-top: 4rem;
-
-}
-hr{
-  margin-bottom: 4rem;
-  color: var(--color-4);
-}
-
-h1,h2,h3{
-  font-family: "Graebenbach Bold", sans-serif;
-  color:var(--color-2);
-  scroll-margin-top: var(--gap);
-}
-
-h1{
-  font-size: 48px;
-  line-height: 56px;
-}
-
-h4{
-    font-size: 26px;
-  line-height: 140%;
-}
-
-h4,
-h5,
-h6,
-p {
-  max-width: 800px;
-}
-
-
-
-a{color:var(--color-3)}
-
-/* Pull the first image to the very top of the container
-#content > img:first-child,
-#content > p:first-child img:first-child,
-#content > a:first-child img:first-child {
-  margin-top: -2rem;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-}
-
-#content > p:first-child:has(img:first-child),
-#content > a:first-child:has(img:first-child) {
-  margin-top: 0;
-} */
