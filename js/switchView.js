@@ -58,7 +58,7 @@ export function setView() {
     previewer
       .preview(
         document.querySelector("#templateContent").content,
-        ["/styles/printPreview.css"],
+        [window.BASE_URL + "styles/printPreview.css"],
         content,
       )
       .then((flow) => {
@@ -89,7 +89,7 @@ export function setView() {
     previewer
       .preview(
         document.querySelector("#templateContent").content,
-        ["/styles/slidePreview.css"],
+        [window.BASE_URL + "styles/slidePreview.css"],
         content,
       )
       .then((flow) => {
@@ -118,7 +118,7 @@ export function setView() {
     let link = document.createElement("link");
     link.rel = "stylesheet";
     link.type = "text/css";
-    link.href = "/styles/webView.css";
+    link.href = window.BASE_URL + "styles/webView.css";
     document.head.appendChild(link);
 
     window.nextSlide = () => {
