@@ -23,6 +23,10 @@
         },
         {
           "type": "note",
+          "path": "Design Concept.md"
+        },
+        {
+          "type": "note",
           "path": "Concept Presentation.md"
         }
       ],
@@ -88,9 +92,6 @@
     "useFloatingToolbars": "synced",
     "dualPane": "synced",
     "dualPaneOrientation": "synced",
-    "narrowSidebarLayout": "synced",
-    "narrowSidebarTriggerMode": "synced",
-    "narrowSidebarCustomWidth": "synced",
     "paneTransitionDuration": "synced",
     "toolbarVisibility": "synced",
     "pinNavigationBanner": "synced",
@@ -126,9 +127,6 @@
   },
   "dualPane": true,
   "dualPaneOrientation": "horizontal",
-  "narrowSidebarLayout": "singlePane",
-  "narrowSidebarTriggerMode": "fitPanes",
-  "narrowSidebarCustomWidth": 350,
   "showTooltips": false,
   "showTooltipPath": true,
   "showTooltipWordCount": false,
@@ -148,7 +146,6 @@
     "list": {
       "back": true,
       "search": true,
-      "reveal": false,
       "descendants": true,
       "sort": true,
       "appearance": true,
@@ -176,7 +173,6 @@
   "navItemHeightScaleText": true,
   "collapseBehavior": "all",
   "smartCollapse": true,
-  "collapseOtherBranchesOnExpand": false,
   "autoSelectFirstFileOnFocusChange": false,
   "autoExpandNavItems": false,
   "springLoadedFolders": true,
@@ -208,7 +204,7 @@
   "showTagIcons": true,
   "showAllTagsFolder": true,
   "showUntagged": true,
-  "scopeTagsToCurrentContext": true,
+  "scopeTagsToCurrentContext": false,
   "tagSortOrder": "alpha-asc",
   "inheritTagColors": true,
   "keepEmptyTagsProperty": false,
