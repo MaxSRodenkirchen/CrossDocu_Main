@@ -1,6 +1,6 @@
-import { Previewer } from "./paged.esm.js";
-import { fitPage } from "./fitPage.js";
-import { switchPages } from "./slidesUI.js";
+import { Previewer } from "/js/paged.esm.js";
+import { fitPage } from "/js/fitPage.js";
+import { switchPages } from "/js/slidesUI.js";
 
 export function switchView(mode = "default") {
   localStorage.setItem("currentView", mode);
@@ -58,7 +58,7 @@ export function setView() {
     previewer
       .preview(
         document.querySelector("#templateContent").content,
-        [window.BASE_URL + "styles/printPreview.css"],
+        ["/styles/printPreview.css"],
         content,
       )
       .then((flow) => {
@@ -89,7 +89,7 @@ export function setView() {
     previewer
       .preview(
         document.querySelector("#templateContent").content,
-        [window.BASE_URL + "styles/slidePreview.css"],
+        ["/styles/slidePreview.css"],
         content,
       )
       .then((flow) => {
@@ -118,7 +118,7 @@ export function setView() {
     let link = document.createElement("link");
     link.rel = "stylesheet";
     link.type = "text/css";
-    link.href = window.BASE_URL + "styles/webView.css";
+    link.href = "/styles/webView.css";
     document.head.appendChild(link);
 
     window.nextSlide = () => {
