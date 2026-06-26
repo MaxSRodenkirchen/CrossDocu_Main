@@ -308,3 +308,73 @@ export function updateModules() {
     window.addEventListener('resize', checkResponsiveSidebars);
     setTimeout(checkResponsiveSidebars, 100);
 }
+
+export function openLists() {
+    const aLists = document.querySelectorAll('.aList');
+    const activeListIdentifier = localStorage.getItem('activeAccordionList');
+
+    aLists.forEach(list => {
+        const contentList = list.querySelector('.listOfContent');
+        const titleElement = list.querySelector('.aListTitle h3');
+        const identifier = titleElement ? titleElement.textContent.trim() : null;
+
+        // Restore state from localStorage
+        if (identifier && activeListIdentifier === identifier) {
+            list.classList.add('active');
+            if (contentList) contentList.style.display = "block";
+        } else {
+            list.classList.remove('active');
+            if (contentList) contentList.style.display = "none";
+        }
+
+        list.addEventListener('click', function(e) {
+            if (e.target.closest('a')) return;
+
+            const isCurrentlyActive = this.classList.contains('active');
+
+            // Close all lists
+            aLists.forEach(otherList => {
+                otherList.classList.remove('active');
+                const otherContent = otherList.querySelector('.listOfContent');
+                if (otherContent) otherContent.style.display = "none";
+            });
+
+            // If it wasn't active before, open it and save to localStorage
+            if (!isCurrentlyActive) {
+                this.classList.add('active');
+                if (contentList) contentList.style.display = "block";
+                if (identifier) localStorage.setItem('activeAccordionList', identifier);
+            } else {
+                // If it was active, it's now closed, so clear localStorage
+                localStorage.removeItem('activeAccordionList');
+            }
+        });
+    });
+}
+
+export function activeLink() {
+    const currentPath = decodeURI(window.location.pathname);
+    const contentLinks = document.querySelectorAll('.contentLink');
+    
+    contentLinks.forEach(linkContainer => {
+        const link = linkContainer.querySelector('a');
+        if (!link) return;
+        
+        const href = link.getAttribute('href');
+        if (!href) {
+            linkContainer.classList.remove('active');
+            return;
+        }
+
+        try {
+            const linkPath = decodeURI(new URL(link.href).pathname);
+            if (linkPath === currentPath || linkPath === currentPath + '/' || linkPath + '/' === currentPath) {
+                linkContainer.classList.add('active');
+            } else {
+                linkContainer.classList.remove('active');
+            }
+        } catch (e) {
+            linkContainer.classList.remove('active');
+        }
+    });
+}

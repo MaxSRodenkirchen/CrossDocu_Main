@@ -5,195 +5,111 @@
     flex-shrink: 0;
     font-family: "Graebenbach Regular", sans-serif;
     background-color: var(--bg);
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     scrollbar-width: none;
   }
 
-  #sidebar{
-    font:var(--font-mono-small);
-    transition: all .1s ease;
+  #ect {
+    margin-top: var(--gapSmall);
+    padding: 0;
   }
 
-  .module{
-    margin-top: var(--gap);
-    /* min-height: 1000px; */
-    width:100%;
-
-    scrollbar-width: none;
+  #ect-title{
+    font-family: "Favorite Lining Bold", sans-serif;
+    padding: var(--gapSmaller) var(--gapSmall);
+    margin: 0;
+    border-top: var(--lineWeight) solid var(--internalInteraction);
+    border-bottom: var(--lineWeight) solid var(--internalInteraction);
   }
 
-
-  /* Internal Links */
-
-  #sidebar a {
-    cursor: pointer;
+  .aList{
+    list-style: none;
+    margin-left:var(--gapSmaller);
+    /* padding-bottom: var(--gapSmaller); */
+    /* border-bottom: var(--lineWeight) dashed var(--internalInteraction);
+    border-left: var(--lineWeight) dashed var(--internalInteraction); */
+    transition: margin .2s;
   }
 
-  #sidebar a > p{
-    /* border: var(--lineWeight) solid var(--internalLink); */
-    border-left: var(--lineWeight) dashed var(--internalLink);
-        border-bottom: var(--lineWeight) dashed var(--internalLink);
-    /* border: var(--lineWeight) solid var(--internalLink); */
+  .aListTitle h3 {
+    font-family: "Graebenbach Regular", sans-serif;
+    font-size: 20px;
+    margin: 0;
+    font-weight: 300;
 
-    padding: 0 var(--gapSmall) ;
-    padding-top:var(--gapSmallest);
-    padding-bottom: 2px;
-    color: var(--internalLink);
-  } 
+  }
 
-    #sidebar a > p::before{
-      /* content: "";
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-      transform: scale(0.9); */
-      /* border-radius: 50%; */
-      /* background-color: currentColor;
-      margin-right: 0.5em;
-      margin-bottom: -.15em; */
+  .aList:hover,
+  .aList.active{
+    background-color: var(--bgLight);
+
     }
 
- #sidebar a:hover > p,
- .active > p{
-    background: var(--internalLink);
-    color: var(--bgLight) !important;
-  } 
+    .aList.active{
+      /* margin-top: var(--gapSmaller);
+      margin-bottom: var(--gapSmaller); */
+      /* border-bottom: var(--lineWeight) solid var(--internalInteraction);
+      border-top: var(--lineWeight) solid var(--internalInteraction); */
+    }
 
-  #orderedContent {
-    gap: 0.5rem;
+   .aList.active .aListTitle{
+        /* border-bottom: var(--lineWeight) solid var(--internalInteraction); */
+
+   }
+
+  .allLists, .listOfContent {
     padding: 0;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
     margin: 0;
-    scrollbar-width: none;
-    margin-top: var(--gap);
   }
 
-  #orderedContent li a img {
-    display: none;
+  .aListTitle{
+    display: flex;
+    align-items: center;  
+    gap: var(--gapSmaller);
+    padding: var(--gapSmaller) var(--gapSmaller);
+    cursor: pointer;
+
   }
 
-  .moc-sidebar-container {
+  /*2. EBENE */
 
-    background-color: var(--bgLight);
-    overflow-wrap: break-word;
-    border-top: var(--lineWeight) solid var(--internalLink);
-    border-bottom: var(--lineWeight) solid var(--internalLink);
-  }
-
-  .moc-sidebar-container * {
+  .listOfContent{
     list-style: none;
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
+    margin-left: var(--gapSmaller);
+    margin: 0 var(--gapSmaller);
+
   }
 
-  .moc-sidebar-container > h1 {
-    font-family: Favorite Lining Regular, sans-serif;
-    font-size: 26pt;
-    line-height: 120%;
-    background-color: var(--internalLink);
-    color: var(--bgLight) !important;
-    margin: 0;
-    padding-left: var(--gapSmall);
-    padding-right: var(--gapSmall);
-    padding-top: var(--gapSmaller);
-    padding-bottom: var(--gapSmaller);
-  }
-
-  #sidebar-default > h1,
-  #tags-default > h1 {
-    background-color: transparent !important;
-    color: var(--internalLink) !important;
-  }
-
-  .moc-sidebar-container:not(#sidebar-default):not(#tags-default) > h1::before{
-    font-family: Favorite Regular, sans-serif;
-    content: "<- ";
-    cursor: pointer;
-  }
-
-  .moc-sidebar-container > ol {
-    color: var(--internalLink) ;
-    padding-top: var(--gapSmall);
-  }
-
-  .moc-sidebar-container > ol > li{
-    margin-bottom: var(--gapSmall);
-    padding:0 var(--gapSmall);
-    padding-top: var(--gapSmall);
-    border-top: var(--lineWeight) dashed var(--internalLink);
-    box-sizing: border-box;
-    line-height: 100%;
-  } 
-
-
-  .moc-sidebar-container > ol > li > p {
-    margin-bottom: var(--gapSmaller);
-    margin-top: 0;
-  } 
-
-  .moc-sidebar-container > ol > li > ol{
+  .contentLink, .listSection{
+    font-size: 15px;
     display: flex;
-    flex-direction: column;
-    gap:var(--gapSmaller);
+    align-items: flex-start;  
+    gap: var(--gapSmaller); 
+    padding: var(--gapSmaller) var(--gapSmaller);
     margin: 0;
-  } 
-
-  .moc-sidebar-container > ol > li > ol > li{
-    
-  } 
-
-
-  .tag {
-    display: flex;
-    align-items: center;
-    font: var(--font-mono-small);
-    /* background-color: var(--internalLink); */
-    color: var(--internalLink) ;
-    padding-right: var(--gapSmaller) ;
-    gap: var(--gapSmallest);
-    cursor: pointer;
-    margin:0;
-        /* border: var(--lineWeight) solid var(--internalLink); */
-    /* border-radius: 100%; */
+    /* border-bottom: var(--lineWeight) dashed var(--internalInteraction);
+    border-left: var(--lineWeight) dashed var(--internalInteraction); */
   }
 
-  .tag p {
-    font: inherit !important;
-    max-width: inherit !important;
-    margin:0 !important;
+  .contentLink{
+        color: var(--internalLink);
   }
 
-
-  .tag svg {
-    margin-left: .5em;
-    transform: scale(-0.8);
-    height: 1em;
-    aspect-ratio: 1 / 1;
-    fill: currentColor;
+  .contentLink svg {
+    margin-top: 3px;
     flex-shrink: 0;
   }
 
-  .tag:hover{
-    color: var(--bgLight);
-    background-color: var(--internalLink) ;
+  .contentLink a{
+    text-decoration: none;
+    color: inherit;
   }
 
-  .tag .tag-count {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* font-size: 10px; */
-    width: 1.4em;
-    height: 1.4em;
-    transform: scale(.6);
-    background-color: var(--internalLink);
-    color: var(--bgLight);
-    /* border-radius: 50%; */
-    line-height: 1;
-}
+  .contentLink:hover,
+  .contentLink.active{
+  }
+
+
 
 }

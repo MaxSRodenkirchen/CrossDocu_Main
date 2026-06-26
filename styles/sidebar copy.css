@@ -1,177 +1,199 @@
 @media screen {
   #sidebar {
-    overflow: hidden !important;
-    width:350px;
-    max-width: 350px;
+    overflow-y: auto;
+    width: 350px;
+    flex-shrink: 0;
     font-family: "Graebenbach Regular", sans-serif;
     background-color: var(--bg);
-  }
-
-  /* Style für die MOC-Umschaltknöpfe */
-  #sidebar button {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--color-white);
-    color: var(--color-white);
-    /* border-radius: 0.25rem; */
-    padding: 0.5rem 1rem;
-    margin-bottom: 0.5rem;
-    cursor: pointer;
-    font-size: 11px;
-    /* font-weight: 600; */
-    transition: all 0.2s ease;
-    width: 100%;
-    text-align: left;
-    /* display: none; */
-  }
-
-  #sidebar button:hover {
-    background: var(--color-white);
-    color: var(--color-black) !important;
-  }
-
-  #sidebar button.active-moc {
-    /* border-width: 3px; */
-    background: var(--color-white);
-    color: var(--color-black);
-
-    /* font-weight: 900; */
-  }
-
-  #sidebar * {
-    color: var(--internalinteraction);
-  }
-
-  #sidebar p strong {
-    font-family: "Graebenbach Bold", sans-serif;
-    font-weight: normal;
-  }
-
-  header {
     display: flex;
-    flex-direction: row;
-    margin: 0;
-    padding-top: 4rem;
-    padding-bottom: 1rem;
-    font-weight: 900;
-    font-size: smaller;
-    color: var(--color-white);
-    display: none;
+    flex-direction: column;
+    scrollbar-width: none;
   }
 
-  header h3 {
-    margin: 0;
-    padding: 0;
+  #sidebar{
+    font:var(--font-mono-small);
+    transition: all .1s ease;
   }
 
-  #sidebarContent {
-    /* display: flex;
-    flex-wrap: wrap; */
+  .module{
+    margin-top: var(--gap);
+    /* min-height: 1000px; */
+    width:100%;
+
+    scrollbar-width: none;
+  }
+
+
+  /* Internal Links */
+
+  #sidebar a {
+    cursor: pointer;
+  }
+
+  #sidebar a > p{
+    /* border: var(--lineWeight) solid var(--internalLink); */
+    border-left: var(--lineWeight) dashed var(--internalLink);
+        border-bottom: var(--lineWeight) dashed var(--internalLink);
+    /* border: var(--lineWeight) solid var(--internalLink); */
+
+    padding: 0 var(--gapSmall) ;
+    padding-top:var(--gapSmallest);
+    padding-bottom: 2px;
+    color: var(--internalLink);
+  } 
+
+    #sidebar a > p::before{
+      /* content: "";
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      transform: scale(0.9); */
+      /* border-radius: 50%; */
+      /* background-color: currentColor;
+      margin-right: 0.5em;
+      margin-bottom: -.15em; */
+    }
+
+ #sidebar a:hover > p,
+ .active > p{
+    background: var(--internalLink);
+    color: var(--bgLight) !important;
+  } 
+
+  #orderedContent {
     gap: 0.5rem;
     padding: 0;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    overflow: scroll;
     margin: 0;
     scrollbar-width: none;
-    height: 100%;
+    margin-top: var(--gap);
   }
 
-  /* ==========================================================================
-     MOC SIDEBAR CONTAINER & STRUKTUR
-     ========================================================================== */
-
+  #orderedContent li a img {
+    display: none;
+  }
 
   .moc-sidebar-container {
-    margin-top: var(--gap);
+
     background-color: var(--bgLight);
     overflow-wrap: break-word;
-    overflow: scroll;
     border-top: var(--lineWeight) solid var(--internalLink);
     border-bottom: var(--lineWeight) solid var(--internalLink);
   }
 
-  /* TITEL */
-  .moc-sidebar-container h1 {
-    font-size: 32pt;
+  .moc-sidebar-container * {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .moc-sidebar-container > h1 {
+    font-family: Favorite Lining Regular, sans-serif;
+    font-size: 26pt;
+    line-height: 120%;
     background-color: var(--internalLink);
     color: var(--bgLight) !important;
     margin: 0;
     padding-left: var(--gapSmall);
+    padding-right: var(--gapSmall);
+    padding-top: var(--gapSmaller);
+    padding-bottom: var(--gapSmaller);
   }
 
-  /* Sektion Inhalt*/
-  #sidebarContent ol {
-    counter-reset: item;
-    padding: 0;
+  #sidebar-default > h1,
+  #tags-default > h1 {
+    background-color: transparent !important;
+    color: var(--internalLink) !important;
+  }
+
+  .moc-sidebar-container:not(#sidebar-default):not(#tags-default) > h1::before{
+    font-family: Favorite Regular, sans-serif;
+    content: "<- ";
+    cursor: pointer;
+  }
+
+  .moc-sidebar-container > ol {
+    color: var(--internalLink) ;
+    padding-top: var(--gapSmall);
+  }
+
+  .moc-sidebar-container > ol > li{
+    margin-bottom: var(--gapSmall);
+    padding:0 var(--gapSmall);
+    padding-top: var(--gapSmall);
+    border-top: var(--lineWeight) dashed var(--internalLink);
+    box-sizing: border-box;
+    line-height: 100%;
+  } 
+
+
+  .moc-sidebar-container > ol > li > p {
+    margin-bottom: var(--gapSmaller);
+    margin-top: 0;
+  } 
+
+  .moc-sidebar-container > ol > li > ol{
+    display: flex;
+    flex-direction: column;
+    gap:var(--gapSmaller);
     margin: 0;
-    list-style: none;
-  }
+  } 
 
-  /* li: ALLE SEKTIONEN / PUNKTE (Grid für saubere Marker- & Textausrichtung) */
-  #sidebarContent ol li {
-    counter-increment: item;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: stretch;
-  }
+  .moc-sidebar-container > ol > li > ol > li{
+    
+  } 
 
-  /* li:not(:has(ol)): Blattelemente erhalten ihren Rahmen direkt auf dem li */
-  #sidebarContent ol li:not(:has(ol)) {
-    /* border-bottom: var(--lineWeight) solid var(--internalLink); */
-  }
 
-  /* li::before: Die Nummerierungs-Marker (z.B. "26.1 ") */
-  #sidebarContent ol li::before {
-    content: counters(item, ".") " ";
-    font-size: 11px;
-    padding-right: var(--gapSmaller);
-    padding-left:var(--gapSmaller);
+  .tag {
     display: flex;
     align-items: center;
-    
+    font: var(--font-mono-small);
+    /* background-color: var(--internalLink); */
+    color: var(--internalLink) ;
+    padding-right: var(--gapSmaller) ;
+    gap: var(--gapSmallest);
+    cursor: pointer;
+    margin:0;
+        /* border: var(--lineWeight) solid var(--internalLink); */
+    /* border-radius: 100%; */
   }
 
-  /* li:has(ol) > a / p: Nur bei Elementen MIT Unterliste kommt der Rahmen auf den Text & Marker */
-  #sidebarContent ol li:has(ol)::before,
-  #sidebarContent ol li:has(ol) > a,
-  #sidebarContent ol li:has(ol) > p {
-    border-bottom: var(--lineWeight) solid var(--internalLink);
-  }
-
-  /* li > a, li > p: Stehen in der rechten Spalte des Grid */
-  #sidebarContent ol li > a,
-  #sidebarContent ol li > p {
-    grid-column: 2;
-  }
-
-  /* li > ol: Verschachtelter SEKTION-INHALT bricht in neue Zeile um */
-  #sidebarContent ol li > ol {
-    grid-column: 1 / -1;
+  .tag p {
+    font: inherit !important;
+    max-width: inherit !important;
+    margin:0 !important;
   }
 
 
-
-
-
-  .moc-sidebar-container > ol > li a:hover,
-  .moc-sidebar-container > ol > li a.active {
-    font-family: "Graebenbach Regular Italic", sans-serif;
+  .tag svg {
+    margin-left: .5em;
+    transform: scale(-0.8);
+    height: 1em;
+    aspect-ratio: 1 / 1;
+    fill: currentColor;
+    flex-shrink: 0;
   }
 
-  .moc-sidebar-container > ol > li a.active::after {
-    content: "←";
-    align-self: center;
+  .tag:hover{
+    color: var(--bgLight);
+    background-color: var(--internalLink) ;
   }
 
-  .moc-sidebar-container > ol > li a:hover p,
-  .moc-sidebar-container > ol > li a.active p {
-    color: var(--color-white) !important;
-  }
+  .tag .tag-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-size: 10px; */
+    width: 1.4em;
+    height: 1.4em;
+    transform: scale(.6);
+    background-color: var(--internalLink);
+    color: var(--bgLight);
+    /* border-radius: 50%; */
+    line-height: 1;
 }
 
-
-  #sidebarContent li a img {
-    display: none;
-  }
+}

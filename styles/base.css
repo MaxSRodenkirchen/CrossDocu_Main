@@ -180,6 +180,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  display: none;
 }
 
 
@@ -215,7 +216,7 @@
 
 /* Meteor Icons Configuration */
 .i {
-  stroke-width: var(--i-stroke, var(--lineWeight));
+  stroke-width: var(--i-stroke, calc(var(--lineWeight)*2));
   width: var(--i-size, 14px);
   height: var(--i-size, 14px);
   stroke: currentColor;

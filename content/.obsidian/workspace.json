@@ -220,8 +220,11 @@
   },
   "active": "562d1d712362cf14",
   "lastOpenFiles": [
+    "icons/svg-sprite.svg",
+    "icons",
     "Journal.md",
     "Design Presentation.md",
+    "Concept Presentation.md",
     "Color Detection in TD.md",
     "A Color Detecting Controller.md",
     "In one sentence - Exploring Creative Technologies.md",
@@ -246,7 +249,6 @@
     "images/color_detection_td.png",
     "Capture and loop movement in p5.js.md",
     "Thank you.md",
-    "Use Cases Moodboard.md",
     "images/OnePager.png",
     "images/Mockup Exhibition 3.jpg",
     "images/Generated Image June 16, 2026 - 10_31PM.jpg",
@@ -255,7 +257,6 @@
     "images/Mockup Exhibition.jpg",
     "images/Generated Image June 16, 2026 - 10_27PM.jpg",
     "images/OnePager3.png",
-    "Markdown-Test.md",
     "Content Map.canvas"
   ]
 }

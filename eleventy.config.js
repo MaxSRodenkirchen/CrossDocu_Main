@@ -45,11 +45,12 @@ export default function (eleventyConfig) {
     });
 
     eleventyConfig.addPassthroughCopy('content/images');
+    eleventyConfig.addPassthroughCopy('content/icons');
     eleventyConfig.addPassthroughCopy('fonts');
     eleventyConfig.addPassthroughCopy('styles');
 
     eleventyConfig.addShortcode("icon", function (iconName) {
-        return `<svg class="i i-${iconName}"><use href="/images/svg-sprite.svg#${iconName}"/></svg>`;
+        return `<svg class="i i-${iconName}"><use href="/fonts/icons/svg-sprite.svg#${iconName}"/></svg>`;
     });
 
     eleventyConfig.addCollection('posts', (collection) => {
@@ -129,16 +130,25 @@ export default function (eleventyConfig) {
     eleventyConfig.addFilter("mocSidebar", function (content) {
         if (!content) return "";
 
-        // Matcht <li><a href="...">Linktext</a></li> und fängt href und Linktext ab
-        const regex = /<li>\s*<a\s*[^>]*?href="([^"]+)"[^>]*?>([^<]+)<\/a>\s*<\/li>/gi;
+        let html = content;
 
-        return content.replace(regex, (match, href, linkText) => {
-            return `<li>
-                <a href="${href}">
-                    <p>${linkText}</p>
-                </a>
-            </li>`;
-        });
+        // Paragraphs get the listSection class
+        html = html.replace(/<p>/gi, '<p class="listSection">');
+
+        // Nested lists get contentSections class (matching <ol> and <ul> with optional attributes)
+        html = html.replace(/<ol([^>]*)>/gi, '<ol class="contentSections"$1>');
+        html = html.replace(/<ul([^>]*)>/gi, '<ul class="contentSections"$1>');
+
+        const chevronIcon = `<svg class="i i-chevron-right"><use href="/fonts/icons/svg-sprite.svg#chevron-right"/></svg>`;
+
+        // All list items get contentLink initially
+        html = html.replace(/<li([^>]*)>/gi, `<li class="contentLink"$1>\n${chevronIcon} `);
+
+        // Remove top-level list wrappers (assuming they start at the beginning of a line from markdown-it)
+        html = html.replace(/^<(ol|ul) class="contentSections"[^>]*>[\r\n]*/gm, '');
+        html = html.replace(/^<\/(ol|ul)>[\r\n]*/gm, '');
+        
+        return html;
     });
 
     eleventyConfig.addFilter("linkClass", (content) => {

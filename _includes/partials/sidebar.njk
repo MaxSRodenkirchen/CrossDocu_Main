@@ -105,64 +105,38 @@
 </div> #}
 
 
-<div id="ECT">
+<div id="ect">
 
-    <h1>Exploring Creative Technologies</h1>
+    <h1 id="ect-title">Exploring Creative Technologies</h1>
 
     <ul class = "allLists">
 
-        <li class = "aList"> Journal
-
-            <ol class = "listContent">
-
-                <p class="listSection">This week</p>
-
-                <li class = "contentLink">
-                    Touchdesigner Course
-                </li>
-
-                <li class = "contentLink">
-                    p5.js Course
-
-                    <ol class = "contentSections">
-                        <li>Intro</li>
-                        <li>Start Section</li>
-                        <li>Keep on reading</li>
-                    </ol>
-                </li>
+        {% for moc in collections.moc %}
+        <li class="aList aMocList"> 
+            <div class = "aListTitle" >
+                {% icon "bookmark-alt" %}
+                <h3 id="aMocName">{{ moc.data.title }}</h3>
+            </div>
+            <ol class="listOfContent" style="display: none;">
+                {{ moc.templateContent | mocSidebar(collections.all) | safe }}
             </ol>    
         </li>
+        {% endfor %}
         
-        <li class = "aList"> Creative Coding
-
-            <ul class = "listContent">
-
-                <li class = "contentLink">Tracking Movement in p5.js
-                </li>
-
-                <li class = "contentLink">
-                    p5.js Course
-
-                    <ol class = "contentSections">
-
-                        <li>Intro</li>
-                        <li>Start Section</li>
-                        <li>Keep on reading</li>
-
-                    </ol>
-
-                </li>
-            </ul>    
-        </li>
 
         {% for item in collections | sortTagsByCount %}
             {% set tag = item.tag %}
             {% set posts = item.posts %}
             <li class="aList aTagList"> 
-                {{ tag | cleanTags }}
-                <ul class="listContent">
+                <div class = "aListTitle" >
+                    {% icon "ellipsis-vertical" %}
+                    <h3 id="aTagName">{{ tag | cleanTags }}</h3>
+                </div>
+                
+                <ul class="listOfContent" style="display: none;">
                     {% for post in posts %}
                         <li class="contentLink">
+                            {% icon "chevron-right" %}
                             <a href="{{ post.url }}">{{ post.data.title | default(post.fileSlug) }}</a>
                         </li>
                     {% endfor %}
@@ -172,3 +146,4 @@
     </ul>
 
 </div>
+

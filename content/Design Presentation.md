@@ -6,13 +6,11 @@ type:
 publish:
   - public
 ---
-# Design Presentation
-
 Design Concept
 
-2. [[In one sentence - Exploring Creative Technologies |In one Sentence]]
-3. [[The Design Problem]]
-4. [[Design System]]
+1. [[In one sentence - Exploring Creative Technologies |In one Sentence]]
+2. [[The Design Problem]]
+3. [[Design System]]
 
 Examples
 

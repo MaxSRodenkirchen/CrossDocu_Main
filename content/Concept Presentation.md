@@ -9,9 +9,6 @@ type:
 publish:
   - public
 ---
-# Concept Presentation
-
-
 Welcome to my presentation
 
 1. [[Welcome to my Concept Presentation|Start here]]

@@ -8,8 +8,6 @@ type:
 publish:
   - public
 ---
-# Journal
-
 CW 21
 
 1. [[Mapping - Exploring Creative Technologies]]

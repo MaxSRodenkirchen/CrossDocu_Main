@@ -63,13 +63,15 @@
 
     <script type="module">
         import { setView } from "/js/switchView.js";
-        import { initMoc, initTags, initSearch, updateModules } from "/js/sidebarUI.js";
+        import { initMoc, initTags, initSearch, updateModules, openLists, activeLink } from "/js/sidebarUI.js";
 
         setView();
         initMoc();
         initTags();
         initSearch();
         updateModules();
+        openLists();
+        activeLink();
     </script>
 
 </body>
