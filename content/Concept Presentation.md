@@ -12,29 +12,31 @@ publish:
 # Concept Presentation
 
 
-1. Welcome to my presentation
-	1. [[Welcome to my Concept Presentation|Start here]]
+Welcome to my presentation
+
+1. [[Welcome to my Concept Presentation|Start here]]
 	
 
-2. Assignment for the semester
+Assignment for the semester
 
-	1. [[In one sentence - Exploring Creative Technologies |In one sentence ]]
-	2. [[Mapping - Exploring Creative Technologies |Mapping the project ]]
-	3. [[Capture and loop movement in p5.js |Example for an Experiment]]
-	4. [[Questions behind ECT]]
+1. [[In one sentence - Exploring Creative Technologies |In one sentence ]]
+2. [[Mapping - Exploring Creative Technologies |Mapping the project ]]
+3. [[Capture and loop movement in p5.js |Example for an Experiment]]
+4. [[Questions behind ECT]]
 	
-	 %% - [[MVP - Exploring Creative Technologies |What is the content?]] %%
+%% - [[MVP - Exploring Creative Technologies |What is the content?]] %%
 
-3. About the medium 
+About the medium 
 
-	1. [[About Digital Gardens and Streams|Digital Garden as the medium ]]
-	2. [[Structuring the Platform|Structuring]]
-	3. [[User Journeys|User Journeys ]]
-	4. [[The idea behind CrossDocu |The CrossDocu System]] 
+1. [[About Digital Gardens and Streams|Digital Garden as the medium ]]
+2. [[Structuring the Platform|Structuring]]
+3. [[User Journeys|User Journeys ]]
+4. [[The idea behind CrossDocu |The CrossDocu System]] 
 
 
-	%% Make it clear that the semester project uses and helps develop CrossDocu, but that its primary focus is not on further developing CrossDocu! %%
+%% Make it clear that the semester project uses and helps develop CrossDocu, but that its primary focus is not on further developing CrossDocu! %%
 
-4. Next steps
-	1. [[Timetracking for Der Baum hat Zeit |Timetracking ]]
-	2. [[Thank you]]
+Next steps
+
+1. [[Timetracking for Der Baum hat Zeit |Timetracking ]]
+2. [[Thank you]]

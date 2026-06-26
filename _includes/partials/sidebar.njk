@@ -1,4 +1,4 @@
-<ul id="orderedContent">
+{# <ul id="orderedContent">
 
     <div class="sidebar-group moc-sidebar-container" id="sidebar-default">
 
@@ -54,7 +54,6 @@
 
 </ul>
 
-
 <div class="module" id="tagsContent">
     <div class="tag-sidebar-group moc-sidebar-container" id="tags-default">
         <h1>All Tags</h1>
@@ -103,4 +102,73 @@
 </div>
 
 <div class="module" id="searchContent">
+</div> #}
+
+
+<div id="ECT">
+
+    <h1>Exploring Creative Technologies</h1>
+
+    <ul class = "allLists">
+
+        <li class = "aList"> Journal
+
+            <ol class = "listContent">
+
+                <p class="listSection">This week</p>
+
+                <li class = "contentLink">
+                    Touchdesigner Course
+                </li>
+
+                <li class = "contentLink">
+                    p5.js Course
+
+                    <ol class = "contentSections">
+                        <li>Intro</li>
+                        <li>Start Section</li>
+                        <li>Keep on reading</li>
+                    </ol>
+                </li>
+            </ol>    
+        </li>
+        
+        <li class = "aList"> Creative Coding
+
+            <ul class = "listContent">
+
+                <li class = "contentLink">Tracking Movement in p5.js
+                </li>
+
+                <li class = "contentLink">
+                    p5.js Course
+
+                    <ol class = "contentSections">
+
+                        <li>Intro</li>
+                        <li>Start Section</li>
+                        <li>Keep on reading</li>
+
+                    </ol>
+
+                </li>
+            </ul>    
+        </li>
+
+        {% for item in collections | sortTagsByCount %}
+            {% set tag = item.tag %}
+            {% set posts = item.posts %}
+            <li class="aList aTagList"> 
+                {{ tag | cleanTags }}
+                <ul class="listContent">
+                    {% for post in posts %}
+                        <li class="contentLink">
+                            <a href="{{ post.url }}">{{ post.data.title | default(post.fileSlug) }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+
 </div>

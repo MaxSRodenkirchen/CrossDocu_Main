@@ -11,10 +11,24 @@
             "id": "562d1d712362cf14",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Design Presentation.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Design Presentation"
             }
           }
         ]
@@ -204,8 +218,10 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "ebc1aaa38d3e2ab7",
+  "active": "562d1d712362cf14",
   "lastOpenFiles": [
+    "Journal.md",
+    "Design Presentation.md",
     "Color Detection in TD.md",
     "A Color Detecting Controller.md",
     "In one sentence - Exploring Creative Technologies.md",
@@ -214,7 +230,6 @@
     "Feedback Effect in Touchdesigner.md",
     "Experience with Handtracking in ml5.js.md",
     "MD-Test.md",
-    "Journal.md",
     "Projection Mapping in Touchdesigner.md",
     "Design System.md",
     "Timetracking for Der Baum hat Zeit.md",
@@ -227,7 +242,6 @@
     "Installation for Exhibition.md",
     "Creative Patterns Taglist.md",
     "Arduino Beginners Workshop.md",
-    "Design Presentation.md",
     "deleteMe.md",
     "images/color_detection_td.png",
     "Capture and loop movement in p5.js.md",
