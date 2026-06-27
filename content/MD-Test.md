@@ -1,8 +1,5 @@
 ---
-title: MD-Test - Exploring Creative Technologies
 tags:
-  - Creative-Coding
-  - Output-Devices
 ---
 
 # Creative Technologies & Digital Gardens

@@ -1,12 +1,6 @@
 ---
 tags:
   - CrossDocu
-state:
-  - "10"
-type:
-  - Research
-publish:
-  - public
 ---
 # Hybrid Search - The Concept
 

@@ -1,12 +1,6 @@
 ---
 tags:
-  - TouchDesigner
-  - Creative-Coding
-state:
-  - "0"
-type:
-publish:
-  - public
+  - Learning-TouchDesigner
 ---
 # Color Detection in Touchdesigner
 

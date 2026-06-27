@@ -1,12 +1,5 @@
 ---
 tags:
-  - Creative-Patterns
-state:
-  - "5"
-type:
-  - Template
-publish:
-  - public
 ---
 ### Inputs
 - **Ziel des Experiments**: Was soll mit dem Experiment erreicht werden? (z. B. Nutzerverhalten verstehen, Wirksamkeit einer Lernanwendung testen, Hypothesen prüfen)

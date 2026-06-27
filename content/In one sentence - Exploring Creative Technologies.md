@@ -1,12 +1,3 @@
----
-tags:
-  - Exploring-Creative-Technologies
-state:
-  - "10"
-type:
-publish:
-  - public
----
 # In one sentence
 
 ###### state 06.05.26

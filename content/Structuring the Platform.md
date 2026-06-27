@@ -1,14 +1,10 @@
 ---
 tags:
-  - CrossDocu
-  - Der-Baum-hat-Zeit
-state:
-  - "8"
-type:
-  - 3-Ideate
-publish:
-  - public
+  - College-Summer-2026
+  - About-this-Digital-Garden
 ---
+# Structure of this Platform
+
 ![[structure.png]]
 
 ![[structure2.png]]

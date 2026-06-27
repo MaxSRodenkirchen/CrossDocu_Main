@@ -54,6 +54,18 @@
             {% include "partials/config.njk" %}
         </aside>
 
+        <div id="viewModeContainer">
+            <button id="webButton" class="viewModeButton" onclick="switchView('web')">
+                Web Mode
+            </button>
+            <button class="viewModeButton" onclick="switchView('print')">
+                Print Mode
+            </button>
+            <button class="viewModeButton" onclick="switchView('slide')">
+                Slide Mode
+            </button>
+        </div>
+
         <aside id="rightModuleBar">
             <a class="moduleName active" id="btnToggleSections">Sections</a>
             <a class="moduleName active" id="btnToggleViewModes">View Modes</a>

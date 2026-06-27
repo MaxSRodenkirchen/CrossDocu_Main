@@ -1,11 +1,6 @@
 ---
 tags:
-  - CrossDocu
-state:
-  - "0"
-type:
-publish:
-  - public
+  - private
 ---
 
 %% Is this a comment already? %%
@@ -14,7 +9,7 @@ publish:
 
 ---
 
-
+Testing out stuff for my Writing Syntax here
 
 ## Subtitle
 

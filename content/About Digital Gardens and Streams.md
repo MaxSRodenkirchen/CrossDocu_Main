@@ -1,12 +1,5 @@
 ---
 tags:
-  - FH-Aachen
-  - CrossDocu
-state:
-  - "8"
-type:
-publish:
-  - public
 ---
 # Digital Gardens and Streams
 

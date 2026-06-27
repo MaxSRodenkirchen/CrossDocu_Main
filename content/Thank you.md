@@ -1,10 +1,5 @@
 ---
 tags:
-state:
-  - "10"
-type:
-publish:
-  - public
 ---
 # Thank you 🌼🐝🌞
 

@@ -1,18 +1,12 @@
 ---
 tags:
-  - FH-Aachen
   - moc
-  - Der-Baum-hat-Zeit
-state:
-  - "10"
-type:
-publish:
-  - public
+  - College-Summer-2026
 ---
 Welcome to my presentation
 
 1. [[Welcome to my Concept Presentation|Start here]]
-	
+
 
 Assignment for the semester
 
@@ -20,7 +14,7 @@ Assignment for the semester
 2. [[Mapping - Exploring Creative Technologies |Mapping the project ]]
 3. [[Capture and loop movement in p5.js |Example for an Experiment]]
 4. [[Questions behind ECT]]
-	
+
 %% - [[MVP - Exploring Creative Technologies |What is the content?]] %%
 
 About the medium 

@@ -1,11 +1,6 @@
 ---
 tags:
-  - TouchDesigner
-state:
-  - "0"
-type:
-publish:
-  - public
+  - Learning-TouchDesigner
 ---
 # 102 – TOPs: Working with Images
 

@@ -1,12 +1,6 @@
 ---
 tags:
   - Light-and-Shadow
-  - Der-Baum-hat-Zeit
-state:
-  - "0"
-type:
-publish:
-  - public
 ---
 # Manipulating Light 
 

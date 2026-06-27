@@ -1,11 +1,6 @@
 ---
 tags:
-  - Der-Baum-hat-Zeit
-state:
-  - "0"
-type:
-publish:
-  - public
+  - private
 ---
 # Design concept for **Exploring Creative Technologies**
 
@@ -15,6 +10,8 @@ The content might **get confusing** to people!
 The content also might **get complicated.**
 People should understand quickly and get inspired. 
 Support exchange!
+[[kjadjsnkd]]
+
 
 **That's why it needs**
 1. An easy-to-understand overview

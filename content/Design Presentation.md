@@ -1,10 +1,5 @@
 ---
 tags: moc
-state:
-  - "0"
-type:
-publish:
-  - public
 ---
 Design Concept
 

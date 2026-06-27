@@ -1,12 +1,6 @@
 ---
 tags:
   - CrossDocu
-state:
-  - "2"
-type:
-  - Documentation
-publish:
-  - public
 ---
 
 MOCs = curated lists

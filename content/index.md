@@ -1,13 +1,6 @@
 ---
 tags:
   - CrossDocu
-state:
-  - "4"
-type:
-  - Synthesis
-  - 6 Communication
-publish:
-  - public
 ---
 
 

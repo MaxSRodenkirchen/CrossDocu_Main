@@ -1,10 +1,5 @@
 ---
 tags:
-state:
-  - "0"
-type:
-publish:
-  - public
 ---
 # Quick Feedback Effect in Touchdesigner
 

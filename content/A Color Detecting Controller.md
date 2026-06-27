@@ -1,11 +1,6 @@
 ---
 tags:
   - Want-to-Learn
-state:
-  - "0"
-type:
-publish:
-  - public
 ---
 # Building a Color Detection Controller
 

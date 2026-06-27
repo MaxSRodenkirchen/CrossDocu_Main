@@ -1,13 +1,6 @@
 ---
 tags:
   - Want-to-Learn
-  - Audiosynthesis
-  - TouchDesigner
-state:
-  - "0"
-type:
-publish:
-  - public
 ---
 # Touchdesigner to VCV Rack
 

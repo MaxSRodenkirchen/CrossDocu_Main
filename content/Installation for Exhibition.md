@@ -1,10 +1,5 @@
 ---
 tags:
-state:
-  - "0"
-type:
-publish:
-  - public
 ---
 # Developing an Installation for the Exhibition 
 

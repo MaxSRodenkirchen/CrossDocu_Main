@@ -1,16 +1,14 @@
 ---
 tags:
   - CrossDocu
-state:
-  - "1"
-type:
-  - 3-Ideate
-publish:
-  - public
 ---
 # Extend your PKM with CrossDocu
 
-Maybe you don't want to write your own PKM with CrossDocu rules in mind. You want to have all the flexibility. 
+Imagine you could use single files of your Personal Knowledge Management System for publishing, presenting or printing. For that you could use CrossDocu, a cross-publishing Tool. But a current problem is that for using CrossDocu your notes would need to be written in a certain manner. How could we convert these notes so they can be used for that?
+
+If you wonder what CrossDocu is: [[The idea behind CrossDocu]]
+
+### Thoughts on possible conversion from your private system to a public system
 
 What if there was a **"Content Loader" to CrossDocu** which also detects errors such as unlinked notes or missing attributes for CrossDocu to work. That way you could have your own PKM and publish only relevant notes. 
 

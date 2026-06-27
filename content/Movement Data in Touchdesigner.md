@@ -1,12 +1,3 @@
----
-tags:
-  - Exploring-Creative-Technologies
-state:
-  - "3"
-type:
-publish:
-  - public
----
 # Body Controls - Movement Data in Touchdesigner
 #### How can we use movement data from the webcam to control parameters in Touchdesigner?
 

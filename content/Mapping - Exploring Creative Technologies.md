@@ -1,12 +1,3 @@
----
-tags:
-  - Exploring-Creative-Technologies
-state:
-  - "10"
-type:
-publish:
-  - public
----
 ![[Mapping ETC.png]]
 
 ![[MappingECT.jpeg]]

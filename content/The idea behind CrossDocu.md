@@ -1,12 +1,6 @@
 ---
 tags:
   - CrossDocu
-state:
-  - "10"
-type:
-  - 3-Ideate
-publish:
-  - public
 ---
 ![[CrossDocu_dieIdee.png]]
 

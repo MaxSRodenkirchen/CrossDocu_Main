@@ -8,9 +8,10 @@
 
     font: var(--font-mono-small);
     overflow: auto;
-        scrollbar-width: none;
+    scrollbar-width: none;
 
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     height: 100%;
   }
@@ -57,15 +58,15 @@
     display: grid;
     grid-template-columns: max-content 1fr;
     align-items: start;
-    padding:  0 ;
+    padding: 0;
     padding-left: var(--gapSmallest);
     border-bottom: var(--lineWeight) dashed var(--bgLines);
     border-left: var(--lineWeight) dashed var(--bgLines);
   }
 
-  #sections li > ol {
+  #sections li>ol {
     grid-column: 1 / -1;
-    
+
   }
 
   #sections li::before {
@@ -74,7 +75,7 @@
     opacity: .5;
     font-size: 12px;
     margin-right: var(--gapSmall);
-    
+
   }
 
   #sections a {

@@ -1,11 +1,6 @@
 ---
 tags:
-  - TouchDesigner
-state:
-  - "0"
-type:
-publish:
-  - public
+  - Learning-TouchDesigner
 ---
 # 103 – CHOPs: Working With Signals
 

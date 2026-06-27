@@ -1,13 +1,3 @@
----
-tags:
-  - FH-Aachen
-  - Exploring-Creative-Technologies
-state:
-  - "4"
-type:
-publish:
-  - public
----
 # Questions behind Exploring Creative Technologies
 
 - What are possibilities and patterns of creative technologies and how can we use them in our design practice? 

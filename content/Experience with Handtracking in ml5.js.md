@@ -1,13 +1,7 @@
 ---
 tags:
-  - Creative-Coding
   - AI
   - Tracking-Movement
-state:
-  - "9"
-type:
-publish:
-  - public
 ---
 # Experiences and issues using the HandPose model in ml5.js
 

@@ -1,10 +1,7 @@
 ---
 tags:
-state:
-  - "0"
-type:
-publish:
-  - public
+  - College-Summer-2026
+  - About-this-Digital-Garden
 ---
 
 

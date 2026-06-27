@@ -150,6 +150,11 @@
   text-decoration: none;
 }
 
+.linkInactive {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .externalLink {
   /* font-family: "Graebenbach Mono Regular", monospace; */
   text-decoration: underline dotted;

@@ -2,11 +2,6 @@
 tags:
   - Output-Devices
   - Light-and-Shadow
-state:
-  - "7"
-type:
-publish:
-  - public
 ---
 # Basic projection mapping in Touchdesigner
 

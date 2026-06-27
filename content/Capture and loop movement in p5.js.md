@@ -1,12 +1,7 @@
 ---
 tags:
   - Creative-Coding
-state:
-  - "4"
-type:
-  - 4-Prototype
-publish:
-  - public
+  - Tracking-Movement
 ---
 # Capture and loop movement in p5.js
 

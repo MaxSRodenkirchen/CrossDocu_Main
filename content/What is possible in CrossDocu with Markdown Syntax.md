@@ -1,11 +1,5 @@
 ---
 tags:
-  - Markdown
-state:
-  - "10"
-type:
-publish:
-  - public
 ---
 [[Writing Conventions in CrossDocu]]
 # Markdown Showcase & Tutorial (AI generiert)

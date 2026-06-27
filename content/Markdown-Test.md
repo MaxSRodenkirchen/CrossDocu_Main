@@ -1,11 +1,6 @@
 ---
 tags:
   - CrossDocu
-state:
-  - "0"
-type:
-publish:
-  - public
 ---
 
 # H1 - Note Title

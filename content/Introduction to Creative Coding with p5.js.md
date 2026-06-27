@@ -1,13 +1,6 @@
 ---
 tags:
   - Creative-Coding
-state:
-  - "9"
-type:
-  - Explaining
-  - Teaching
-publish:
-  - public
 ---
 
 # Introduction to Creative Coding with p5.js

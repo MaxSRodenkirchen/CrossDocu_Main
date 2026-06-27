@@ -1,11 +1,6 @@
 ---
 tags:
-  - Der-Baum-hat-Zeit
-state:
-  - "10"
-type:
-publish:
-  - public
+  - College-Summer-2026
 ---
 # Tasks and Timetable
 
@@ -17,6 +12,7 @@ One month left until final presentation and exhibition.
 
 Priority List:
 1. [[Installation for Exhibition|Develop Installation for Exhibition]]
+2. Have a working base version of the Digital Garden
 
 
 

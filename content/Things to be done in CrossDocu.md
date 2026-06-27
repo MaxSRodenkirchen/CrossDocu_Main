@@ -1,10 +1,5 @@
 ---
 tags:
-state:
-type:
-  - 3-Ideate
-publish:
-  - public
 ---
 # What are things to be done in CrossDocu?
 

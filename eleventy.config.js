@@ -159,12 +159,26 @@ export default function (eleventyConfig) {
         if (/<[a-z][\s\S]*>/i.test(content)) {
             return content.replace(/<a\s+([^>]*href=["']([^"']*)["']([^>]*))>/gi, (match, body, href) => {
                 const isExternal = /^(https?:)?\/\//.test(href);
-                const className = isExternal ? 'externalLink' : 'internalLink';
+                let className = isExternal ? 'externalLink' : 'internalLink';
+                let extraAttrs = '';
+
+                if (!isExternal && href && !href.startsWith('#')) {
+                    let pageName = decodeURIComponent(href).replace(/^\/?\.\//, '').replace(/\/$/, '');
+                    if (pageName && pageName !== '/') {
+                        const filePathMd = path.join(process.cwd(), 'content', pageName + '.md');
+                        const filePathExact = path.join(process.cwd(), 'content', pageName);
+                        if (!fs.existsSync(filePathMd) && !fs.existsSync(filePathExact)) {
+                            className += ' linkInactive';
+                            extraAttrs = ' title="To be Written"';
+                            body = body.replace(/href=["'][^"']*["']/i, '');
+                        }
+                    }
+                }
 
                 if (/class=["']/i.test(body)) {
-                    return `<a ${body.replace(/class=(["'])(.*?)\1/gi, `class=$1$2 ${className}$1`)}>`;
+                    return `<a ${body.replace(/class=(["'])(.*?)\1/gi, `class=$1$2 ${className}$1`)}${extraAttrs}>`;
                 } else {
-                    return `<a class="${className}" ${body}>`;
+                    return `<a class="${className}"${extraAttrs} ${body}>`;
                 }
             });
         }

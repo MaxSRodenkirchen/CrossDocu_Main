@@ -1,14 +1,12 @@
 ---
 tags:
-  - Der-Baum-hat-Zeit
-  - CrossDocu
-  - Exploring-Creative-Technologies
-state:
-  - "8"
-type:
-publish:
-  - public
+  - College-Summer-2026
+  - About-this-Digital-Garden
 ---
+# Mini User Journeys
+
+This was made to imagine needs of people and possible barriers of this webplattform. 
+
 ![[userjourney_wrede.png]]
 
 ![[userjourney_nacken.png]]

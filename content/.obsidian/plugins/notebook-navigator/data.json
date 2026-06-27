@@ -4,7 +4,26 @@
       "id": "default",
       "name": "Default",
       "fileVisibility": "supported",
-      "propertyKeys": [],
+      "propertyKeys": [
+        {
+          "key": "publish",
+          "showInNavigation": true,
+          "showInList": false,
+          "showInFileMenu": false
+        },
+        {
+          "key": "state",
+          "showInNavigation": true,
+          "showInList": false,
+          "showInFileMenu": false
+        },
+        {
+          "key": "type",
+          "showInNavigation": true,
+          "showInList": false,
+          "showInFileMenu": false
+        }
+      ],
       "hiddenFolders": [],
       "hiddenTags": [],
       "hiddenFileNames": [],
@@ -20,10 +39,6 @@
         {
           "type": "note",
           "path": "Design Presentation.md"
-        },
-        {
-          "type": "note",
-          "path": "Design Concept.md"
         },
         {
           "type": "note",
@@ -212,7 +227,7 @@
   "showTagIcons": true,
   "showAllTagsFolder": true,
   "showUntagged": true,
-  "scopeTagsToCurrentContext": false,
+  "scopeTagsToCurrentContext": true,
   "tagSortOrder": "alpha-asc",
   "inheritTagColors": true,
   "keepEmptyTagsProperty": false,
@@ -507,7 +522,7 @@
   "fileColors": {
     "Journal.md": "#06b6d4",
     "Concept Presentation.md": "#eab308",
-    "Design Concept.md": "#f59e0b",
+    "Design Concept.md": "#ef4444",
     "Design Presentation.md": "#f97316"
   },
   "fileBackgroundColors": {},
@@ -518,7 +533,9 @@
   "folderTreeSortOverrides": {},
   "folderAppearances": {},
   "tagIcons": {},
-  "tagColors": {},
+  "tagColors": {
+    "moc": "#64748b"
+  },
   "tagBackgroundColors": {},
   "tagSortOverrides": {},
   "tagTreeSortOverrides": {},
@@ -530,7 +547,10 @@
   "propertyTreeSortOverrides": {},
   "propertyAppearances": {},
   "virtualFolderColors": {},
-  "virtualFolderBackgroundColors": {},
+  "virtualFolderBackgroundColors": {
+    "tags-root": "#cec09427",
+    "shortcuts-root": "#d8e2f225"
+  },
   "navigationSeparators": {},
   "userColors": [
     "#ffffff",

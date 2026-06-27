@@ -1,12 +1,6 @@
 ---
 tags:
   - moc
-  - Exploring-Creative-Technologies
-state:
-  - "9"
-type:
-publish:
-  - public
 ---
 CW 21
 

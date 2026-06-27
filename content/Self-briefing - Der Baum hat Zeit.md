@@ -1,13 +1,6 @@
 ---
 tags:
-  - FH-Aachen
-  - Der-Baum-hat-Zeit
-state:
-  - "10"
-type:
-  - 
-publish:
-  - public
+  - College-Summer-2026
 ---
 
 # What is the plan for this semester - The self-briefing

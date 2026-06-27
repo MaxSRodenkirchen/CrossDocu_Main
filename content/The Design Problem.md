@@ -1,12 +1,7 @@
 ---
 tags:
-  - Exploring-Creative-Technologies
-  - Der-Baum-hat-Zeit
-state:
-  - "0"
-type:
-publish:
-  - public
+  - College-Summer-2026
+  - About-this-Digital-Garden
 ---
 # Design problem
 

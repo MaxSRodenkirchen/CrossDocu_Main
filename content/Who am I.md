@@ -1,13 +1,5 @@
 ---
 tags:
-  - FH-Aachen
-state:
-  - "10"
-type:
-  - Synthesis
-  - 6 Communication
-publish:
-  - public
 ---
 
 # Kurzvorstellung 

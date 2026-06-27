@@ -1,11 +1,6 @@
 ---
 tags:
   - Creative-Coding
-state:
-  - "1"
-type:
-publish:
-  - public
 ---
 # Creating a Webpage for collecting and visualizing peoples definitions on Creative Coding
 
