@@ -1,7 +1,6 @@
 ---
 title: MD-Test - Exploring Creative Technologies
 tags:
-  - TouchDesigner
   - Creative-Coding
   - Output-Devices
 ---

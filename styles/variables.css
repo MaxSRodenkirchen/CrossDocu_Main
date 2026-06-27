@@ -11,11 +11,12 @@
   --color-alpha: #ffffff7a;
 
 
-  --bgLines: #33393f61;
+  --bgLines: #33393f27;
   --bg: #F5EDDF;
   --bgLight: #FFF7E8;
   --internalLink: #BA5E5E;
   --internalInteraction: #33393f;
+  /* 3F464F */
   --externalLink: #535D6A;
 
   --gapBig: 90px;
@@ -31,15 +32,15 @@
   --font-body: 22px/160% "Graebenbach Regular", sans-serif;
 
   /* CSS HEX */
---old-lace: #fff7e8ff;
---old-lace-2: #f5eddfff;
---dust-grey: #d7d5ceff;
---silver: #b9bdbcff;
---slate-grey: #738290ff;
---blue-slate: #535e68ff;
---jet-black: #33393fff;
---chocolate-plum: #774c4fff;
---lobster-pink: #ba5e5eff;
+  --old-lace: #fff7e8ff;
+  --old-lace-2: #f5eddfff;
+  --dust-grey: #d7d5ceff;
+  --silver: #b9bdbcff;
+  --slate-grey: #738290ff;
+  --blue-slate: #535e68ff;
+  --jet-black: #33393fff;
+  --chocolate-plum: #774c4fff;
+  --lobster-pink: #ba5e5eff;
 
 }
 
@@ -97,4 +98,24 @@
 @font-face {
   font-family: "Graebenbach Mono Bold";
   src: url(/fonts/GraebenbachMono-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Ease Display Regular";
+  src: url(/fonts/EaseDisplayTRIAL-Regular.otf);
+}
+
+@font-face {
+  font-family: "Ease Display Medium";
+  src: url(/fonts/EaseDisplayTRIAL-Medium.otf);
+}
+
+@font-face {
+  font-family: "Ease Standard Regular";
+  src: url(/fonts/EaseStandardTRIAL-Regular.otf);
+}
+
+@font-face {
+  font-family: "Ease Standard Medium";
+  src: url(/fonts/EaseStandardTRIAL-Medium.otf);
 }

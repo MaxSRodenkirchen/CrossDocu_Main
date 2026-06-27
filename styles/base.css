@@ -51,7 +51,7 @@
     background-color: var(--bg);
   }
 
-  
+
   /* Fullscreen specific styles */
   #mainContainer:fullscreen {
     background-color: var(--color-4);
@@ -214,13 +214,10 @@
   color: var(--bgLight);
 }
 
-/* Meteor Icons Configuration */
+/* Carbon Icons Configuration */
 .i {
-  stroke-width: var(--i-stroke, calc(var(--lineWeight)*2));
-  width: var(--i-size, 14px);
-  height: var(--i-size, 14px);
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
+  width: var(--i-size, 16px);
+  height: var(--i-size, 16px);
+  fill: currentColor;
+  flex-shrink: 0;
 }

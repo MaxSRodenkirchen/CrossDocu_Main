@@ -2,37 +2,37 @@
 
     <div class="sidebar-group moc-sidebar-container" id="sidebar-default">
 
-    <h1>Ordered Lists</h1>
-    <ol>
-        <li>
-            <ol>
-                {% for moc in collections.moc %}
+        <h1>Ordered Lists</h1>
+        <ol>
+            <li>
+                <ol>
+                    {% for moc in collections.moc %}
                     <li>
                         <a data-moc-btn-url="{{ moc.url }}" onclick="switchMoc('{{ moc.url }}')">
                             <p>{{ moc.data.title | safe }}</p>
                         </a>
                     </li>
-                {% endfor %}
-                <li>
-                    <a data-moc-btn-url="/all-notes/" onclick="switchMoc('/all-notes/')">
-                        <p>All Notes</p>
-                    </a>
-                </li>
-            </ol>
-        </li>
-    </ol>
+                    {% endfor %}
+                    <li>
+                        <a data-moc-btn-url="/all-notes/" onclick="switchMoc('/all-notes/')">
+                            <p>All Notes</p>
+                        </a>
+                    </li>
+                </ol>
+            </li>
+        </ol>
 
 
 
     </div>
 
     {% for moc in collections.moc %}
-        <div class="sidebar-group moc-sidebar-container" data-moc-url="{{ moc.url }}" style="display: none;">
-            {{ moc.templateContent | mocSidebar(collections.all) | safe }}
+    <div class="sidebar-group moc-sidebar-container" data-moc-url="{{ moc.url }}" style="display: none;">
+        {{ moc.templateContent | mocSidebar(collections.all) | safe }}
 
 
-        </div>
-        
+    </div>
+
     {% endfor %}
 
     <div class="sidebar-group moc-sidebar-container" data-moc-url="/all-notes/" style="display: none;">
@@ -41,9 +41,9 @@
             <li>
                 <ol>
                     {% set allNotesList %}
-                        {% for post in collections.posts %}
-                            <li><a href="{{ post.url }}">{{ post.data.title | default(post.fileSlug) }}</a></li>
-                        {% endfor %}
+                    {% for post in collections.posts %}
+                    <li><a href="{{ post.url }}">{{ post.data.title | default(post.fileSlug) }}</a></li>
+                    {% endfor %}
                     {% endset %}
                     {{ allNotesList | mocSidebar(collections.all) | safe }}
                 </ol>
@@ -61,16 +61,16 @@
             <li>
                 <ol>
                     {% for item in collections | sortTagsByCount %}
-                        {% set tag = item.tag %}
-                        {% set posts = item.posts %}
-                            <li>
-                                <a data-tag-btn-name="{{ tag }}" onclick="switchTag('{{ tag }}')">
-                                    <div class="tag">
-                                        <span class="tag-count">{{ posts.length }}</span>
-                                        <p>{{ tag | cleanTags}}</p>
-                                    </div>
-                                </a>
-                            </li>
+                    {% set tag = item.tag %}
+                    {% set posts = item.posts %}
+                    <li>
+                        <a data-tag-btn-name="{{ tag }}" onclick="switchTag('{{ tag }}')">
+                            <div class="tag">
+                                <span class="tag-count">{{ posts.length }}</span>
+                                <p>{{ tag | cleanTags}}</p>
+                            </div>
+                        </a>
+                    </li>
                     {% endfor %}
                 </ol>
             </li>
@@ -78,26 +78,26 @@
     </div>
 
     {% for item in collections | sortTagsByCount %}
-        {% set tag = item.tag %}
-        {% set posts = item.posts %}
-            <div class="tag-sidebar-group moc-sidebar-container" data-tag-name="{{ tag }}" style="display: none;">
-                <h1 onclick="switchTag('')" style="cursor: pointer;" title="Back to Tags"> {{ tag | cleanTags}}</h1>
+    {% set tag = item.tag %}
+    {% set posts = item.posts %}
+    <div class="tag-sidebar-group moc-sidebar-container" data-tag-name="{{ tag }}" style="display: none;">
+        <h1 onclick="switchTag('')" style="cursor: pointer;" title="Back to Tags"> {{ tag | cleanTags}}</h1>
+        <ol>
+            <li>
                 <ol>
+                    {% set tagNotesList %}
+                    {% for post in posts %}
                     <li>
-                        <ol>
-                            {% set tagNotesList %}
-                                {% for post in posts %}
-                                    <li>
-                                        <a href="{{ post.url }}">{{ post.data.title | default(post.fileSlug) }}</a>
-                                    </li>
-                                {% endfor %}
-                            {% endset %}
-                            {{ tagNotesList | mocSidebar(collections.all) | safe }}
-                        </ol>
+                        <a href="{{ post.url }}">{{ post.data.title | default(post.fileSlug) }}</a>
                     </li>
+                    {% endfor %}
+                    {% endset %}
+                    {{ tagNotesList | mocSidebar(collections.all) | safe }}
                 </ol>
-            </div>
-        
+            </li>
+        </ol>
+    </div>
+
     {% endfor %}
 </div>
 
@@ -107,43 +107,57 @@
 
 <div id="ect">
 
-    <h1 id="ect-title">Exploring Creative Technologies</h1>
+    <div id="ect-title">
+        {# {% icon "home" %} #}
+        <h1>Exploring Creative Technologies</h1>
+    </div>
 
-    <ul class = "allLists">
+
+    <ul class="allLists">
+
+        <hr class="gap">
 
         {% for moc in collections.moc %}
-        <li class="aList aMocList"> 
-            <div class = "aListTitle" >
-                {% icon "bookmark-alt" %}
-                <h3 id="aMocName">{{ moc.data.title }}</h3>
+        <li class="aList aMocList">
+            <div class="aListTitle">
+                {% icon "chevron--right" %}
+                <div>
+                    <h3 id="aMocName">{{ moc.data.title }}</h3>
+                    {% icon "ibm--webmethods-api-studio" %}
+                </div>
             </div>
+
             <ol class="listOfContent" style="display: none;">
                 {{ moc.templateContent | mocSidebar(collections.all) | safe }}
-            </ol>    
+            </ol>
         </li>
         {% endfor %}
-        
+        <div class="gap"></div>
 
         {% for item in collections | sortTagsByCount %}
-            {% set tag = item.tag %}
-            {% set posts = item.posts %}
-            <li class="aList aTagList"> 
-                <div class = "aListTitle" >
-                    {% icon "ellipsis-vertical" %}
+        {% set tag = item.tag %}
+        {% set posts = item.posts %}
+        <li class="aList aTagList">
+            <div class="aListTitle">
+                {% icon "chevron--right" %}
+                <div>
                     <h3 id="aTagName">{{ tag | cleanTags }}</h3>
+                    {% icon "ibm--webmethods-integration-server" %}
                 </div>
-                
-                <ul class="listOfContent" style="display: none;">
-                    {% for post in posts %}
-                        <li class="contentLink">
-                            {% icon "chevron-right" %}
-                            <a href="{{ post.url }}">{{ post.data.title | default(post.fileSlug) }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </li>
+            </div>
+
+
+            <ul class="listOfContent" style="display: none;">
+                {% for post in posts %}
+                <li class="contentLink">
+                    {% icon "choose-item" %}
+
+                    <a href="{{ post.url }}">{{ post.data.title | default(post.fileSlug) }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
         {% endfor %}
     </ul>
 
 </div>
-

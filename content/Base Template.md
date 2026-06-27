@@ -1,6 +1,6 @@
 ---
 tags:
-  - untagged
+  - CrossDocu
 state:
   - "0"
 type:

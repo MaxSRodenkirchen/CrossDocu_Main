@@ -1,6 +1,6 @@
 ---
 tags:
-  - work-in-progress
+  - Want-to-Learn
 state:
   - "0"
 type:

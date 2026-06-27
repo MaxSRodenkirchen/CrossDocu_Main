@@ -1,6 +1,5 @@
 ---
 tags:
-  - untagged
 state:
 type:
   - 3-Ideate

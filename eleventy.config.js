@@ -1,6 +1,7 @@
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import wikilinksPlus from "markdown-it-wikilinks-plus";
-
+import fs from "fs";
+import path from "path";
 
 export default function (eleventyConfig) {
 
@@ -139,7 +140,7 @@ export default function (eleventyConfig) {
         html = html.replace(/<ol([^>]*)>/gi, '<ol class="contentSections"$1>');
         html = html.replace(/<ul([^>]*)>/gi, '<ul class="contentSections"$1>');
 
-        const chevronIcon = `<svg class="i i-chevron-right"><use href="/fonts/icons/svg-sprite.svg#chevron-right"/></svg>`;
+        const chevronIcon = `<svg class="i "><use href="/fonts/icons/svg-sprite.svg#choose-item"/></svg>`;
 
         // All list items get contentLink initially
         html = html.replace(/<li([^>]*)>/gi, `<li class="contentLink"$1>\n${chevronIcon} `);
@@ -147,7 +148,7 @@ export default function (eleventyConfig) {
         // Remove top-level list wrappers (assuming they start at the beginning of a line from markdown-it)
         html = html.replace(/^<(ol|ul) class="contentSections"[^>]*>[\r\n]*/gm, '');
         html = html.replace(/^<\/(ol|ul)>[\r\n]*/gm, '');
-        
+
         return html;
     });
 

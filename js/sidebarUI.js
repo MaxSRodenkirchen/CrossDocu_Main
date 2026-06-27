@@ -313,6 +313,25 @@ export function openLists() {
     const aLists = document.querySelectorAll('.aList');
     const activeListIdentifier = localStorage.getItem('activeAccordionList');
 
+    function updateStates() {
+        const hasActive = Array.from(aLists).some(l => l.classList.contains('active'));
+        aLists.forEach(list => {
+            if (hasActive) {
+                if (!list.classList.contains('active')) {
+                    list.classList.add('hide');
+                    list.classList.remove('default');
+                } else {
+                    list.classList.remove('hide');
+                    list.classList.remove('default');
+                }
+            } else {
+                list.classList.remove('hide');
+                list.classList.remove('active');
+                list.classList.add('default');
+            }
+        });
+    }
+
     aLists.forEach(list => {
         const contentList = list.querySelector('.listOfContent');
         const titleElement = list.querySelector('.aListTitle h3');
@@ -348,13 +367,21 @@ export function openLists() {
                 // If it was active, it's now closed, so clear localStorage
                 localStorage.removeItem('activeAccordionList');
             }
+
+            updateStates();
         });
     });
+
+    // Initiale Zustände setzen (z.B. aus dem localStorage)
+    updateStates();
 }
 
 export function activeLink() {
     const currentPath = decodeURI(window.location.pathname);
     const contentLinks = document.querySelectorAll('.contentLink');
+    const allALists = document.querySelectorAll('.aList');
+    
+    allALists.forEach(list => list.classList.remove('containsActive'));
     
     contentLinks.forEach(linkContainer => {
         const link = linkContainer.querySelector('a');
@@ -370,6 +397,10 @@ export function activeLink() {
             const linkPath = decodeURI(new URL(link.href).pathname);
             if (linkPath === currentPath || linkPath === currentPath + '/' || linkPath + '/' === currentPath) {
                 linkContainer.classList.add('active');
+                const parentList = linkContainer.closest('.aList');
+                if (parentList) {
+                    parentList.classList.add('containsActive');
+                }
             } else {
                 linkContainer.classList.remove('active');
             }

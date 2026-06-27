@@ -3,37 +3,63 @@
     overflow-y: auto;
     width: 350px;
     flex-shrink: 0;
-    font-family: "Graebenbach Regular", sans-serif;
-    background-color: var(--bg);
-    /* display: flex;
-    flex-direction: column; */
+    font-family: "Ease Standard Regular", sans-serif;
+    background-color: var(--bgLight);
     scrollbar-width: none;
+    margin-left: var(--gapSmall);
+    color: var(--internalInteraction);
+
+    /* height: 90vh;
+    position: absolute;
+    top: 20px;
+    left: 20px; */
+    /* border: var(--lineWeight) solid var(--internalInteraction); */
+    /* box-shadow: var(--gapSmallest) var(--gapSmallest) var(--internalInteraction); */
   }
 
   #ect {
     margin-top: var(--gapSmall);
     padding: 0;
+    overflow-x: visible;
+    text-align: left;
+    padding-bottom: 50vh;
   }
 
-  #ect-title{
-    font-family: "Favorite Lining Bold", sans-serif;
-    padding: var(--gapSmaller) var(--gapSmall);
+  #ect-title {
+    display: flex;
+    align-items: center;
+    background-color: var(--bgLight);
+
+    /* border-top: var(--lineWeight) dashed var(--internalInteraction); */
+    /* border-bottom: var(--lineWeight) dashed var(--internalInteraction); */
+    padding-left: var(--gapSmall);
+    padding-right: var(--gapSmall);
+    padding-top: var(--gapSmall);
+    padding-bottom: var(--gapSmall);
+  }
+
+  #ect-title h1 {
+    font-family: "Ease Display Regular", sans-serif;
+    font-size: 34px;
+    line-height: 100%;
+    /* padding-left: var(--gapSmaller); */
     margin: 0;
-    border-top: var(--lineWeight) solid var(--internalInteraction);
-    border-bottom: var(--lineWeight) solid var(--internalInteraction);
   }
 
-  .aList{
+  .aList {
+    background-color: var(--bg);
+
     list-style: none;
-    margin-left:var(--gapSmaller);
+    /* margin-left: var(--gapSmaller); */
     /* padding-bottom: var(--gapSmaller); */
-    /* border-bottom: var(--lineWeight) dashed var(--internalInteraction);
-    border-left: var(--lineWeight) dashed var(--internalInteraction); */
-    transition: margin .2s;
+    border-bottom: var(--lineWeight) dashed var(--internalInteraction);
+    /* border-left: var(--lineWeight) dashed var(--internalInteraction); */
+    transition: all 2ms;
   }
+
 
   .aListTitle h3 {
-    font-family: "Graebenbach Regular", sans-serif;
+    font-family: "Ease Display Regular", sans-serif;
     font-size: 20px;
     margin: 0;
     font-weight: 300;
@@ -41,59 +67,115 @@
   }
 
   .aList:hover,
-  .aList.active{
+  .aList.active {
     background-color: var(--bgLight);
+    color: var(--internalInteraction) !important;
+  }
 
-    }
+  .aList.hide {
+    color: var(--silver);
+  }
 
-    .aList.active{
-      /* margin-top: var(--gapSmaller);
-      margin-bottom: var(--gapSmaller); */
-      /* border-bottom: var(--lineWeight) solid var(--internalInteraction);
+  .aList.containsActive .aListTitle {
+    color: var(--internalLink) !important;
+  }
+
+  .aList.active {
+    /* margin-top: var(--gapSmaller);
+    margin-bottom: var(--gapSmaller); */
+    /* border-bottom: var(--lineWeight) solid var(--internalInteraction);
       border-top: var(--lineWeight) solid var(--internalInteraction); */
-    }
+  }
 
-   .aList.active .aListTitle{
-        /* border-bottom: var(--lineWeight) solid var(--internalInteraction); */
+  .aList.active .aListTitle {
+    border-bottom: var(--lineWeight) solid var(--internalInteraction);
+    /* color: var(--internalLink); */
 
-   }
+  }
 
-  .allLists, .listOfContent {
+
+  .allLists,
+  .listOfContent {
     padding: 0;
     margin: 0;
   }
 
-  .aListTitle{
+  .aListTitle {
     display: flex;
-    align-items: center;  
-    gap: var(--gapSmaller);
+    margin: auto;
+    align-items: center;
+    justify-content: flex-start;
     padding: var(--gapSmaller) var(--gapSmaller);
+    width: 100%;
     cursor: pointer;
-
+    gap: var(--gapSmaller);
   }
+
+  .aListTitle>div {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gapSmaller);
+    /* padding: var(--gapSmaller) var(--gapSmaller); */
+    cursor: pointer;
+    /* border: 1px solid red; */
+  }
+
+  .aList.active .aListTitle svg.i-chevron--right {
+    transform: rotate(90deg);
+  }
+
+  .allLists hr {
+    border: none;
+  }
+
+  .allLists .gap {
+    border: none;
+    margin: 0;
+    height: var(--gapSmaller);
+    background-color: var(--bgLight);
+    border-bottom: var(--lineWeight) solid var(--internalInteraction) !important;
+    /* margin-top: var(--gapSmaller); */
+    /* padding: 20px 0;
+    height: 200px; */
+  }
+
+
+
 
   /*2. EBENE */
 
-  .listOfContent{
+  .listOfContent {
     list-style: none;
     margin-left: var(--gapSmaller);
     margin: 0 var(--gapSmaller);
-
+    margin-bottom: var(--gapSmallest);
   }
 
-  .contentLink, .listSection{
+  .contentLink,
+  .listSection {
     font-size: 15px;
     display: flex;
-    align-items: flex-start;  
-    gap: var(--gapSmaller); 
-    padding: var(--gapSmaller) var(--gapSmaller);
+    align-items: center;
+    gap: var(--gapSmaller);
+    padding-left: var(--gapSmaller);
     margin: 0;
-    /* border-bottom: var(--lineWeight) dashed var(--internalInteraction);
-    border-left: var(--lineWeight) dashed var(--internalInteraction); */
+    border-bottom: var(--lineWeight) dashed var(--internalInteraction);
+    border-left: var(--lineWeight) dashed var(--internalInteraction);
   }
 
-  .contentLink{
-        color: var(--internalLink);
+  .listSection {
+    font-size: 12px;
+    padding: var(--gapSmaller) var(--gapSmaller);
+    color: var(--silver);
+  }
+
+  .contentLink {
+    /* color: var(--internalLink); */
+    /* text-decoration: var(--bgLines) dashed underline .04px !important; */
+    /* text-decoration-thickness: ; */
+    transition: margin 2ms;
   }
 
   .contentLink svg {
@@ -101,13 +183,20 @@
     flex-shrink: 0;
   }
 
-  .contentLink a{
+  .contentLink a {
     text-decoration: none;
     color: inherit;
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: var(--gapSmaller) 0;
   }
 
   .contentLink:hover,
-  .contentLink.active{
+  .contentLink.active {
+    /* margin-bottom: var(--gapSmaller); */
+    /* font-family: "Ease Standard Medium", sans-serif; */
+    color: var(--lobster-pink);
+
   }
 
 

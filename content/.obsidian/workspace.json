@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design Presentation.md",
+                "file": "MD-Test.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Design Presentation"
+              "title": "MD-Test"
             }
           }
         ]
@@ -220,13 +220,20 @@
   },
   "active": "562d1d712362cf14",
   "lastOpenFiles": [
+    "A Color Detecting Controller.md",
+    "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
+    "Things to be done in CrossDocu.md",
+    "Customized Editor for CrossDocu.md",
+    "Base Template.md",
+    "Installation for Exhibition.md",
+    "fnsjadn.md",
+    "Creative Patterns Taglist.md",
+    "Design Presentation.md",
     "icons/svg-sprite.svg",
     "icons",
     "Journal.md",
-    "Design Presentation.md",
     "Concept Presentation.md",
     "Color Detection in TD.md",
-    "A Color Detecting Controller.md",
     "In one sentence - Exploring Creative Technologies.md",
     "The Design Problem.md",
     "Movement Data in Touchdesigner.md",
@@ -242,13 +249,7 @@
     "TouchDesigner Lesson 102.md",
     "TouchDesigner Lesson 101.md",
     "Manipulating Light.md",
-    "Installation for Exhibition.md",
-    "Creative Patterns Taglist.md",
-    "Arduino Beginners Workshop.md",
-    "deleteMe.md",
     "images/color_detection_td.png",
-    "Capture and loop movement in p5.js.md",
-    "Thank you.md",
     "images/OnePager.png",
     "images/Mockup Exhibition 3.jpg",
     "images/Generated Image June 16, 2026 - 10_31PM.jpg",
@@ -256,7 +257,6 @@
     "images/Generated Image June 16, 2026 - 10_30PM.jpg",
     "images/Mockup Exhibition.jpg",
     "images/Generated Image June 16, 2026 - 10_27PM.jpg",
-    "images/OnePager3.png",
     "Content Map.canvas"
   ]
 }
