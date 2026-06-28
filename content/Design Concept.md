@@ -49,7 +49,7 @@ surrounding elements:
 
 - Gives an overview over the navigation options 
 - Gives some first insights into some content
-- Gives an impression / feeling of what [[In one sentence - Exploring Creative Technologies|ECT]] is about
+- Gives an impression / feeling of what [[In one sentence|ECT]] is about
 
 ### The moc navigation
 

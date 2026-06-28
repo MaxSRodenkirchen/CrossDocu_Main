@@ -2,6 +2,10 @@
 tags:
   - moc
 ---
+CW 20
+
+1. [[Arduino Beginners Workshop]]
+
 CW 21
 
 1. [[Mapping the Garden]]
@@ -16,7 +20,7 @@ CW 22: Concept Presentation
 CW 23
     
 1. [[Experience with Handtracking in ml5.js]]
-2. [[Movement Data in Touchdesigner]]
+2. [[Movement Detection in Touchdesigner]]
 3. [[TouchDesigner Lesson 101]]
 
 CW 24
@@ -32,12 +36,16 @@ CW 25: Design Presentation
 1. [[MD-Test]]
 2. [[TouchDesigner Lesson 103]]
 3. [[Design Presentation]]
-4. [[Color Detection in TD]]
+4. [[Creative Patterns Taglist]]
+5. [[Installation for Exhibition]]
+
 
 CW 26 
 
-1. [[Timetracking for Der Baum hat Zeit|Timetracking]] 
-2. [[Creative Patterns Taglist]]
+1. [[Projecting on Glass]]
+2. [[Building a Sever on an Android Device]]
+3. [[Color Detection in TD]]
+4. [[Webcam Movement Visualization in TD]]
 
 CW 27
 
@@ -51,9 +59,6 @@ CW 31
 
 following
 
-1. ways for interacting with a wall
-2. Building a Low-Tech Server
-3. Project Mapping
-4. Fetch Live Data
-5. [[A Color Detecting Controller]]
+1. [[A Color Detecting Controller]]
+2. [[Touchdesigner to VCV Rack]]
 

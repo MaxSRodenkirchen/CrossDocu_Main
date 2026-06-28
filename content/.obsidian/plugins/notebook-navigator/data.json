@@ -551,7 +551,9 @@
     "tags-root": "#cec09427",
     "shortcuts-root": "#d8e2f225"
   },
-  "navigationSeparators": {},
+  "navigationSeparators": {
+    "section:tags": true
+  },
   "userColors": [
     "#ffffff",
     "#d9d9d9",

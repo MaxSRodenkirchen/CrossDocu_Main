@@ -1,5 +1,7 @@
 ---
 tags:
+  - About-this-Digital-Garden
+  - Want-to-Learn
 ---
 # Learning in Public
 

@@ -113,7 +113,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Welcome to my Concept Presentation.md",
+                "file": "Webcam Movement Visualization in TD.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -128,16 +128,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Welcome to my Concept Presentation"
+              "title": "Webcam Movement Visualization in TD"
             }
           },
           {
-            "id": "dca0ac920934537c",
+            "id": "85cd4083a7b4ed52",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Writing Conventions in CrossDocu.md",
+                "file": "Self-briefing.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -152,16 +152,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Writing Conventions in CrossDocu"
+              "title": "Self-briefing"
             }
           },
           {
-            "id": "4a28c6ad436626a4",
+            "id": "283f89c2d125c00b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Questions behind ECT.md",
+                "file": "Journal.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -176,16 +176,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Questions behind ECT"
+              "title": "Journal"
             }
           },
           {
-            "id": "6308118b4afe990b",
+            "id": "87bbd12a08334add",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction to Creative Coding with p5.js.md",
+                "file": "Movement Detection in Touchdesigner.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -200,11 +200,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Introduction to Creative Coding with p5.js"
+              "title": "Movement Detection in Touchdesigner"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -267,11 +267,12 @@
               "title": "Notebook Navigator"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 752.0031242370605
+    "width": 945
   },
   "right": {
     "id": "0d88643e45ad4bee",
@@ -386,49 +387,47 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "templater-obsidian:Templater": false,
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "dca0ac920934537c",
+  "active": "283f89c2d125c00b",
   "lastOpenFiles": [
-    "Working with Live Data.md",
-    "Brief Self-Introduction.md",
-    "Questions behind ECT.md",
-    "Introduction to Creative Coding with p5.js.md",
-    "Welcome to my Concept Presentation.md",
-    "What is possible in CrossDocu with Markdown Syntax.md",
-    "The Idea Behind CrossDocu.md",
-    "User Journeys.md",
-    "Use Cases Moods.md",
-    "Touchdesigner to VCV Rack.md",
-    "TouchDesigner Lesson 103.md",
-    "TouchDesigner Lesson 101.md",
-    "TouchDesigner Lesson 102.md",
-    "Timetracking for Der Baum hat Zeit.md",
-    "Things to be done in CrossDocu.md",
-    "Thank you.md",
-    "The Design Problem.md",
-    "Styling System for CrossDocu.md",
-    "Structuring the Platform.md",
-    "Self-briefing - Der Baum hat Zeit.md",
-    "Projektideen - Der Baum hat Zeit.md",
+    "Building a Sever on an Android Device.md",
+    "images/PROTO_Workshop (1).jpeg",
+    "images/PROTO_Handout.jpeg",
+    "images/PROTO_Workshop (3).jpeg",
+    "images/PROTO_Workshop (2).jpeg",
+    "images/wiki.comphost.club.png",
+    "Alternative Interfaces.md",
+    "Manipulating Light.md",
+    "Projecting on Glass.md",
+    "Webcam Movement Visualization in TD.md",
     "Projection Mapping in Touchdesigner.md",
-    "Concept Presentation.md",
-    "MVP - Exploring Creative Technologies.md",
-    "Movement Data in Touchdesigner.md",
+    "Movement Detection in Touchdesigner.md",
+    "Feedback Effect in Touchdesigner.md",
+    "Color Detection in TD.md",
+    "A Color Detecting Controller.md",
+    "Connecting a Kinect 1 to TD.md",
+    "images/ArduinoWorkshop_1.jpeg",
+    "images/Projection_Light_Test (3).jpeg",
+    "images/Projection_Light_Test (2).jpeg",
+    "images/Projection_Light_Test (1).jpeg",
+    "images/ArduinoWorkshop_2.jpeg",
+    "Self-briefing.md",
+    "Timetracking.md",
+    "Customized Editor for CrossDocu.md",
+    "About Learning in Public.md",
+    "About Digital Gardens and Streams.md",
+    "In one sentence.md",
+    "MD-Test.md",
+    "Use Cases Moods.md",
+    "Brief Self-Introduction.md",
+    "Capture and loop movement in p5.js.md",
+    "Mapping the Garden.md",
+    "Journal.md",
+    "Introduction to Creative Coding with p5.js.md",
     "Installation for Exhibition.md",
     "Content Map.canvas",
-    "images/ArduinoWorkshop_2.jpeg",
-    "images/ArduinoWorkshop_1.jpeg",
-    "images/color_detection_td.png",
-    "images/CrossDocu_dieIdee.png",
-    "images/digitalStreams.png",
-    "images/firstKantanMapperTest.png",
-    "images/Magie Appleton - Digital Garden.png",
-    "images/MappingECT.jpeg",
-    "images/Mockup Exhibition 3.jpg",
-    "images/Mockup Handout 3.jpg",
     "icons"
   ]
 }

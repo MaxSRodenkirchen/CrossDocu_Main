@@ -1,5 +1,6 @@
 ---
 tags:
+  - CrossDocu
 ---
 # Why stick with Obsidian as an editor for CrossDocu?
 

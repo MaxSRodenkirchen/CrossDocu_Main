@@ -3,7 +3,7 @@ tags: moc
 ---
 Design Concept
 
-1. [[In one sentence - Exploring Creative Technologies |In one Sentence]]
+1. [[In one sentence|In one Sentence]]
 2. [[The Design Problem]]
 3. [[Design System]]
 

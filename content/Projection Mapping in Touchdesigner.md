@@ -1,8 +1,9 @@
 ---
 tags:
-  - Output-Devices
+  - Alternative-Output-Media
   - Light-as-a-Medium
   - Learning-TouchDesigner
+  - Multimedia-Installation
 ---
 # Basic projection mapping in Touchdesigner
 

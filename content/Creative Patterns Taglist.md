@@ -4,7 +4,7 @@ tags:
 ---
 # Creative Technologie Patterns
 
-These tags represent the patterns and areas already or to be addressed in this Digital Garden [[In one sentence - Exploring Creative Technologies|Exploring Creative Technologies ]].
+These tags represent the patterns and areas already or to be addressed in this Digital Garden [[In one sentence|Exploring Creative Technologies ]].
 
 Tags / Categories / Patterns:
 

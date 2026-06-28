@@ -8,7 +8,7 @@ The idea is to combine different Creative Technology patterns to showcase some o
 
 ### A Motion Visual Generative Projection Audio Installation
 
-- [[Movement Data in Touchdesigner]]
+- [[Movement Detection in Touchdesigner]]
 - [[Projection Mapping in Touchdesigner]]
 - [[Arduino Beginners Workshop]] 
 - [[Touchdesigner to VCV Rack]]
