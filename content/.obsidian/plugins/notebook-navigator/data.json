@@ -4,26 +4,7 @@
       "id": "default",
       "name": "Default",
       "fileVisibility": "supported",
-      "propertyKeys": [
-        {
-          "key": "publish",
-          "showInNavigation": true,
-          "showInList": false,
-          "showInFileMenu": false
-        },
-        {
-          "key": "state",
-          "showInNavigation": true,
-          "showInList": false,
-          "showInFileMenu": false
-        },
-        {
-          "key": "type",
-          "showInNavigation": true,
-          "showInList": false,
-          "showInFileMenu": false
-        }
-      ],
+      "propertyKeys": [],
       "hiddenFolders": [],
       "hiddenTags": [],
       "hiddenFileNames": [],
@@ -39,6 +20,10 @@
         {
           "type": "note",
           "path": "Design Presentation.md"
+        },
+        {
+          "type": "note",
+          "path": "Design Concept.md"
         },
         {
           "type": "note",
@@ -227,7 +212,7 @@
   "showTagIcons": true,
   "showAllTagsFolder": true,
   "showUntagged": true,
-  "scopeTagsToCurrentContext": true,
+  "scopeTagsToCurrentContext": false,
   "tagSortOrder": "alpha-asc",
   "inheritTagColors": true,
   "keepEmptyTagsProperty": false,
@@ -522,7 +507,7 @@
   "fileColors": {
     "Journal.md": "#06b6d4",
     "Concept Presentation.md": "#eab308",
-    "Design Concept.md": "#ef4444",
+    "Design Concept.md": "#f59e0b",
     "Design Presentation.md": "#f97316"
   },
   "fileBackgroundColors": {},
@@ -533,9 +518,7 @@
   "folderTreeSortOverrides": {},
   "folderAppearances": {},
   "tagIcons": {},
-  "tagColors": {
-    "moc": "#64748b"
-  },
+  "tagColors": {},
   "tagBackgroundColors": {},
   "tagSortOverrides": {},
   "tagTreeSortOverrides": {},
@@ -547,13 +530,8 @@
   "propertyTreeSortOverrides": {},
   "propertyAppearances": {},
   "virtualFolderColors": {},
-  "virtualFolderBackgroundColors": {
-    "tags-root": "#cec09427",
-    "shortcuts-root": "#d8e2f225"
-  },
-  "navigationSeparators": {
-    "section:tags": true
-  },
+  "virtualFolderBackgroundColors": {},
+  "navigationSeparators": {},
   "userColors": [
     "#ffffff",
     "#d9d9d9",
