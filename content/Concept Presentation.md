@@ -15,14 +15,14 @@ Assignment for the semester
 3. [[Capture and loop movement in p5.js |Example for an Experiment]]
 4. [[Questions behind ECT]]
 
-%% - [[MVP - Exploring Creative Technologies |What is the content?]] %%
+
 
 About the medium 
 
 1. [[About Digital Gardens and Streams|Digital Garden as the medium ]]
 2. [[Structuring the Platform|Structuring]]
 3. [[User Journeys|User Journeys ]]
-4. [[The idea behind CrossDocu |The CrossDocu System]] 
+4. [[The Idea Behind CrossDocu|The CrossDocu System]] 
 
 
 %% Make it clear that the semester project uses and helps develop CrossDocu, but that its primary focus is not on further developing CrossDocu! %%

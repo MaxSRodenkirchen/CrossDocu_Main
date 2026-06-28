@@ -31,7 +31,7 @@
 		{"id":"b92162a7df73d289","type":"text","text":"Light as input - Light reactive","x":26,"y":385,"width":250,"height":54,"color":"3"},
 		{"id":"4570b5fe490d5053","type":"text","text":"### [[Journal]]","x":-369,"y":-444,"width":250,"height":80,"color":"4"},
 		{"id":"f43cff89c9dc4c48","type":"text","text":"### PKM, Digital Gardens and Learning in Public","x":-367,"y":-164,"width":250,"height":109,"color":"4"},
-		{"id":"6ff63fe625cef850","type":"text","text":"### [[The idea behind CrossDocu |CrossDocu - crosspublishing tool]]","x":-367,"y":-55,"width":250,"height":80,"color":"4"},
+		{"id":"6ff63fe625cef850","type":"text","text":"### [[The Idea Behind CrossDocu|CrossDocu - crosspublishing tool]]","x":-367,"y":-55,"width":250,"height":80,"color":"4"},
 		{"id":"8f99eaf6bfc0ab1a","type":"text","text":"Obsidian as CMS","x":-367,"y":25,"width":250,"height":60,"color":"4"},
 		{"id":"670e01f178b1669c","type":"text","text":"Markdown to paged.js","x":-367,"y":85,"width":250,"height":60,"color":"4"},
 		{"id":"a5b262a1064417ef","type":"text","text":"[[Introduction to Creative Coding with p5.js|Creative Coding Intro Workshop]]","x":-369,"y":-364,"width":250,"height":79,"color":"4"},

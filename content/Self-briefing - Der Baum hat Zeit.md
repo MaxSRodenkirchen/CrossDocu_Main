@@ -3,9 +3,11 @@ tags:
   - College-Summer-2026
 ---
 
-# What is the plan for this semester - The self-briefing
+# The self-briefing
 
-#### > What is the plan for this semester? 🌱
+Attention! This is not an atomic note and has a lot of text! It was a first test of presenting with Markdown in CrossDocu. [[Atomic Notes]] [[The Idea Behind CrossDocu]]
+
+### > What is the plan for this semester? 🌱
 
 This note is written for a presentation! 
 

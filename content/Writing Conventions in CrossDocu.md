@@ -26,7 +26,8 @@ https://obsidian.md/help/syntax
 
 ---
 old:
-### Comment out long Textblocks
+
+Comment out long Textblocks
 
 from the TLDR-concept (too long don't read);
 that way longer text passages will be styled differently, 

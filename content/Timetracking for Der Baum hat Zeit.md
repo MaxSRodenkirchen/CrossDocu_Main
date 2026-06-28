@@ -13,6 +13,7 @@ One month left until final presentation and exhibition.
 Priority List:
 1. [[Installation for Exhibition|Develop Installation for Exhibition]]
 2. Have a working base version of the Digital Garden
+3. Keep on learning and experimenting
 
 
 

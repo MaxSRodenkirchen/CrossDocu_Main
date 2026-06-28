@@ -4,7 +4,7 @@ tags:
 ---
 # Introduction to Creative Coding with p5.js
 
-Attention! This is not an atomic note and has a lot of text! It was a first test of presenting with Markdown in CrossDocu. [[Atomic Notes]] [[The idea behind CrossDocu]]
+Attention! This is not an atomic note and has a lot of text! It was a first test of presenting with Markdown in CrossDocu. [[Atomic Notes]] [[The Idea Behind CrossDocu]]
 
 This presentation is part of an **introduction into p5.js and Creative Coding** for fellow students at FH Aachen in June 2026. The workshop was conducted in German and later translated into English.
 ## Previous Experience

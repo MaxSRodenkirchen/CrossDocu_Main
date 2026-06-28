@@ -6,7 +6,7 @@ tags:
 
 Imagine you could use single files of your Personal Knowledge Management System for publishing, presenting or printing. For that you could use CrossDocu, a cross-publishing Tool. But a current problem is that for using CrossDocu your notes would need to be written in a certain manner. How could we convert these notes so they can be used for that?
 
-If you wonder what CrossDocu is: [[The idea behind CrossDocu]]
+If you wonder what CrossDocu is: [[The Idea Behind CrossDocu]]
 
 ### Thoughts on possible conversion from your private system to a public system
 
