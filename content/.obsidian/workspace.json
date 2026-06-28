@@ -137,7 +137,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "User Tests.md",
+                "file": "Building a Server on an Android Device.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -152,11 +152,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "User Tests"
+              "title": "Building a Server on an Android Device"
+            }
+          },
+          {
+            "id": "de6f1b2ecdb2b671",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "index"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -342,11 +366,14 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "283f89c2d125c00b",
+  "active": "de6f1b2ecdb2b671",
   "lastOpenFiles": [
+    "Backlinks.md",
+    "Building a Server on an Android Device.md",
+    "Projecting on Glass.md",
+    "User Tests.md",
     "Working with Live Data.md",
     "images/Projection_Light_Test (3).jpeg",
-    "User Tests.md",
     "images/Version_20thJune.png",
     "Journal.md",
     "images/wiki.comphost.club.png",
@@ -361,12 +388,10 @@
     "Use Cases Moods.md",
     "Timetracking.md",
     "Self-briefing.md",
-    "Projecting on Glass.md",
     "Movement Detection in Touchdesigner.md",
     "Mapping the Garden.md",
     "In one sentence.md",
     "Document a Design Experiment.md",
-    "Building a Sever on an Android Device.md",
     "Brief Self-Introduction.md",
     "deleteMe.md",
     "Who am I.md",

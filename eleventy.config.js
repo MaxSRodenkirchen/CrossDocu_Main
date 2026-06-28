@@ -59,6 +59,64 @@ export default function (eleventyConfig) {
             .getFilteredByGlob('./content/*.md')
     })
 
+    eleventyConfig.addCollection('backlinksMap', (collectionApi) => {
+        const allItems = collectionApi.getAll();
+        const backlinks = {};
+
+        allItems.forEach(item => {
+            let rawText = item.rawInput || (item.page ? item.page.rawInput : '') || '';
+            if (!rawText) return;
+
+            // Strip code blocks to avoid false positives
+            rawText = rawText.replace(/```[\s\S]*?```/g, '');
+            rawText = rawText.replace(/`[^`]*`/g, '');
+
+            allItems.forEach(targetItem => {
+                if (item.url === targetItem.url || !targetItem.url) return;
+
+                let targetPageName = targetItem.fileSlug;
+                if (!targetPageName && targetItem.url === '/') {
+                    targetPageName = 'index';
+                }
+                
+                if (!targetPageName) return;
+
+                let isLinked = false;
+                const escapeRegExp = (string) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                const escapedName = escapeRegExp(targetPageName);
+                
+                // Wikilinks: [[name]] or [[name|alias]] with optional spaces
+                const wikiRegex = new RegExp(`\\[\\[\\s*${escapedName}\\s*(?:\\]\\]|\\|)`, 'i');
+                if (wikiRegex.test(rawText)) {
+                    isLinked = true;
+                }
+
+                // Standard Markdown links
+                if (!isLinked) {
+                    const encodedName = encodeURIComponent(targetPageName);
+                    const escapedEncoded = escapeRegExp(encodedName);
+                    const mdRegex = new RegExp(`\\]\\(\\s*(?:\\.\\/)?(?:${escapedName}|${escapedEncoded})(?:\\.md)?\\s*\\)`, 'i');
+                    if (mdRegex.test(rawText)) {
+                        isLinked = true;
+                    }
+                }
+
+                if (isLinked) {
+                    if (!backlinks[targetItem.url]) {
+                        backlinks[targetItem.url] = [];
+                    }
+                    if (!backlinks[targetItem.url].some(bl => bl.url === item.url)) {
+                        backlinks[targetItem.url].push({
+                            url: item.url,
+                            title: item.data.title || item.fileSlug
+                        });
+                    }
+                }
+            });
+        });
+        return backlinks;
+    });
+
     eleventyConfig.addCollection('mocs', (collection) => {
         return collection.getFilteredByGlob('./content/*.md')
     })
@@ -107,25 +165,16 @@ export default function (eleventyConfig) {
         // return value;
     });
 
-    eleventyConfig.addFilter("injectTags", function (content, tags) {
-        if (!tags || !Array.isArray(tags) || tags.length === 0) return content;
+    eleventyConfig.addFilter("injectAfterH1", function (content, htmlToInject) {
+        if (!htmlToInject || typeof htmlToInject !== 'string') return content;
 
-        const tagsHtml = `<div class="content-tags">
-            ${tags.map(tag => `<div class="content-tag" onclick="openTagModule('${tag}')">
-                <svg>
-                    <rect width="100%" height="100%"/>
-                </svg>
-                <p>${tag.replace(/-/g, ' ')}</p>
-            </div>`).join('')}
-        </div>`;
-
-        // Erste Überschrift (h1, h2 oder h3) finden
+        // Find first heading
         const match = content.match(/<h[1-3][^>]*>[\s\S]*?<\/h[1-3]>/i);
         if (match) {
             const insertIndex = match.index + match[0].length;
-            return content.slice(0, insertIndex) + tagsHtml + content.slice(insertIndex);
+            return content.slice(0, insertIndex) + htmlToInject + content.slice(insertIndex);
         }
-        return tagsHtml + content;
+        return htmlToInject + content;
     });
 
     eleventyConfig.addFilter("mocSidebar", function (content) {
@@ -161,6 +210,7 @@ export default function (eleventyConfig) {
                 const isExternal = /^(https?:)?\/\//.test(href);
                 let className = isExternal ? 'externalLink' : 'internalLink';
                 let extraAttrs = '';
+                let isInactive = false;
 
                 if (!isExternal && href && !href.startsWith('#')) {
                     let pageName = decodeURIComponent(href).replace(/^\/?\.\//, '').replace(/\/$/, '');
@@ -171,8 +221,13 @@ export default function (eleventyConfig) {
                             className += ' linkInactive';
                             extraAttrs = ' title="To be Written"';
                             body = body.replace(/href=["'][^"']*["']/i, '');
+                            isInactive = true;
                         }
                     }
+                }
+
+                if (!isInactive && !/title=["']/i.test(body) && href && !href.startsWith('#')) {
+                    extraAttrs += ` title="${href}"`;
                 }
 
                 if (/class=["']/i.test(body)) {

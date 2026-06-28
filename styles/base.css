@@ -2,7 +2,6 @@
 
   body {
     background: var(--bgLight);
-    /* padding:0 var(--gap) 0 var(--gap) ; */
     margin: 0;
     color: var(--internalInteraction);
     scrollbar-width: none;
@@ -28,10 +27,10 @@
 
   #mainContainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: var(--gapSmaller);
     margin: 0;
-    /* padding: 1rem; */
+    padding: 0 var(--gapSmaller);
     height: 100vh;
     width: 100%;
     position: relative;
@@ -40,15 +39,18 @@
 
   #midContainer {
     flex: 1;
-    min-width: 350px;
-    max-width: 1050px;
+    /* min-width: 1000px; */
+    /* max-width: 1050px; */
+    /* display: flex;
+    justify-content: center; */
     background-clip: content-box;
     overflow-y: scroll;
     overflow-x: hidden;
     scrollbar-width: none;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto; */
+    /* margin-right: var(--gapSmall); */
     background-color: var(--bg);
+    /* padding: 20px; */
   }
 
 
@@ -72,7 +74,7 @@
   }
 
   #content {
-    margin: var(--gap) 0 !important;
+    /* margin: var(--gap) 0 !important; */
   }
 
   .pagedjs_page {
@@ -135,8 +137,8 @@
   /* font-family: "Graebenbach Mono Regular", monospace; */
   text-decoration: underline dotted;
   /* border-bottom: var(--lineWeight) solid var(--internalLink); */
-  padding: 0 var(--gapSmallest);
-  transform: translate(0px, 2px);
+  /* padding: 0 var(--gapSmallest); */
+  /* transform: translate(0px, 2px); */
   width: fit-content;
   color: var(--internalLink);
   display: inline-flex;

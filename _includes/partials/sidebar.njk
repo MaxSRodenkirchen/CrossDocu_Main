@@ -106,16 +106,45 @@
 
 
 <div id="ect">
+    <div class="gap"></div>
 
-    <div id="ect-title">
+    <a href="/" id="ect-title" style="text-decoration: none; color: inherit;">
         {# {% icon "home" %} #}
         <h1>Exploring Creative Technologies</h1>
-    </div>
+    </a>
 
+    <div class="gap"></div>
 
     <ul class="allLists">
+        <li class="aList aMocList" id="search">
+            <div class="aListTitle">
+                {% icon "chevron--right" %}
+                <div>
+                    <h3 id="aMocName"> Search</h3>
+                    <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+                    {% icon "search" %}
+                </div>
+            </div>
+            <ol class="listOfContent" style="display: none;">
+                {% for post in collections.posts | sort(attribute="data.title") %}
+                    {% set skip = false %}
+                    {% if post.data.tags %}
+                        {% if "moc" in post.data.tags or "private" in post.data.tags %}
+                            {% set skip = true %}
+                        {% endif %}
+                    {% endif %}
+                    
+                    {% if not skip and post.url %}
+                        <li class="contentLink">
+                            {% icon "choose-item" %}
+                            <a href="{{ post.url }}">{{ post.data.title or post.fileSlug }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ol>
+        </li>
 
-        <hr class="gap">
+        <div class="gap"></div>
 
         {% for moc in collections.moc %}
         <li class="aList aMocList">
@@ -132,6 +161,7 @@
             </ol>
         </li>
         {% endfor %}
+
         <div class="gap"></div>
 
         {% for item in collections | sortTagsByCount %}
@@ -159,5 +189,7 @@
         </li>
         {% endfor %}
     </ul>
+    <div class="gap" id="gapBottom"></div>
+
 
 </div>

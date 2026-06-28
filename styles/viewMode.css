@@ -1,0 +1,43 @@
+  #viewModeContainer {
+      font-family: "Ease Display Regular", sans-serif;
+      /* font-size: 12px; */
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: var(--gapSmall);
+      right: 0;
+      bottom: var(--gapSmall);
+      background-color: var(--bgLight);
+      color: var(--internalInteraction);
+
+      /* margin-bottom: var(--gap); */
+  }
+
+  .viewModeButton {
+      background-color: var(--bg);
+      border: none;
+      padding: var(--gapSmallest) var(--gapSmaller);
+      padding-right: var(--gapSmall);
+      margin: 0;
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+      outline: none;
+      border-radius: 0;
+      appearance: none;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: var(--gapSmaller);
+  }
+
+  .viewModeButton svg {
+      width: 20px;
+      height: 20px;
+  }
+
+  .activeViewButton,
+  .viewModeButton:hover {
+      /* background-color: var(--internalLink); */
+      color: var(--internalLink);
+  }

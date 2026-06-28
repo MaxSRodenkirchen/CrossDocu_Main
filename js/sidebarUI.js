@@ -119,7 +119,51 @@ export function initTags() {
 }
 
 export function initSearch() {
-    // Currently empty
+    const searchInput = document.getElementById('searchInput');
+    const searchList = document.getElementById('search');
+    
+    if (!searchInput || !searchList) return;
+    
+    const items = searchList.querySelectorAll('.contentLink');
+    
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        items.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            if (text.includes(query)) {
+                item.style.display = '';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+
+    // Prevent accordion toggle when clicking the input
+    searchInput.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
+    // Ctrl+O / Cmd+O Shortcut
+    document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'o') {
+            e.preventDefault(); // Prevent default browser file open
+            
+            // 1. Ensure the left module tab is open
+            const btnToggleSearch = document.getElementById('btnToggleSearch');
+            if (btnToggleSearch && !btnToggleSearch.classList.contains('active')) {
+                btnToggleSearch.click();
+            }
+            
+            // 2. Ensure the search accordion is open
+            if (!searchList.classList.contains('active')) {
+                const titleContainer = searchList.querySelector('.aListTitle');
+                if (titleContainer) titleContainer.click();
+            } else {
+                // If already open, just focus
+                searchInput.focus();
+            }
+        }
+    });
 }
 
 export function updateModules() {
@@ -335,6 +379,7 @@ export function openLists() {
     aLists.forEach(list => {
         const contentList = list.querySelector('.listOfContent');
         const titleElement = list.querySelector('.aListTitle h3');
+        const titleContainer = list.querySelector('.aListTitle');
         const identifier = titleElement ? titleElement.textContent.trim() : null;
 
         // Restore state from localStorage
@@ -346,30 +391,37 @@ export function openLists() {
             if (contentList) contentList.style.display = "none";
         }
 
-        list.addEventListener('click', function(e) {
-            if (e.target.closest('a')) return;
+        if (titleContainer) {
+            titleContainer.addEventListener('click', function(e) {
+                if (e.target.closest('a')) return;
 
-            const isCurrentlyActive = this.classList.contains('active');
+                const isCurrentlyActive = list.classList.contains('active');
 
-            // Close all lists
-            aLists.forEach(otherList => {
-                otherList.classList.remove('active');
-                const otherContent = otherList.querySelector('.listOfContent');
-                if (otherContent) otherContent.style.display = "none";
+                // Close all lists
+                aLists.forEach(otherList => {
+                    otherList.classList.remove('active');
+                    const otherContent = otherList.querySelector('.listOfContent');
+                    if (otherContent) otherContent.style.display = "none";
+                });
+
+                // If it wasn't active before, open it and save to localStorage
+                if (!isCurrentlyActive) {
+                    list.classList.add('active');
+                    if (contentList) contentList.style.display = "block";
+                    if (identifier) localStorage.setItem('activeAccordionList', identifier);
+
+                    if (list.id === 'search') {
+                        const searchInput = document.getElementById('searchInput');
+                        if (searchInput) setTimeout(() => searchInput.focus(), 50);
+                    }
+                } else {
+                    // If it was active, it's now closed, so clear localStorage
+                    localStorage.removeItem('activeAccordionList');
+                }
+
+                updateStates();
             });
-
-            // If it wasn't active before, open it and save to localStorage
-            if (!isCurrentlyActive) {
-                this.classList.add('active');
-                if (contentList) contentList.style.display = "block";
-                if (identifier) localStorage.setItem('activeAccordionList', identifier);
-            } else {
-                // If it was active, it's now closed, so clear localStorage
-                localStorage.removeItem('activeAccordionList');
-            }
-
-            updateStates();
-        });
+        }
     });
 
     // Initiale Zustände setzen (z.B. aus dem localStorage)

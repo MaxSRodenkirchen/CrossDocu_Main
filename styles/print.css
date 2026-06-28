@@ -1,4 +1,5 @@
 @media print {
+
   /* Hide all non-essential UI elements during printing */
   #sidebar,
   #config,
@@ -7,7 +8,8 @@
   #slideControls,
   #credit,
   #leftModuleBar,
-  #rightModuleBar {
+  #rightModuleBar,
+  #viewModeContainer {
     display: none !important;
   }
 

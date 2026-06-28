@@ -4,9 +4,11 @@ tags:
 ---
 
 
-# Building a Sever on an Android Device
+# Building a Server on an Android Device
 
 ###### A workshop concept by Creative Coding Utrecht held at PROTO in Eindhoven in June 2026.
+
+[[Projecting on Glass]]
 
 In the workshop we used our old Android Devices to setup servers. In the end we were able to host our own HTML web page to the local network. But this technique can also be used to host to the world wide web. 
 

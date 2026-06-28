@@ -121,32 +121,4 @@
     color: var(--bgLight)
   }
 
-  #viewModeContainer {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--bgLight);
-    margin-top: auto;
-    margin-bottom: var(--gap);
-  }
-
-  .viewModeButton {
-    background-color: var(--bgLight);
-    border: none;
-    padding: var(--gapSmallest) var(--gapSmall);
-    margin: 0;
-    font: inherit;
-    color: inherit;
-    cursor: pointer;
-    outline: none;
-    border-radius: 0;
-    appearance: none;
-    text-align: left;
-  }
-
-  .activeViewButton,
-  .viewModeButton:hover {
-    background-color: var(--internalLink);
-    color: var(--bgLight);
-
-  }
 }

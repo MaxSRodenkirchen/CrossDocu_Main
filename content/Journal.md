@@ -43,7 +43,7 @@ CW 25: Design Presentation
 CW 26 
 
 1. [[Projecting on Glass]]
-2. [[Building a Sever on an Android Device]]
+2. [[Building a Server on an Android Device]]
 3. [[Color Detection in TD]]
 4. [[Webcam Movement Visualization in TD]]
 

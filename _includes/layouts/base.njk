@@ -9,7 +9,9 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=web" />
     <link rel="stylesheet" href="/styles/variables.css">
     <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
-    <link rel="stylesheet" href="/styles/config.css" data-pagedjs-ignore>
+    {#
+    <link rel="stylesheet" href="/styles/config.css" data-pagedjs-ignore> #}
+    <link rel="stylesheet" href="/styles/viewMode.css" data-pagedjs-ignore>
     <link rel="stylesheet" href="/styles/sidebar.css" data-pagedjs-ignore>
     <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
 
@@ -34,13 +36,16 @@
             {% include "partials/sidebar.njk" %}
         </aside>
 
-        <template id="templateSource">
+        {% set metaHtml %}
+            {% include "partials/metaData.njk" %}
+        {% endset %}
 
-            {{ content | ensureH1 | injectTags(tags) | contentContainer | linkClass | addHeadingIds | safe }}
+        <template id="templateSource">
+            {{ content | ensureH1 | injectAfterH1(metaHtml) | contentContainer | linkClass | addHeadingIds | safe }}
         </template>
 
         <template id="templateContent">
-            {{ content | ensureH1 | injectTags(tags) | contentContainer | linkClass | addHeadingIds | safe }}
+            {{ content | ensureH1 | injectAfterH1(metaHtml) | contentContainer | linkClass | addHeadingIds | safe }}
         </template>
 
         <div id="midContainer">
@@ -55,14 +60,14 @@
         </aside>
 
         <div id="viewModeContainer">
-            <button id="webButton" class="viewModeButton" onclick="switchView('web')">
-                Web Mode
+            <button class="viewModeButton" onclick="switchView('web')">
+                {% icon "screen" %} Web Mode
             </button>
             <button class="viewModeButton" onclick="switchView('print')">
-                Print Mode
+                {% icon "printer" %} Print Mode
             </button>
             <button class="viewModeButton" onclick="switchView('slide')">
-                Slide Mode
+                {% icon "presentation-file" %} Slide Mode
             </button>
         </div>
 
