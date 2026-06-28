@@ -13,6 +13,20 @@ export default {
         
       }
       return data.title;
+    },
+    eleventyExcludeFromCollections: (data) => {
+      const tags = Array.isArray(data.tags) ? data.tags : (data.tags ? [data.tags] : []);
+      if (tags.includes('private')) {
+        return true;
+      }
+      return data.eleventyExcludeFromCollections;
+    },
+    permalink: (data) => {
+      const tags = Array.isArray(data.tags) ? data.tags : (data.tags ? [data.tags] : []);
+      if (tags.includes('private')) {
+        return false;
+      }
+      return data.permalink;
     }
   }
 };

@@ -315,8 +315,10 @@ export default function (eleventyConfig) {
     eleventyConfig.addFilter("sortTagsByCount", function (collections) {
         let tagsArray = [];
         for (let tag in collections) {
-            if (tag !== "all" && tag !== "post" && tag !== "posts" && tag !== "moc" && tag !== "mocs") {
-                tagsArray.push({ tag: tag, posts: collections[tag] });
+            if (tag !== "all" && tag !== "post" && tag !== "posts" && tag !== "moc" && tag !== "mocs" && tag !== "private") {
+                if (collections[tag].length > 0) {
+                    tagsArray.push({ tag: tag, posts: collections[tag] });
+                }
             }
         }
         tagsArray.sort((a, b) => b.posts.length - a.posts.length);

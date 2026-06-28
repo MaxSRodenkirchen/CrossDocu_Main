@@ -113,7 +113,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Installation for Exhibition.md",
+                "file": "Movement Data in Touchdesigner.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -128,7 +128,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Installation for Exhibition"
+              "title": "Movement Data in Touchdesigner"
             }
           }
         ],
@@ -199,7 +199,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 752.0031242370605
+    "width": 945
   },
   "right": {
     "id": "0d88643e45ad4bee",
@@ -314,31 +314,40 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "templater-obsidian:Templater": false,
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "941ba8402870b71c",
+  "active": "447985832c7a8cd0",
   "lastOpenFiles": [
+    "MD-Test.md",
+    "Capture and loop movement in p5.js.md",
+    "Mapping the Garden.md",
+    "Manipulating Light.md",
+    "Journal.md",
+    "Introduction to Creative Coding with p5.js.md",
+    "Installation for Exhibition.md",
+    "index.md",
+    "In one sentence - Exploring Creative Technologies.md",
+    "Hybrid Search - The Concept.md",
+    "Feedback Effect in Touchdesigner.md",
+    "Document a Design Experiment.md",
     "Experience with Handtracking in ml5.js.md",
+    "Customized Editor for CrossDocu.md",
     "Design System.md",
     "Design Presentation.md",
     "Design Concept.md",
     "Definitions of Creative Coding.md",
+    "Markdown-Test.md",
     "Concept Presentation.md",
     "Styling System for CrossDocu.md",
-    "Customized editor for CrossDocu.md",
     "Creative Patterns Taglist.md",
     "Content Map.canvas",
     "Content Loader for CrossDocu.md",
     "Connecting a Kinect 1 to TD.md",
     "Color Detection in TD.md",
-    "Capture and loop movement in p5.js.md",
     "Base Template.md",
-    "Arduino Beginners Workshop.md",
     "images/ArduinoWorkshop_2.jpeg",
     "images/ArduinoWorkshop_1.jpeg",
-    "Alternative Interfaces.md",
     "images/color_detection_td.png",
     "images/CrossDocu_dieIdee.png",
     "images/digitalStreams.png",
@@ -347,16 +356,6 @@
     "images/MappingECT.jpeg",
     "images/Mockup Exhibition 3.jpg",
     "images/Mockup Handout 3.jpg",
-    "A Color Detecting Controller.md",
-    "Welcome to my Concept Presentation.md",
-    "The Design Problem.md",
-    "Projektideen - Der Baum hat Zeit.md",
-    "Self-briefing - Der Baum hat Zeit.md",
-    "Structuring the Platform.md",
-    "User Journeys.md",
-    "Timetracking for Der Baum hat Zeit.md",
-    "Manipulating Light.md",
-    "Working with Live Data.md",
     "icons"
   ]
 }

@@ -4,7 +4,7 @@ tags:
 ---
 CW 21
 
-1. [[Mapping - Exploring Creative Technologies]]
+1. [[Mapping the Garden]]
 2. [[Questions behind ECT]]
 3. [[User Journeys]]
 4. [[Structuring the Platform]]
@@ -29,11 +29,10 @@ CW 24
 
 CW 25: Design Presentation 
 
-1. [[Markdown-Test]]
-2. [[MD-Test]]
-3. [[TouchDesigner Lesson 103]]
-4. [[Design Presentation]]
-5. [[Color Detection in TD]]
+1. [[MD-Test]]
+2. [[TouchDesigner Lesson 103]]
+3. [[Design Presentation]]
+4. [[Color Detection in TD]]
 
 CW 26 
 

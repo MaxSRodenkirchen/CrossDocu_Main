@@ -1,7 +1,7 @@
 ---
 tags:
   - Output-Devices
-  - Light-and-Shadow
+  - Light-as-a-Medium
 ---
 # Basic projection mapping in Touchdesigner
 

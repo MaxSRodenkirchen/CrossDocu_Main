@@ -1,6 +1,6 @@
 ---
 tags:
-  - CrossDocu
+  - About-this-Digital-Garden
 ---
 # Hybrid Search - The Concept
 

@@ -1,7 +1,7 @@
 ---
 tags:
   - Creative-Coding
-  - Tracking-Movement
+  - Body-Movement-Data
 ---
 # Capture and loop movement in p5.js
 

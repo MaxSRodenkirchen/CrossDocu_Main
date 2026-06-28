@@ -1,7 +1,7 @@
 ---
 tags:
-  - AI
-  - Tracking-Movement
+  - AI-Techniques
+  - Body-Movement-Data
 ---
 # Experiences and issues using the HandPose model in ml5.js
 
@@ -38,14 +38,13 @@ Is it p5.js or is it a problem with some WebAPI?
 
 ### Issue 2: Performance issues with the tfjs model
 
-There were **strong performance issues with the tfjs model.** First of all it took a long time to load and it was also stuttering. It was tested on a good Laptop and an even better PC with the same results. This is strange, because in Video tutorials it seams to work for people. Using the models live demo also works fine. But why doesn't it in this test with p5.js and ml5.js? [^1]
-%% 
-[Live demo for Tensorflow](https://storage.googleapis.com/tfjs-models/demos/hand-pose-detection/index.html?model=mediapipe_hands)  %% 
+There were **strong performance issues with the tfjs model.** First of all it took a long time to load and it was also stuttering. It was tested on a good Laptop and an even better PC with the same results. This is strange, because in Video tutorials it seams to work for people. Using the models live demo also works fine. But why doesn't it in this test with p5.js and ml5.js? 
 
-#### Finding Solutions
+More info on options [here](https://github.com/tensorflow/tfjs-models/tree/master/hand-pose-detection/src/tfjs#create-a-detector) for "tfjs" runtime.
 
-What helped was changing the runtime model to the older **mediapipe** [^2] and switching from full to light mode. Light mode runs a smaller version of the model which is enough for just tracking a finger tip. And also the mediapipe model returned much more satisfactory results. It loads much quicker and has no stuttering. Sometimes it does detect other parts of the hand as a finger tip and glitches. This is most probably because it is an older and less trained model. In the end mediapipe did the job with acceptable performance and just some glitching. 
+### Finding Solutions
 
+What helped was changing the runtime model to the older **mediapipe** and switching from full to light mode. Light mode runs a smaller version of the model which is enough for just tracking a finger tip. And also the mediapipe model returned much more satisfactory results. It loads much quicker and has no stuttering. Sometimes it does detect other parts of the hand as a finger tip and glitches. This is most probably because it is an older and less trained model. In the end mediapipe did the job with acceptable performance and just some glitching. 
 
 ```
 let options = {
@@ -56,14 +55,10 @@ let options = {
 };
 ```
 
+More info on options [here](https://github.com/tensorflow/tfjs-models/tree/master/hand-pose-detection/src/mediapipe#create-a-detector) for "mediapipe" runtime.
+
 ---
 
 *2026-05-31* 
 
 My first impression is that it technically works, but the AI tracking seams to be really slow. With such delays it's kind of not usable. I will research on methods to speed up the ml5.js processes. Maybe we can run it locally?    
-
----
-
-[^1]: More info on options [here](https://github.com/tensorflow/tfjs-models/tree/master/hand-pose-detection/src/tfjs#create-a-detector) for "tfjs" runtime.
-
-[^2]: More info on options [here](https://github.com/tensorflow/tfjs-models/tree/master/hand-pose-detection/src/mediapipe#create-a-detector) for "mediapipe" runtime.

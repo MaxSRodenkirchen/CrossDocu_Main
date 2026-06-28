@@ -1,6 +1,7 @@
 ---
 tags:
-  - Light-and-Shadow
+  - Want-to-Learn
+  - Light-as-a-Medium
 ---
 # Manipulating Light 
 

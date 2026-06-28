@@ -1,6 +1,6 @@
 ---
 tags:
-  - Tracking-Movement
+  - Body-Movement-Data
   - Learning-TouchDesigner
 ---
 # Connecting a Kinect 1 to TouchDesigner

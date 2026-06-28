@@ -1,3 +1,8 @@
+---
+tags:
+  - Body-Movement-Data
+  - Learning-TouchDesigner
+---
 # Body Controls - Movement Data in Touchdesigner
 #### How can we use movement data from the webcam to control parameters in Touchdesigner?
 

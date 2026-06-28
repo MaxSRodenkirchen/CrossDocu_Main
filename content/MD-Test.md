@@ -1,5 +1,6 @@
 ---
 tags:
+  - CrossDocu
 ---
 
 # Creative Technologies & Digital Gardens
@@ -40,7 +41,8 @@ How do we navigate these gardens?
 
 Here is an example of an embedded iframe (a p5.js sketch):
 
-<iframe src="https://editor.p5js.org/p5/embed/document" width="100%" height="400px"></iframe>
+<iframe src="https://editor.p5js.org/MaxRodenkirchen/full/kB4i3pS0X" width="100%" height="100%" style="border: none;"></iframe>
+
 
 ---
 

@@ -9,7 +9,7 @@ Design Concept
 
 Examples
 
-1. [[Markdown-Test]]
+1. [[MD-Test]]
 2. [[Capture and loop movement in p5.js |p5.js Sketch Example]]
 3. [[Experience with Handtracking in ml5.js |Video Example]]
 4. [[Design Concept |Sections Showcase]]
