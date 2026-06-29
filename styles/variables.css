@@ -28,6 +28,13 @@
 
   --lineWeight: 1px;
 
+  --largest: 80px;
+  --larger: 60px;
+  --large: 40px;
+  --medium: 20px;
+  --regular: 15px;
+  --small: 12px;
+
   /* Typography shortcuts */
   --font-mono-small: 12pt/140% "Graebenbach Mono Regular", sans-serif;
   --font-body: 22px/160% "Graebenbach Regular", sans-serif;

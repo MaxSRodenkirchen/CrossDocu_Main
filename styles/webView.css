@@ -1,53 +1,52 @@
 #content {
-  background: var(--bgLight);
-  font: var(--font-body);
   width: 100%;
-  max-width: 950px;
+  max-width: 1000px;
   color: var(--internalInteraction);
   margin: var(--gapSmaller);
+  font-family: "Ease Standard Regular", sans-serif;
+  font-size: var(--regular);
+  line-height: 140%;
 }
 
 .contentContainer {
   /* border-top: var(--lineWeight) dashed var(--internalInteraction);
   border-bottom: var(--lineWeight) dashed var(--internalInteraction); */
-  padding: var(--gapSmall) var(--gapSmall);
+  padding: var(--gapSmaller) var(--gapSmall);
+  margin: var(--gapSmaller) 0;
+  background: var(--bgLight);
 }
+
+
 
 #content h1,
 #content h2,
-#content h3 {
-  scroll-margin-top: var(--gap);
-  margin: var(--gapSmallest) 0 var(--gapSmall) 0;
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+  font-family: "Ease Display Regular", sans-serif;
+  font-weight: 300;
+  line-height: 100%;
 
+  margin: var(--gapSmallest) 0 var(--gapSmall) 0;
+  scroll-margin-top: var(--gap);
 }
 
 #content h1 {
-  font-family: "Ease Display Regular", sans-serif;
-  font-size: 80px;
-  line-height: 100%;
-  max-width: 800px;
-
+  font-size: var(--largest);
 }
 
 #content h2 {
-  font-family: "Ease Display Regular", sans-serif;
   font-size: 60px;
-  line-height: 100%;
-
-  margin-bottom: var(--gap);
 }
 
 #content h3 {
-  font-family: "Ease Display Regular", sans-serif;
   font-size: 40px;
-  line-height: 100%;
-
 }
 
 #content h4 {
   font-family: "Ease Display Regular";
   font-size: 20px;
-  font-weight: 300;
 }
 
 #content h6 {
@@ -95,13 +94,14 @@ iframe {
   margin-left: calc(-1*var(--gapSmall));
   width: calc(100% + var(--gapSmall)*2);
   max-width: none;
+  /* width: 100%; */
   /* margin-top: 4rem; */
   /* border-top: var(--lineWeight) solid var(--internalInteraction);
   border-bottom: var(--lineWeight) solid var(--internalInteraction); */
 }
 
 #content iframe {
-  max-width: 100%;
+  /* max-width: 100%; */
   aspect-ratio: 16 / 9;
   border: 0;
 }

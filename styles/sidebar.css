@@ -23,7 +23,7 @@
     padding-top: var(--gapSmall);
     padding-bottom: var(--gapSmall);
     background-color: var(--bgLight);
-    border-bottom: var(--lineWeight) dashed var(--internalInteraction);
+    /* border-bottom: var(--lineWeight) dashed var(--internalInteraction); */
 
   }
 
@@ -37,7 +37,7 @@
   .aList {
     background-color: var(--bg);
     list-style: none;
-    border-bottom: var(--lineWeight) dashed var(--internalInteraction);
+    /* border-bottom: var(--lineWeight) dashed var(--internalInteraction); */
     transition: all 2ms;
   }
 
@@ -145,9 +145,9 @@
     border: none;
     margin: 0;
     height: var(--gapSmall);
-    background-color: var(--bg);
-    /* opacity: .4; */
-    border-bottom: var(--lineWeight) dashed var(--internalInteraction) !important;
+    background-color: var(--silver);
+    opacity: .2;
+    /* border-bottom: var(--lineWeight) dashed var(--internalInteraction) !important; */
     /* margin-top: var(--gapSmaller); */
     /* padding: 20px 0;
     height: 200px; */

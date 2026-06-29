@@ -1,41 +1,60 @@
 {% set hasMeta = false %}
 
 {% if tags and tags | length > 0 %}
-    {% set hasMeta = true %}
+{% set hasMeta = true %}
 {% endif %}
 
 {% set backlinks = [] %}
 {% if collections.backlinksMap and page.url %}
-    {% set backlinks = collections.backlinksMap[page.url] %}
+{% set backlinks = collections.backlinksMap[page.url] %}
 {% endif %}
 {% if backlinks and backlinks | length > 0 %}
-    {% set hasMeta = true %}
+{% set hasMeta = true %}
 {% endif %}
 
 {% if hasMeta %}
-<div class="content-meta" style="margin-bottom: 2rem;">
+<div class="content-meta">
+
+    <div id="url">
+        <span>The URL</span>
+        <div class="meta-content-wrapper">
+            <p>{{page.url}}</p>
+        </div>
+    </div>
 
     {% if tags and tags | length > 0 %}
     <div class="content-tags">
-        {% for tag in tags %}
-        <div class="content-tag" onclick="openTagModule('{{ tag }}')">
-            <svg><rect width="100%" height="100%"/></svg>
-            <p>{{ tag | replace("-", " ") }}</p>
+        <span>Tagged with</span>
+
+        <div class="meta-content-wrapper">
+            {% for tag in tags %}
+            <div class="content-tag" onclick="openTagModule('{{ tag }}')">
+                {# <svg>
+                    <rect width="100%" height="100%" />
+                </svg> #}
+
+                <p>{{ tag | replace("-", " ") }}</p>
+                {% icon "ibm--webmethods-integration-server" %}
+
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
     {% endif %}
 
     {% if backlinks and backlinks | length > 0 %}
-    <div class="content-backlinks" style="margin-top: 1rem; font-size: 0.9em; color: var(--silver);">
-        <span style="display: block; margin-bottom: 0.5rem;">Linked Mentions:</span>
-        <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+    <div class="content-backlinks">
+        <span>Mentioned in</span>
+
+        <div class="meta-content-wrapper">
             {% for bl in backlinks %}
-            <li style="margin: 0;">
-                <a href="{{ bl.url }}" style="text-decoration: none; padding: 0.2rem 0.5rem; background: var(--bg); border: 1px dashed var(--silver); border-radius: 4px; display: inline-block;">{{ bl.title }}</a>
-            </li>
+
+
+            <a href="{{ bl.url }}">{{ bl.title }}</a>
+
             {% endfor %}
-        </ul>
+        </div>
+
     </div>
     {% endif %}
 

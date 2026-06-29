@@ -161,7 +161,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "About Learning in Public.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -176,7 +176,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "About Learning in Public"
             }
           }
         ],
@@ -368,6 +368,7 @@
   },
   "active": "de6f1b2ecdb2b671",
   "lastOpenFiles": [
+    "index.md",
     "Backlinks.md",
     "Building a Server on an Android Device.md",
     "Projecting on Glass.md",
@@ -403,7 +404,6 @@
     "Markdown-Test.md",
     "Mapping - Exploring Creative Technologies.md",
     "MVP - Exploring Creative Technologies.md",
-    "In one sentence - Exploring Creative Technologies.md",
     "Content Map.canvas",
     "icons"
   ]
