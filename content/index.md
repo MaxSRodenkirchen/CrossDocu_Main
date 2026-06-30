@@ -3,7 +3,7 @@ tags:
 ---
 # Welcome Fellow Learner
 
-Let me introduce you to the [[In one sentence|Exploring Creative Technologies]] Digital Garden. 
+Let me introduce you to the [[In one sentence - Exploring Creative Technologies|Exploring Creative Technologies]] Digital Garden. 
 
 
 Sections to be mentioned on the landing page: 
