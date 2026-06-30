@@ -1,8 +1,14 @@
 ---
 tags:
-  - College-Summer-2026
+  - Der-Baum-hat-Zeit
+  - Exploring-Creative-Technologies
+state:
+  - "10"
+type:
+publish:
+  - public
 ---
-# Exploring Creative Technologies - Concept Presentation
+# Exploring Creative Technologies
 
 <iframe src="https://archive.org/embed/concept-presentation-exploring-creative-technologies" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 

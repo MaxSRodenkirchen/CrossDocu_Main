@@ -86,6 +86,10 @@
   display: none;
 }
 
+#content li {
+  margin-bottom: var(--gapSmaller);
+}
+
 
 #content img,
 iframe {

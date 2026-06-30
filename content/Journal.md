@@ -49,6 +49,9 @@ CW 26
 
 CW 27
 
+- [[Talk with Carl about Navigation Interfaces]]
+- [[Plans for Today’s Feedback Meeting]]
+
 CW 28
 
 CW 29 

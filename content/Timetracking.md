@@ -6,6 +6,12 @@ tags:
 
 ###### This note gets regularly updated. 
 
+### Tuesday, June 30th 2026
+
+A bit less than one month less until semester end and the exhibition. A lot of work went into "CrossDocu" development which works fine. Even more time went into developing this "Public Learning Web-Documentation", which will never be finished, because of the nature of such dynamic systems. The goal is to have a working prototype and show / sketch possible further developments of that. A bit to less time went into the exploration of tools and techniques. **The rest of this semester should focus on the exploration, testing, experimenting and developing an [[Installation for Exhibition]].**
+
+![[The Three Pillars.png]]
+
 ### Monday, June 22nd 2026
 
 One month left until final presentation and exhibition. 

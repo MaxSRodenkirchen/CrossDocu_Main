@@ -1,10 +1,16 @@
 ---
 tags:
   - Creative-Coding
+state:
+  - "9"
+type:
+  - Explaining
+  - Teaching
+publish:
+  - public
 ---
-# Introduction to Creative Coding with p5.js
 
-Attention! This is not an atomic note and has a lot of text! It was a first test of presenting with Markdown in CrossDocu. [[Atomic Notes]] [[The Idea Behind CrossDocu]]
+# Introduction to Creative Coding with p5.js
 
 This presentation is part of an **introduction into p5.js and Creative Coding** for fellow students at FH Aachen in June 2026. The workshop was conducted in German and later translated into English.
 ## Previous Experience
@@ -26,6 +32,7 @@ What might have held you back?
 
 - Using different programming languages and tools
 - Depending on what you want to do
+
 
 ## Showcase
 
@@ -55,12 +62,6 @@ What might have held you back?
 
 ## Tools
 
-A selection of some of the more well-known tools.
-
-- [p5.js](https://p5js.org/examples/)
-- [Processing](https://processing.org/examples/)
-- [d3.js - Datenvisualisierungen](https://d3js.org/)
-- ...
 ### Node-based Programming
 
 - [Touchdesigner - Multimedia Installationen](https://derivative.ca/showcase)
@@ -68,6 +69,14 @@ A selection of some of the more well-known tools.
 - [Max DSP - Musik](https://www.youtube.com/watch?v=auj4406RPQw&list=RDauj4406RPQw&start_radio=1)
 - [Pure Data - music](https://www.youtube.com/watch?v=yp3PnQMM3rA&list=PLIZ01VQ6n_lzbQEstI-lFTmeLI8e1U2zJ&index=8)
 - ...
+
+### Coding with code?!
+
+- [p5.js](https://p5js.org/examples/)
+- [Processing](https://processing.org/examples/)
+- [d3.js - Datenvisualisierungen](https://d3js.org/)
+- ...
+
 ### Live coding
 
 - [Hydra - Visuals](https://hydra.ojack.xyz/?sketch_id=rangga_4)
