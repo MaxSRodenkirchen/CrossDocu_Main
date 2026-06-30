@@ -78,13 +78,13 @@ export default function (eleventyConfig) {
                 if (!targetPageName && targetItem.url === '/') {
                     targetPageName = 'index';
                 }
-                
+
                 if (!targetPageName) return;
 
                 let isLinked = false;
                 const escapeRegExp = (string) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
                 const escapedName = escapeRegExp(targetPageName);
-                
+
                 // Wikilinks: [[name]] or [[name|alias]] with optional spaces
                 const wikiRegex = new RegExp(`\\[\\[\\s*${escapedName}\\s*(?:\\]\\]|\\|)`, 'i');
                 if (wikiRegex.test(rawText)) {
@@ -211,6 +211,10 @@ export default function (eleventyConfig) {
                 let className = isExternal ? 'externalLink' : 'internalLink';
                 let extraAttrs = '';
                 let isInactive = false;
+
+                if (isExternal) {
+                    extraAttrs += ' target="_blank" rel="noopener noreferrer"';
+                }
 
                 if (!isExternal && href && !href.startsWith('#')) {
                     let pageName = decodeURIComponent(href).replace(/^\/?\.\//, '').replace(/\/$/, '');

@@ -86,6 +86,11 @@
   display: none;
 }
 
+#content ol,
+ul {
+  padding: var(--gapSmaller) var(--gapSmall);
+}
+
 #content li {
   margin-bottom: var(--gapSmaller);
 }

@@ -15,3 +15,7 @@ Via video-call I showed Carl the current version of this web-documentation and w
 - One solution for the need of an overview, the need of directly understanding what the system is about and how it works is by building an interface for that. 
 - The standard right now for that is the graph view where content is displayed in a 2d network. But for sure this interface has its downsides. 
 - Why is it so hard to imagine new [[Alternative Interfaces]] for non-linear system. We should have all the possibilities and flexibility through working digitally. 
+
+This is the version of the UI we have talked about:
+
+![[Design_Version_30thJune.png]]

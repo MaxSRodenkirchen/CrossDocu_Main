@@ -125,7 +125,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "byModifiedTime",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -284,9 +284,14 @@
   },
   "active": "d6533bcd7714b5b2",
   "lastOpenFiles": [
-    "images/ArduinoWorkshop_1.jpeg",
+    "Working with Live Data.md",
+    "Use Cases Moods.md",
+    "Mapping the Garden.md",
+    "Document a Design Experiment.md",
     "The Navigation Problem by Mark Bernstein.md",
     "Talk with Carl about Navigation Interfaces.md",
+    "images/Design_Version_30thJune.png",
+    "images/ArduinoWorkshop_1.jpeg",
     "Plans for Today’s Feedback Meeting.md",
     "Timetracking.md",
     "images/The Three Pillars.png",
@@ -307,8 +312,6 @@
     "images/Projection_Light_Test (1).jpeg",
     "images/PROTO_Workshop (3).jpeg",
     "images/PROTO_Workshop (2).jpeg",
-    "images/PROTO_Workshop (1).jpeg",
-    "images/PROTO_Handout.jpeg",
     "Webcam Movement Visualization in TD.md",
     "User Tests.md",
     "Self-briefing.md",
@@ -318,9 +321,6 @@
     "Building a Server on an Android Device.md",
     "Backlinks.md",
     "Design Concept.md",
-    "Brief Self-Introduction.md",
-    "Concept Presentation.md",
-    "Design Presentation.md",
     "Content Map.canvas",
     "icons"
   ]
