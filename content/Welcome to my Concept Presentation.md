@@ -1,12 +1,6 @@
 ---
 tags:
-  - Der-Baum-hat-Zeit
-  - Exploring-Creative-Technologies
-state:
-  - "10"
-type:
-publish:
-  - public
+  - private
 ---
 # Exploring Creative Technologies
 

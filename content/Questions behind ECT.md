@@ -1,12 +1,7 @@
 ---
 tags:
-  - FH-Aachen
-  - Exploring-Creative-Technologies
-state:
-  - "4"
-type:
-publish:
-  - public
+  - College-Summer-2026
+  - About-this-Digital-Garden
 ---
 # Questions behind Exploring Creative Technologies
 
