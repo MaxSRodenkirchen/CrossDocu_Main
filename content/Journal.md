@@ -51,6 +51,8 @@ CW 27
 
 - [[Talk with Carl about Navigation Interfaces]]
 - [[Plans for Today’s Feedback Meeting]]
+- [[Installation for Exhibition]]
+- [[Projecting onto a Glass Prism]]
 
 CW 28
 

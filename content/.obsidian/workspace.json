@@ -32,8 +32,81 @@
               "icon": "lucide-file",
               "title": "Journal"
             }
+          },
+          {
+            "id": "5b818fe5ed3b9dcc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Installation for Exhibition.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Installation for Exhibition"
+            }
+          },
+          {
+            "id": "c443fa489dd4fd6e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Alternative Interfaces.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Alternative Interfaces"
+            }
+          },
+          {
+            "id": "e29798fcbf9c6180",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projecting onto a Glass Prism.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Projecting onto a Glass Prism"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -192,7 +265,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 409
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -204,13 +277,17 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false,
-      "templater-obsidian:Templater": false,
-      "notebook-navigator:Notebook Navigator": false
+      "bases:Create new base": false
     }
   },
-  "active": "d0fca1631b8a6cbd",
+  "active": "e29798fcbf9c6180",
   "lastOpenFiles": [
+    "Projecting onto a Glass Prism.md",
+    "Journal.md",
+    "Alternative Interfaces.md",
+    "Installation for Exhibition.md",
+    "Talk with Carl about Navigation Interfaces.md",
+    "2026-06-30.md",
     "images/wiki.comphost.club.png",
     "images/Version_20thJune.png",
     "images/The Three Pillars.png",
@@ -222,10 +299,8 @@
     "images/PROTO_Workshop (2).jpeg",
     "images/PROTO_Workshop (1).jpeg",
     "images/PROTO_Handout.jpeg",
-    "images/KantanProjection.jpeg",
     "Timetracking.md",
     "The Navigation Problem by Mark Bernstein.md",
-    "Talk with Carl about Navigation Interfaces.md",
     "deleteMe.md",
     "Who am I.md",
     "What is possible in CrossDocu with Markdown Syntax.md",
@@ -237,7 +312,6 @@
     "Mapping the Garden.md",
     "Document a Design Experiment.md",
     "Plans for Today’s Feedback Meeting.md",
-    "Journal.md",
     "About Learning in Public.md",
     "About Digital Gardens and Streams.md",
     "Creative Patterns Taglist.md",
@@ -245,9 +319,6 @@
     "Welcome to my Concept Presentation.md",
     "Introduction to Creative Coding with p5.js.md",
     "Questions behind ECT.md",
-    "Projektideen - Der Baum hat Zeit.md",
-    "Webcam Movement Visualization in TD.md",
-    "User Tests.md",
     "Content Map.canvas",
     "icons"
   ]

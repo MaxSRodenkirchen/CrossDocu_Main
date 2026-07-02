@@ -13,3 +13,27 @@ The idea is to combine different Creative Technology patterns to showcase some o
 - [[Arduino Beginners Workshop]] 
 - [[Touchdesigner to VCV Rack]]
 - [[Manipulating Light]]
+
+
+### Needed for Setup:
+
+**Installation**
+- Dark room
+- Option to work top down from the ceiling
+- Electricity
+- Space for some movement
+
+- Computer for sending visuals and audio %% (Olschewski?) %%
+- Good audio out (headphones?!)
+- Audio-Interface
+- Projector
+
+- Printed DIN A4 handouts
+- Printed Documentation
+- Stands for the prints
+- Business cards
+
+**ECT-web documentation**
+- Mac or PC with display
+	- Display-PC ? 
+- Casual headphones
