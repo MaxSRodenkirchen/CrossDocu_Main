@@ -10,4 +10,4 @@ tags:
 ###### 27.05.2026 
 ###### at [[Der Baum hat Zeit - FH Aachen - Prof. Eva Vitting]]
 
-Part of [[Concept Presentation]]
+Part of [[Concept for this Garden]]

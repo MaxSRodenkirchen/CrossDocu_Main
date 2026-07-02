@@ -157,7 +157,7 @@
             </div>
 
             <ol class="listOfContent" style="display: none;">
-                {{ moc.templateContent | mocSidebar(collections.all) | safe }}
+                {{ moc.templateContent | linkClass | mocSidebar(collections.all) | safe }}
             </ol>
         </li>
         {% endfor %}

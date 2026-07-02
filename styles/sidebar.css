@@ -185,6 +185,7 @@
     margin: 0;
     border-bottom: var(--lineWeight) dashed var(--internalInteraction);
     border-left: var(--lineWeight) dashed var(--internalInteraction);
+    background-color: none !important;
   }
 
   .listSection {
@@ -214,10 +215,13 @@
   }
 
   .contentLink:hover,
-  .contentLink.active {
+  .contentLink.active,
+  .internalLink:hover {
     /* margin-bottom: var(--gapSmaller); */
     /* font-family: "Ease Standard Medium", sans-serif; */
     color: var(--lobster-pink);
+    scroll-margin-top: var(--gap);
+    background-color: transparent !important;
 
   }
 

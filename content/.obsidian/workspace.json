@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Journal.md",
+                "file": "Weekly Progress.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -30,7 +30,7 @@
               },
               "pinned": true,
               "icon": "lucide-file",
-              "title": "Journal"
+              "title": "Weekly Progress"
             }
           },
           {
@@ -104,9 +104,80 @@
               "icon": "lucide-file",
               "title": "Projecting onto a Glass Prism"
             }
+          },
+          {
+            "id": "7b7209982da34847",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Concept for this Garden.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Concept for this Garden"
+            }
+          },
+          {
+            "id": "701450e4db0b15e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Design System.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Design System"
+            }
+          },
+          {
+            "id": "d4383c6448bd8e03",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Designing this Garden.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Designing this Garden"
+            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -280,10 +351,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "e29798fcbf9c6180",
+  "active": "d0fca1631b8a6cbd",
   "lastOpenFiles": [
+    "Concept for this Garden.md",
+    "Designing this Garden.md",
+    "Design System.md",
+    "Weekly Progress.md",
     "Projecting onto a Glass Prism.md",
-    "Journal.md",
+    "images/Prism-Projection_1.jpeg",
+    "images/Prism-Projection_2.jpeg",
     "Alternative Interfaces.md",
     "Installation for Exhibition.md",
     "Talk with Carl about Navigation Interfaces.md",
@@ -297,8 +373,6 @@
     "images/Projection_Light_Test (1).jpeg",
     "images/PROTO_Workshop (3).jpeg",
     "images/PROTO_Workshop (2).jpeg",
-    "images/PROTO_Workshop (1).jpeg",
-    "images/PROTO_Handout.jpeg",
     "Timetracking.md",
     "The Navigation Problem by Mark Bernstein.md",
     "deleteMe.md",
@@ -316,9 +390,6 @@
     "About Digital Gardens and Streams.md",
     "Creative Patterns Taglist.md",
     "Connecting a Kinect 1 to TD.md",
-    "Welcome to my Concept Presentation.md",
-    "Introduction to Creative Coding with p5.js.md",
-    "Questions behind ECT.md",
     "Content Map.canvas",
     "icons"
   ]

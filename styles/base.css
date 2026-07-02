@@ -169,7 +169,7 @@
   color: var(--internalLink);
   /* padding: 0 var(--gapSmallest); */
   /* gap: var(--gapSmallest); */
-  /* cursor: pointer; */
+  cursor: pointer;
   margin: 0;
 }
 

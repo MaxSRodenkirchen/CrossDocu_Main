@@ -65,7 +65,7 @@ export function initMoc() {
 
     document.querySelectorAll('.sidebar-group.moc-sidebar-container:not(#sidebar-default) > h1').forEach(h1 => {
         h1.addEventListener('click', () => {
-            switchMoc(''); 
+            switchMoc('');
         });
         h1.style.cursor = "pointer";
     });
@@ -104,13 +104,40 @@ export function initTags() {
     };
 
     window.openTagModule = function (tag) {
-        // Zuerst zum entsprechenden Tag wechseln
-        window.switchTag(tag);
-        
-        // Sicherstellen, dass das Tag-Modul in der Sidebar geöffnet ist
-        const btnToggleTags = document.getElementById('btnToggleTags');
-        if (btnToggleTags && !btnToggleTags.classList.contains('active')) {
-            btnToggleTags.click();
+        const formattedTag = tag.replace(/-/g, ' ');
+
+        // Find the aList with this tag name in the new sidebar
+        const tagLists = document.querySelectorAll('.aTagList');
+        let targetList = null;
+        tagLists.forEach(list => {
+            const h3 = list.querySelector('h3');
+            if (h3 && h3.textContent.trim() === formattedTag) {
+                targetList = list;
+            }
+        });
+
+        if (targetList) {
+            const isCurrentlyActive = targetList.classList.contains('active');
+            
+            if (!isCurrentlyActive) {
+                const titleContainer = targetList.querySelector('.aListTitle');
+                if (titleContainer) {
+                    titleContainer.click(); // This will trigger openLists logic
+                }
+            }
+
+            setTimeout(() => {
+                targetList.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        } else {
+            // Fallback for old sidebar behavior
+            if (typeof window.switchTag === 'function') {
+                window.switchTag(tag);
+            }
+            const btnToggleTags = document.getElementById('btnToggleTags');
+            if (btnToggleTags && !btnToggleTags.classList.contains('active')) {
+                btnToggleTags.click();
+            }
         }
     };
 
@@ -121,11 +148,11 @@ export function initTags() {
 export function initSearch() {
     const searchInput = document.getElementById('searchInput');
     const searchList = document.getElementById('search');
-    
+
     if (!searchInput || !searchList) return;
-    
+
     const items = searchList.querySelectorAll('.contentLink');
-    
+
     searchInput.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase();
         items.forEach(item => {
@@ -147,13 +174,13 @@ export function initSearch() {
     document.addEventListener('keydown', (e) => {
         if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'o') {
             e.preventDefault(); // Prevent default browser file open
-            
+
             // 1. Ensure the left module tab is open
             const btnToggleSearch = document.getElementById('btnToggleSearch');
             if (btnToggleSearch && !btnToggleSearch.classList.contains('active')) {
                 btnToggleSearch.click();
             }
-            
+
             // 2. Ensure the search accordion is open
             if (!searchList.classList.contains('active')) {
                 const titleContainer = searchList.querySelector('.aListTitle');
@@ -202,10 +229,10 @@ export function updateModules() {
             contentDiv.style.display = newState ? defaultDisplay : 'none';
             btn.classList.toggle('active', newState);
             localStorage.setItem(storageKey, newState);
-            
+
             if (onToggleFn) onToggleFn(newState);
             if (updateVisibilityFn) updateVisibilityFn();
-            
+
             window.dispatchEvent(new Event('resize'));
         });
     }
@@ -220,7 +247,7 @@ export function updateModules() {
         btnToggleViewModes.classList.toggle('active', newState);
         localStorage.setItem('module_viewModes', newState);
     });
-    
+
     setupToggle(btnToggleViewModes, viewModeContainer, 'module_viewModes', 'flex', updateConfigSidebarVisibility, (newState) => {
         sectionsDiv.style.display = newState ? 'block' : 'none';
         btnToggleSections.classList.toggle('active', newState);
@@ -241,11 +268,11 @@ export function updateModules() {
     const btnToggleOrdered = document.getElementById('btnToggleOrdered');
     const btnToggleSearch = document.getElementById('btnToggleSearch');
     const btnToggleTags = document.getElementById('btnToggleTags');
-    
+
     const orderedContentDiv = document.getElementById('orderedContent');
     const searchContentDiv = document.getElementById('searchContent');
     const tagsContentDiv = document.getElementById('tagsContent');
-    
+
     const mainSidebarEl = document.getElementById('sidebar');
 
     function updateMainSidebarVisibility() {
@@ -269,7 +296,7 @@ export function updateModules() {
 
     function setupExclusiveToggle(modules, updateVisibilityFn) {
         let activeFound = false;
-        
+
         modules.forEach(mod => {
             if (!mod.btn || !mod.content) return;
             const savedState = localStorage.getItem(mod.key);
@@ -293,7 +320,7 @@ export function updateModules() {
             if (!mod.btn || !mod.content) return;
             mod.btn.addEventListener('click', () => {
                 const isCurrentlyVisible = window.getComputedStyle(mod.content).display !== 'none';
-                
+
                 modules.forEach(m => {
                     if (!m.btn || !m.content) return;
                     m.content.style.display = 'none';
@@ -323,7 +350,7 @@ export function updateModules() {
         if (mainContainer.scrollWidth > mainContainer.clientWidth + 1) {
             const btnToggleViewModes = document.getElementById('btnToggleViewModes');
             const btnToggleSections = document.getElementById('btnToggleSections');
-            
+
             let closedConfig = false;
             if (btnToggleViewModes && btnToggleViewModes.classList.contains('active')) {
                 btnToggleViewModes.click();
@@ -332,12 +359,12 @@ export function updateModules() {
                 btnToggleSections.click();
                 closedConfig = true;
             }
-            
+
             if (!closedConfig) {
                 const btnToggleOrdered = document.getElementById('btnToggleOrdered');
                 const btnToggleSearch = document.getElementById('btnToggleSearch');
                 const btnToggleTags = document.getElementById('btnToggleTags');
-                
+
                 if (btnToggleOrdered && btnToggleOrdered.classList.contains('active')) {
                     btnToggleOrdered.click();
                 } else if (btnToggleSearch && btnToggleSearch.classList.contains('active')) {
@@ -392,7 +419,7 @@ export function openLists() {
         }
 
         if (titleContainer) {
-            titleContainer.addEventListener('click', function(e) {
+            titleContainer.addEventListener('click', function (e) {
                 if (e.target.closest('a')) return;
 
                 const isCurrentlyActive = list.classList.contains('active');
@@ -432,13 +459,13 @@ export function activeLink() {
     const currentPath = decodeURI(window.location.pathname);
     const contentLinks = document.querySelectorAll('.contentLink');
     const allALists = document.querySelectorAll('.aList');
-    
+
     allALists.forEach(list => list.classList.remove('containsActive'));
-    
+
     contentLinks.forEach(linkContainer => {
         const link = linkContainer.querySelector('a');
         if (!link) return;
-        
+
         const href = link.getAttribute('href');
         if (!href) {
             linkContainer.classList.remove('active');
@@ -453,6 +480,9 @@ export function activeLink() {
                 if (parentList) {
                     parentList.classList.add('containsActive');
                 }
+                setTimeout(() => {
+                    linkContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
             } else {
                 linkContainer.classList.remove('active');
             }
@@ -461,3 +491,5 @@ export function activeLink() {
         }
     });
 }
+
+

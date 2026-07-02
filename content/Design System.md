@@ -5,7 +5,7 @@ tags:
 ---
 # A Design System for this Garden
 
-This was shows as part of the [[Design Presentation]]. It may have changed since then. 
+This was shows as part of the [[Designing this Garden]]. It may have changed since then. 
 
 ![[Design Elements.png]]
 
