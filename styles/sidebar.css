@@ -39,6 +39,8 @@
     list-style: none;
     /* border-bottom: var(--lineWeight) dashed var(--internalInteraction); */
     transition: all 2ms;
+    scroll-margin-top: var(--gapSmall);
+
   }
 
 
@@ -220,7 +222,7 @@
     /* margin-bottom: var(--gapSmaller); */
     /* font-family: "Ease Standard Medium", sans-serif; */
     color: var(--lobster-pink);
-    scroll-margin-top: var(--gap);
+    scroll-margin-top: var(--gapSmall);
     background-color: transparent !important;
 
   }

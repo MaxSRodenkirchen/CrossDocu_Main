@@ -118,7 +118,7 @@ export function initTags() {
 
         if (targetList) {
             const isCurrentlyActive = targetList.classList.contains('active');
-            
+
             if (!isCurrentlyActive) {
                 const titleContainer = targetList.querySelector('.aListTitle');
                 if (titleContainer) {
@@ -490,6 +490,30 @@ export function activeLink() {
             linkContainer.classList.remove('active');
         }
     });
-}
 
+    // Close active aTagList when clicking an internalLink in midContainer
+    const midContainer = document.getElementById('midContainer');
+    if (midContainer) {
+        midContainer.addEventListener('click', (e) => {
+            const internalLink = e.target.closest('.internalLink');
+            if (internalLink) {
+                const activeTagList = document.querySelector('.aTagList.active');
+                if (activeTagList) {
+                    activeTagList.classList.remove('active');
+                    const contentList = activeTagList.querySelector('.listOfContent');
+                    if (contentList) contentList.style.display = "none";
+
+                    // Check if the currently saved accordion list is this tag list's identifier
+                    const titleElement = activeTagList.querySelector('.aListTitle h3');
+                    if (titleElement) {
+                        const identifier = titleElement.textContent.trim();
+                        if (localStorage.getItem('activeAccordionList') === identifier) {
+                            localStorage.removeItem('activeAccordionList');
+                        }
+                    }
+                }
+            }
+        });
+    }
+}
 
