@@ -1,0 +1,10 @@
+{
+  "id": "title-case-converter",
+  "name": "Title Case Converter",
+  "version": "1.0.6",
+  "minAppVersion": "1.4.0",
+  "description": "Convert selected text to proper title case using citation-style rules (AMA, with more styles planned).",
+  "author": "MaxSRodenkirchen",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}
