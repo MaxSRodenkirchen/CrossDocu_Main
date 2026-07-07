@@ -8,7 +8,7 @@ tags:
 What are ways of working with light? 
 
 What happens if we use light from a projector? 
-Could this be combined with an projecting some interactive visuals?
+Could this be combined with projecting some interactive visuals?
 [[Movement Detection in Touchdesigner]] 
 [[Projection Mapping in Touchdesigner]]
 

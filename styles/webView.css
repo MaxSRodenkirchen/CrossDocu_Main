@@ -16,6 +16,10 @@
   background: var(--bgLight);
 }
 
+#content p strong {
+  font-family: "Ease Standard Bold", sans-serif;
+  font-weight: 300;
+}
 
 
 #content h1,
@@ -87,12 +91,17 @@
 }
 
 #content ol,
-ul {
+#content ul {
   padding: var(--gapSmaller) var(--gapSmall);
 }
 
 #content li {
   margin-bottom: var(--gapSmaller);
+}
+
+#content li p,
+#content li p:not(:has(img)) {
+  margin: 0;
 }
 
 

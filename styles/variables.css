@@ -127,3 +127,8 @@
   font-family: "Ease Standard Medium";
   src: url(/fonts/EaseStandardTRIAL-Medium.otf);
 }
+
+@font-face {
+  font-family: "Ease Standard Bold";
+  src: url(/fonts/EaseStandardTRIAL-Bold.otf);
+}
