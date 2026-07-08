@@ -34,12 +34,12 @@
             }
           },
           {
-            "id": "5b818fe5ed3b9dcc",
+            "id": "dba79a865905c261",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Installation for Exhibition.md",
+                "file": "Arduino Motor Control.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -54,130 +54,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Installation for Exhibition"
-            }
-          },
-          {
-            "id": "c443fa489dd4fd6e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Alternative Interfaces.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Alternative Interfaces"
-            }
-          },
-          {
-            "id": "e29798fcbf9c6180",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projecting onto a Glass Prism.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Projecting onto a Glass Prism"
-            }
-          },
-          {
-            "id": "7b7209982da34847",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Concept for this Garden.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Concept for this Garden"
-            }
-          },
-          {
-            "id": "701450e4db0b15e4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Design System.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Design System"
-            }
-          },
-          {
-            "id": "d4383c6448bd8e03",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Designing this Garden.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Designing this Garden"
+              "title": "Arduino Motor Control"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -209,7 +90,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Studium",
+                "query": "tag:#Physical-Computing",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -351,12 +232,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "d0fca1631b8a6cbd",
+  "active": "447985832c7a8cd0",
   "lastOpenFiles": [
-    "Concept for this Garden.md",
+    "images/Arduino Prism.jpeg",
+    "images/Arduino Set Up.jpeg",
+    "A Color Detecting Controller.md",
+    "Weekly Progress.md",
+    "Arduino Motor Control.md",
     "Designing this Garden.md",
     "Design System.md",
-    "Weekly Progress.md",
+    "Concept for this Garden.md",
     "Projecting onto a Glass Prism.md",
     "images/Prism-Projection_1.jpeg",
     "images/Prism-Projection_2.jpeg",
@@ -372,7 +257,6 @@
     "images/Projection_Light_Test (2).jpeg",
     "images/Projection_Light_Test (1).jpeg",
     "images/PROTO_Workshop (3).jpeg",
-    "images/PROTO_Workshop (2).jpeg",
     "Timetracking.md",
     "The Navigation Problem by Mark Bernstein.md",
     "deleteMe.md",
@@ -387,9 +271,6 @@
     "Document a Design Experiment.md",
     "Plans for Today’s Feedback Meeting.md",
     "About Learning in Public.md",
-    "About Digital Gardens and Streams.md",
-    "Creative Patterns Taglist.md",
-    "Connecting a Kinect 1 to TD.md",
     "Content Map.canvas",
     "icons"
   ]

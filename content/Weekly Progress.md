@@ -4,12 +4,11 @@ tags:
 ---
 Sorted by: new to old 
 
-Want to do
+CW 28
 
 1. [[Touchdesigner to VCV Rack]]
 2. [[Arduino Motor Control]]
-3. [[Building a Prism Mobile]]
-4. [[A Color Detecting Controller]]
+3. [[A Color Detecting Controller]]
 
 CW 27
 
