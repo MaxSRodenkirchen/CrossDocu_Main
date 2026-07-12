@@ -9,19 +9,25 @@ export function fitPage() {
     pagesContainer.style.transform = 'scale(1)';
     pagesContainer.style.transformOrigin = 'top left';
 
-    const pageWidth = firstPage.offsetWidth;
-    const pageHeight = firstPage.offsetHeight;
+    const viewMode = document.body.dataset.view;
+
+    let targetWidth = firstPage.offsetWidth;
+    const targetHeight = firstPage.offsetHeight;
+
+    if (viewMode === "print") {
+        targetWidth = firstPage.offsetWidth * 2;
+    }
 
     const containerWidth = container.offsetWidth;
     const containerHeight = container.clientHeight;
 
-    const scaleWidth = containerWidth / pageWidth;
-    const scaleHeight = containerHeight / pageHeight;
+    const scaleWidth = containerWidth / targetWidth;
+    const scaleHeight = containerHeight / targetHeight;
 
     const scale = Math.min(scaleWidth, scaleHeight);
 
     pagesContainer.style.transform = `scale(${scale})`;
     pagesContainer.style.setProperty('--slide-scale', scale);
-    
+
     // console.log(container);
 }

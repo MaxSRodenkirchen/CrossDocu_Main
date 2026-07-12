@@ -1,22 +1,17 @@
 @media print {
   @page {
     size: A4;
-    /* bleed: 3mm;
-    marks: crop; */
-    /* background: var(--color-white); */
+    background: #ffffff;
 
     @bottom-center {
       /* content: counter(page); */
-
     }
 
     @bottom-left {
       content: string(title);
-
       font-family: "Graebenbach Mono Regular", monospace;
       font-size: 9px;
       line-height: 140%;
-
       padding-left: var(--gapSmall);
       margin-bottom: 20px;
       border-left: var(--lineWeight) solid var(--internalInteraction);
@@ -25,168 +20,14 @@
 
     @bottom-right {
       content: counter(page) " | " counter(pages);
-
       font-family: "Graebenbach Mono Regular", monospace;
       font-size: 9px;
       line-height: 140%;
-
       padding-right: var(--gapSmall);
       margin-bottom: 20px;
       border-right: var(--lineWeight) solid var(--internalInteraction);
       border-bottom: var(--lineWeight) solid var(--internalInteraction);
     }
-
-    .contentContainer {
-      padding: var(--gapSmall);
-      border-bottom: var(--lineWeight) solid var(--internalInteraction) !important;
-      border-top: var(--lineWeight) solid var(--internalInteraction) !important;
-      margin-bottom: var(--gapSmaller);
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    li,
-    ol,
-    ul {
-      color: var(--internalInteraction);
-    }
-
-    h1 {
-      font-family: Favorite Lining Bold;
-      font-size: 44pt;
-      line-height: 100%;
-      margin: 0;
-      margin-bottom: var(--gapSmall);
-      /* padding-bottom: var(--gapSmall);
-      border-bottom:var(--lineWeight) solid var(--internalInteraction) ; */
-    }
-
-    h2 {
-      font-family: Favorite Lining Regular;
-      font-size: 26pt;
-      line-height: 100%;
-      margin: 0;
-      margin-bottom: var(--gapSmall);
-
-
-    }
-
-    h3 {
-      font-family: Favorite Lining Regular;
-      font-size: 24pt;
-      line-height: 100%;
-      margin: 0;
-      margin-bottom: var(--gapSmall);
-    }
-
-    h4 {
-      font-family: Favorite Regular;
-      font-weight: 300;
-      font-size: 16pt;
-      line-height: 120%;
-      margin-top: var(--gapSmall);
-      margin-bottom: var(--gapSmallest);
-    }
-
-    h6 {
-      font-weight: 300;
-      font-family: "Graebenbach Mono Regular", monospace;
-      font-size: 9px;
-      line-height: 140%;
-    }
-
-    p,
-    li {
-      font-family: Graebenbach Regular;
-      font-size: 11pt;
-      line-height: 140%;
-    }
-
-    img {
-      width: 100%;
-      object-fit: contain;
-      display: block;
-      z-index: -1;
-    }
-
-
-
-    code {
-      font: var(--font-mono-small);
-      padding: 0 4px;
-      border-radius: 3px;
-    }
-
-    pre {
-      padding: var(--gapSmall);
-      border-radius: 5px;
-      overflow-x: auto;
-      margin: var(--gapSmaller) 0;
-    }
-
-    pre code {
-      display: block;
-      padding: 0;
-      background: transparent;
-      white-space: pre;
-    }
-
-    .print-only-links {
-      display: block !important;
-      margin-top: var(--gapSmall);
-      padding-top: var(--gapSmallest);
-      /* border-top: var(--lineWeight) dotted var(--internalInteraction); */
-      page-break-inside: avoid;
-    }
-
-    /* .print-only-links ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    } */
-
-    /* .print-only-links li {
-      font-family: "Graebenbach Mono Regular", monospace;
-      font-size: 9pt;
-      margin-bottom: 4px;
-      line-height: 140%;
-      word-break: break-all;
-    } */
-
-    /* 
-    .print-only-links span {
-      font-family: Graebenbach Bold, sans-serif;
-    }
-
-    .print-only-links a {
-      text-decoration: none !important;
-      color: inherit !important;
-      display: inline !important;
-      padding: 0 !important;
-      transform: none !important;
-      background: none !important;
-    } */
-
-    /* .print-only-links .internalLink::before {
-      content: "[Internal] ";
-      font-weight: bold;
-    }
-
-    .print-only-links .externalLink::before {
-      content: "[External] ";
-      font-weight: bold;
-    } */
-
-    hr {
-      display: none;
-    }
-
-
   }
 
   @page :left {
@@ -203,19 +44,89 @@
     }
   }
 
-  .contentContainer {
+
+
+  .pagedjs_page .contentContainer {
+    padding: var(--gapSmall);
+    border-bottom: var(--lineWeight) solid var(--internalInteraction) !important;
+    border-top: var(--lineWeight) solid var(--internalInteraction) !important;
+    margin-bottom: var(--gapSmaller);
     break-inside: avoid;
+  }
+
+  .pagedjs_page h1 {
+    font-size: 44pt;
+    margin: 0;
+    margin-bottom: var(--gapSmall);
   }
 
   h1 {
     string-set: title content(text);
   }
 
-}
+  .pagedjs_page h2 {
+    font-size: 26pt;
+    margin: 0;
+    margin-bottom: var(--gapSmall);
+  }
 
-.pagedjs_area {
-  border-right: var(--lineWeight) solid var(--internalInteraction) !important;
-  border-left: var(--lineWeight) solid var(--internalInteraction) !important;
-  border-bottom: var(--lineWeight) solid var(--internalInteraction) !important;
+  .pagedjs_page h3 {
+    font-size: 24pt;
+    margin: 0;
+    margin-bottom: var(--gapSmall);
+  }
 
+  .pagedjs_page h4 {
+    font-size: 16pt;
+    line-height: 120%;
+    margin-top: var(--gapSmall);
+    margin-bottom: var(--gapSmallest);
+  }
+
+  .pagedjs_page h6 {
+    font-size: 9px;
+  }
+
+  .pagedjs_page p,
+  .pagedjs_page li {
+    font-size: 11pt;
+    line-height: 140%;
+  }
+
+  /* .pagedjs_page img {
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    z-index: -1;
+  } */
+
+
+  .pagedjs_page img,
+  .pagedjs_page iframe {
+    display: block;
+    margin-left: calc(-1*var(--gapSmall));
+    width: calc(100% + var(--gapSmall)*2);
+    max-width: none;
+
+  }
+
+  #content iframe {
+    aspect-ratio: 16 / 9;
+    border: 0;
+  }
+
+
+
+  .pagedjs_page .print-only-links {
+    display: block !important;
+    margin-top: var(--gapSmall);
+    padding-top: var(--gapSmallest);
+    page-break-inside: avoid;
+  }
+
+  .pagedjs_area {
+    border-right: var(--lineWeight) solid var(--internalInteraction) !important;
+    border-left: var(--lineWeight) solid var(--internalInteraction) !important;
+    border-bottom: var(--lineWeight) solid var(--internalInteraction) !important;
+  }
 }

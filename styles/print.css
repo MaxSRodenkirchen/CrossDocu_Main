@@ -1,5 +1,9 @@
 @media print {
 
+  @page {
+    margin: 0 !important;
+  }
+
   /* Hide all non-essential UI elements during printing */
   #sidebar,
   #config,
@@ -30,8 +34,30 @@
   .pagedjs_page {
     opacity: 1 !important;
     break-inside: avoid !important;
-    break-after: page !important;
-
+    break-after: auto !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
   }
 
+}
+
+@media screen {
+
+  body[data-view="print"] .pagedjs_pages {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(2 * var(--pagedjs-width, 210mm));
+    margin-top: var(--gapSmall);
+    /* Breite von 2 Seiten */
+  }
+
+  body[data-view="print"] .pagedjs_first_page {
+    margin-left: var(--pagedjs-width, 210mm);
+    /* schiebt Seite 1 auf die rechte Position */
+  }
+
+  /* Show a border on the screen so you can see the page edges */
+  body[data-view="print"] .pagedjs_page {
+    border: var(--lineWeight) solid var(--dust-grey);
+  }
 }

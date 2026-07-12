@@ -16,4 +16,5 @@ tags:
 
 *These are not the best images for demonstration, because of the the abstract shape layered above the rectangular shape. The images are here to illustrate the simplicity of this projection mapping technique.*
 
-![[firstKantanMapperTest.png]]![[ProjectMappingTest 1.png]]
+![[firstKantanMapperTest.png]]
+![[ProjectMappingTest 1.png]]
