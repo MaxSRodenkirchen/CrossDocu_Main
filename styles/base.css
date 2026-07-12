@@ -39,18 +39,11 @@
 
   #midContainer {
     flex: 1;
-    /* min-width: 1000px; */
-    /* max-width: 1050px; */
-    /* display: flex;
-    justify-content: center; */
     background-clip: content-box;
     overflow-y: scroll;
     overflow-x: hidden;
     scrollbar-width: none;
-    /* margin-left: auto; */
-    /* margin-right: var(--gapSmall); */
     background-color: var(--bg);
-    /* padding: 20px; */
   }
 
 
@@ -73,15 +66,9 @@
     justify-content: center;
   }
 
-  #content {
-    /* margin: var(--gap) 0 !important; */
-  }
-
   .pagedjs_page {
     scroll-margin-top: var(--gapSmall);
-    /* border-top: var(--lineWeight) solid var(--internalInteraction);
-    border-bottom: var(--lineWeight) solid var(--internalInteraction);
-    margin-bottom: var(--gapSmaller); */
+
   }
 }
 
@@ -94,8 +81,7 @@
   /* transform: translate(0px, 2px); */
   color: var(--internalLink);
   display: inline;
-  word-break: break-all;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   /* text-decoration: none; */
 }
 
@@ -111,17 +97,10 @@
 }
 
 .externalLink {
-  /* font-family: "Graebenbach Mono Regular", monospace; */
   text-decoration: underline dotted;
-
-  /* border: var(--lineWeight) solid var(--externalLink); */
-  /* padding: 0 var(--gapSmallest); */
-  /* transform: translate(0px, 2px); */
   color: inherit;
   display: inline;
-  word-break: break-all;
-  overflow-wrap: anywhere;
-  /* text-decoration: none; */
+  overflow-wrap: break-word;
 }
 
 .externalLink:hover {
@@ -131,8 +110,6 @@
 }
 
 .content-meta {
-  /* background-color: var(--bg); */
-  /* max-width: 600px; */
   padding-left: var(--gapSmall);
   border-left: var(--lineWeight) dashed var(--internalInteraction);
   border-bottom: var(--lineWeight) dashed var(--internalInteraction);
@@ -147,9 +124,6 @@
   align-items: start;
   gap: var(--gapSmaller);
   padding-bottom: var(--gapSmaller);
-  /* padding-top: var(--gapSmaller); */
-  /* border-bottom: var(--lineWeight) solid var(--internalLink); */
-  /* border-top: var(--lineWeight) solid var(--internalLink); */
 }
 
 .meta-content-wrapper {

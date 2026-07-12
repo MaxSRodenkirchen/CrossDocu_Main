@@ -33,9 +33,11 @@
 #content img,
 iframe {
   display: block;
-  margin-left: calc(-1*var(--gapSmall));
-  width: calc(100% + var(--gapSmall)*2);
-  max-width: none;
+  /* margin-left: calc(-1*var(--gapSmall));
+  width: calc(100% + var(--gapSmall)*2); */
+  max-height: 800px;
+  object-fit: contain;
+  max-width: 100%;
 
 }
 

@@ -1,20 +1,17 @@
   #viewModeContainer {
       font-family: "Ease Display Regular", sans-serif;
-      /* font-size: 12px; */
       display: flex;
       flex-direction: column;
       position: absolute;
-      right: var(--gapSmall);
       right: 0;
-      bottom: var(--gapSmall);
-      background-color: var(--bgLight);
-      color: var(--internalInteraction);
-
-      /* margin-bottom: var(--gap); */
+      bottom: 25%;
+      background-color: var(--internalLink);
+      color: var(--bg);
+      /* box-shadow: var(--gapSmaller) var(--gapSmallest) 10px var(--internalLink); */
   }
 
   .viewModeButton {
-      background-color: var(--bg);
+      background-color: var(--internalLink);
       border: none;
       padding: var(--gapSmallest) var(--gapSmaller);
       padding-right: var(--gapSmall);
@@ -39,5 +36,5 @@
   .activeViewButton,
   .viewModeButton:hover {
       /* background-color: var(--internalLink); */
-      color: var(--internalLink);
+      color: var(--bgLight);
   }

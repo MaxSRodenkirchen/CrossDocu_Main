@@ -105,12 +105,12 @@
   .pagedjs_page iframe {
     display: block;
     margin-left: calc(-1*var(--gapSmall));
-    width: calc(100% + var(--gapSmall)*2);
-    max-width: none;
-
+    max-width: calc(100% + var(--gapSmall)*2);
+    max-height: 400px;
+    object-fit: contain;
   }
 
-  #content iframe {
+  .pagedjs_page iframe {
     aspect-ratio: 16 / 9;
     border: 0;
   }

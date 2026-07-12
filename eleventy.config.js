@@ -328,8 +328,9 @@ export default function (eleventyConfig) {
             rest = '';
         }
 
-        const appendLinks = (htmlBlock) => {
-            const links = [];
+        const allLinks = [];
+
+        const extractLinks = (htmlBlock) => {
             const linkRegex = /<a\s+[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
             let match;
             while ((match = linkRegex.exec(htmlBlock)) !== null) {
@@ -337,30 +338,36 @@ export default function (eleventyConfig) {
                 const text = match[2].replace(/<[^>]+>/g, '').trim();
                 // Exclude anchor links and purely empty text links
                 if (href && !href.startsWith('#') && text) {
-                    links.push({ href, text });
+                    if (!allLinks.find(l => l.href === href && l.text === text)) {
+                        allLinks.push({ href, text });
+                    }
                 }
             }
-            if (links.length > 0) {
-                let linksHtml = `<div class="print-only-links" style="display: none;">\n<ul>\n`;
-                links.forEach(l => {
-                    // Render as an actual <a> tag so that the 'linkClass' filter (which runs after) can add the appropriate CSS classes
-                    linksHtml += `<li><span>${l.text}:</span> <a href="${l.href}">${l.href}</a></li>\n`;
-                });
-                linksHtml += `</ul>\n</div>`;
-                return htmlBlock + '\n' + linksHtml;
-            }
-            return htmlBlock;
         };
 
         let result = '';
         if (prefix.trim() !== '') {
-            result += `<div class="contentContainer">\n${appendLinks(prefix)}\n</div>\n`;
+            extractLinks(prefix);
+            result += `<div class="contentContainer">\n${prefix}\n</div>\n`;
         }
 
         if (rest.trim() !== '') {
             result += rest.replace(/(<h[1-3]\b[^>]*>[\s\S]*?<\/h[1-3]>|<hr\b[^>]*>)([\s\S]*?)(?=<h[1-3]\b|<hr\b|$)/gi, (match, heading, innerContent) => {
-                return `<div class="contentContainer">\n${appendLinks(heading + '\n' + innerContent)}\n</div>`;
+                let block = heading + '\n' + innerContent;
+                extractLinks(block);
+                return `<div class="contentContainer">\n${block}\n</div>`;
             });
+        }
+
+        if (allLinks.length > 0) {
+            let linksHtml = `<div class="print-only-links" style="display: none;">\n<ul>\n`;
+            allLinks.forEach(l => {
+                // Render as an actual <a> tag so that the 'linkClass' filter (which runs after) can add the appropriate CSS classes
+                linksHtml += `<li><span>${l.text}:</span> <a href="${l.href}">${l.href}</a></li>\n`;
+            });
+            linksHtml += `</ul>\n</div>`;
+
+            result += `\n<div class="contentContainer">\n<h3>Link Directory</h3>\n${linksHtml}</div>\n`;
         }
 
         return result;
