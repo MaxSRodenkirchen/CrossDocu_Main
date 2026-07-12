@@ -6,13 +6,10 @@
 
   /* Hide all non-essential UI elements during printing */
   #sidebar,
-  #config,
   footer,
   .viewModeButton,
   #slideControls,
   #credit,
-  #leftModuleBar,
-  #rightModuleBar,
   #viewModeContainer {
     display: none !important;
   }

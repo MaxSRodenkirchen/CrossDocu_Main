@@ -9,7 +9,6 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=web" />
     <link rel="stylesheet" href="/styles/variables.css">
     <link rel="stylesheet" href="/styles/base.css" data-pagedjs-ignore>
-    <link rel="stylesheet" href="/styles/config.css" data-pagedjs-ignore>
     <link rel="stylesheet" href="/styles/viewMode.css" data-pagedjs-ignore>
     <link rel="stylesheet" href="/styles/sidebar.css" data-pagedjs-ignore>
     <link rel="stylesheet" href="/styles/print.css" data-pagedjs-ignore>
@@ -26,17 +25,11 @@
     <div id="mainContainer">
 
 
-        <aside id="leftModuleBar">
-            <a class="moduleName active" id="btnToggleOrdered">Ordered Lists</a>
-            <a class="moduleName" id="btnToggleTags">Tags</a>
-            <a class="moduleName" id="btnToggleSearch">Search</a>
-        </aside>
+
 
         <aside id="sidebar">
 
             
-
-
 <div id="ect">
     <div class="gap"></div>
 
@@ -1789,48 +1782,7 @@
 
         </div>
 
-        <aside id="config">
 
-            <div id="sections">
-
-    <h1>Sections</h1>
-
-    <ol><li><a href="#welcome-fellow-learner">Welcome Fellow Learner</a></li></ol>
-
-    <div id="slideControls">
-        <button class="sectionButton" onclick="prevSlide()" title="Previous Section">
-            <svg class="i i-arrow--left"><use href="/fonts/icons/svg-sprite.svg#arrow--left"/></svg> Previous Section
-        </button>
-        <button class="sectionButton" onclick="nextSlide()" title="Next Section">
-            <svg class="i i-arrow--right"><use href="/fonts/icons/svg-sprite.svg#arrow--right"/></svg> Next Section
-        </button>
-    </div>
-    <button class="sectionButton" onclick="toggleFullscreen()" title="Toggle Fullscreen">
-        <svg class="i i-maximize"><use href="/fonts/icons/svg-sprite.svg#maximize"/></svg> Fullscreen
-    </button>
-
-</div>
-
-
-
-<div id="viewModeContainer">
-    <button id="webButton" class="viewModeButton" onclick="switchView('web')">
-        Web Mode
-    </button>
-    <button class="viewModeButton" onclick="switchView('print')">
-        Print Mode
-    </button>
-    <button class="viewModeButton" onclick="switchView('slide')">
-        Slide Mode
-    </button>
-</div>
-
-
-
-
-
-
-        </aside>
 
         <div id="viewModeContainer">
             <button class="viewModeButton" onclick="switchView('web')">
@@ -1844,22 +1796,16 @@
             </button>
         </div>
 
-        <aside id="rightModuleBar">
-            <a class="moduleName active" id="btnToggleSections">Sections</a>
-            <a class="moduleName active" id="btnToggleViewModes">View Modes</a>
-        </aside>
+
     </div>
 
 
     <script type="module">
         import { setView } from "/js/switchView.js";
-        import { initMoc, initTags, initSearch, updateModules, openLists, activeLink } from "/js/sidebarUI.js";
+        import { initSearch, openLists, activeLink } from "/js/sidebarUI.js";
 
         setView();
-        initMoc();
-        initTags();
         initSearch();
-        updateModules();
         openLists();
         activeLink();
     </script>
