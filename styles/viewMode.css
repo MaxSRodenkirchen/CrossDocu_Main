@@ -38,3 +38,10 @@
       /* background-color: var(--internalLink); */
       color: var(--bgLight);
   }
+
+  #slideControls {
+      display: none; /* Shown via JS when in slide mode */
+      flex-direction: column;
+      margin-top: var(--gapSmaller);
+      border-top: 1px solid var(--bg);
+  }

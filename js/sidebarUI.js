@@ -1,3 +1,29 @@
+import { fitPage } from "./fitPage.js";
+
+export function initSidebarToggle() {
+    const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
+    if (isCollapsed) {
+        document.body.classList.add('sidebar-collapsed');
+    }
+
+    const btn = document.getElementById('toggleSidebarButton');
+    if (btn) {
+        btn.onclick = () => {
+            const collapsed = document.body.classList.toggle('sidebar-collapsed');
+            localStorage.setItem('sidebarCollapsed', collapsed);
+            
+            let start = performance.now();
+            function step() {
+                fitPage();
+                if (performance.now() - start < 350) { // match 0.3s CSS transition
+                    requestAnimationFrame(step);
+                }
+            }
+            requestAnimationFrame(step);
+        };
+    }
+}
+
 export function initSearch() {
     const searchInput = document.getElementById('searchInput');
     const searchList = document.getElementById('search');

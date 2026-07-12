@@ -7,6 +7,65 @@
     background-color: var(--bg);
     scrollbar-width: none;
     color: var(--internalInteraction);
+    /* transition: width 0.3s ease; */
+  }
+
+  body.sidebar-collapsed #sidebar {
+    width: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  #toggleSidebarButton {
+    position: absolute;
+    /* top: var(--gapSmall); */
+    bottom: 25%;
+    left: var(--gapSmaller);
+    left: 0;
+    z-index: 1000;
+    background: var(--internalLink);
+    border: none;
+    cursor: pointer;
+    padding: var(--gapSmallest);
+    color: var(--bgLight);
+  }
+
+  #toggleSidebarButton svg {
+    width: 24px;
+    height: 24px;
+    display: none;
+    fill: currentColor;
+  }
+
+  /* Default state: Sidebar is OPEN, so button shows 'close' icon */
+  #toggleSidebarButton .icon-close {
+    display: block;
+  }
+
+  #toggleSidebarButton:hover .icon-close {
+    display: none;
+  }
+
+  #toggleSidebarButton:hover .icon-close-filled {
+    display: block;
+  }
+
+  /* Collapsed state: Sidebar is CLOSED, so button shows 'open' icon */
+  body.sidebar-collapsed #toggleSidebarButton .icon-close,
+  body.sidebar-collapsed #toggleSidebarButton .icon-close-filled {
+    display: none;
+  }
+
+  body.sidebar-collapsed #toggleSidebarButton .icon-open {
+    display: block;
+  }
+
+  body.sidebar-collapsed #toggleSidebarButton:hover .icon-open {
+    display: none;
+  }
+
+  body.sidebar-collapsed #toggleSidebarButton:hover .icon-open-filled {
+    display: block;
   }
 
   #ect {
@@ -62,20 +121,9 @@
     color: var(--silver);
   }
 
-  /* .aList.containsActive .aListTitle {
-    color: var(--internalLink) !important;
-  } */
-
-  .aList.active {
-    /* margin-top: var(--gapSmaller);
-    margin-bottom: var(--gapSmaller); */
-    /* border-bottom: var(--lineWeight) solid var(--internalInteraction);
-      border-top: var(--lineWeight) solid var(--internalInteraction); */
-  }
 
   .aList.active .aListTitle {
     border-bottom: var(--lineWeight) solid var(--internalInteraction);
-    /* color: var(--internalLink); */
 
   }
 

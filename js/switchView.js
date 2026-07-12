@@ -41,15 +41,15 @@ export function setView() {
   // Set active class on view mode buttons
   const buttons = document.querySelectorAll(".viewModeButton");
   buttons.forEach(btn => {
-      btn.classList.remove("activeViewButton");
-      const onclickAttr = btn.getAttribute("onclick") || "";
-      if (viewMode === "print" && onclickAttr.includes("print")) {
-          btn.classList.add("activeViewButton");
-      } else if (viewMode === "slide" && onclickAttr.includes("slide")) {
-          btn.classList.add("activeViewButton");
-      } else if ((viewMode === "default" || viewMode === "web") && onclickAttr.includes("web")) {
-          btn.classList.add("activeViewButton");
-      }
+    btn.classList.remove("activeViewButton");
+    const onclickAttr = btn.getAttribute("onclick") || "";
+    if (viewMode === "print" && onclickAttr.includes("print")) {
+      btn.classList.add("activeViewButton");
+    } else if (viewMode === "slide" && onclickAttr.includes("slide")) {
+      btn.classList.add("activeViewButton");
+    } else if ((viewMode === "default" || viewMode === "web") && onclickAttr.includes("web")) {
+      btn.classList.add("activeViewButton");
+    }
   });
 
   const content = document.querySelector("#content");
@@ -224,7 +224,7 @@ function initActiveSectionHighlighting() {
 
   if (targets.length > 0) {
     const gap = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gap')) || 60;
-    
+
     const observerOptions = {
       root: null,
       rootMargin: `-${gap}px 0px -60% 0px`, // trigger active section near the top boundary

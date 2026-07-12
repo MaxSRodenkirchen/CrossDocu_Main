@@ -26,6 +26,21 @@
 
 
 
+        <button id="toggleSidebarButton">
+            <svg class="icon-open">
+                <use href="/fonts/icons/svg-sprite.svg#side-panel--open" />
+            </svg>
+            <svg class="icon-open-filled">
+                <use href="/fonts/icons/svg-sprite.svg#side-panel--open--filled" />
+            </svg>
+            <svg class="icon-close">
+                <use href="/fonts/icons/svg-sprite.svg#side-panel--close" />
+            </svg>
+            <svg class="icon-close-filled">
+                <use href="/fonts/icons/svg-sprite.svg#side-panel--close--filled" />
+            </svg>
+        </button>
+
         <aside id="sidebar">
 
             {% include "partials/sidebar.njk" %}
@@ -61,6 +76,15 @@
             <button class="viewModeButton" onclick="switchView('slide')">
                 {% icon "presentation-file" %} Slide Mode
             </button>
+
+            <div id="slideControls">
+                <button class="viewModeButton" onclick="prevSlide()">
+                    {% icon "chevron--up" %} Prev Slide
+                </button>
+                <button class="viewModeButton" onclick="nextSlide()">
+                    {% icon "chevron--down" %} Next Slide
+                </button>
+            </div>
         </div>
 
 
@@ -69,12 +93,13 @@
 
     <script type="module">
         import { setView } from "/js/switchView.js";
-        import { initSearch, openLists, activeLink } from "/js/sidebarUI.js";
+        import { initSearch, openLists, activeLink, initSidebarToggle } from "/js/sidebarUI.js";
 
         setView();
         initSearch();
         openLists();
         activeLink();
+        initSidebarToggle();
     </script>
 
 </body>

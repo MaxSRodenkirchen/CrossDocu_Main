@@ -1,33 +1,55 @@
 export function fitPage() {
-
     const pagesContainer = document.querySelector('.pagedjs_pages');
     const firstPage = document.querySelector('.pagedjs_page');
-    const container = document.querySelector('#content');
+    const viewport = document.getElementById('midContainer');
 
-    if (!pagesContainer || !firstPage || !container) return;
+    if (!pagesContainer || !firstPage || !viewport) return;
 
-    pagesContainer.style.transform = 'scale(1)';
     pagesContainer.style.transformOrigin = 'top left';
 
     const viewMode = document.body.dataset.view;
 
-    let targetWidth = firstPage.offsetWidth;
-    const targetHeight = firstPage.offsetHeight;
+    if (!firstPage.dataset.targetWidth) {
+        const computedStyle = window.getComputedStyle(firstPage);
+        const marginTop = parseFloat(computedStyle.marginTop) || 0;
+        const marginBottom = parseFloat(computedStyle.marginBottom) || 0;
+        const marginLeft = parseFloat(computedStyle.marginLeft) || 0;
+        const marginRight = parseFloat(computedStyle.marginRight) || 0;
 
-    if (viewMode === "print") {
-        targetWidth = firstPage.offsetWidth * 2;
+        firstPage.dataset.targetWidth = firstPage.offsetWidth + marginLeft + marginRight;
+        firstPage.dataset.targetHeight = firstPage.offsetHeight + marginTop + marginBottom;
+        firstPage.dataset.targetPrintWidth = firstPage.offsetWidth * 2;
     }
 
-    const containerWidth = container.offsetWidth;
-    const containerHeight = container.clientHeight;
+    let targetWidth = parseFloat(firstPage.dataset.targetWidth);
+    const targetHeight = parseFloat(firstPage.dataset.targetHeight);
+
+    if (viewMode === "print") {
+        targetWidth = parseFloat(firstPage.dataset.targetPrintWidth);
+    }
+
+    const containerWidth = viewport.clientWidth;
+    const containerHeight = viewport.clientHeight;
 
     const scaleWidth = containerWidth / targetWidth;
-    const scaleHeight = containerHeight / targetHeight;
+    const scaleHeight = viewMode === "slide" ? (containerHeight / targetHeight) : Infinity;
 
     const scale = Math.min(scaleWidth, scaleHeight);
 
-    pagesContainer.style.transform = `scale(${scale})`;
-    pagesContainer.style.setProperty('--slide-scale', scale);
+    // Center horizontally in both modes, center vertically only in slide mode
+    const scaledWidth = targetWidth * scale;
+    const offsetX = Math.max(0, (containerWidth - scaledWidth) / 2);
 
-    // console.log(container);
+    if (viewMode === "slide") {
+        const scaledHeight = targetHeight * scale;
+        const offsetY = Math.max(0, (containerHeight - scaledHeight) / 2);
+        
+        pagesContainer.style.transform = `translateX(${offsetX}px) scale(${scale})`;
+        pagesContainer.style.setProperty('--slide-offset-y', `${offsetY / scale}px`);
+    } else {
+        pagesContainer.style.transform = `translateX(${offsetX}px) scale(${scale})`;
+        pagesContainer.style.removeProperty('--slide-offset-y');
+    }
+
+    pagesContainer.style.setProperty('--slide-scale', scale);
 }

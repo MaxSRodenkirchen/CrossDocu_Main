@@ -27,6 +27,21 @@
 
 
 
+        <button id="toggleSidebarButton">
+            <svg class="icon-open">
+                <use href="/fonts/icons/svg-sprite.svg#side-panel--open" />
+            </svg>
+            <svg class="icon-open-filled">
+                <use href="/fonts/icons/svg-sprite.svg#side-panel--open--filled" />
+            </svg>
+            <svg class="icon-close">
+                <use href="/fonts/icons/svg-sprite.svg#side-panel--close" />
+            </svg>
+            <svg class="icon-close-filled">
+                <use href="/fonts/icons/svg-sprite.svg#side-panel--close--filled" />
+            </svg>
+        </button>
+
         <aside id="sidebar">
 
             
@@ -1704,13 +1719,12 @@
 </custom-slideshow>
 
 </div>
-<div class="contentContainer">
+<div class="contentContainer print-only-links" style="display: none;">
 <h3 id="link-directory" >Link Directory</h3>
-<div class="print-only-links" style="display: none;">
 <ul>
 <li><span>Exploring Creative Technologies:</span> <a class="internalLink" title="/./In one sentence" href="/./In one sentence">/./In one sentence</a></li>
 </ul>
-</div></div>
+</div>
 
         </template>
 
@@ -1766,13 +1780,12 @@
 </custom-slideshow>
 
 </div>
-<div class="contentContainer">
+<div class="contentContainer print-only-links" style="display: none;">
 <h3 id="link-directory" >Link Directory</h3>
-<div class="print-only-links" style="display: none;">
 <ul>
 <li><span>Exploring Creative Technologies:</span> <a class="internalLink" title="/./In one sentence" href="/./In one sentence">/./In one sentence</a></li>
 </ul>
-</div></div>
+</div>
 
         </template>
 
@@ -1794,6 +1807,15 @@
             <button class="viewModeButton" onclick="switchView('slide')">
                 <svg class="i i-presentation-file"><use href="/fonts/icons/svg-sprite.svg#presentation-file"/></svg> Slide Mode
             </button>
+
+            <div id="slideControls">
+                <button class="viewModeButton" onclick="prevSlide()">
+                    <svg class="i i-chevron--up"><use href="/fonts/icons/svg-sprite.svg#chevron--up"/></svg> Prev Slide
+                </button>
+                <button class="viewModeButton" onclick="nextSlide()">
+                    <svg class="i i-chevron--down"><use href="/fonts/icons/svg-sprite.svg#chevron--down"/></svg> Next Slide
+                </button>
+            </div>
         </div>
 
 
@@ -1802,12 +1824,13 @@
 
     <script type="module">
         import { setView } from "/js/switchView.js";
-        import { initSearch, openLists, activeLink } from "/js/sidebarUI.js";
+        import { initSearch, openLists, activeLink, initSidebarToggle } from "/js/sidebarUI.js";
 
         setView();
         initSearch();
         openLists();
         activeLink();
+        initSidebarToggle();
     </script>
 
 </body>

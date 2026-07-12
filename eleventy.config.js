@@ -360,14 +360,14 @@ export default function (eleventyConfig) {
         }
 
         if (allLinks.length > 0) {
-            let linksHtml = `<div class="print-only-links" style="display: none;">\n<ul>\n`;
+            let linksHtml = `<ul>\n`;
             allLinks.forEach(l => {
                 // Render as an actual <a> tag so that the 'linkClass' filter (which runs after) can add the appropriate CSS classes
                 linksHtml += `<li><span>${l.text}:</span> <a href="${l.href}">${l.href}</a></li>\n`;
             });
-            linksHtml += `</ul>\n</div>`;
+            linksHtml += `</ul>`;
 
-            result += `\n<div class="contentContainer">\n<h3>Link Directory</h3>\n${linksHtml}</div>\n`;
+            result += `\n<div class="contentContainer print-only-links" style="display: none;">\n<h3>Link Directory</h3>\n${linksHtml}\n</div>\n`;
         }
 
         return result;
@@ -420,4 +420,4 @@ export const config = {
         data: "../_data",          // default: "_data" (`input` relative)
         output: "_site"
     },
-};
+}; 
