@@ -4,11 +4,17 @@ tags:
 ---
 Sorted by: new to old 
 
+CW 29
+
+1. [[Using an Ultrasonic Sensor]]
+2. [[Touchdesigner to VCV Rack]]
+3. [[A Color Detecting Controller]]
+
 CW 28
 
-1. [[Touchdesigner to VCV Rack]]
-2. [[Arduino Motor Control]]
-3. [[A Color Detecting Controller]]
+
+1. [[Arduino Motor Control]]
+
 
 CW 27
 
