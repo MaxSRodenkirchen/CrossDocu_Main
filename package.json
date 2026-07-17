@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node optimize-images.js && npx @11ty/eleventy --serve --port 8081 --host 0.0.0.0",
+    "start": "node optimize-images.js && npx @11ty/eleventy --serve --port 8081 ",
     "build": "node optimize-images.js && npx @11ty/eleventy",
     "deploy": "node deploy.js",
     "test": "echo \"Error: no test specified\" && exit 1"

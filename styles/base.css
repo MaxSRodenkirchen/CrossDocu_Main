@@ -67,7 +67,7 @@
 
   .pagedjs_page {
     scroll-margin-top: var(--gapSmall);
-
+    margin-bottom: var(--gap);
   }
 }
 

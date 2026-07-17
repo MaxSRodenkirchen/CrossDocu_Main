@@ -134,9 +134,9 @@ export default function (eleventyConfig) {
     });
 
     // Filter to ensure there is an h1 at the start of the content
-    eleventyConfig.addFilter("ensureH1", function (content) {
+    eleventyConfig.addFilter("ensureH1", function (content, fallbackTitle) {
         if (typeof content !== 'string') return '';
-        const title = this.ctx.title || 'Untitled';
+        const title = fallbackTitle || this.ctx.title || 'Untitled';
         // Remove HTML comments and leading whitespace to check the first tag
         const stripped = content.replace(/<!--[\s\S]*?-->/g, '').trim();
         if (!stripped.startsWith('<h1')) {
@@ -146,17 +146,110 @@ export default function (eleventyConfig) {
     });
 
     // Filter to add slugified IDs to h1, h2, h3 tags for table of contents navigation
-    eleventyConfig.addFilter("addHeadingIds", function (content) {
+    eleventyConfig.addFilter("addHeadingIds", function (content, prefix = "", chapterTitle = "") {
         if (typeof content !== 'string') return '';
         const slugify = (text) => text.toLowerCase().replace(/[^a-z0-9\u00df-\u00ff]+/gi, '-').replace(/(^-|-$)/g, '');
         return content.replace(/<h([1-3])\b([^>]*)>([\s\S]*?)<\/h\1>/gi, (match, level, attrs, text) => {
-            if (attrs.includes('id=')) {
+            // Remove existing ID if we are prefixing (to overwrite)
+            if (prefix) {
+                attrs = attrs.replace(/id=["'][^"']*["']/gi, '');
+            } else if (attrs.includes('id=')) {
                 return match;
             }
             const cleanText = text.replace(/<[^>]+>/g, '').trim();
-            const id = slugify(cleanText);
-            return `<h${level} id="${id}" ${attrs}>${text}</h${level}>`;
+            let id = slugify(cleanText);
+            if (prefix) {
+                id = `${slugify(prefix)}-${id}`;
+            }
+            
+            let titleAttr = "";
+            if (level === "1" && chapterTitle) {
+                titleAttr = ` data-chapter-title="${chapterTitle.replace(/"/g, '&quot;')}"`;
+            }
+            
+            return `<h${level} id="${id}" ${attrs}${titleAttr}>${text}</h${level}>`;
         });
+    });
+
+    // Extract book items from the parent page's content
+    eleventyConfig.addFilter("extractBookItems", function(htmlContent, allCollections) {
+        if (!htmlContent) return [];
+        
+        const linkRegex = /<a\s+[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
+        const linkedSlugs = [];
+        let match;
+        
+        while ((match = linkRegex.exec(htmlContent)) !== null) {
+            const href = match[1];
+            if (href && !href.startsWith('#') && !/^(https?:)?\/\//.test(href)) {
+                let slug = decodeURIComponent(href).replace(/^\/?\.\//, '').replace(/\/$/, '');
+                if (slug && !linkedSlugs.includes(slug)) {
+                    linkedSlugs.push(slug);
+                }
+            }
+        }
+        
+        const chapters = [];
+        for (const slug of linkedSlugs) {
+            const foundPage = allCollections.find(item => item.fileSlug === slug || (slug === 'index' && item.url === '/'));
+            if (foundPage) {
+                chapters.push(foundPage);
+            }
+        }
+        return chapters;
+    });
+
+    // Inject Table of Contents after ### Table of Content and remove original list
+    eleventyConfig.addFilter("injectToC", function(content) {
+        if (!content) return "";
+        
+        const headingRegex = /<h([1-3])\b([^>]*)>([\s\S]*?)<\/h\1>/gi;
+        let match;
+        let tocHtml = '<div class="toc">\n';
+        
+        while ((match = headingRegex.exec(content)) !== null) {
+            const level = parseInt(match[1], 10);
+            if (level === 1) { // Only h1 for main chapters
+                const attrs = match[2];
+                let text = match[3].replace(/<[^>]+>/g, '').trim();
+                
+                const titleMatch = attrs.match(/data-chapter-title=["']([^"']+)["']/i);
+                if (titleMatch && titleMatch[1]) {
+                    text = titleMatch[1];
+                }
+                
+                const idMatch = attrs.match(/id=["']([^"']+)["']/i);
+                if (idMatch && idMatch[1]) {
+                    tocHtml += `<div class="toc-item"><a href="#${idMatch[1]}"><span>${text}</span></a></div>\n`;
+                }
+            }
+        }
+        tocHtml += '</div>\n';
+        
+        // Find the "Table of Content" heading and add toc-container class
+        // Since contentContainer wraps the heading, we replace the heading with the ToC and add a class to its parent
+        const tocRegex = /(<div class="contentContainer)(">\n?<h3[^>]*>Table of Content<\/h3>)\n*<ul[^>]*>[\s\S]*?<\/ul>/i;
+        
+        if (tocRegex.test(content)) {
+            return content.replace(tocRegex, `$1 toc-container$2\n${tocHtml}`);
+        } else {
+            // Fallback 1: Maybe there's no ul
+            const tocRegexNoUl = /(<div class="contentContainer)(">\n?<h3[^>]*>Table of Content<\/h3>)/i;
+            if (tocRegexNoUl.test(content)) {
+                return content.replace(tocRegexNoUl, `$1 toc-container$2\n${tocHtml}`);
+            }
+            
+            // Fallback 2: Just insert after the heading
+            const tocHeaderRegex = /<h3[^>]*>Table of Content<\/h3>/i;
+            const tocHeaderMatch = content.match(tocHeaderRegex);
+            
+            if (tocHeaderMatch) {
+                const insertPos = tocHeaderMatch.index + tocHeaderMatch[0].length;
+                return content.slice(0, insertPos) + '\n' + tocHtml + '\n' + content.slice(insertPos);
+            }
+        }
+        
+        return content;
     });
 
 
@@ -336,8 +429,8 @@ export default function (eleventyConfig) {
             while ((match = linkRegex.exec(htmlBlock)) !== null) {
                 const href = match[1];
                 const text = match[2].replace(/<[^>]+>/g, '').trim();
-                // Exclude anchor links and purely empty text links
-                if (href && !href.startsWith('#') && text) {
+                // Only include external links (http/https) in the printed Link Directory
+                if (href && (href.startsWith('http://') || href.startsWith('https://')) && text) {
                     if (!allLinks.find(l => l.href === href && l.text === text)) {
                         allLinks.push({ href, text });
                     }

@@ -1,3 +1,4 @@
+
 @media print {
 
   @page {
@@ -10,7 +11,8 @@
   .viewModeButton,
   #slideControls,
   #credit,
-  #viewModeContainer {
+  #viewModeContainer,
+  #toggleSidebarButton {
     display: none !important;
   }
 
@@ -34,6 +36,18 @@
     break-after: auto !important;
     margin: 0 !important;
     box-sizing: border-box !important;
+  }
+
+  /* CRITICAL FIX: Prevent the browser's native print engine from hanging or recalculating layout.
+     Paged.js has already paginated the content into absolute blocks (.pagedjs_page).
+     We must remove all break rules from the child elements during native print so the browser doesn't freeze. */
+  .pagedjs_pages * {
+    break-before: auto !important;
+    break-after: auto !important;
+    break-inside: auto !important;
+    page-break-before: auto !important;
+    page-break-after: auto !important;
+    page-break-inside: auto !important;
   }
 
 }

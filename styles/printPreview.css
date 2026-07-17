@@ -31,11 +31,11 @@
   }
 
   @page :left {
-    margin: 20px 100px 60px 20px;
+    margin: 20px 100px 80px 20px;
   }
 
   @page :right {
-    margin: 20px 20px 60px 100px;
+    margin: 20px 20px 80px 100px;
   }
 
   @page :blank {
@@ -53,6 +53,15 @@
     margin-bottom: var(--gapSmaller);
     break-inside: avoid;
   }
+
+  /* h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    break-after: avoid;
+  } */
 
   .pagedjs_page h1 {
     font-size: 44pt;
@@ -129,4 +138,46 @@
     border-left: var(--lineWeight) solid var(--internalInteraction) !important;
     border-bottom: var(--lineWeight) solid var(--internalInteraction) !important;
   }
+
+  /* Book Styles (Print & Preview) */
+  .book-chapter {
+    break-before: page;
+  }
+
+  .toc {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  .toc-item {
+    margin-bottom: 0.5rem;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  .toc a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px dotted var(--text);
+  }
+
+  .toc a span {
+    padding-right: 8px;
+    margin-bottom: -5px;
+  }
+
+  .toc a .page-num {
+    padding-left: 8px;
+    margin-bottom: -5px;
+  }
+
+  .toc-container {
+    break-before: page;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
 }

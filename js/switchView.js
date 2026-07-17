@@ -1,7 +1,10 @@
-import { Previewer } from "/js/paged.esm.js";
+import { Previewer, registerHandlers } from "/js/paged.esm.js";
 import { fitPage } from "/js/fitPage.js";
 import { switchPages } from "/js/slidesUI.js";
+import { TOCHandler } from "/js/tocHandler.js";
 import "/js/slideshow.js";
+
+registerHandlers(TOCHandler);
 
 export function switchView(mode = "default") {
   localStorage.setItem("currentView", mode);

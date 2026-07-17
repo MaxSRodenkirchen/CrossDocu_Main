@@ -32,7 +32,7 @@ export function fitPage() {
     const containerHeight = viewport.clientHeight;
 
     const scaleWidth = containerWidth / targetWidth;
-    const scaleHeight = viewMode === "slide" ? (containerHeight / targetHeight) : Infinity;
+    const scaleHeight = containerHeight / targetHeight;
 
     const scale = Math.min(scaleWidth, scaleHeight);
 

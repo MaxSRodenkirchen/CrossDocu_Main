@@ -51,11 +51,67 @@
         {% endset %}
 
         <template id="templateSource">
-            {{ content | ensureH1 | injectAfterH1(metaHtml) | contentContainer | linkClass | addHeadingIds | safe }}
+            {% if tags and "book" in tags %}
+                {% set bookMain = content | ensureH1 | injectAfterH1(metaHtml) | contentContainer | linkClass %}
+                {% set chapters = bookMain | extractBookItems(collections.all) %}
+                {% set fullBook = bookMain | addHeadingIds %}
+                
+                {% for chapter in chapters %}
+                    {% set originalPage = page %}
+                    {% set originalTags = tags %}
+                    
+                    {% set page = chapter.page %}
+                    {% set tags = chapter.data.tags %}
+                    
+                    {% set chapterMeta %}
+                    {% include "partials/metaData.njk" %}
+                    {% endset %}
+                    
+                    {% set page = originalPage %}
+                    {% set tags = originalTags %}
+                    
+                    {% set chapterContent = chapter.templateContent | ensureH1(chapter.fileSlug) | injectAfterH1(chapterMeta) | contentContainer | linkClass %}
+                    {% set chapterContent = chapterContent | addHeadingIds(chapter.fileSlug, chapter.fileSlug) %}
+                    
+                    {% set fullBook = fullBook + "<article class='book-chapter'>" + chapterContent + "</article>" %}
+                {% endfor %}
+
+                {{ fullBook | injectToC | safe }}
+            {% else %}
+                {{ content | ensureH1 | injectAfterH1(metaHtml) | contentContainer | linkClass | addHeadingIds | safe }}
+            {% endif %}
         </template>
 
         <template id="templateContent">
-            {{ content | ensureH1 | injectAfterH1(metaHtml) | contentContainer | linkClass | addHeadingIds | safe }}
+            {% if tags and "book" in tags %}
+                {% set bookMain = content | ensureH1 | injectAfterH1(metaHtml) | contentContainer | linkClass %}
+                {% set chapters = bookMain | extractBookItems(collections.all) %}
+                {% set fullBook = bookMain | addHeadingIds %}
+                
+                {% for chapter in chapters %}
+                    {% set originalPage = page %}
+                    {% set originalTags = tags %}
+                    
+                    {% set page = chapter.page %}
+                    {% set tags = chapter.data.tags %}
+                    
+                    {% set chapterMeta %}
+                    {% include "partials/metaData.njk" %}
+                    {% endset %}
+                    
+                    {% set page = originalPage %}
+                    {% set tags = originalTags %}
+                    
+                    {% set chapterContent = chapter.templateContent | ensureH1(chapter.fileSlug) | injectAfterH1(chapterMeta) | contentContainer | linkClass %}
+                    {% set chapterContent = chapterContent | addHeadingIds(chapter.fileSlug, chapter.fileSlug) %}
+                    
+                    {% set fullBook = fullBook + "<article class='book-chapter'>" + chapterContent + "</article>" %}
+                {% endfor %}
+
+                {{ fullBook | injectToC | safe }}
+            {% else %}
+                {{ content | ensureH1 | injectAfterH1(metaHtml) | contentContainer | linkClass | addHeadingIds | safe }}
+            {% endif %}
         </template>
 
         <div id="midContainer">

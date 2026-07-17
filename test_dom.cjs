@@ -1,0 +1,1 @@
+const fs = require('fs'); const content = fs.readFileSync('_site/Design Class Documentation/index.html', 'utf8'); const match = content.match(/<div class="contentContainer[^>]*">[\s\S]*?<\/div>/gi); if(match){ const toc = match.find(m => m.includes('Table of Content')); if(toc) console.log(toc.substring(0, 500)); }
