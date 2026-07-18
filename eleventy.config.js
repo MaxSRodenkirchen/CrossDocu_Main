@@ -231,12 +231,12 @@ export default function (eleventyConfig) {
         const tocRegex = /(<div class="contentContainer)(">\n?<h3[^>]*>Table of Content<\/h3>)\n*<ul[^>]*>[\s\S]*?<\/ul>/i;
         
         if (tocRegex.test(content)) {
-            return content.replace(tocRegex, `$1 toc-container$2\n${tocHtml}`);
+            return content.replace(tocRegex, `$1 toc-container" style="break-inside: auto; page-break-inside: auto; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding-top: var(--gapSmall); padding-bottom: var(--gapSmall);$2\n${tocHtml}`);
         } else {
             // Fallback 1: Maybe there's no ul
             const tocRegexNoUl = /(<div class="contentContainer)(">\n?<h3[^>]*>Table of Content<\/h3>)/i;
             if (tocRegexNoUl.test(content)) {
-                return content.replace(tocRegexNoUl, `$1 toc-container$2\n${tocHtml}`);
+                return content.replace(tocRegexNoUl, `$1 toc-container" style="break-inside: auto; page-break-inside: auto; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding-top: var(--gapSmall); padding-bottom: var(--gapSmall);$2\n${tocHtml}`);
             }
             
             // Fallback 2: Just insert after the heading
@@ -405,7 +405,67 @@ export default function (eleventyConfig) {
         return html;
     });
 
-    eleventyConfig.addFilter("contentContainer", function (content) {
+    const normalizeHref = (href) => {
+        if (/^(https?:)?\/\//.test(href)) return href;
+        let clean = decodeURIComponent(href);
+        clean = clean.replace(/^\/?\.\//, ''); // remove leading ./ or /./
+        clean = clean.replace(/^\//, ''); // remove leading /
+        clean = clean.replace(/\/$/, ''); // remove trailing /
+        clean = clean.replace(/\.html$|\.md$/i, ''); // remove extensions
+        return '/' + clean + '/';
+    };
+
+    const generateLinkDirectoryHtml = (allLinks, forceClasses = false) => {
+        if (allLinks.length === 0) return '';
+
+        const isExternalUrl = (url) => /^(https?:)?\/\//.test(url);
+        const externalLinks = allLinks.filter(l => isExternalUrl(l.href));
+        const internalLinks = allLinks.filter(l => !isExternalUrl(l.href));
+
+        externalLinks.sort((a, b) => a.text.localeCompare(b.text));
+        internalLinks.sort((a, b) => a.text.localeCompare(b.text));
+
+        const renderLinkRow = (l, isExternal) => {
+            const linkClass = isExternal ? 'externalLink' : 'internalLink';
+            const targetAttr = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
+            const inlineStyle = ' style="text-decoration: underline dotted !important;"';
+            
+            let anchorHtml;
+            if (forceClasses) {
+                anchorHtml = `<a href="${l.href}" class="${linkClass}"${targetAttr} title="${l.href}"${inlineStyle}>${l.href}</a>`;
+            } else {
+                anchorHtml = `<a href="${l.href}"${inlineStyle}>${l.href}</a>`;
+            }
+            
+            return `<div style="display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 0.5rem; break-inside: avoid; page-break-inside: avoid;">
+                <div style="flex: 1; text-align: left; padding-right: 1rem; word-break: break-word;">${l.text}:</div>
+                <div style="flex: 1; text-align: left; overflow-wrap: anywhere;">${anchorHtml}</div>
+            </div>\n`;
+        };
+
+        let html = `\n<div class="contentContainer print-only-links" style="display: none; break-inside: auto; page-break-inside: auto; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding-top: var(--gapSmall); padding-bottom: var(--gapSmall);">\n<h1 id="link-directory">Link Directory</h1>\n`;
+
+        if (internalLinks.length > 0) {
+            html += `<h4>Internal Links</h4>\n<div style="margin-bottom: 1rem;">\n`;
+            internalLinks.forEach(l => {
+                html += renderLinkRow(l, false);
+            });
+            html += `</div>\n`;
+        }
+
+        if (externalLinks.length > 0) {
+            html += `<h4>External Links</h4>\n<div>\n`;
+            externalLinks.forEach(l => {
+                html += renderLinkRow(l, true);
+            });
+            html += `</div>\n`;
+        }
+
+        html += `</div>\n`;
+        return html;
+    };
+
+    eleventyConfig.addFilter("contentContainer", function (content, disableLinkDirectory = false) {
         if (typeof content !== 'string') return '';
 
         const firstHeadingMatch = content.match(/<h[1-3]\b|<hr\b/i);
@@ -427,11 +487,11 @@ export default function (eleventyConfig) {
             const linkRegex = /<a\s+[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
             let match;
             while ((match = linkRegex.exec(htmlBlock)) !== null) {
-                const href = match[1];
+                const originalHref = match[1];
                 const text = match[2].replace(/<[^>]+>/g, '').trim();
-                // Only include external links (http/https) in the printed Link Directory
-                if (href && (href.startsWith('http://') || href.startsWith('https://')) && text) {
-                    if (!allLinks.find(l => l.href === href && l.text === text)) {
+                if (originalHref && !originalHref.startsWith('#') && text) {
+                    const href = normalizeHref(originalHref);
+                    if (!allLinks.find(l => l.href === href)) {
                         allLinks.push({ href, text });
                     }
                 }
@@ -452,18 +512,31 @@ export default function (eleventyConfig) {
             });
         }
 
-        if (allLinks.length > 0) {
-            let linksHtml = `<ul>\n`;
-            allLinks.forEach(l => {
-                // Render as an actual <a> tag so that the 'linkClass' filter (which runs after) can add the appropriate CSS classes
-                linksHtml += `<li><span>${l.text}:</span> <a href="${l.href}">${l.href}</a></li>\n`;
-            });
-            linksHtml += `</ul>`;
-
-            result += `\n<div class="contentContainer print-only-links" style="display: none;">\n<h3>Link Directory</h3>\n${linksHtml}\n</div>\n`;
+        if (!disableLinkDirectory) {
+            result += generateLinkDirectoryHtml(allLinks, false);
         }
 
         return result;
+    });
+
+    eleventyConfig.addFilter("appendLinkDirectory", function (content) {
+        if (typeof content !== 'string') return content;
+        
+        const allLinks = [];
+        const linkRegex = /<a\s+[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
+        let match;
+        while ((match = linkRegex.exec(content)) !== null) {
+            const originalHref = match[1];
+            const text = match[2].replace(/<[^>]+>/g, '').trim();
+            if (originalHref && !originalHref.startsWith('#') && text) {
+                const href = normalizeHref(originalHref);
+                if (!allLinks.find(l => l.href === href)) {
+                    allLinks.push({ href, text });
+                }
+            }
+        }
+
+        return content + `\n<article class="book-chapter">\n` + generateLinkDirectoryHtml(allLinks, true) + `\n</article>\n`;
     });
 
     eleventyConfig.addFilter("cleanTags", function (content) {
