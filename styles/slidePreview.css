@@ -36,7 +36,7 @@
     string-set: title content(text);
   }
 
-  /* .pagedjs_page h3 {
+  .pagedjs_page h3 {
     font-size: 80px;
     margin: 0 0 8rem 0;
   }
@@ -46,18 +46,17 @@
   }
 
   .pagedjs_page p:not(:has(img)) {
-    max-width: 70%;
-    line-height: 100%;
+    max-width: 60%;
+    line-height: 120%;
   }
 
-
   .pagedjs_page ul {
-    max-width: 70%;
+    max-width: 60%;
   }
 
   .pagedjs_page ul>li {
     font-size: 50px;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
   .pagedjs_page th,
@@ -65,7 +64,7 @@
     font-size: 40px;
     text-align: left;
     padding-right: 8rem;
-  } */
+  }
 
 
   .pagedjs_page p:has(img) {
@@ -83,7 +82,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    /* background-color: red; */
   }
 
   .pagedjs_page img,
@@ -159,20 +158,10 @@
     opacity: 1;
   }
 
+
   /* Hide page numbers and titles on slides that contain an image */
   .pagedjs_page:has(img) .pagedjs_margin-bottom-right,
   .pagedjs_page:has(img) .pagedjs_margin-bottom-left {
     display: none !important;
-  }
-
-  .content-tags,
-  .content-backlinks,
-  #url {
-    display: grid;
-    grid-template-columns: 420px 1fr;
-    align-items: start;
-    gap: var(--gapSmaller);
-    padding-bottom: var(--gapSmaller);
-
   }
 }

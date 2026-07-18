@@ -17,9 +17,7 @@
 
     <div id="url">
         <span>The URL</span>
-        <div class="meta-content-wrapper">
-            <p>{{page.url}}</p>
-        </div>
+        <div class="meta-content-wrapper"><p>{{page.url}}</p></div>
     </div>
 
     {% if tags and tags | length > 0 %}
@@ -27,17 +25,9 @@
         <span>Tagged with</span>
 
         <div class="meta-content-wrapper">
-            {% for tag in tags %}
-            <div class="content-tag" onclick="openTagModule('{{ tag }}')" title="Open in Sidebar">
-                {# <svg>
-                    <rect width="100%" height="100%" />
-                </svg> #}
-
-                <p>{{ tag | replace("-", " ") }}</p>
-                {% icon "ibm--webmethods-integration-server" %}
-
-            </div>
-            {% endfor %}
+            {%- for tag in tags -%}
+            <div class="content-tag" onclick="openTagModule('{{ tag }}')" title="Open in Sidebar"><p>{{ tag | replace("-", " ") }}</p>{% icon "ibm--webmethods-integration-server" %}</div>
+            {%- endfor -%}
         </div>
     </div>
     {% endif %}
@@ -47,12 +37,9 @@
         <span>Mentioned in</span>
 
         <div class="meta-content-wrapper">
-            {% for bl in backlinks %}
-
-
+            {%- for bl in backlinks -%}
             <a href="{{ bl.url }}">{{ bl.title }}</a>
-
-            {% endfor %}
+            {%- endfor -%}
         </div>
 
     </div>

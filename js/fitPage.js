@@ -31,8 +31,13 @@ export function fitPage() {
     const containerWidth = viewport.clientWidth;
     const containerHeight = viewport.clientHeight;
 
-    const scaleWidth = containerWidth / targetWidth;
-    const scaleHeight = containerHeight / targetHeight;
+    const paddingX = 120;
+    const paddingY = 120;
+    const availableWidth = Math.max(10, containerWidth - paddingX);
+    const availableHeight = Math.max(10, containerHeight - paddingY);
+
+    const scaleWidth = availableWidth / targetWidth;
+    const scaleHeight = availableHeight / targetHeight;
 
     const scale = Math.min(scaleWidth, scaleHeight);
 
