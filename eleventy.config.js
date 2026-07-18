@@ -133,6 +133,63 @@ export default function (eleventyConfig) {
         return content;
     });
 
+    // Transform to generate print/slide fallbacks for iframes
+    eleventyConfig.addTransform("iframe-fallbacks", function (content) {
+        if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
+            return content.replace(/<iframe\b([^>]*?)\bsrc=["']([^"']+)["']([^>]*)>[\s\S]*?<\/iframe>/gi, (match, beforeSrc, src, afterSrc) => {
+                let isYouTube = false;
+                let isArchive = false;
+                let videoId = "";
+                let thumbUrl = "";
+
+                // Check for YouTube
+                const ytMatch = src.match(/youtube\.com\/embed\/([a-zA-Z0-9_-]+)/);
+                if (ytMatch) {
+                    isYouTube = true;
+                    videoId = ytMatch[1];
+                    thumbUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+                }
+
+                // Check for Archive.org
+                const archiveMatch = src.match(/archive\.org\/embed\/([a-zA-Z0-9_-]+)/);
+                if (archiveMatch) {
+                    isArchive = true;
+                    videoId = archiveMatch[1];
+                    thumbUrl = `https://archive.org/services/img/${videoId}`;
+                }
+
+                const iframeHTML = `<iframe${beforeSrc}src="${src}"${afterSrc}></iframe>`;
+
+                if (isYouTube || isArchive) {
+                    return `
+<div class="iframe-container has-thumbnail">
+    <div class="iframe-interactive">
+        ${iframeHTML}
+    </div>
+    <div class="iframe-print-fallback">
+        <img src="${thumbUrl}" alt="Video Thumbnail" class="iframe-thumbnail" />
+    </div>
+    <div class="iframe-print-fallback-link-only">
+        <a href="${src}" target="_blank" class="externalLink">${src}</a>
+    </div>
+</div>`;
+                } else {
+                    // For p5.js and others: Leave iframe as is, but add a link below it.
+                    return `
+<div class="iframe-container no-thumbnail">
+    <div class="iframe-interactive">
+        ${iframeHTML}
+    </div>
+    <div class="iframe-print-fallback-link-only">
+        <a href="${src}" target="_blank" class="externalLink">${src}</a>
+    </div>
+</div>`;
+                }
+            });
+        }
+        return content;
+    });
+
     // Filter to ensure there is an h1 at the start of the content
     eleventyConfig.addFilter("ensureH1", function (content, fallbackTitle) {
         if (typeof content !== 'string') return '';

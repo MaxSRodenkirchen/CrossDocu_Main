@@ -257,3 +257,54 @@
 #content li p:not(:has(img)) {
   margin: 0;
 } */
+
+/* Iframe Fallback Container (Web Mode Default) */
+.iframe-container {
+  display: inline-block;
+  width: 100%;
+  margin: var(--gapSmall) 0;
+  vertical-align: top;
+}
+
+.iframe-interactive {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* 16:9 ratio */
+}
+
+.iframe-interactive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Hide fallbacks in web mode */
+.iframe-print-fallback,
+.iframe-print-fallback-link-only {
+  display: none;
+}
+
+/* Styling for the thumbnail (used in print/slide mode) */
+.iframe-print-fallback {
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* 16:9 ratio */
+  position: relative;
+  background-color: var(--bgDark);
+  overflow: hidden;
+}
+
+.iframe-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}

@@ -50,7 +50,29 @@
     }
   }
 
+  #toc ul li::before {
+    content: " ";
+  }
 
+  /* Iframe Fallbacks in Print Mode */
+  .iframe-container {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .iframe-container.has-thumbnail .iframe-interactive {
+    display: none !important;
+  }
+  
+  .iframe-container.has-thumbnail .iframe-print-fallback {
+    display: block !important;
+  }
+
+  .iframe-print-fallback-link-only {
+    display: block !important;
+    margin-top: var(--gapSmaller);
+    word-break: break-all;
+  }
 
   .pagedjs_page .contentContainer {
     padding: var(--gapSmall);
