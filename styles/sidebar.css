@@ -7,6 +7,7 @@
     background-color: var(--bg);
     scrollbar-width: none;
     color: var(--internalInteraction);
+    margin-right: var(--gapSmaller);
     /* transition: width 0.3s ease; */
   }
 
@@ -14,6 +15,7 @@
     width: 0;
     overflow: hidden;
     padding: 0;
+    display: none;
   }
 
   #toggleSidebarButton {
