@@ -138,7 +138,7 @@ export default function (eleventyConfig) {
         if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
             return content.replace(/<iframe\b([^>]*?)\bsrc=["']([^"']+)["']([^>]*)>[\s\S]*?<\/iframe>/gi, (match, beforeSrc, src, afterSrc) => {
                 let isYouTube = false;
-                let isArchive = false;
+
                 let videoId = "";
                 let thumbUrl = "";
 
@@ -150,17 +150,10 @@ export default function (eleventyConfig) {
                     thumbUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
                 }
 
-                // Check for Archive.org
-                const archiveMatch = src.match(/archive\.org\/embed\/([a-zA-Z0-9_-]+)/);
-                if (archiveMatch) {
-                    isArchive = true;
-                    videoId = archiveMatch[1];
-                    thumbUrl = `https://archive.org/services/img/${videoId}`;
-                }
-
+                // Removed Archive.org thumbnail check due to low-res images
                 const iframeHTML = `<iframe${beforeSrc}src="${src}"${afterSrc}></iframe>`;
 
-                if (isYouTube || isArchive) {
+                if (isYouTube) {
                     return `
 <div class="iframe-container has-thumbnail">
     <div class="iframe-interactive">
@@ -494,9 +487,9 @@ export default function (eleventyConfig) {
                 anchorHtml = `<a href="${l.href}"${inlineStyle}>${l.href}</a>`;
             }
             
-            return `<div style="display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 0.5rem; break-inside: avoid; page-break-inside: avoid;">
-                <div style="flex: 1; text-align: left; padding-right: 1rem; word-break: break-word;">${l.text}:</div>
-                <div style="flex: 1; text-align: left; overflow-wrap: anywhere;">${anchorHtml}</div>
+            return `<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.5rem; break-inside: avoid; page-break-inside: avoid;">
+                <div style="text-align: left; padding-right: 1rem; word-break: break-word;">${l.text}:</div>
+                <div style="text-align: left; overflow-wrap: anywhere; min-width: 0;">${anchorHtml}</div>
             </div>\n`;
         };
 
@@ -594,6 +587,43 @@ export default function (eleventyConfig) {
         }
 
         return content + `\n<article class="book-chapter">\n` + generateLinkDirectoryHtml(allLinks, true) + `\n</article>\n`;
+    });
+
+    eleventyConfig.addFilter("generateLinkDataJSON", function (allCollection, backlinksMap) {
+        const linkData = [];
+        allCollection.forEach(item => {
+            if (!item.url || !item.inputPath.endsWith('.md')) return;
+            if (item.data.tags && item.data.tags.includes('private')) return;
+            
+            const name = item.fileSlug || 'index';
+            
+            // Backlinks: who links TO this item
+            const itemBacklinks = backlinksMap[item.url] || [];
+            const backlinksNames = itemBacklinks.map(bl => {
+                const sourceItem = allCollection.find(i => i.url === bl.url);
+                return sourceItem ? (sourceItem.fileSlug || 'index') : bl.url;
+            });
+            
+            // Internal Links: who this item links TO
+            const internalLinksNames = [];
+            allCollection.forEach(targetItem => {
+                if (targetItem.url === item.url) return;
+                const targetBacklinks = backlinksMap[targetItem.url] || [];
+                if (targetBacklinks.some(bl => bl.url === item.url)) {
+                    internalLinksNames.push(targetItem.fileSlug || 'index');
+                }
+            });
+            
+            linkData.push({
+                id: name,
+                title: item.data.title || name,
+                url: item.url,
+                tags: item.data.tags || [],
+                backlinks: backlinksNames,
+                internalLinks: internalLinksNames
+            });
+        });
+        return JSON.stringify(linkData, null, 2);
     });
 
     eleventyConfig.addFilter("cleanTags", function (content) {
