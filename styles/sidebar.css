@@ -126,7 +126,10 @@
 
   .aList.active .aListTitle {
     border-bottom: var(--lineWeight) solid var(--internalInteraction);
-
+    position: sticky;
+    top: 0;
+    background-color: var(--bgLight);
+    z-index: 10;
   }
 
 
