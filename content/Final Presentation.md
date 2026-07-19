@@ -3,24 +3,31 @@ tags:
   - College-Summer-2026
   - moc
 ---
-Start
+Welcome to the Final Presentation
 
-1. [[Welcome to my Concept Presentation|Start here]]
+1. [[Why This Garden Began]]
 
 Final Concept
 
-1. [[ECT-Concept]]
-2. [[The idea behind CrossDocu]]
-3. [[Proof of Concept]]
+2. [[About Learning in Public]]
+3. [[About Digital Gardens and Streams]]
+4. [[This Gardens System]]
+5. [[The idea behind CrossDocu]]
 
-Showcase / Design Decisions
+Technical Implementation
+1. [[Tools Used for ECT]]
+2. [[Publishing Workflow]]
 
-1. [[Installation for Exhibition]]
+%% Showcase / Design Decisions
+
+1. [[Feedback Effect in Touchdesigner]]
+2. [[Movement Detection in Touchdesigner]]
+3. [[Connecting a Kinect 1 to TD]]
+4. [[Touchdesigner to VCV Rack]]
+5. [[Arduino Motor Control]]
+6. [[Installation for Exhibition]] %%
 
 Conclusion and Outlook
 
-1. [[In one sentence|In one sentence ]]
-2. [[Mapping the Garden|Mapping the project ]]
-3. [[Capture and loop movement in p5.js |Example for an Experiment]]
-4. [[Questions behind ECT]]
+1. [[Reflecting the Semester]]
 

@@ -1,12 +1,12 @@
 ---
 tags:
   - About-this-Digital-Garden
-  - Want-to-Learn
 ---
 # Learning in Public
 
+###### Public Learning: Share your process and support exchange!
+
 And how can we benefit from a [[Shared Learning Experience]]?
 
----
-There is more for me to read
-- [https://www.swyx.io/learn-in-public](https://www.swyx.io/learn-in-public)
+This is one of the most cited articles for Learning in Public:
+[https://www.swyx.io/learn-in-public](https://www.swyx.io/learn-in-public)
