@@ -16,7 +16,7 @@ The components were rendered, 3D printed and laser cutted by [Markus Bartz](http
 
 ### Why would you use an Arduino for that?
 
-That's a valid question, because the same thing could be achieved with a regular motor and a simple electrical circuit. The advantage is that you can now control the motor's rotation using additional sensors via the Arduino. For example, you could now control the rotation using an ultrasonic sensor, or write a generative, randomization algorithm for the rotation. 
+That's a valid question, because the same thing could be achieved with a regular motor and a simple electrical circuit. The advantage is that you can now control the motor's rotation using additional sensors via the Arduino. For example, you could now control the rotation using an ultrasonic sensor, or write a generative, randomization algorithm for the rotation. [[Using an Ultrasonic Sensor]]
 
 ### Circuit Diagram for 28BYJ-48 Stepper Motor with Arduino
 

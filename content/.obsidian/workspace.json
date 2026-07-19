@@ -6,7 +6,6 @@
       {
         "id": "df1ea8d0b2928d7d",
         "type": "tabs",
-        "dimension": 52.89855072463768,
         "children": [
           {
             "id": "d0fca1631b8a6cbd",
@@ -33,16 +32,33 @@
               "icon": "lucide-file",
               "title": "Weekly Progress"
             }
-          }
-        ]
-      },
-      {
-        "id": "4ca53963fd2a96f3",
-        "type": "tabs",
-        "dimension": 47.10144927536232,
-        "children": [
+          },
           {
-            "id": "5b818fe5ed3b9dcc",
+            "id": "734d4f3e15a6b854",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ECT-Concept.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "ECT-Concept"
+            }
+          },
+          {
+            "id": "6e72dac9b5dfe3ca",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -66,12 +82,12 @@
             }
           },
           {
-            "id": "c443fa489dd4fd6e",
+            "id": "2de802fdf10b9cd2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Alternative Interfaces.md",
+                "file": "About Digital Gardens and Streams.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -86,16 +102,33 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Alternative Interfaces"
+              "title": "About Digital Gardens and Streams"
             }
           },
           {
-            "id": "e29798fcbf9c6180",
+            "id": "959d8014aa29311e",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Content Map.canvas",
+                "viewState": {
+                  "x": 534.5,
+                  "y": -54.5,
+                  "zoom": 0
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Content Map"
+            }
+          },
+          {
+            "id": "59dc9e7701681d3a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projecting onto a Glass Prism.md",
+                "file": "Design Concept.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -110,11 +143,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Projecting onto a Glass Prism"
+              "title": "Design Concept"
             }
           },
           {
-            "id": "7b7209982da34847",
+            "id": "581ea7de09648b17",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -138,55 +171,7 @@
             }
           },
           {
-            "id": "701450e4db0b15e4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Design System.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Design System"
-            }
-          },
-          {
-            "id": "d4383c6448bd8e03",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Designing this Garden.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Designing this Garden"
-            }
-          },
-          {
-            "id": "8c84d510486dc035",
+            "id": "393d372d7fcdc257",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -208,33 +193,9 @@
               "icon": "lucide-file",
               "title": "Arduino Motor Control"
             }
-          },
-          {
-            "id": "d55b285e2977a81e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "new.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "new"
-            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -266,7 +227,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#moc",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -287,7 +248,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -393,8 +355,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 409,
-    "collapsed": true
+    "width": 409
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -409,24 +370,31 @@
       "bases:Create new base": false
     }
   },
-  "active": "d55b285e2977a81e",
+  "active": "734d4f3e15a6b854",
   "lastOpenFiles": [
-    "Design Class Documentation.md",
-    "new.md",
     "Arduino Motor Control.md",
-    "Using an Ultrasonic Sensor.md",
+    "ECT-Concept.md",
+    "Final Presentation.md",
+    "Installation for Exhibition.md",
+    "The idea behind CrossDocu.md",
+    "About Digital Gardens and Streams.md",
+    "Concept for this Garden.md",
+    "Content Map.canvas",
+    "Design Concept.md",
+    "Welcome to my Concept Presentation.md",
+    "Design Class Documentation.md",
     "Weekly Progress.md",
+    "Alternative Interfaces.md",
+    "Projecting onto a Glass Prism.md",
+    "Design System.md",
     "Designing this Garden.md",
+    "new.md",
+    "Using an Ultrasonic Sensor.md",
     "images/Arduino Set Up.jpeg",
     "images/Arduino Prism.jpeg",
     "deleteMe please.md",
-    "Concept for this Garden.md",
-    "Design System.md",
-    "Projecting onto a Glass Prism.md",
     "images/Prism-Projection_1.jpeg",
     "images/Prism-Projection_2.jpeg",
-    "Alternative Interfaces.md",
-    "Installation for Exhibition.md",
     "Talk with Carl about Navigation Interfaces.md",
     "2026-06-30.md",
     "images/wiki.comphost.club.png",
@@ -442,13 +410,6 @@
     "Who am I.md",
     "What is possible in CrossDocu with Markdown Syntax.md",
     "Use Cases Moodboard.md",
-    "Timetracking for Der Baum hat Zeit.md",
-    "Self-briefing - Der Baum hat Zeit.md",
-    "Working with Live Data.md",
-    "Use Cases Moods.md",
-    "Mapping the Garden.md",
-    "Document a Design Experiment.md",
-    "Content Map.canvas",
     "icons"
   ]
 }
