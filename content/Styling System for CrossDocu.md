@@ -10,4 +10,4 @@ tags:
 It makes CrossDocu development a lot more complex. 
 We would need to push and pull that styling data on a server or store it locally e.g. in the browser.
 
-### **But: What if we instead build a styling user interface in Obsidian?**
+**But: What if we instead build a styling user interface in Obsidian?**

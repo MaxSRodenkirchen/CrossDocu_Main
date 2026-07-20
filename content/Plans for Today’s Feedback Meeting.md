@@ -1,6 +1,7 @@
 ---
 tags:
   - College-Summer-2026
+  - private
 ---
 - [[Talk with Carl about Navigation Interfaces]]
 - User Tests with new ECT-Version..?!

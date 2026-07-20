@@ -3,7 +3,7 @@ tags:
   - About-this-Digital-Garden
   - Alternative-Interfaces
 ---
-Via video-call I showed Carl the current version of this web-documentation and we discussed the navigation and generell thoughts about interfaces for non-linear systems.
+Via video-call I showed Carl Vitting the current version of this web-documentation and we discussed the navigation and generell thoughts about interfaces for non-linear systems.
 
 - Does the interface need to fit the underlying system? Folders in an non-linear system feel wrong
 - Aren't tags used as categories just another way of creating folders but in a non-exclusive way? They serve the same purpose in giving us the feeling of the structure. The feeling all our thoughts are safe in one place.

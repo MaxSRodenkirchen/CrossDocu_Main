@@ -134,8 +134,7 @@ Use the prepared editor, change "Vorlage" images, and hide them for export
 
 **Loop Animation Example**
 
-<iframe src="https://archive.org/embed/beispiel-funktionen-animation-loop" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GmHNqXaismM?si=hI7m5MiFp7cqWuQc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 I've put together a sketch that summarizes all the features shown today. You could experiment with different colors, shapes, or line thicknesses. I've also included some brief explanations.
 

@@ -12,75 +12,80 @@ Summer 2026 at FH Aachen
 
 ### Table of Content
 
-- [[Print Mode]]
+Documenting the semester
 
-The Concept behind Exploring Creative Technologies
+{# - [[How to Read a Book]] #}
+
+- [[Der Baum hat Zeit]]
+
+The Final Concept Behind Exploring Creative Technologies
 
 - [[In one sentence]]
-- [[This Gardens System]]
+- [[Why This Garden Began]]
 - [[About Learning in Public]]
+- [[About Digital Gardens and Streams]]
+- [[This Gardens System]]
+- [[The idea behind CrossDocu]]
+
+Developing the ECT-Garden
+
+- [[Brief Self-Introduction]]
+- [[Self-briefing]]
 - [[Questions behind ECT]]
+- [[Definitions of Creative Coding]]
+- [[Alternative Interfaces]]
 - [[Mapping the Garden]]
-- [[User Journeys]]
 - [[Structuring the Platform]]
-- [[Concept for this Garden]]
+- [[User Journeys]]
+- [[The Design Problem]]
+- [[Use Cases Moods]]
+- [[User Tests]]
+- [[Hybrid Search - The Concept]]
+- [[Document a Design Experiment]]
+- [[Writing Conventions in CrossDocu]]
+- [[Styling System for CrossDocu]]
+- [[Content Loader for CrossDocu]]
+- [[Customized editor for CrossDocu]]
+- [[First Design System]]
+- [[Plans for Today’s Feedback Meeting]]
+- [[Talk with Carl about Navigation Interfaces]]
+- [[Tools Used for ECT]]
+- [[Publishing Workflow]]
+- [[Timetracking]]
+- [[Things to be done in CrossDocu]]
+- [[Reflecting the Semester]]
 
 Technical Explorations
 
+- [[Capture and loop movement in p5.js]]
 - [[Arduino Beginners Workshop]]
+- [[Introduction to Creative Coding with p5.js]]
 - [[Experience with Handtracking in ml5.js]]
 - [[Movement Detection in Touchdesigner]]
-- [[TouchDesigner Lesson 101]]
+- [[Manipulating Light]]
 - [[Projection Mapping in Touchdesigner]]
 - [[Feedback Effect in Touchdesigner]]
-- [[TouchDesigner Lesson 102]]
 - [[Connecting a Kinect 1 to TD]]
+- [[TouchDesigner Lesson 101]]
+- [[TouchDesigner Lesson 102]]
 - [[TouchDesigner Lesson 103]]
 - [[Creative Patterns Taglist]]
 - [[Projecting on Glass]]
 - [[Building a Server on an Android Device]]
 - [[Color Detection in TD]]
 - [[Webcam Movement Visualization in TD]]
-- [[Talk with Carl about Navigation Interfaces]]
-- [[Plans for Today’s Feedback Meeting]]
-- [[Installation for Exhibition]]
 - [[Projecting onto a Glass Prism]]
 - [[Arduino Motor Control]]
-- [[A Color Detecting Controller]]
+- [[Using an Ultrasonic Sensor]]
 - [[Testing the Installation]]
+- [[VCV Rack]]
+- [[Touchdesigner to VCV Rack]]
 - [[Installation for Exhibition]]
 
-Others
+Internal and External Links
 
-- [[About Digital Gardens and Streams]]
-- [[Alternative Interfaces]]
-- [[Brief Self-Introduction]]
-- [[Capture and loop movement in p5.js]]
-- [[Content Loader for CrossDocu]]
-- [[Customized editor for CrossDocu]]
-- [[Definitions of Creative Coding]]
-- [[Der Baum hat Zeit]]
-- [[First Design System]]
-- [[Document a Design Experiment]]
-- [[Hybrid Search - The Concept]]
-- [[Introduction to Creative Coding with p5.js]]
-- [[Manipulating Light]]
-- [[Projektideen - Der Baum hat Zeit]]
-- [[Publishing Workflow]]
-- [[Reflecting the Semester]]
-- [[Self-briefing]]
-- [[Styling System for CrossDocu]]
-- [[The Design Problem]]
-- [[The idea behind CrossDocu]]
-- [[The Navigation Problem by Mark Bernstein]]
-- [[Things to be done in CrossDocu]]
-- [[Timetracking]]
-- [[Tools Used for ECT]]
-- [[Touchdesigner to VCV Rack]]
-- [[Use Cases Moods]]
-- [[User Tests]]
-- [[Using an Ultrasonic Sensor]]
-- [[VCV Rack]]
-- [[Why This Garden Began]]
-- [[Working with Live Data]]
-- [[Writing Conventions in CrossDocu]]
+{#
+%% - [[A Color Detecting Controller]] %%
+%% - [[Projektideen - Der Baum hat Zeit]] %%
+%% [[The Navigation Problem by Mark Bernstein]] %%
+%% - [[Working with Live Data]] %% #}

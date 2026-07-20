@@ -3,7 +3,7 @@ tags:
   - CrossDocu
   - About-this-Digital-Garden
 ---
-# The Print Mode
+# How to Read a Book
 
 Part of the CrossDocu tool. [[The idea behind CrossDocu]] 
 

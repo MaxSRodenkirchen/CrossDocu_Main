@@ -5,9 +5,9 @@ tags:
   - Learning-TouchDesigner
   - Multimedia-Installation
 ---
-# Basic projection mapping in Touchdesigner
+# Basic Projection Mapping in Touchdesigner
 
-###### Wednesday, June 3rd 2026 | during class time
+*Wednesday, June 3rd 2026 | during class time*
 
 [Overview over certain techniques in Touchdesigner](https://interactiveimmersive.io/blog/touchdesigner-operators-tricks/projection-mapping-basics-with-kantan-mapper-in-touchdesigner/)
 [[Concept for this Garden]]

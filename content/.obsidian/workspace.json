@@ -110,129 +110,9 @@
               "icon": "lucide-file",
               "title": "Design Class Documentation"
             }
-          },
-          {
-            "id": "51a5b3126e8267fb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Self-briefing.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Self-briefing"
-            }
-          },
-          {
-            "id": "ab51dfeb8feeedb8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Writing Conventions in CrossDocu.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Writing Conventions in CrossDocu"
-            }
-          },
-          {
-            "id": "895de57f310745e4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Capture and loop movement in p5.js.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Capture and loop movement in p5.js"
-            }
-          },
-          {
-            "id": "8d82cad026fb3700",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Webcam Movement Visualization in TD.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Webcam Movement Visualization in TD"
-            }
-          },
-          {
-            "id": "cbc517eb0e3819e5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Publishing Workflow.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Publishing Workflow"
-            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -299,8 +179,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 444,
-    "collapsed": true
+    "width": 444
   },
   "right": {
     "id": "0d88643e45ad4bee",
@@ -419,38 +298,38 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "cbc517eb0e3819e5",
+  "active": "a38f279e80b5f384",
   "lastOpenFiles": [
+    "Structuring the Platform.md",
     "Design Class Documentation.md",
-    "Webcam Movement Visualization in TD.md",
-    "Self-briefing.md",
     "Capture and loop movement in p5.js.md",
-    "Writing Conventions in CrossDocu.md",
-    "index.md",
-    "Welcome to my Concept Presentation.md",
-    "Final Presentation.md",
-    "Design Concept.md",
-    "First Design System.md",
-    "Designing this Garden.md",
     "This Gardens System.md",
-    "Der Baum hat Zeit.md",
-    "Print Mode.md",
-    "Weekly Progress.md",
-    "Testing the Installation.md",
-    "Using an Ultrasonic Sensor.md",
-    "In One Sentence.md",
-    "A Color Detecting Controller.md",
-    "TouchDesigner to VCV Rack.md",
-    "VCV Rack.md",
-    "Reflecting the Semester.md",
-    "Why This Garden Began.md",
-    "About Learning in Public.md",
+    "Concept for this Garden.md",
+    "Introduction to Creative Coding with p5.js.md",
+    "Movement Detection in Touchdesigner.md",
+    "Projection Mapping in Touchdesigner.md",
+    "Feedback Effect in Touchdesigner.md",
+    "Experience with Handtracking in ml5.js.md",
+    "Definitions of Creative Coding.md",
+    "Brief Self-Introduction.md",
+    "Self-briefing.md",
+    "Styling System for CrossDocu.md",
+    "How to Read a Book.md",
+    "The Navigation Problem by Mark Bernstein.md",
+    "Talk with Carl about Navigation Interfaces.md",
+    "Plans for Today’s Feedback Meeting.md",
+    "The Design Problem.md",
+    "Creative Patterns Taglist.md",
+    "Document a Design Experiment.md",
+    "Hybrid Search - The Concept.md",
+    "Projektideen - Der Baum hat Zeit.md",
+    "Content Loader for CrossDocu.md",
+    "().md",
+    "Things to be done in CrossDocu.md",
     "images/Installation-Test-Makke_crazyColors.JPEG.tmp",
     "images/Installation-Test-Makke_aufbau.JPEG.tmp",
     "images/Installation-Test-Makke_crazyColors.JPEG",
     "images/Installation-Test-Makke_aufbau.JPEG",
-    "About Digital Gardens and Streams.md",
-    "Tools Used for ECT.md",
     "images/ToolsUsed.png.tmp",
     "images/ToolsUsed.png",
     "images/PublishingWorkflow.png",

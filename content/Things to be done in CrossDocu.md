@@ -4,12 +4,14 @@ tags:
 ---
 # What are things to be done in CrossDocu?
 
-###### last edit: 2026-03-30
+Last edit: 2026-03-30
 
-- Barrierearme Gestaltung / Programmierung 
+- Accessible Design / Programming 
   - [https://www.w3.org/WAI/ARIA/apg/]()
 
 - Make it Accessible 
-  - Learning Experiences für die verschiedenen Tools (Obsidian, Paged.js,...)
-  - Ansprechende, spaßige Gestaltung (Bsp. Coding Train)
-  - Idea: Upload your MD File to the CrossDocu Webpage for testing the functionalities
+  - Learning Experiences for the various tools (Obsidian, Paged.js, etc.)
+  - Engaging, fun design (e.g., Coding Train)
+  - Idea: Upload your MD file to the CrossDocu webpage to test the features
+
+More is written in [[Reflecting the Semester]].

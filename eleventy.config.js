@@ -306,6 +306,10 @@ export default function (eleventyConfig) {
             tocContent = tocContent.replace(/<li[^>]*>/gi, '<div class="toc-item">');
             tocContent = tocContent.replace(/<\/li>/gi, '</div>');
             
+            if (content.match(/id=["']link-directory["']/i)) {
+                tocContent += `\n<div class="toc" style="margin-top: 1em;">\n<div class="toc-item"><a href="#link-directory"><span>Link Directory</span></a></div>\n</div>\n`;
+            }
+            
             const newBlock = `${tocMatch[1]} toc-container" style="break-inside: auto; page-break-inside: auto; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding-top: var(--gapSmall); padding-bottom: var(--gapSmall);">${tocMatch[3]}\n${tocContent}</div>`;
             
             return content.replace(tocContainerRegex, newBlock);

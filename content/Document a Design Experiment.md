@@ -2,7 +2,7 @@
 tags:
   - College-Summer-2026
 ---
-# Thoughts on How To Document a Design Experiment
+# Thoughts on How to Document a Design Experiment
 
 ### Inputs
 

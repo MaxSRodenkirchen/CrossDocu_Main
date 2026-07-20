@@ -9,14 +9,13 @@ Attention! This is not an atomic note and has a lot of text! It was a first test
 
 *April 8*
 
-Hi, I'm Max :)
+### About me 
 
 - **Creative Coding / Computing / Interactive Media** 
 - **Process Design**
--  **Digital Teaching & Learning Applications** 
+- **Digital Teaching & Learning Applications** 
 - **Science Communication** 
-
-- **Board and Computer Games**
+- **Electronic Music Composition**
 - **Ultimate Frisbee**
 - **Bouldering / Climbing**
 
@@ -53,7 +52,6 @@ Interactive VR short film on noise pollution caused by deep-sea mining
 - In-depth research and analysis 
 - Helping to shape design knowledge (reflective work)
 - Projects with relevance / meaning
-
 - Exploratory collaborations
 - Smaller-scale projects 
 

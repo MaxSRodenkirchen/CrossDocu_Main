@@ -15,4 +15,4 @@ What if there was a **"Content Loader" to CrossDocu** which also detects errors 
 The problem will be that there is a lot of work to be done converting single notes to the CrossDocu writing convention. But if people just load single notes and have AI help it might work. For new starters this shouldn't be a problem anyway.
 
 
-![[Writing Conventions in CrossDocu]]
+[[Writing Conventions in CrossDocu]]
