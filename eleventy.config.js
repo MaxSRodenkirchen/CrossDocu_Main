@@ -255,6 +255,9 @@ export default function (eleventyConfig) {
         
         const headingRegex = /<h([1-3])\b([^>]*)>([\s\S]*?)<\/h\1>/gi;
         let match;
+        
+        // Build a mapping from data-chapter-title (fileSlug) to the generated h1 id
+        const slugToIdMap = {};
         let tocHtml = '<div class="toc">\n';
         
         while ((match = headingRegex.exec(content)) !== null) {
@@ -271,17 +274,41 @@ export default function (eleventyConfig) {
                 const idMatch = attrs.match(/id=["']([^"']+)["']/i);
                 if (idMatch && idMatch[1]) {
                     tocHtml += `<div class="toc-item"><a href="#${idMatch[1]}"><span>${text}</span></a></div>\n`;
+                    if (titleMatch && titleMatch[1]) {
+                        slugToIdMap[titleMatch[1]] = idMatch[1];
+                    }
                 }
             }
         }
         tocHtml += '</div>\n';
         
-        // Find the "Table of Content" heading and add toc-container class
-        // Since contentContainer wraps the heading, we replace the heading with the ToC and add a class to its parent
-        const tocRegex = /(<div class="contentContainer)(">\n?<h3[^>]*>Table of Content<\/h3>)\n*<ul[^>]*>[\s\S]*?<\/ul>/i;
+        // Find the "Table of Content" heading block entirely
+        const tocContainerRegex = /(<div class="contentContainer)("?[^>]*>)\s*(<h3[^>]*>Table of Content<\/h3>)([\s\S]*?)(<\/div>)/i;
+        const tocMatch = content.match(tocContainerRegex);
         
-        if (tocRegex.test(content)) {
-            return content.replace(tocRegex, `$1 toc-container" style="break-inside: auto; page-break-inside: auto; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding-top: var(--gapSmall); padding-bottom: var(--gapSmall);$2\n${tocHtml}`);
+        if (tocMatch && tocMatch[4].includes('<ul')) {
+            let tocContent = tocMatch[4];
+            
+            // 1. Transform internal links to point to anchor IDs
+            tocContent = tocContent.replace(/<a\s+([^>]*href=["']([^"']+)["'][^>]*)>([\s\S]*?)<\/a>/gi, (aMatch, attrs, href, linkText) => {
+                if (href && !href.startsWith('#') && !/^(https?:)?\/\//.test(href)) {
+                    let slug = decodeURIComponent(href).replace(/^\/?\.\//, '').replace(/\/$/, '');
+                    if (slugToIdMap[slug]) {
+                        return `<a href="#${slugToIdMap[slug]}"><span>${linkText.replace(/<[^>]+>/g, '').trim()}</span></a>`;
+                    }
+                }
+                return aMatch;
+            });
+            
+            // 2. Change <ul>/<li> to <div class="toc">/<div class="toc-item">
+            tocContent = tocContent.replace(/<ul[^>]*>/gi, '<div class="toc">');
+            tocContent = tocContent.replace(/<\/ul>/gi, '</div>');
+            tocContent = tocContent.replace(/<li[^>]*>/gi, '<div class="toc-item">');
+            tocContent = tocContent.replace(/<\/li>/gi, '</div>');
+            
+            const newBlock = `${tocMatch[1]} toc-container" style="break-inside: auto; page-break-inside: auto; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding-top: var(--gapSmall); padding-bottom: var(--gapSmall);">${tocMatch[3]}\n${tocContent}</div>`;
+            
+            return content.replace(tocContainerRegex, newBlock);
         } else {
             // Fallback 1: Maybe there's no ul
             const tocRegexNoUl = /(<div class="contentContainer)(">\n?<h3[^>]*>Table of Content<\/h3>)/i;

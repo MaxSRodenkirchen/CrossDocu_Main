@@ -9,7 +9,7 @@ tags:
 ---
 # Testing the Installation 
 
-for the [[Installation for Exhibition]] at [[Der Baum hat Zeit]]. The images and videos show a first bigger setup after [[Projecting onto a Glass Prism]] was tested. Several techniques are combined here. The prism is now rotated by an Arduino motor [[Arduino Motor Control]]. The [[Webcam Movement Visualization in TD|interactive visuals]] are now controlled by the infrared camera of the [[Connecting a Kinect 1 to TD |Kinect]].
+... for the [[Installation for Exhibition]] at [[Der Baum hat Zeit]]. The images and videos show a first bigger setup after [[Projecting onto a Glass Prism]] was tested. Several techniques are combined here. The prism is now rotated by an Arduino motor [[Arduino Motor Control]]. The [[Webcam Movement Visualization in TD|interactive visuals]] are now controlled by the infrared camera of the [[Connecting a Kinect 1 to TD |Kinect]].
 
 For the final installation there will be an interactive synthesizer composition added to the installation. [[TouchDesigner to VCV Rack]]
 

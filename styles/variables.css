@@ -53,82 +53,26 @@
 }
 
 @font-face {
-  font-family: Medium;
-  src: url(/fonts/Favorit-Regular.otf);
-}
-
-@font-face {
-  font-family: Favorite Lining Regular;
-  src: url(/fonts/Fontspring-DEMO-alergia_remix-medium.otf);
-}
-
-@font-face {
-  font-family: Favorite Lining Bold;
-  src: url(/fonts/Fontspring-DEMO-alergia_remix-medium.otf);
-}
-
-@font-face {
-  font-family: Favorite Regular;
-  src: url(/fonts/Favorit-Regular.otf);
-}
-
-@font-face {
-  font-family: Favorite Bold;
-  src: url(/fonts/Favorit-Bold.otf);
-}
-
-@font-face {
-  font-family: "Graebenbach Bold";
-  src: url(/fonts/Graebenbach-Bold.ttf);
-}
-
-@font-face {
-  font-family: "Graebenbach Regular";
-  src: url(/fonts/Graebenbach-Regular.ttf);
-}
-
-@font-face {
-  font-family: "Graebenbach Medium";
-  src: url(/fonts/Graebenbach-Medium.ttf);
-}
-
-@font-face {
-  font-family: "Graebenbach Regular Italic";
-  src: url(/fonts/Graebenbach-RegularItalic.ttf);
-}
-
-
-@font-face {
-  font-family: "Graebenbach Mono Regular";
-  src: url(/fonts/Graebenbach-Regular.ttf);
-}
-
-@font-face {
-  font-family: "Graebenbach Mono Bold";
-  src: url(/fonts/GraebenbachMono-Bold.ttf);
-}
-
-@font-face {
   font-family: "Ease Display Regular";
-  src: url(/fonts/EaseDisplayTRIAL-Regular.otf);
+  src: url(/fonts/EaseDisplay-Regular.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "Ease Display Medium";
-  src: url(/fonts/EaseDisplayTRIAL-Medium.otf);
+  src: url(/fonts/EaseDisplay-Medium.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "Ease Standard Regular";
-  src: url(/fonts/EaseStandardTRIAL-Regular.otf);
+  src: url(/fonts/EaseStandard-Regular.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "Ease Standard Medium";
-  src: url(/fonts/EaseStandardTRIAL-Medium.otf);
+  src: url(/fonts/EaseStandard-Medium.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "Ease Standard Bold";
-  src: url(/fonts/EaseStandardTRIAL-Bold.otf);
+  src: url(/fonts/EaseStandard-Bold.woff2) format("woff2");
 }

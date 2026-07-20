@@ -3,7 +3,7 @@
     overflow-y: auto;
     width: 350px;
     flex-shrink: 0;
-    font-family: "Graebenbach Regular", sans-serif;
+    font-family: "Ease Standard Regular", sans-serif;
     background-color: var(--bg);
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@
   }
 
   .moc-sidebar-container > h1 {
-    font-family: Favorite Lining Regular, sans-serif;
+    font-family: "Ease Standard Regular", sans-serif;
     font-size: 26pt;
     line-height: 120%;
     background-color: var(--internalLink);
@@ -110,7 +110,7 @@
   }
 
   .moc-sidebar-container:not(#sidebar-default):not(#tags-default) > h1::before{
-    font-family: Favorite Regular, sans-serif;
+    font-family: "Ease Standard Regular", sans-serif;
     content: "<- ";
     cursor: pointer;
   }

@@ -13,3 +13,6 @@ A personal knowledge system but publicly.
 
 This Digital Garden is a Public Learning Experience.
 [[About Learning in Public]]
+
+You can view the content in different media with CrossDocu:
+[[The idea behind CrossDocu]]

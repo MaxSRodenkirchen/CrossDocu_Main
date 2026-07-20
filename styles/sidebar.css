@@ -229,8 +229,7 @@
     margin-bottom: var(--gapSmallest);
   }
 
-  .contentLink,
-  .listSection {
+  .contentLink {
     font-size: 15px;
     display: flex;
     align-items: center;
@@ -245,8 +244,12 @@
 
   .listSection {
     font-size: 12px;
-    padding: var(--gapSmaller) var(--gapSmaller);
+    /* padding: var(--gapSmallest) var(--gapSmaller); */
+    /* margin-top: var(--gapSmaller); */
+    /* margin-bottom: 0; */
     color: var(--silver);
+    /* text-transform: uppercase;
+    letter-spacing: 0.5px; */
   }
 
   .contentLink {
@@ -270,14 +273,12 @@
   }
 
   .contentLink:hover,
-  .contentLink.active,
-  .internalLink:hover {
+  .contentLink.active {
     /* margin-bottom: var(--gapSmaller); */
     /* font-family: "Ease Standard Medium", sans-serif; */
     color: var(--lobster-pink);
     scroll-margin-top: var(--gapSmall);
     background-color: transparent !important;
-
   }
 
 
