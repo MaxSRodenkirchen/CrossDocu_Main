@@ -7,13 +7,13 @@ Sorted by: new to old
 CW 29
 
 1. [[Using an Ultrasonic Sensor]]
-2. [[Touchdesigner to VCV Rack]]
-3. [[A Color Detecting Controller]]
+2. [[TouchDesigner to VCV Rack]]
+
 
 CW 28
 
-
 1. [[Arduino Motor Control]]
+2. [[Testing the Installation]]
 
 
 CW 27

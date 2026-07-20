@@ -23,7 +23,7 @@ Technical Implementation
 1. [[Feedback Effect in Touchdesigner]]
 2. [[Movement Detection in Touchdesigner]]
 3. [[Connecting a Kinect 1 to TD]]
-4. [[Touchdesigner to VCV Rack]]
+4. [[TouchDesigner to VCV Rack]]
 5. [[Arduino Motor Control]]
 6. [[Installation for Exhibition]] %%
 

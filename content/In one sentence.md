@@ -5,14 +5,15 @@ tags:
 ---
 # In One Sentence 
 
-What this semester project is about. 
-###### latest edit: 06.05.26
+...what this semester project is about. Part of the design class: [[Der Baum hat Zeit]].
+
+*Tuesday, May 5th 2026*
 
 **Exploring Creative Technologies** by asking questions, discussing topics and testing ideas, collected inside an interactive and non-linear, **web-based knowledge system.**
 
+### Read More
 
-![[oneSentence.png]]
-
-
-
-[[Questions behind ECT]]
+- [[Why This Garden Began]]
+- [[Mapping the Garden]]
+- [[This Gardens System]]
+- [[Questions behind ECT]]

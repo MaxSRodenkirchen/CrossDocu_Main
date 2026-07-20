@@ -8,6 +8,6 @@ tags:
 
 ###### **Max S. Rodenkirchen**
 ###### 27.05.2026 
-###### at [[Der Baum hat Zeit - FH Aachen - Prof. Eva Vitting]]
+###### at [[Der Baum hat Zeit]]
 
 Part of [[Concept for this Garden]]

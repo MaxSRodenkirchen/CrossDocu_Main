@@ -6,4 +6,4 @@ tags:
 
 Builds on top of this pattern: [[Color Detection in TD]]
 
-A technique for using some kind of analogue color mixing as a control mechanism. 
+Want to explore: **A technique for using some kind of analogue color mixing as a control mechanism.** 

@@ -43,4 +43,4 @@ Summer 2026 at FH Aachen
 - [[Projecting onto a Glass Prism]]
 - [[Arduino Motor Control]]
 - [[A Color Detecting Controller]]
-- [[Touchdesigner to VCV Rack]]
+- [[TouchDesigner to VCV Rack]]

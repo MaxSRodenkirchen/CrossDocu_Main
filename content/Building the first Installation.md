@@ -15,7 +15,7 @@ Creating the Visuals
 
 Generative and Interactive Audio
 
-1. [[Touchdesigner to VCV Rack]]
+1. [[TouchDesigner to VCV Rack]]
 
 
 The Final Installation

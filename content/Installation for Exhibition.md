@@ -13,5 +13,5 @@ Following techniques get combined for the installation:
 - [[Movement Detection in Touchdesigner]]
 - [[Projection Mapping in Touchdesigner]]
 - [[Arduino Beginners Workshop]] 
-- [[Touchdesigner to VCV Rack]]
+- [[TouchDesigner to VCV Rack]]
 - [[Manipulating Light]]

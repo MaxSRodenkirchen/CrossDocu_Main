@@ -5,13 +5,16 @@ tags:
 ---
 # Reflecting the Semester
 
-Summer 2026 at FH Aachen with Prof. Eva Vitting
+Summer 2026: [[Der Baum hat Zeit]]
 
 - Writing conventions are complex
-- Finding the right terminologies is very important
+- Finding the right terminologies is very important for
+- explaining but also 
+- for finding the right notes in your editor
 
   
 Next steps 
 - Simplify publishing workflow
-- CrossDocu webeditor
+- CrossDocu webeditor 
 - CrossDocu Obsidian plugin
+- WYSIWYG editor

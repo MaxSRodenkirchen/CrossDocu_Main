@@ -10,7 +10,7 @@ Welcome to my presentation
 
 Assignment for the semester
 
-1. [[In one sentence|In one sentence ]]
+1. [[In One Sentence|In one sentence ]]
 2. [[Mapping the Garden|Mapping the project ]]
 3. [[Capture and loop movement in p5.js |Example for an Experiment]]
 4. [[Questions behind ECT]]
