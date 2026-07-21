@@ -5,11 +5,13 @@ tags:
 ---
 # Course Documentation
 
-Max S. Rodenkirchen
+**Max S. Rodenkirchen**
 Design Class "Der Baum Hat Zeit"
 With Prof. Eva Vitting
 Summer 2026 at FH Aachen
 
+This edition was printed on:
+Tuesday, July 21st 2026
 ### Table of Content
 
 Documenting the semester
@@ -20,7 +22,7 @@ Documenting the semester
 
 The Final Concept Behind Exploring Creative Technologies
 
-- [[In one sentence]]
+- [[In One Sentence]]
 - [[Why This Garden Began]]
 - [[About Learning in Public]]
 - [[About Digital Gardens and Streams]]
@@ -79,7 +81,7 @@ Technical Explorations
 - [[Using an Ultrasonic Sensor]]
 - [[Testing the Installation]]
 - [[VCV Rack]]
-- [[Touchdesigner to VCV Rack]]
+- [[TouchDesigner to VCV Rack]]
 - [[Installation for Exhibition]]
 
 Internal and External Links
