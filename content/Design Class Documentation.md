@@ -1,7 +1,7 @@
 ---
 tags:
   - College-Summer-2026
-  - book
+  - Book
 ---
 # Course Documentation
 

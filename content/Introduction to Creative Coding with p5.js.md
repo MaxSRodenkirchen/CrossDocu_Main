@@ -51,7 +51,7 @@ What might have held you back?
 - [Genotyp 2 by Michael Schmitz](https://interaktivegestaltung.net/genotyp2/)
 - [Gradient Truchet ](https://openprocessing.org/sketch/2518786)
 - [Tidal Cycle first test](https://www.youtube.com/watch?v=HZUgYgjIi6Y&list=PLIZ01VQ6n_lzbQEstI-lFTmeLI8e1U2zJ&index=9)
-- [Insomina - Node-based Music](https://www.youtube.com/watch?v=yp3PnQMM3rA&list=PLIZ01VQ6n_lzbQEstI-lFTmeLI8e1U2zJ&index=8)
+- [Insomnia - Node-based Music](https://www.youtube.com/watch?v=yp3PnQMM3rA&list=PLIZ01VQ6n_lzbQEstI-lFTmeLI8e1U2zJ&index=8)
 - [Pure Data algorithmic IDM](https://www.youtube.com/watch?v=n9C58n7FC5c&list=RDn9C58n7FC5c&start_radio=1&pp=oAcB)
 - [DJ_Dave & Char Stiles Livecoding Performance @ Algowave Algorave](https://www.youtube.com/watch?v=7qfCeIgtllY&list=RD7qfCeIgtllY&start_radio=1&t=248s)
 - [Algorave at Iterations 2025](https://www.youtube.com/watch?v=AJakiTK5Z-I)

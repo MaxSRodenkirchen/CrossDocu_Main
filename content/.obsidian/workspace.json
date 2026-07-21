@@ -110,9 +110,33 @@
               "icon": "lucide-file",
               "title": "Design Class Documentation"
             }
+          },
+          {
+            "id": "e52ea66f203c26cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Connecting a Kinect 1 to TD.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Connecting a Kinect 1 to TD"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -298,10 +322,11 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "a38f279e80b5f384",
+  "active": "e52ea66f203c26cc",
   "lastOpenFiles": [
-    "Structuring the Platform.md",
     "Design Class Documentation.md",
+    "Welcome Fellow Learner.md",
+    "Structuring the Platform.md",
     "Capture and loop movement in p5.js.md",
     "This Gardens System.md",
     "Concept for this Garden.md",
@@ -325,7 +350,6 @@
     "Projektideen - Der Baum hat Zeit.md",
     "Content Loader for CrossDocu.md",
     "().md",
-    "Things to be done in CrossDocu.md",
     "images/Installation-Test-Makke_crazyColors.JPEG.tmp",
     "images/Installation-Test-Makke_aufbau.JPEG.tmp",
     "images/Installation-Test-Makke_crazyColors.JPEG",

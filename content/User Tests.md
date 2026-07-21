@@ -20,7 +20,7 @@ The navigation and structuring was a big problem for the users. They did not und
 - Colors did not help at all
 - The left arrow pointed onto modules, but it was supposed to say "go back"
 - Tags were not recognized as categories
-- There is too much focus on more unrelevant things like the "Sections"
+- There is too much focus on more irrelevant things like the "Sections"
 - Relations between content and navigation were not understood 
 - The tested geometric Display Font "Algeria Remix" looks too unsettled
 

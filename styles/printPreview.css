@@ -113,7 +113,7 @@
 
   .pagedjs_page h4 {
     font-size: 16pt;
-    line-height: 120%;
+    line-height: 120% !important;
     margin-top: var(--gapSmall);
     margin-bottom: var(--gapSmallest);
   }
@@ -123,9 +123,20 @@
   }
 
   .pagedjs_page p,
+  .pagedjs_page ul,
+  .pagedjs_page ol {
+    max-width: 50ch;
+    /* Optimale Zeilenlänge für Lesbarkeit (ca. 70-80 Zeichen) */
+  }
+
+  .pagedjs_page p,
   .pagedjs_page li {
     font-size: 11pt;
     line-height: 140%;
+  }
+
+  .pagedjs_page li {
+    line-height: 120% !important;
   }
 
   /* .pagedjs_page img {
@@ -206,7 +217,16 @@
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     color: var(--silver);
-    font-family: 'Ease Display Medium', sans-serif; /* Optional: adjust if you prefer a different font */
+    font-family: 'Ease Display Medium', sans-serif;
+    /* Optional: adjust if you prefer a different font */
+  }
+
+  .toc-chapter {
+    font-size: 14px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--silver);
+    font-family: 'Ease Display Medium', sans-serif;
   }
 
   .toc-container {

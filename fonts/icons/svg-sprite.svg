@@ -37,4 +37,6 @@
   <symbol viewBox="0 0 32 32" id="side-panel--close--filled"><path d="M28,4H4C2.9,4,2,4.9,2,6v20c0,1.1,0.9,2,2,2h24c1.1,0,2-0.9,2-2V6C30,4.9,29.1,4,28,4z M28,15H17.8l3.6-3.6L20,10l-6,6l6,6	l1.4-1.4L17.8,17H28v9H12V6h16V15z"/></symbol>
   <symbol viewBox="0 0 32 32" id="chevron--left--double"><path d="M6 16 16 6 17.4 7.4 8.8 16 17.4 24.6 16 26z"/><path d="M14 16 24 6 25.4 7.4 16.8 16 25.4 24.6 24 26z"/></symbol>
   <symbol viewBox="0 0 32 32" id="chevron--right--double"><path d="M18 16 8 26 6.6 24.6 15.2 16 6.6 7.4 8 6z"/><path d="M26 16 16 26 14.6 24.6 23.2 16 14.6 7.4 16 6z"/></symbol>
+  <symbol viewBox="0 0 32 32" id="list--bulleted"><circle cx="7" cy="9" r="3"/><circle cx="7" cy="23" r="3"/><path d="M16 22H30V24H16z"/><path d="M16 8H30V10H16z"/></symbol>
+  <symbol viewBox="0 0 32 32" id="list--numbered"><path d="M16 22H30V24H16z"/><path d="M16 8H30V10H16z"/><path d="M8 12 8 4 6 4 6 5 4 5 4 7 6 7 6 12 4 12 4 14 6 14 8 14 10 14 10 12 8 12z"/><path d="M10,28H4V24a2,2,0,0,1,2-2H8V20H4V18H8a2,2,0,0,1,2,2v2a2,2,0,0,1-2,2H6v2h4Z"/></symbol>
 </svg>

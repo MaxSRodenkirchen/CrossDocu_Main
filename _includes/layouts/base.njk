@@ -51,7 +51,7 @@
         {% endset %}
 
         <template id="templateSource">
-            {% if tags and "book" in tags %}
+            {% if tags and ("book" in tags or "Book" in tags) %}
             {% set bookMain = content | ensureH1 | injectAfterH1(metaHtml) | contentContainer(true) | linkClass %}
             {% set chapters = bookMain | extractBookItems(collections.all) %}
             {% set fullBook = bookMain | addHeadingIds %}
@@ -84,7 +84,7 @@
         </template>
 
         <template id="templateContent">
-            {% if tags and "book" in tags %}
+            {% if tags and ("book" in tags or "Book" in tags) %}
             {% set bookMain = content | ensureH1 | injectAfterH1(metaHtml) | contentContainer(true) | linkClass %}
             {% set chapters = bookMain | extractBookItems(collections.all) %}
             {% set fullBook = bookMain | addHeadingIds %}

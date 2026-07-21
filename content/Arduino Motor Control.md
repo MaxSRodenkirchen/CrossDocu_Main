@@ -12,7 +12,7 @@ This was tested for the [[Installation for Exhibition]] to bring a slight rotati
 
 ![[Arduino Set Up.jpeg]]
 
-The components were rendered, 3D printed and laser cutted by [Markus Bartz](https://www.instagram.com/makkes.mukke/).
+The components were rendered, 3D printed and laser cut by [Markus Bartz](https://www.instagram.com/makkes.mukke/).
 
 ### Why would you use an Arduino for that?
 

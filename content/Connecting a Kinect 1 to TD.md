@@ -6,9 +6,17 @@ tags:
 ---
 # Connecting a Kinect 1 to TouchDesigner
 
-Originally Kinect cameras were developed by Microsoft for their Xbox game consoles. They have a build in depth sensor and recognize certain body parts. They published versions for Xbox and later also for Windows. The lastet and way more expensive one is the Kinect Azure. I bought a Kinect 1 for Windows because for using it on a PC the Kinect needs some special USB power plug that comes with this Windows version. 
+Kinect cameras were originally developed by Microsoft for the Xbox gaming console. Equipped with a built-in depth sensor, they are capable of recognizing specific body parts and tracking skeletal movement. Microsoft later released dedicated versions for Windows, with the most recent and advanced iteration being the Azure Kinect. 
 
-After installing some drivers and setting the Kinect CHOP in TouchDesigner to the correct version it was good to go. There are also nice developer tools by Microsoft you could use for testing the Kinect.
+![Kinect v1 ](https://images.hothardware.com/static/newsimages/Item29336/microsoft-kinect-for-windowsv1-main1.jpg)
+
+*Image: https://images.hothardware.com/static/newsimages/Item29336/microsoft-kinect-for-windowsv1-main1.jpg*
+
+### Set Up
+
+When connecting a Kinect v1 to a PC, the specific Windows version of the hardware is required, as it includes a proprietary USB power adapter necessary for PC compatibility.
+
+Once the appropriate drivers are installed and the Kinect CHOP node in TouchDesigner is configured to the correct hardware version, the device functions seamlessly. Additionally, Microsoft provides dedicated developer tools that can be utilized for testing and calibrating the Kinect sensor.
 
 [This article contains information about the Kinect Version 1 device](https://derivative.ca/UserGuide/Kinect1)
 

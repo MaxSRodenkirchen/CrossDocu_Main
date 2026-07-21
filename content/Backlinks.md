@@ -7,7 +7,7 @@ tags:
 
 # Backlinks in Eleventy
 
-**Attention! This is a AI written documentation for a techniqual pattern created by Gemini 3.1 Pro (High).**
+**Attention! This is an AI written documentation for a technical pattern created by Gemini 3.1 Pro (High).**
 
 In our custom CrossDocu setup, we implemented a robust, native solution to generate backlinks (or "Linked Mentions") without relying on external plugins. This guarantees full control over how links are parsed and ensures compatibility with Obsidian-style Wikilinks (`[[Link]]`).
 

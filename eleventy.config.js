@@ -108,7 +108,8 @@ export default function (eleventyConfig) {
                     if (!backlinks[targetItem.url].some(bl => bl.url === item.url)) {
                         backlinks[targetItem.url].push({
                             url: item.url,
-                            title: item.data.title || item.fileSlug
+                            title: item.data.title || item.fileSlug,
+                            tags: item.data.tags || []
                         });
                     }
                 }
@@ -143,12 +144,33 @@ export default function (eleventyConfig) {
                 let thumbUrl = "";
 
                 // Check for YouTube
-                const ytMatch = src.match(/youtube\.com\/embed\/([a-zA-Z0-9_-]+)/);
+                let ytMatch = src.match(/youtube\.com\/embed\/([a-zA-Z0-9_-]+)/);
+                if (!ytMatch) {
+                    ytMatch = src.match(/youtube-nocookie\.com\/embed\/([a-zA-Z0-9_-]+)/);
+                }
+
+                let linkHref = src;
+
                 if (ytMatch) {
                     isYouTube = true;
                     videoId = ytMatch[1];
                     thumbUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+                    linkHref = `https://www.youtube.com/watch?v=${videoId}`;
+                } else {
+                    // Clean up other iframe URLs (e.g. Arduino ?view-mode=embed)
+                    try {
+                        const urlObj = new URL(linkHref);
+                        urlObj.searchParams.delete('view-mode');
+                        // Optional: remove other embed-specific query params if they exist
+                        linkHref = urlObj.toString();
+                    } catch (e) {
+                        // In case src is not a valid URL (e.g. relative path), fallback to simple string replace
+                        linkHref = linkHref.replace('?view-mode=embed', '').replace('&view-mode=embed', '');
+                    }
                 }
+
+                // Check for explicit pixel height
+                const explicitHeightMatch = match.match(/height\s*[:=]\s*["']?(\d+)px["']?/);
 
                 // Removed Archive.org thumbnail check due to low-res images
                 const iframeHTML = `<iframe${beforeSrc}src="${src}"${afterSrc}></iframe>`;
@@ -162,20 +184,29 @@ export default function (eleventyConfig) {
     <div class="iframe-print-fallback">
         <img src="${thumbUrl}" alt="Video Thumbnail" class="iframe-thumbnail" />
     </div>
+</div>
+<div class="iframe-print-fallback-link-only">
+    <a href="${linkHref}" target="_blank" class="externalLink">${linkHref}</a>
+</div>`;
+                } else if (explicitHeightMatch) {
+                    // If the iframe has a fixed pixel height (like Arduino), do not use the 16:9 container.
+                    return `
+<div class="iframe-wrapper-native">
+    ${iframeHTML}
     <div class="iframe-print-fallback-link-only">
-        <a href="${src}" target="_blank" class="externalLink">${src}</a>
+        <a href="${linkHref}" target="_blank" class="externalLink">${linkHref}</a>
     </div>
 </div>`;
                 } else {
-                    // For p5.js and others: Leave iframe as is, but add a link below it.
+                    // For p5.js and others (without explicit height): use the 16:9 container.
                     return `
 <div class="iframe-container no-thumbnail">
     <div class="iframe-interactive">
         ${iframeHTML}
     </div>
-    <div class="iframe-print-fallback-link-only">
-        <a href="${src}" target="_blank" class="externalLink">${src}</a>
-    </div>
+</div>
+<div class="iframe-print-fallback-link-only">
+    <a href="${linkHref}" target="_blank" class="externalLink">${linkHref}</a>
 </div>`;
                 }
             });
@@ -211,24 +242,24 @@ export default function (eleventyConfig) {
             if (prefix) {
                 id = `${slugify(prefix)}-${id}`;
             }
-            
+
             let titleAttr = "";
             if (level === "1" && chapterTitle) {
                 titleAttr = ` data-chapter-title="${chapterTitle.replace(/"/g, '&quot;')}"`;
             }
-            
+
             return `<h${level} id="${id}" ${attrs}${titleAttr}>${text}</h${level}>`;
         });
     });
 
     // Extract book items from the parent page's content
-    eleventyConfig.addFilter("extractBookItems", function(htmlContent, allCollections) {
+    eleventyConfig.addFilter("extractBookItems", function (htmlContent, allCollections) {
         if (!htmlContent) return [];
-        
+
         const linkRegex = /<a\s+[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
         const linkedSlugs = [];
         let match;
-        
+
         while ((match = linkRegex.exec(htmlContent)) !== null) {
             const href = match[1];
             if (href && !href.startsWith('#') && !/^(https?:)?\/\//.test(href)) {
@@ -238,7 +269,7 @@ export default function (eleventyConfig) {
                 }
             }
         }
-        
+
         const chapters = [];
         for (const slug of linkedSlugs) {
             const foundPage = allCollections.find(item => item.fileSlug === slug || (slug === 'index' && item.url === '/'));
@@ -250,27 +281,27 @@ export default function (eleventyConfig) {
     });
 
     // Inject Table of Contents after ### Table of Content and remove original list
-    eleventyConfig.addFilter("injectToC", function(content) {
+    eleventyConfig.addFilter("injectToC", function (content) {
         if (!content) return "";
-        
+
         const headingRegex = /<h([1-3])\b([^>]*)>([\s\S]*?)<\/h\1>/gi;
         let match;
-        
+
         // Build a mapping from data-chapter-title (fileSlug) to the generated h1 id
         const slugToIdMap = {};
         let tocHtml = '<div class="toc">\n';
-        
+
         while ((match = headingRegex.exec(content)) !== null) {
             const level = parseInt(match[1], 10);
             if (level === 1) { // Only h1 for main chapters
                 const attrs = match[2];
                 let text = match[3].replace(/<[^>]+>/g, '').trim();
-                
+
                 const titleMatch = attrs.match(/data-chapter-title=["']([^"']+)["']/i);
                 if (titleMatch && titleMatch[1]) {
                     text = titleMatch[1];
                 }
-                
+
                 const idMatch = attrs.match(/id=["']([^"']+)["']/i);
                 if (idMatch && idMatch[1]) {
                     tocHtml += `<div class="toc-item"><a href="#${idMatch[1]}"><span>${text}</span></a></div>\n`;
@@ -281,14 +312,14 @@ export default function (eleventyConfig) {
             }
         }
         tocHtml += '</div>\n';
-        
+
         // Find the "Table of Content" heading block entirely
         const tocContainerRegex = /(<div class="contentContainer)("?[^>]*>)\s*(<h3[^>]*>Table of Content<\/h3>)([\s\S]*?)(<\/div>)/i;
         const tocMatch = content.match(tocContainerRegex);
-        
+
         if (tocMatch && tocMatch[4].includes('<ul')) {
             let tocContent = tocMatch[4];
-            
+
             // 1. Transform internal links to point to anchor IDs
             tocContent = tocContent.replace(/<a\s+([^>]*href=["']([^"']+)["'][^>]*)>([\s\S]*?)<\/a>/gi, (aMatch, attrs, href, linkText) => {
                 if (href && !href.startsWith('#') && !/^(https?:)?\/\//.test(href)) {
@@ -299,19 +330,19 @@ export default function (eleventyConfig) {
                 }
                 return aMatch;
             });
-            
+
             // 2. Change <ul>/<li> to <div class="toc">/<div class="toc-item">
             tocContent = tocContent.replace(/<ul[^>]*>/gi, '<div class="toc">');
             tocContent = tocContent.replace(/<\/ul>/gi, '</div>');
             tocContent = tocContent.replace(/<li[^>]*>/gi, '<div class="toc-item">');
             tocContent = tocContent.replace(/<\/li>/gi, '</div>');
-            
+
             if (content.match(/id=["']link-directory["']/i)) {
                 tocContent += `\n<div class="toc" style="margin-top: 1em;">\n<div class="toc-item"><a href="#link-directory"><span>Link Directory</span></a></div>\n</div>\n`;
             }
-            
+
             const newBlock = `${tocMatch[1]} toc-container" style="break-inside: auto; page-break-inside: auto; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding-top: var(--gapSmall); padding-bottom: var(--gapSmall);">${tocMatch[3]}\n${tocContent}</div>`;
-            
+
             return content.replace(tocContainerRegex, newBlock);
         } else {
             // Fallback 1: Maybe there's no ul
@@ -319,17 +350,17 @@ export default function (eleventyConfig) {
             if (tocRegexNoUl.test(content)) {
                 return content.replace(tocRegexNoUl, `$1 toc-container" style="break-inside: auto; page-break-inside: auto; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding-top: var(--gapSmall); padding-bottom: var(--gapSmall);$2\n${tocHtml}`);
             }
-            
+
             // Fallback 2: Just insert after the heading
             const tocHeaderRegex = /<h3[^>]*>Table of Content<\/h3>/i;
             const tocHeaderMatch = content.match(tocHeaderRegex);
-            
+
             if (tocHeaderMatch) {
                 const insertPos = tocHeaderMatch.index + tocHeaderMatch[0].length;
                 return content.slice(0, insertPos) + '\n' + tocHtml + '\n' + content.slice(insertPos);
             }
         }
-        
+
         return content;
     });
 
@@ -510,14 +541,16 @@ export default function (eleventyConfig) {
             const linkClass = isExternal ? 'externalLink' : 'internalLink';
             const targetAttr = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
             const inlineStyle = ' style="text-decoration: underline dotted !important;"';
-            
+
+            let displayHref = isExternal ? l.href : l.href.replace(/\//g, '');
+
             let anchorHtml;
             if (forceClasses) {
-                anchorHtml = `<a href="${l.href}" class="${linkClass}"${targetAttr} title="${l.href}"${inlineStyle}>${l.href}</a>`;
+                anchorHtml = `<a href="${l.href}" class="${linkClass}"${targetAttr} title="${l.href}"${inlineStyle}>${displayHref}</a>`;
             } else {
-                anchorHtml = `<a href="${l.href}"${inlineStyle}>${l.href}</a>`;
+                anchorHtml = `<a href="${l.href}"${inlineStyle}>${displayHref}</a>`;
             }
-            
+
             return `<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.5rem; break-inside: avoid; page-break-inside: avoid;">
                 <div style="text-align: left; padding-right: 1rem; word-break: break-word;">${l.text}:</div>
                 <div style="text-align: left; overflow-wrap: anywhere; min-width: 0;">${anchorHtml}</div>
@@ -527,7 +560,7 @@ export default function (eleventyConfig) {
         let html = `\n<div class="contentContainer print-only-links" style="display: none; break-inside: auto; page-break-inside: auto; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding-top: var(--gapSmall); padding-bottom: var(--gapSmall);">\n<h1 id="link-directory">Link Directory</h1>\n`;
 
         if (internalLinks.length > 0) {
-            html += `<h4>Internal Links</h4>\n<div style="margin-bottom: 1rem;">\n`;
+            html += `<p class="toc-chapter">Internal Links</p>\n<div style="margin-bottom: 1rem;">\n`;
             internalLinks.forEach(l => {
                 html += renderLinkRow(l, false);
             });
@@ -535,7 +568,7 @@ export default function (eleventyConfig) {
         }
 
         if (externalLinks.length > 0) {
-            html += `<h4>External Links</h4>\n<div>\n`;
+            html += `<p class="toc-chapter">External Links</p>\n<div>\n`;
             externalLinks.forEach(l => {
                 html += renderLinkRow(l, true);
             });
@@ -602,7 +635,7 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addFilter("appendLinkDirectory", function (content) {
         if (typeof content !== 'string') return content;
-        
+
         const allLinks = [];
         const linkRegex = /<a\s+[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
         let match;
@@ -625,16 +658,16 @@ export default function (eleventyConfig) {
         allCollection.forEach(item => {
             if (!item.url || !item.inputPath.endsWith('.md')) return;
             if (item.data.tags && item.data.tags.includes('private')) return;
-            
+
             const name = item.fileSlug || 'index';
-            
+
             // Backlinks: who links TO this item
             const itemBacklinks = backlinksMap[item.url] || [];
             const backlinksNames = itemBacklinks.map(bl => {
                 const sourceItem = allCollection.find(i => i.url === bl.url);
                 return sourceItem ? (sourceItem.fileSlug || 'index') : bl.url;
             });
-            
+
             // Internal Links: who this item links TO
             const internalLinksNames = [];
             allCollection.forEach(targetItem => {
@@ -644,7 +677,7 @@ export default function (eleventyConfig) {
                     internalLinksNames.push(targetItem.fileSlug || 'index');
                 }
             });
-            
+
             linkData.push({
                 id: name,
                 title: item.data.title || name,
@@ -665,7 +698,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addFilter("sortTagsByCount", function (collections) {
         let tagsArray = [];
         for (let tag in collections) {
-            if (tag !== "all" && tag !== "post" && tag !== "posts" && tag !== "moc" && tag !== "mocs" && tag !== "private") {
+            if (tag !== "all" && tag !== "post" && tag !== "posts" && tag !== "moc" && tag !== "mocs" && tag !== "private" && tag !== "book" && tag !== "Book") {
                 if (collections[tag].length > 0) {
                     tagsArray.push({ tag: tag, posts: collections[tag] });
                 }

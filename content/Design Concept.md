@@ -10,7 +10,7 @@ The content might **get confusing** to people!
 The content also might **get complicated.**
 People should understand quickly and get inspired. 
 Support exchange!
-[[kjadjsnkd]]
+
 
 
 **That's why it needs**

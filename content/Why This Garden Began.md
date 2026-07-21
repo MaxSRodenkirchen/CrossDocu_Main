@@ -13,6 +13,4 @@ tags:
 How this Digital Garden is set up
 [[This Gardens System]]
 [[Mapping the Garden]]
-
 [[About Learning in Public]]
-

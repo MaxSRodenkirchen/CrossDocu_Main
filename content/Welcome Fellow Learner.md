@@ -1,4 +1,5 @@
 ---
+permalink: /
 tags:
 ---
 # Welcome Fellow Learner
