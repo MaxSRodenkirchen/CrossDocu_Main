@@ -45,17 +45,21 @@
     font-size: 20px;
   }
 
+
   .pagedjs_page p:not(:has(img)) {
-    max-width: 60%;
+    max-width: 35ch;
+    font-size: 38px;
     line-height: 120%;
   }
 
-  .pagedjs_page ul {
+  .pagedjs_page ul,
+  .pagedjs_page ol {
     max-width: 60%;
   }
 
-  .pagedjs_page ul>li {
+  .pagedjs_page li {
     font-size: 50px;
+    line-height: 1.2;
     margin-top: 2rem;
   }
 
@@ -185,7 +189,7 @@
   .iframe-container.has-thumbnail .iframe-interactive {
     display: none !important;
   }
-  
+
   .iframe-container.has-thumbnail .iframe-print-fallback {
     display: block !important;
   }

@@ -6,7 +6,22 @@ export function switchPages(totalPages, currentPage = 1) {
             currentPage = pageNumber;
             const targetPage = document.querySelector(`#page-${currentPage}`);
             if (targetPage) {
-                targetPage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const viewMode = document.body.dataset.view;
+                const midContainer = document.getElementById("midContainer");
+                
+                if (viewMode === "slide" && midContainer) {
+                    const pagesContainer = document.querySelector('.pagedjs_pages');
+                    const scale = parseFloat(pagesContainer.style.getPropertyValue('--slide-scale')) || 1;
+                    const slideOffsetY = parseFloat(pagesContainer.style.getPropertyValue('--slide-offset-y')) || 0;
+                    
+                    const scrollTop = (targetPage.offsetTop - slideOffsetY) * scale;
+                    midContainer.scrollTo({
+                        top: scrollTop,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    targetPage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
                 
                 document.querySelectorAll('.pagedjs_page').forEach(page => {
                     page.classList.remove('active-slide');
