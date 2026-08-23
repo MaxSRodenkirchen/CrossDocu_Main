@@ -8,10 +8,9 @@
 </head>
 
 <body>
-    <!-- includes/noteLayout.njk -->
 
     <h1>Using a Ultrasonic Sensor 1PC with an Arduino</h1>
-<p>After setting up a [[Arduino Motor Control]] for the [[Installation for Exhibition]] the question was how to control the motors rotation manually. An ultrasonic sensor measures distances and can therefore function as a type of controller or input device.</p>
+<p>After setting up a <a href="/Arduino%20Motor%20Control/">Arduino Motor Control</a> for the <a href="/Installation%20for%20Exhibition/">Installation for Exhibition</a> the question was how to control the motors rotation manually. An ultrasonic sensor measures distances and can therefore function as a type of controller or input device.</p>
 <h3>Setting Up</h3>
 <p>Setting up the sensor on its own was pretty straight forward. <a href="https://www.youtube.com/watch?v=n-gJ00GTsNg">This video tutorial</a> explains how to setup the sensor. Problems came up when trying to combine the sensor's logic with that of the motor. The problem is that the program codes have delays of different lengths in the loop. This means that the motor has to wait until the sensor’s logic has run through again. What we actually want is for these two logic sequences to run in parallel, but that’s not really possible with the single core on the Arduino.</p>
 <h3>Solution</h3>
@@ -21,8 +20,24 @@
 <p>This is the combined code where the Ultrasonic sensor is controlling the rotation speed of the motor. (It is actually controlling the timing of the motors logic)</p>
 <iframe src="https://app.arduino.cc/sketches/fa8c8330-f8ed-4e55-8a4f-b5c0fc89606b?view-mode=embed" style="height:510px;width:100%;margin:10px 0" border=0></iframe>
     <hr>
-
+    <h3>Backlinks</h3>
     <ul>
+        
+        <li>
+            <a href="/Arduino Motor Control/">/Arduino Motor Control/</a>
+        </li>
+        
+        <li>
+            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+        </li>
+        
+        <li>
+            <a href="/Building the first Installation/">/Building the first Installation/</a>
+        </li>
+        
+        <li>
+            <a href="/Weekly Progress/">/Weekly Progress/</a>
+        </li>
         
     </ul>
 </body>

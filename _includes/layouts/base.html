@@ -8,15 +8,14 @@
 </head>
 
 <body>
-    <!-- includes/noteLayout.njk -->
 
     {{ content | safe }}
     <hr>
-
+    <h3>Backlinks</h3>
     <ul>
         {% for link in backlinks %}
         <li>
-            <a href="{{ link.url }}">Something</a>
+            <a href="{{ link.url }}">{{ link.url }}</a>
         </li>
         {% endfor %}
     </ul>
