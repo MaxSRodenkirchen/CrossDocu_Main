@@ -3,7 +3,9 @@ permalink: /
 layout: "layouts/base.html"
 tags:
 ---
-# Welcome Fellow Learner
+# Welcome Fellow Learner ^-.-^
+
+[Lets go](/Backlinks/)
 
 **Exploring Creative Technologies** is a **Public Learning Experience** in the form of a **Digital Garden**. You wonder what the heck all these terms mean? Start here:
 

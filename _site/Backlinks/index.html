@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backlinks</title>
+</head>
+
+<body>
+    <!-- includes/noteLayout.njk -->
+
+    <p><a href="/index/">Lets go</a></p>
+<p>[[index]]</p>
+<h1>Backlinks in Eleventy</h1>
+<p><strong>Attention! This is an AI written documentation for a technical pattern created by Gemini 3.1 Pro (High).</strong></p>
+<p>In our custom CrossDocu setup, we implemented a robust, native solution to generate backlinks (or &quot;Linked Mentions&quot;) without relying on external plugins. This guarantees full control over how links are parsed and ensures compatibility with Obsidian-style Wikilinks (<code>[[Link]]</code>).</p>
+<h2>How it works</h2>
+<p>The core of our backlink logic resides in <code>eleventy.config.js</code> via a custom Eleventy Collection called <code>backlinksMap</code>.</p>
+<h3>1. Global Scanning before Rendering</h3>
+<p>Before Eleventy renders any page, the <code>backlinksMap</code> collection iterates through every single markdown file in the project. It extracts the raw Markdown content (<code>rawInput</code>) from each file.</p>
+<h3>2. Preventing False Positives</h3>
+<p>To ensure we only find actual links and not code examples, the script first strips out all code blocks from the raw text. This prevents false positives when documenting code or explaining how to write links.</p>
+<h3>3. Regex Pattern Matching</h3>
+<p>For every file, we check if its filename (<code>fileSlug</code>) appears as a link in the raw text of <em>other</em> files. We use a case-insensitive Regular Expression (Regex) that looks for two types of links:</p>
+<ul>
+<li><strong>Wikilinks:</strong> <code>[[Page Name]]</code> or <code>[[Page Name | Alias]]</code></li>
+<li><strong>Standard Markdown Links:</strong> <code>[Alias](Page Name.md)</code> or <code>[Alias](./Page Name)</code></li>
+</ul>
+<p>The regex is designed to be highly flexible, allowing for optional whitespace around the page names to catch variations like <code>[[ Page Name | Alias ]]</code>.</p>
+<h3>4. Creating the Map</h3>
+<p>If a match is found, the linking page's URL and title are added to a central &quot;Map&quot; (a JavaScript object). This map uses the target page's URL as the key, and stores an array of all pages that link to it.</p>
+<h3>5. UI Rendering</h3>
+<p>Finally, during the rendering phase, the <code>base.njk</code> layout includes a Nunjucks partial (<code>metaData.njk</code>). This partial checks if the current page's URL exists in our pre-calculated <code>backlinksMap</code>. If it does, it dynamically generates an HTML list of &quot;Linked Mentions&quot; and injects it right below the main <code>&lt;h1&gt;</code> title using a custom Nunjucks filter (<code>injectAfterH1</code>).</p>
+
+    <hr>
+
+    <ul>
+        
+    </ul>
+</body>
+
+</html>

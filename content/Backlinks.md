@@ -4,6 +4,9 @@ tags:
   - CrossDocu
   - AI-Techniques
 ---
+[Lets go](/index/)
+
+[[index]]
 
 # Backlinks in Eleventy
 

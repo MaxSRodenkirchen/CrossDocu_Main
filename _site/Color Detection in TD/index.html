@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+</head>
+
+<body>
+    <!-- includes/noteLayout.njk -->
+
+    <h1>Color Detection in Touchdesigner</h1>
+<p>How can color be used as input data for interactive applications? This is a quick test in Touchdesigner which showcases the simplicity of this pattern.</p>
+<p><strong>Step 1:</strong> Used an <strong>input</strong> source: e.g. a constant color, random colors or a webcam input
+<strong>Step 2:</strong> Used an <strong>&quot;Analyze&quot;-TOP</strong> for returning single values and played around with different operations. In this case &quot;Average&quot; was used.<br>
+<strong>Step 3:</strong> <em>optional:</em> RGB color values to HSV using the <strong>&quot;RGB to HSV&quot;-TOP</strong><br>
+<strong>Step 4:</strong> <strong>&quot;TOP to CHOP&quot;</strong> and renamed channels to HSV
+<strong>Step 5</strong>: Used a <strong>&quot;Filter&quot;-CHOP</strong> for smooth interpolation between values</p>
+<p>These channels could now be used for controlling certain parameters in the application. In combination with a camera this pattern could be used for building a color detecting controller. E.g. mixing watercolors in real time and returning average color values.</p>
+<p>[[A Color Detecting Controller]]</p>
+<p>![[color_detection_td.png]]</p>
+
+    <hr>
+
+    <ul>
+        
+    </ul>
+</body>
+
+</html>

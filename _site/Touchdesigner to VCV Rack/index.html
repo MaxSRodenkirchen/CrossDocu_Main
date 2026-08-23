@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+</head>
+
+<body>
+    <!-- includes/noteLayout.njk -->
+
+    <h1>TouchDesigner to VCV Rack</h1>
+<p>How can we control the software synthesizer [[VCV Rack]] via inputs coming from TouchDesigner?</p>
+<p>There are multiple options to do this. One very good way for sending data from TouchDesigner to VCV Rack is by using <strong><a href="https://en.wikipedia.org/wiki/Open_Sound_Control">OSC (Open Sound Control)</a></strong> which is a protocol made for sending data between electronic devices, especially electronic instruments. It actually works over the local network which enables connecting devices wireless. Following this YouTube tutorial it took less than one hour to make it work: <a href="https://www.youtube.com/watch?v=_2bgXrMPRxc">TouchDesigner / VCV Rack OSC Communication</a>.</p>
+<h3>Set Up</h3>
+<p>Basically you need only two things:</p>
+<ol>
+<li>The OSC Out Chop in TouchDesigner</li>
+<li>An OSC module in VCV Rack (cvOSCcv for example)</li>
+</ol>
+<p>Then just check that you are on the same port and that channel names are matching.</p>
+
+    <hr>
+
+    <ul>
+        
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+</head>
+
+<body>
+    <!-- includes/noteLayout.njk -->
+
+    <h1>Experiences and issues using the HandPose model in ml5.js</h1>
+<p>Following questions lead into testing ml5.js:
+<strong>Can you build an Interface that gets controlled by the users webcam input? Does ml5.js and their hand-tracking model work for that?</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OrrxKsYCj54?si=JOcblCbhObPY98wt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<h3>Test: Building a small UI controlled by users finger tips 👆</h3>
+<ol>
+<li>Webcam input gets loaded into p5.js</li>
+<li>Webcam gets send to ml5.js</li>
+<li>ml5.js returns Object with position data of points on your hands</li>
+<li>take only the finger tip x and y position</li>
+<li>check if those positions are in between the ui fields</li>
+<li>if so change their color (or do anything else 🙂)</li>
+</ol>
+<h3>Issue 1: Camera takes seconds to load</h3>
+<p>This is acceptable for Installations that get started once, but if you implement this in a web page users will need to wait. I am not sure why that is. I have tried to constrain the video input in its dimensions and framerate but that didn't change much.</p>
+<pre><code>  let constraints = {
+    video: {
+      width: { min: 640, ideal: 640 },
+      height: { min: 480, ideal: 480 },
+      frameRate: { max: 25 },
+    }
+  };
+</code></pre>
+<p>Is it p5.js or is it a problem with some WebAPI?</p>
+<h3>Issue 2: Performance issues with the tfjs model</h3>
+<p>There were <strong>strong performance issues with the tfjs model.</strong> First of all it took a long time to load and it was also stuttering. It was tested on a good Laptop and an even better PC with the same results. This is strange, because in Video tutorials it seams to work for people. Using the models live demo also works fine. But why doesn't it in this test with p5.js and ml5.js?</p>
+<p>More info on options <a href="https://github.com/tensorflow/tfjs-models/tree/master/hand-pose-detection/src/tfjs#create-a-detector">here</a> for &quot;tfjs&quot; runtime.</p>
+<h3>Finding Solutions</h3>
+<p>What helped was changing the runtime model to the older <strong>mediapipe</strong> and switching from full to light mode. Light mode runs a smaller version of the model which is enough for just tracking a finger tip. And also the mediapipe model returned much more satisfactory results. It loads much quicker and has no stuttering. Sometimes it does detect other parts of the hand as a finger tip and glitches. This is most probably because it is an older and less trained model. In the end mediapipe did the job with acceptable performance and just some glitching.</p>
+<pre><code>let options = {
+  maxHands: 2,
+  flipped: true,
+  runtime: &quot;mediapipe&quot;,
+  modelType: &quot;lite&quot;,
+};
+</code></pre>
+<p>More info on options <a href="https://github.com/tensorflow/tfjs-models/tree/master/hand-pose-detection/src/mediapipe#create-a-detector">here</a> for &quot;mediapipe&quot; runtime.</p>
+<hr>
+<p><em>2026-05-31</em></p>
+<p>My first impression is that it technically works, but the AI tracking seams to be really slow. With such delays it's kind of not usable. I will research on methods to speed up the ml5.js processes. Maybe we can run it locally?</p>
+
+    <hr>
+
+    <ul>
+        
+    </ul>
+</body>
+
+</html>
