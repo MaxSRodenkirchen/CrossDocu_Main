@@ -1,0 +1,26 @@
+{
+  "name": "exploring-creative-technologies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxSRodenkirchen/CrossDocu_Main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/MaxSRodenkirchen/CrossDocu_Main/issues"
+  },
+  "homepage": "https://github.com/MaxSRodenkirchen/CrossDocu_Main#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}
