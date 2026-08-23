@@ -15,7 +15,6 @@
   "type": "module",
   "dependencies": {
     "@carbon/icons": "^11.82.0",
-    "markdown-it-wikilinks-plus": "github:actuallysomecat/markdown-it-wikilinks-plus",
     "pagedjs": "^0.4.3",
     "sharp": "^0.35.3"
   },

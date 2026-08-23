@@ -1,5 +1,4 @@
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
-import wikilinksPlus from "markdown-it-wikilinks-plus";
 import fs from "fs";
 import path from "path";
 
@@ -8,21 +7,40 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-    // Wikilinks Plugin aktivieren ([[seite]] und ![[bild.png]])
+    // Custom Wikilinks Plugin ([[seite]] und ![[bild.png]])
     eleventyConfig.amendLibrary("md", (mdLib) => {
         mdLib.set({ breaks: true }); //enable single line breaks - like in Obsidian and VS-Code etc. 
 
-        mdLib.use(wikilinksPlus, {
-            pageLink: {
-                relativeBaseURL: './',
-                absoluteBaseURL: './',
-                forceAllLinksAbsolute: true
-            },
-            imageEmbed: {
-                defaultAltText: true,
-                absoluteBaseURL: '/images/',
-                forceAllImageUrlsAbsolute: true
-            },
+        // Eigene Regel hinzufügen, um Wikilinks umzuwandeln
+        mdLib.core.ruler.push('replace_wikilinks', function (state) {
+            for (let i = state.tokens.length - 1; i >= 0; i--) {
+                if (state.tokens[i].type !== 'inline') continue;
+                let tokens = state.tokens[i].children;
+                for (let j = tokens.length - 1; j >= 0; j--) {
+                    if (tokens[j].type === 'text') {
+                        let content = tokens[j].content;
+                        if (content.includes('[[')) {
+                            // Convert image links ![[image.png]]
+                            content = content.replace(/!\[\[(.*?)\]\]/g, (match, p1) => {
+                                return `<img src="/images/${p1}" alt="${p1}">`;
+                            });
+                            // Convert standard wikilinks [[Link]] or [[Link|Text]]
+                            content = content.replace(/\[\[(.*?)\]\]/g, (match, p1) => {
+                                let parts = p1.split('|');
+                                let link = parts[0];
+                                let text = parts[1] || link;
+                                // Die generierten Ordner behalten Leerzeichen und Groß-/Kleinschreibung bei
+                                return `<a href="/${encodeURI(link)}/">${text}</a>`;
+                            });
+                            
+                            if (content !== tokens[j].content) {
+                                tokens[j].content = content;
+                                tokens[j].type = 'html_inline';
+                            }
+                        }
+                    }
+                }
+            }
         });
 
         // Eigene Regel hinzufügen, um -> in → umzuwandeln
