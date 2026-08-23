@@ -3,7 +3,7 @@ tags:
   - College-Summer-2026
   - About-this-Digital-Garden
 ---
-# In One Sentence 
+# In One Sentence
 
 ...what this semester project is about. Part of the design class: [[Der Baum hat Zeit]].
 
