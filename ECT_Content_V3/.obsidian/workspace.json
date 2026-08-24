@@ -78,9 +78,33 @@
               "icon": "lucide-file",
               "title": "Welcome Fellow Learner"
             }
+          },
+          {
+            "id": "bd1fdb76e538a2d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -267,11 +291,11 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "275bcd8af64e50c9",
+  "active": "bd1fdb76e538a2d4",
   "lastOpenFiles": [
+    "Welcome Fellow Learner.md",
     "index.md",
     "Backlinks.md",
-    "Welcome Fellow Learner.md",
     "In one sentence.md",
     "Does Learning Experience Design offer new perspectives compared to UX-Design.md",
     "notes/Working with Live Data.md",
