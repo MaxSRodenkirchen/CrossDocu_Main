@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>A Design System for this Garden</h1>
+    <div id="mainContainer">
+        <h1>A Design System for this Garden</h1>
 <p>This was shows as part of the <a href="/Designing%20this%20Garden/">Designing this Garden</a>. It may have changed since then.</p>
 <p>!<a href="/Design%20Elements.png/">Design Elements.png</a></p>
 <p>!<a href="/fonts%20and%20color.png/">fonts and color.png</a></p>
@@ -18,19 +21,30 @@
 <p>!<a href="/print%20mode%20design.png/">print mode design.png</a></p>
 <p>!<a href="/slide%20mode%20design.png/">slide mode design.png</a></p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Designing this Garden/">/Designing this Garden/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Designing this Garden/">/Designing this Garden/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Backlinks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <p><a href="/Welcome%20Fellow%20Learner/">Welcome Fellow Learner</a></p>
+    <div id="mainContainer">
+        <p><a href="/Welcome%20Fellow%20Learner/">Welcome Fellow Learner</a></p>
 <h1>Backlinks in Eleventy</h1>
 <p><strong>Attention! This is an AI written documentation for a technical pattern created by Gemini 3.1 Pro (High).</strong></p>
 <p>In our custom CrossDocu setup, we implemented a robust, native solution to generate backlinks (or &quot;Linked Mentions&quot;) without relying on external plugins. This guarantees full control over how links are parsed and ensures compatibility with Obsidian-style Wikilinks (<code>[[Link]]</code>).</p>
@@ -31,11 +34,22 @@
 <h3>5. UI Rendering</h3>
 <p>Finally, during the rendering phase, the <code>base.njk</code> layout includes a Nunjucks partial (<code>metaData.njk</code>). This partial checks if the current page's URL exists in our pre-calculated <code>backlinksMap</code>. If it does, it dynamically generates an HTML list of &quot;Linked Mentions&quot; and injects it right below the main <code>&lt;h1&gt;</code> title using a custom Nunjucks filter (<code>injectAfterH1</code>).</p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

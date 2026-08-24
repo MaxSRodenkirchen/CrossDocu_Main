@@ -11,3 +11,11 @@ layout: layouts/landingpage.html
  
 
 ## To Exploring Creative Technologies
+
+```
+  ´^`  msr
+´´0.0``    
+-(< >)-
+  :-:
+  ^ ^ 
+```

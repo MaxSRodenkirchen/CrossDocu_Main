@@ -3,36 +3,50 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Testing the Installation</h1>
+    <div id="mainContainer">
+        <h1>Testing the Installation</h1>
 <p>... for the <a href="/Installation%20for%20Exhibition/">Installation for Exhibition</a> at <a href="/Der%20Baum%20hat%20Zeit/">Der Baum hat Zeit</a>. The images and videos show a first bigger setup after <a href="/Projecting%20onto%20a%20Glass%20Prism/">Projecting onto a Glass Prism</a> was tested. Several techniques are combined here. The prism is now rotated by an Arduino motor <a href="/Arduino%20Motor%20Control/">Arduino Motor Control</a>. The <a href="/Webcam%20Movement%20Visualization%20in%20TD/">interactive visuals</a> are now controlled by the infrared camera of the <a href="/Connecting%20a%20Kinect%201%20to%20TD/">Kinect</a>.</p>
 <p>For the final installation there will be an interactive synthesizer composition added to the installation. <a href="/TouchDesigner%20to%20VCV%20Rack/">TouchDesigner to VCV Rack</a></p>
 <p>!<a href="/Installation-Test-Makke_crazyColors.JPEG/">Installation-Test-Makke_crazyColors.JPEG</a></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BHSXJvrjqN0?si=hv5caGFatmV3a-s_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <p>!<a href="/Installation-Test-Makke_aufbau.JPEG/">Installation-Test-Makke_aufbau.JPEG</a></p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Building the first Installation/">/Building the first Installation/</a>
-        </li>
-        
-        <li>
-            <a href="/Weekly Progress/">/Weekly Progress/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Building the first Installation/">/Building the first Installation/</a>
+            </li>
+            
+            <li>
+                <a href="/Weekly Progress/">/Weekly Progress/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

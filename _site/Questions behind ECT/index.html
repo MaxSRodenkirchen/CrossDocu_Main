@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Questions behind Exploring Creative Technologies</h1>
+    <div id="mainContainer">
+        <h1>Questions behind Exploring Creative Technologies</h1>
 <ul>
 <li>What are possibilities and patterns of creative technologies and how can we use them in our design practice?</li>
 <li><a href="/How%20can%20we%20bring%20together%20digital%20and%20real%20world%20environment/">How can we bring together digital and real world environment</a></li>
@@ -21,27 +24,38 @@
 <li>What are the advantages of <a href="/About%20Learning%20in%20Public/">learning in public</a>?</li>
 </ul>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/In one sentence/">/In one sentence/</a>
-        </li>
-        
-        <li>
-            <a href="/Concept for this Garden/">/Concept for this Garden/</a>
-        </li>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Weekly Progress/">/Weekly Progress/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/In one sentence/">/In one sentence/</a>
+            </li>
+            
+            <li>
+                <a href="/Concept for this Garden/">/Concept for this Garden/</a>
+            </li>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Weekly Progress/">/Weekly Progress/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>TouchDesigner to VCV Rack</h1>
+    <div id="mainContainer">
+        <h1>TouchDesigner to VCV Rack</h1>
 <p>How can we control the software synthesizer <a href="/VCV%20Rack/">VCV Rack</a> via inputs coming from TouchDesigner?</p>
 <p>There are multiple options to do this. One very good way for sending data from TouchDesigner to VCV Rack is by using <strong><a href="https://en.wikipedia.org/wiki/Open_Sound_Control">OSC (Open Sound Control)</a></strong> which is a protocol made for sending data between electronic devices, especially electronic instruments. It actually works over the local network which enables connecting devices wireless. Following this YouTube tutorial it took less than one hour to make it work: <a href="https://www.youtube.com/watch?v=_2bgXrMPRxc">TouchDesigner / VCV Rack OSC Communication</a>.</p>
 <h3>Set Up</h3>
@@ -20,39 +23,50 @@
 </ol>
 <p>Then just check that you are on the same port and that channel names are matching.</p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Testing the Installation/">/Testing the Installation/</a>
-        </li>
-        
-        <li>
-            <a href="/VCV Rack/">/VCV Rack/</a>
-        </li>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Final Presentation/">/Final Presentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Installation for Exhibition/">/Installation for Exhibition/</a>
-        </li>
-        
-        <li>
-            <a href="/Building the first Installation/">/Building the first Installation/</a>
-        </li>
-        
-        <li>
-            <a href="/Weekly Progress/">/Weekly Progress/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Testing the Installation/">/Testing the Installation/</a>
+            </li>
+            
+            <li>
+                <a href="/VCV Rack/">/VCV Rack/</a>
+            </li>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Final Presentation/">/Final Presentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Installation for Exhibition/">/Installation for Exhibition/</a>
+            </li>
+            
+            <li>
+                <a href="/Building the first Installation/">/Building the first Installation/</a>
+            </li>
+            
+            <li>
+                <a href="/Weekly Progress/">/Weekly Progress/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

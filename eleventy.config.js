@@ -95,6 +95,9 @@ export default function (eleventyConfig) {
             return result;
         },
     });
+
+    // Set directories to pass through to the dist folder
+    eleventyConfig.addPassthroughCopy('css');
 }
 
 export const config = {

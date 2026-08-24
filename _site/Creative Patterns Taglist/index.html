@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Creative Technologie Patterns</h1>
+    <div id="mainContainer">
+        <h1>Creative Technologie Patterns</h1>
 <p>These tags represent the patterns and areas already or to be addressed in this Digital Garden <a href="/In%20One%20Sentence/">Exploring Creative Technologies</a>.</p>
 <p>Tags / Categories / Patterns:</p>
 <p>  - Creative-Patterns
@@ -27,19 +30,30 @@
   - Audiosynthesis
   - Live-Data</p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Weekly Progress/">/Weekly Progress/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Weekly Progress/">/Weekly Progress/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

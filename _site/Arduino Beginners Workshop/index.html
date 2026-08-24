@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Participated at an Arduino Beginners Workshop</h1>
+    <div id="mainContainer">
+        <h1>Participated at an Arduino Beginners Workshop</h1>
 <p>Hosted by the <a href="https://gruendungszentrum.fh-aachen.de/">Gründungszentrum</a> FH Aachen, Summer 2026.</p>
 <p>On two separate days we dived into some basic Arduino workflows. On the first day there was some introduction into some basics of electronics. On the second day we connected a temperature and humidity sensor and send its data onto a small display. This worked out pretty well for every participant.</p>
 <p>I want to mention that I really appreciated the handout they offered. We didn't use it that much while the workshop, but it is nice to have a documentation. If I ever want to use a humidity sensor I can come back to this handout. Thanks for that!
@@ -17,31 +20,42 @@
 <p>!<a href="/ArduinoWorkshop_2.jpeg/">ArduinoWorkshop_2.jpeg</a>
 !<a href="/ArduinoWorkshop_1.jpeg/">ArduinoWorkshop_1.jpeg</a></p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Arduino Motor Control/">/Arduino Motor Control/</a>
-        </li>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Installation for Exhibition/">/Installation for Exhibition/</a>
-        </li>
-        
-        <li>
-            <a href="/Building the first Installation/">/Building the first Installation/</a>
-        </li>
-        
-        <li>
-            <a href="/Weekly Progress/">/Weekly Progress/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Arduino Motor Control/">/Arduino Motor Control/</a>
+            </li>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Installation for Exhibition/">/Installation for Exhibition/</a>
+            </li>
+            
+            <li>
+                <a href="/Building the first Installation/">/Building the first Installation/</a>
+            </li>
+            
+            <li>
+                <a href="/Weekly Progress/">/Weekly Progress/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

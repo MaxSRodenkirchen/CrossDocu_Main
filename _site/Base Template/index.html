@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <p>%% Is this a comment already? %%</p>
+    <div id="mainContainer">
+        <p>%% Is this a comment already? %%</p>
 <p>%% HEADER %%</p>
 <hr>
 <p>Testing out stuff for my Writing Syntax here</p>
@@ -52,11 +55,22 @@ sth else</p>
 <p>Das ist die Beschreibung unter dem Bild.</p>
 </blockquote>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

@@ -3,27 +3,41 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Creating a Webpage for collecting and visualizing peoples definitions on Creative Coding</h1>
+    <div id="mainContainer">
+        <h1>Creating a Webpage for collecting and visualizing peoples definitions on Creative Coding</h1>
 <p>The idea for visualizing peoples definitions evolved from a semester project in 2025, where at time the idea was to explain to people what Creative Coding means. The learning of that process was that there is not one universal definition. What really defines Creative Coding are the people and their perspectives on that scene, the creative work they do and the discussions on socially relevant topics.</p>
 <p><a href="/What%20are%20definitions%20for%20Creative%20Coding/">What are definitions for Creative Coding</a></p>
 <p>So maybe the best way for introducing someone to Creative Coding is by showing peoples definitions and perspectives.</p>
 <p><a href="/How%20can%20we%20explain%20and%20teach%20Creative%20Coding/">How can we explain and teach Creative Coding</a></p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

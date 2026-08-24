@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Extend your PKM with CrossDocu</h1>
+    <div id="mainContainer">
+        <h1>Extend your PKM with CrossDocu</h1>
 <p>Imagine you could use single files of your Personal Knowledge Management System for publishing, presenting or printing. For that you could use CrossDocu, a cross-publishing Tool. But a current problem is that for using CrossDocu your notes would need to be written in a certain manner. How could we convert these notes so they can be used for that?</p>
 <p>If you wonder what CrossDocu is: <a href="/The%20Idea%20Behind%20CrossDocu/">The Idea Behind CrossDocu</a></p>
 <h3>Thoughts on possible conversion from your private system to a public system</h3>
@@ -17,15 +20,26 @@
 <p>The problem will be that there is a lot of work to be done converting single notes to the CrossDocu writing convention. But if people just load single notes and have AI help it might work. For new starters this shouldn't be a problem anyway.</p>
 <p><a href="/Writing%20Conventions%20in%20CrossDocu/">Writing Conventions in CrossDocu</a></p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

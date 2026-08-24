@@ -3,25 +3,39 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Hybrid Search - The Concept</h1>
+    <div id="mainContainer">
+        <h1>Hybrid Search - The Concept</h1>
 <p>Hybrid search is a combination from a traditional keyword search and a vector-based semantic search. A keyword search is good in finding exact results but it lacks in finding correlated terms. Semantic search works by calculating relations between words with vectors. The results of both algorithms are put together for the hybrid search.</p>
 <p><a href="https://www.youtube.com/watch?v=V1iGw0Os27w">2 minute video explaining the core concept</a></p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

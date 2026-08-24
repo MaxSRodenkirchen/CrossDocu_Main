@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Tasks and Timetable</h1>
+    <div id="mainContainer">
+        <h1>Tasks and Timetable</h1>
 <h6>This note gets regularly updated.</h6>
 <h3>Tuesday, June 30th 2026</h3>
 <p>A bit less than one month less until semester end and the exhibition. A lot of work went into &quot;CrossDocu&quot; development which works fine. Even more time went into developing this &quot;Public Learning Web-Documentation&quot;, which will never be finished, because of the nature of such dynamic systems. The goal is to have a working prototype and show / sketch possible further developments of that. A bit to less time went into the exploration of tools and techniques. <strong>The rest of this semester should focus on the exploration, testing, experimenting and developing an <a href="/Installation%20for%20Exhibition/">Installation for Exhibition</a>.</strong></p>
@@ -116,23 +119,34 @@
 </li>
 </ul>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Plans for Today’s Feedback Meeting/">/Plans for Today’s Feedback Meeting/</a>
-        </li>
-        
-        <li>
-            <a href="/Concept for this Garden/">/Concept for this Garden/</a>
-        </li>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Concept for this Garden/">/Concept for this Garden/</a>
+            </li>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Plans for Today’s Feedback Meeting/">/Plans for Today’s Feedback Meeting/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Developing an Installation for the Exhibition</h1>
+    <div id="mainContainer">
+        <h1>Developing an Installation for the Exhibition</h1>
 <p>The idea is to combine different Creative Technology patterns to showcase some of our learning achievements from this semester. Parts of this Digital Garden will be used to explain how the installation works, while the installation itself serves to <strong>explain the purpose of the Digital Garden</strong>.</p>
 <h3>A Motion Visual Generative Projection Audio Installation</h3>
 <p>Following techniques get combined for the installation:</p>
@@ -21,67 +24,78 @@
 <li><a href="/Manipulating%20Light/">Manipulating Light</a></li>
 </ul>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Manipulating Light/">/Manipulating Light/</a>
-        </li>
-        
-        <li>
-            <a href="/Use Cases Moods/">/Use Cases Moods/</a>
-        </li>
-        
-        <li>
-            <a href="/Testing the Installation/">/Testing the Installation/</a>
-        </li>
-        
-        <li>
-            <a href="/Arduino Motor Control/">/Arduino Motor Control/</a>
-        </li>
-        
-        <li>
-            <a href="/Using an Ultrasonic Sensor/">/Using an Ultrasonic Sensor/</a>
-        </li>
-        
-        <li>
-            <a href="/Projecting on Glass/">/Projecting on Glass/</a>
-        </li>
-        
-        <li>
-            <a href="/Webcam Movement Visualization in TD/">/Webcam Movement Visualization in TD/</a>
-        </li>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Final Presentation/">/Final Presentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Timetracking/">/Timetracking/</a>
-        </li>
-        
-        <li>
-            <a href="/Building the first Installation/">/Building the first Installation/</a>
-        </li>
-        
-        <li>
-            <a href="/Weekly Progress/">/Weekly Progress/</a>
-        </li>
-        
-        <li>
-            <a href="/Projecting onto a Glass Prism/">/Projecting onto a Glass Prism/</a>
-        </li>
-        
-        <li>
-            <a href="/Welcome Fellow Learner/">/Welcome Fellow Learner/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Manipulating Light/">/Manipulating Light/</a>
+            </li>
+            
+            <li>
+                <a href="/Use Cases Moods/">/Use Cases Moods/</a>
+            </li>
+            
+            <li>
+                <a href="/Testing the Installation/">/Testing the Installation/</a>
+            </li>
+            
+            <li>
+                <a href="/Arduino Motor Control/">/Arduino Motor Control/</a>
+            </li>
+            
+            <li>
+                <a href="/Using an Ultrasonic Sensor/">/Using an Ultrasonic Sensor/</a>
+            </li>
+            
+            <li>
+                <a href="/Projecting on Glass/">/Projecting on Glass/</a>
+            </li>
+            
+            <li>
+                <a href="/Webcam Movement Visualization in TD/">/Webcam Movement Visualization in TD/</a>
+            </li>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Final Presentation/">/Final Presentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Timetracking/">/Timetracking/</a>
+            </li>
+            
+            <li>
+                <a href="/Building the first Installation/">/Building the first Installation/</a>
+            </li>
+            
+            <li>
+                <a href="/Weekly Progress/">/Weekly Progress/</a>
+            </li>
+            
+            <li>
+                <a href="/Projecting onto a Glass Prism/">/Projecting onto a Glass Prism/</a>
+            </li>
+            
+            <li>
+                <a href="/Welcome Fellow Learner/">/Welcome Fellow Learner/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

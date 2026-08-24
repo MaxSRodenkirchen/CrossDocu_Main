@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Writing Conventions in CrossDocu</h1>
+    <div id="mainContainer">
+        <h1>Writing Conventions in CrossDocu</h1>
 <p>Monday, July 20th 2026</p>
 <p>H1-Elements are Titles
 H2-Elements are Subtitles
@@ -41,27 +44,38 @@ Level 1 – Page Level: YAML Frontmatter
 Level 2 – Block Level: Obsidian Callouts as Layout Containers
 Level 3 – Element Level: Alt Text Conventions for Images</p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Content Loader for CrossDocu/">/Content Loader for CrossDocu/</a>
-        </li>
-        
-        <li>
-            <a href="/Design Concept/">/Design Concept/</a>
-        </li>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Self-briefing/">/Self-briefing/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Content Loader for CrossDocu/">/Content Loader for CrossDocu/</a>
+            </li>
+            
+            <li>
+                <a href="/Design Concept/">/Design Concept/</a>
+            </li>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Self-briefing/">/Self-briefing/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

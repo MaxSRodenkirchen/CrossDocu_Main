@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>The self-briefing</h1>
+    <div id="mainContainer">
+        <h1>The self-briefing</h1>
 <p>Attention! This is not an atomic note and has a lot of text! It was a first test of presenting with Markdown in CrossDocu. <a href="/Atomic%20Notes/">Atomic Notes</a> <a href="/The%20Idea%20Behind%20CrossDocu/">The Idea Behind CrossDocu</a></p>
 <h3>&gt; What is the plan for this semester? 🌱</h3>
 <p>This note is written for a presentation!</p>
@@ -105,15 +108,26 @@
 </ul>
 <h1>Thank you ✌️🙂</h1>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Quick Feedback Effect in Touchdesigner</h1>
+    <div id="mainContainer">
+        <h1>Quick Feedback Effect in Touchdesigner</h1>
 <h4>Feedback loops are simple yet very attractive. This technique offers a wide range of options for creating impressive effects</h4>
 <p>!<a href="/simpleFeedback-inTd.png/">simpleFeedback-inTd.png</a></p>
 <h3>Set Up</h3>
@@ -29,35 +32,46 @@
 <p>This was made following along this 5-minute tutorial:
 <a href="https://learn.derivative.ca/courses/100-fundamentals/lessons/102-tops-working-with-images/topic/creating-a-feedback/">Creating a Feedback - Videotutorial</a></p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Webcam Movement Visualization in TD/">/Webcam Movement Visualization in TD/</a>
-        </li>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Final Presentation/">/Final Presentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Building the first Installation/">/Building the first Installation/</a>
-        </li>
-        
-        <li>
-            <a href="/Weekly Progress/">/Weekly Progress/</a>
-        </li>
-        
-        <li>
-            <a href="/TouchDesigner Lesson 102/">/TouchDesigner Lesson 102/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Webcam Movement Visualization in TD/">/Webcam Movement Visualization in TD/</a>
+            </li>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Final Presentation/">/Final Presentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Building the first Installation/">/Building the first Installation/</a>
+            </li>
+            
+            <li>
+                <a href="/Weekly Progress/">/Weekly Progress/</a>
+            </li>
+            
+            <li>
+                <a href="/TouchDesigner Lesson 102/">/TouchDesigner Lesson 102/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

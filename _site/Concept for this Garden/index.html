@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <p>Welcome to my presentation</p>
+    <div id="mainContainer">
+        <p>Welcome to my presentation</p>
 <ol>
 <li><a href="/Welcome%20to%20my%20Concept%20Presentation/">Start here</a></li>
 </ol>
@@ -34,23 +37,34 @@
 <li><a href="/Thank%20you/">Thank you</a></li>
 </ol>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Projection Mapping in Touchdesigner/">/Projection Mapping in Touchdesigner/</a>
-        </li>
-        
-        <li>
-            <a href="/Welcome to my Concept Presentation/">/Welcome to my Concept Presentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Weekly Progress/">/Weekly Progress/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Projection Mapping in Touchdesigner/">/Projection Mapping in Touchdesigner/</a>
+            </li>
+            
+            <li>
+                <a href="/Welcome to my Concept Presentation/">/Welcome to my Concept Presentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Weekly Progress/">/Weekly Progress/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

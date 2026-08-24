@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Connecting a Kinect 1 to TouchDesigner</h1>
+    <div id="mainContainer">
+        <h1>Connecting a Kinect 1 to TouchDesigner</h1>
 <p>Kinect cameras were originally developed by Microsoft for the Xbox gaming console. Equipped with a built-in depth sensor, they are capable of recognizing specific body parts and tracking skeletal movement. Microsoft later released dedicated versions for Windows, with the most recent and advanced iteration being the Azure Kinect.</p>
 <p><img src="https://images.hothardware.com/static/newsimages/Item29336/microsoft-kinect-for-windowsv1-main1.jpg" alt="Kinect v1 "></p>
 <p><em>Image: https://images.hothardware.com/static/newsimages/Item29336/microsoft-kinect-for-windowsv1-main1.jpg</em></p>
@@ -18,31 +21,42 @@
 <p>Once the appropriate drivers are installed and the Kinect CHOP node in TouchDesigner is configured to the correct hardware version, the device functions seamlessly. Additionally, Microsoft provides dedicated developer tools that can be utilized for testing and calibrating the Kinect sensor.</p>
 <p><a href="https://derivative.ca/UserGuide/Kinect1">This article contains information about the Kinect Version 1 device</a></p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Testing the Installation/">/Testing the Installation/</a>
-        </li>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Final Presentation/">/Final Presentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Building the first Installation/">/Building the first Installation/</a>
-        </li>
-        
-        <li>
-            <a href="/Weekly Progress/">/Weekly Progress/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Testing the Installation/">/Testing the Installation/</a>
+            </li>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Final Presentation/">/Final Presentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Building the first Installation/">/Building the first Installation/</a>
+            </li>
+            
+            <li>
+                <a href="/Weekly Progress/">/Weekly Progress/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

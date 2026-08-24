@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>This Gardens System</h1>
+    <div id="mainContainer">
+        <h1>This Gardens System</h1>
 <p>A personal knowledge system but publicly.</p>
 <ul>
 <li><a href="/Atomic%20Notes/">Atomic Notes</a></li>
@@ -22,35 +25,46 @@
 <p>You can view the content in different media with CrossDocu:
 <a href="/The%20idea%20behind%20CrossDocu/">The idea behind CrossDocu</a></p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/In one sentence/">/In one sentence/</a>
-        </li>
-        
-        <li>
-            <a href="/Why This Garden Began/">/Why This Garden Began/</a>
-        </li>
-        
-        <li>
-            <a href="/Writing Conventions in CrossDocu/">/Writing Conventions in CrossDocu/</a>
-        </li>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Final Presentation/">/Final Presentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Welcome Fellow Learner/">/Welcome Fellow Learner/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/In one sentence/">/In one sentence/</a>
+            </li>
+            
+            <li>
+                <a href="/Why This Garden Began/">/Why This Garden Began/</a>
+            </li>
+            
+            <li>
+                <a href="/Writing Conventions in CrossDocu/">/Writing Conventions in CrossDocu/</a>
+            </li>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Final Presentation/">/Final Presentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Welcome Fellow Learner/">/Welcome Fellow Learner/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

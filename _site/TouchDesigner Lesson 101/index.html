@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>101 – Navigating the Environment</h1>
+    <div id="mainContainer">
+        <h1>101 – Navigating the Environment</h1>
 <p>With its older looking user interface TouchDesigner might be a bit intimidating at first. But once familiar with the workflow this node-based system runs rather smoothly.</p>
 <h3>Links</h3>
 <p><em>The TouchDesigner Fundamentals course is split into short video tutorials. They are easy to understand and follow and good for getting an overview.</em></p>
@@ -17,23 +20,34 @@
 <p>Next lesson
 <a href="/TouchDesigner%20Lesson%20102/">TouchDesigner Lesson 102</a></p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Weekly Progress/">/Weekly Progress/</a>
-        </li>
-        
-        <li>
-            <a href="/TouchDesigner Lesson 102/">/TouchDesigner Lesson 102/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Weekly Progress/">/Weekly Progress/</a>
+            </li>
+            
+            <li>
+                <a href="/TouchDesigner Lesson 102/">/TouchDesigner Lesson 102/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

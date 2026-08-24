@@ -1,0 +1,34 @@
+html {
+    height: 100%;
+    margin: 0rem;
+    zoom: 1.2;
+}
+
+body {
+    height: 100%;
+    margin: 0rem;
+    /* overflow-y: hidden; */
+
+}
+
+#mainContainer {
+    /* margin: 2rem; */
+    padding: 2rem;
+    height: calc(100% - 4rem);
+    overflow-x: auto;
+    column-width: 450px;
+    column-gap: 4rem;
+    column-fill: auto;
+    /* background-color: aqua; */
+    font-family: sans-serif;
+
+}
+
+p,
+a,
+ul,
+li,
+ol {
+    /* font-size: larger; */
+    line-height: 160%;
+}

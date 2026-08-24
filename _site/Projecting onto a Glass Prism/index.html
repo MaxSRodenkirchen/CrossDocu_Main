@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Projecting onto a Glass Prism</h1>
+    <div id="mainContainer">
+        <h1>Projecting onto a Glass Prism</h1>
 <p>A small experiment was conducted to investigate what happens when an interactive visual (<a href="/Webcam%20Movement%20Visualization%20in%20TD/">Webcam Movement Visualization in TD</a>) is projected through a glass prism. The main <strong>prism ball</strong> had a diameter of <strong>4.5 centimeters</strong> which is a bit small for the projector. We also tested working wit a <strong>triangular prism</strong> which is interesting as well but does not cause a nicer effect.</p>
 <p>This could later be used for <a href="/Installation%20for%20Exhibition/">Installation for Exhibition</a></p>
 <h3>Documentation</h3>
@@ -32,27 +35,38 @@
 <li><a href="/Arduino%20Motor%20Control/">Arduino Motor Control</a></li>
 </ol>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Testing the Installation/">/Testing the Installation/</a>
-        </li>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Building the first Installation/">/Building the first Installation/</a>
-        </li>
-        
-        <li>
-            <a href="/Weekly Progress/">/Weekly Progress/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Testing the Installation/">/Testing the Installation/</a>
+            </li>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Building the first Installation/">/Building the first Installation/</a>
+            </li>
+            
+            <li>
+                <a href="/Weekly Progress/">/Weekly Progress/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

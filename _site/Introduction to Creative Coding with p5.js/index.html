@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Introduction to Creative Coding with p5.js</h1>
+    <div id="mainContainer">
+        <h1>Introduction to Creative Coding with p5.js</h1>
 <p>This presentation is part of an <strong>introduction into p5.js and Creative Coding</strong> for fellow students at FH Aachen in June 2026. The workshop was conducted in German and later translated into English.</p>
 <h2>Previous Experience</h2>
 <p>Who has done Creative Coding before?
@@ -156,15 +159,26 @@ The p5.js documentation — The website also features tutorials and examples</li
 <li><a href="">https://stigmollerhansen.dk/resume/learning-creative-coding/</a> I haven’t read this one myself yet. The Book is available for free digitally!</li>
 </ul>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

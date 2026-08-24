@@ -3,36 +3,50 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Mini User Journeys</h1>
+    <div id="mainContainer">
+        <h1>Mini User Journeys</h1>
 <p>This was made to imagine needs of people and possible barriers of this webplattform.</p>
 <p>!<a href="/userjourney_wrede.png/">userjourney_wrede.png</a></p>
 <p>!<a href="/userjourney_nacken.png/">userjourney_nacken.png</a></p>
 <p>!<a href="/userjourney_toni.png/">userjourney_toni.png</a></p>
 <p>My Problem with those user journeys is that they seam quite fictional. How can I know that these are some real questions, emotions and barriers they go through? Without testing with users, I can't. That's one of the reasons I don't like the User Journey and Persona methods that much. But I have to admit that I have asked myself some important questions in the process of creating those. That is good.</p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Concept for this Garden/">/Concept for this Garden/</a>
-        </li>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Weekly Progress/">/Weekly Progress/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Concept for this Garden/">/Concept for this Garden/</a>
+            </li>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Weekly Progress/">/Weekly Progress/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

@@ -3,37 +3,51 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Capture and loop movement in p5.js</h1>
+    <div id="mainContainer">
+        <h1>Capture and loop movement in p5.js</h1>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jMUPhPbaZHo?si=LJHokQq1XqzGp23t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <iframe src="https://editor.p5js.org/MaxRodenkirchen/full/gd2HiwvFt"></iframe>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/Concept for this Garden/">/Concept for this Garden/</a>
-        </li>
-        
-        <li>
-            <a href="/Design Class Documentation/">/Design Class Documentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Self-briefing/">/Self-briefing/</a>
-        </li>
-        
-        <li>
-            <a href="/Designing this Garden/">/Designing this Garden/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/Concept for this Garden/">/Concept for this Garden/</a>
+            </li>
+            
+            <li>
+                <a href="/Design Class Documentation/">/Design Class Documentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Self-briefing/">/Self-briefing/</a>
+            </li>
+            
+            <li>
+                <a href="/Designing this Garden/">/Designing this Garden/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>

@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ECT</title>
+    <link rel="stylesheet" href="/css/base.css">
+
 </head>
 
 <body>
 
-    <h1>Why This Garden Began</h1>
+    <div id="mainContainer">
+        <h1>Why This Garden Began</h1>
 <ol>
 <li>Explore what is possible in Creative Tech</li>
 <li>Train the communication of expertise</li>
@@ -22,31 +25,42 @@
 <a href="/About%20Learning%20in%20Public/">About Learning in Public</a></p>
 <p><a href="Backlinks">Lets Back</a></p>
 
-    <hr>
-    <h3>Backlinks</h3>
-    <ul>
-        
-        <li>
-            <a href="/About Learning in Public/">/About Learning in Public/</a>
-        </li>
-        
-        <li>
-            <a href="/In one sentence/">/In one sentence/</a>
-        </li>
-        
-        <li>
-            <a href="/Der Baum hat Zeit/">/Der Baum hat Zeit/</a>
-        </li>
-        
-        <li>
-            <a href="/Final Presentation/">/Final Presentation/</a>
-        </li>
-        
-        <li>
-            <a href="/Welcome Fellow Learner/">/Welcome Fellow Learner/</a>
-        </li>
-        
-    </ul>
+        <hr>
+        <h3>Backlinks</h3>
+        <ul>
+            
+            <li>
+                <a href="/About Learning in Public/">/About Learning in Public/</a>
+            </li>
+            
+            <li>
+                <a href="/In one sentence/">/In one sentence/</a>
+            </li>
+            
+            <li>
+                <a href="/Der Baum hat Zeit/">/Der Baum hat Zeit/</a>
+            </li>
+            
+            <li>
+                <a href="/Final Presentation/">/Final Presentation/</a>
+            </li>
+            
+            <li>
+                <a href="/Welcome Fellow Learner/">/Welcome Fellow Learner/</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        const container = document.getElementById('mainContainer');
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+            container.scrollBy({ left: delta * 2, behavior: 'smooth' });
+        }, { passive: false });
+
+    </script>
 </body>
 
 </html>
